@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Montserrat', sans-serif;
+  --color-primary: #22c55e; /* Verde principal */
+  --color-primary-dark: #16a34a; /* Verde hover */
+  --color-secondary: #0f172a; /* Azul oscuro hero */
+  --color-accent: #38bdf8; /* Azul acento */
+  --color-background: #0b1120; /* Fondo oscuro */
+  --color-surface: #111827; /* Cards oscuras */
+  --color-muted: #6b7280; /* Texto secundario */
+  --color-light: #f3f4f6; /* Secciones claras */
+  --color-white: #ffffff;
+}
