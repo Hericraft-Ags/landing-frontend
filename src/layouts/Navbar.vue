@@ -28,7 +28,6 @@
             <!-- Menú Escritorio -->
             <div class="hidden lg:flex space-x-1 items-center text-white">
                 <a href="" class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide rounded-full hover:bg-white/10">Nosotros</a>
-                <a href="#educacion50" class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide rounded-full hover:bg-white/10">Educación 5.0</a>
                 
                 <!-- Dropdown Ecosistemas -->
                 <div class="relative group">

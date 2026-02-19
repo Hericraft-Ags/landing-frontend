@@ -11,7 +11,7 @@
                 <!-- Columna Texto -->
                 <div class="order-2 lg:order-1">
                     <div class="inline-block bg-white/10 text-cyan-bright border border-cyan-bright/30 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                        <i class="fas fa-cubes mr-2"></i> Hericraft Design
+                        <i class="fas fa-cubes mr-2"></i> Hericraft Studio
                     </div>
                     <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 leading-tight">
                         Diseña tu aula activa <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-bright to-teal-400">En Tiempo Real</span>
@@ -54,14 +54,12 @@
                             <div class="w-3 h-3 rounded-full bg-red-500"></div>
                             <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                             <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                            <div class="ml-4 bg-slate-800 px-3 py-1 rounded text-xs text-gray-400 font-mono w-full">hericraft.com/design</div>
+                            <div class="ml-4 bg-slate-800 px-3 py-1 rounded text-xs text-gray-400 font-mono w-full">hericraft.com/studio</div>
                         </div>
                         <!-- Imagen Placeholder de la App -->
-                        <!-- Sube una captura de tu app a: assets/img/app-ambientes-mockup.jpg -->
-                        <img src="https://placehold.co/600x400/1e293b/06b6d4?text=Interfaz+Dise%C3%B1ador+3D" alt="Hericraft Design App" class="w-full object-cover hover:scale-105 transition duration-700">
-                        
+                        <img src="../../../assets/images/logos/studio-logo.svg" alt="Hericraft Design App" class="w-full studio-logo object-cover hover:scale-105 transition duration-700">
                         <!-- Floating Card -->
-                        <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur text-navy p-4 rounded-xl shadow-lg border-l-4 border-cyan-bright max-w-xs animate-bounce hidden md:block">
+                        <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur text-navy p-4 rounded-xl shadow-lg border-l-4 border-cyan-bright max-w-xs hover:scale-105 transition duration-700 hidden md:block">
                             <p class="font-bold text-sm"><i class="fas fa-check-circle text-green-600 mr-1"></i> Cotización lista</p>
                             <p class="text-xs text-gray-500 mt-1">Tu diseño "Aula STEAM" está listo para descargar.</p>
                         </div>

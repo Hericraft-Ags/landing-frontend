@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-@theme {
+:root {
   --font-sans: 'Montserrat', sans-serif;
   --color-primary: #22c55e; /* Verde principal */
   --color-primary-dark: #16a34a; /* Verde hover */
@@ -57,4 +57,8 @@ body.loading { overflow: hidden; }
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.studio-logo{
+    padding: 10% 20% 20% 20%;
 }
