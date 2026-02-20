@@ -1,23 +1,17 @@
 <template>
-  <!-- ========================================= -->
-  <!-- SECCIÓN: BANCO DE SABERES (MEJORADA) -->
-  <!-- ========================================= -->
   <section
     id="saberes"
     class="py-24 px-6 bg-slate-50 border-t border-slate-200 relative overflow-hidden"
     aria-labelledby="saberes-title"
   >
-    <!-- Elementos decorativos de fondo -->
     <div class="absolute inset-0 pointer-events-none opacity-20">
       <div class="absolute top-0 left-0 w-64 h-64 bg-collegeOrange/5 rounded-full blur-3xl"></div>
       <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
     </div>
 
     <div class="max-w-7xl mx-auto relative z-10">
-      <!-- Encabezado mejorado -->
       <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
         <div class="space-y-4">
-          <!-- Badge -->
           <div
             class="inline-flex items-center gap-2 bg-collegeOrange/10 text-collegeOrange border border-collegeOrange/20 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest"
           >
@@ -25,7 +19,6 @@
             <span>Knowledge Hub</span>
           </div>
 
-          <!-- Título -->
           <h2
             id="saberes-title"
             class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-navy"
@@ -37,14 +30,12 @@
             >
           </h2>
 
-          <!-- Descripción -->
           <p class="text-gray-500 max-w-2xl text-lg leading-relaxed">
             Recursos curados para potenciar tu desarrollo: Blogs, Podcasts, Revistas Digitales y
             más.
           </p>
         </div>
 
-        <!-- Enlace a biblioteca mejorado -->
         <a
           href="#"
           class="group relative px-6 py-3 rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-collegeOrange/20"
@@ -62,7 +53,6 @@
         </a>
       </div>
 
-      <!-- Grid de Contenido -->
       <div class="grid md:grid-cols-3 gap-8">
         <KnowledgeCard
           v-for="item in knowledgeItems"
@@ -73,7 +63,7 @@
         />
       </div>
 
-      <!-- Sección de estadísticas (opcional) 
+      <!-- Sección de estadísticas
       <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-gray-200">
         <div v-for="stat in stats" :key="stat.label" class="text-center">
           <div class="text-2xl md:text-3xl font-bold text-navy mb-1">{{ stat.value }}</div>
@@ -88,10 +78,8 @@
 import { ref, inject } from 'vue'
 import KnowledgeCard from '@/components/ui/KnowledgeCard.vue'
 
-// Inyectar preferencia de movimiento
 const reduceMotion = inject('reduceMotion', ref(false))
 
-// Datos de los items del banco de saberes
 const knowledgeItems = [
   {
     id: 'podcast-ia',
@@ -143,7 +131,6 @@ const knowledgeItems = [
   },
 ]
 
-// Estadísticas
 const stats = [
   { value: '50+', label: 'Podcasts' },
   { value: '120+', label: 'Manuales' },
@@ -151,19 +138,14 @@ const stats = [
   { value: '15k', label: 'Descargas' },
 ]
 
-// Manejador de acciones
 const handleItemAction = item => {
   console.log('Acción en item:', item.title)
-  // Aquí iría la lógica según el tipo de item
   switch (item.type) {
     case 'podcast':
-      // Reproducir podcast
       break
     case 'manual':
-      // Descargar PDF
       break
     case 'revista':
-      // Abrir revista online
       break
   }
 }

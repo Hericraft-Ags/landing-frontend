@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- BARRA DE ACCESIBILIDAD -->
     <div
       class="fixed top-0 w-full bg-dark-nav text-white z-[70] h-10 flex justify-between items-center px-4 text-[10px] sm:text-xs font-bold border-b border-gray-800"
     >
@@ -48,7 +47,7 @@
         <!-- Logo -->
         <a href="/" class="flex-shrink-0 cursor-pointer hover:opacity-80 transition">
           <img
-            src="../../assets/logos/logo_hericraft.png"
+            src="../assets/images/logos/logo_hericraft.png"
             alt="Hericraft Logo"
             class="h-10 w-auto"
           />
@@ -127,7 +126,6 @@
     </nav>
 
     <main class="animate-fade-in pt-28">
-      <!-- HERO SECTION: COLLEGE -->
       <section class="relative bg-slate-50 pt-16 pb-32 px-6 overflow-hidden clip-wave-bottom">
         <div class="absolute inset-0 hero-pattern pointer-events-none"></div>
         <div
@@ -143,7 +141,7 @@
             </div>
 
             <img
-              src="../../assets/logos/logo_college.png"
+              src="../assets/images/logos/logo_college.png"
               alt="College Logo"
               class="h-40 w-auto mb-2 drop-shadow-sm"
             />
@@ -184,7 +182,7 @@
               class="absolute inset-0 bg-gradient-to-tr from-collegeOrange to-collegeBlue rounded-[2rem] opacity-20 rotate-6 scale-95 transition-transform group-hover:rotate-3"
             ></div>
             <img
-              src="../../assets/images/hero_college.jpg"
+              src="../assets/images/hero_college.jpg"
               alt="Clase STEAM Interactiva"
               class="relative rounded-[2rem] shadow-2xl border-4 border-white w-full object-cover transform transition duration-500 group-hover:-translate-y-2"
             />
@@ -204,7 +202,6 @@
         </div>
       </section>
 
-      <!-- 2. PROGRAMA CURRICULAR EBA (Escuelas) -->
       <section id="eba" class="py-24 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-16">
@@ -245,7 +242,7 @@
                   class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center p-3 shadow-md group-hover:scale-110 transition group-hover:rotate-6"
                 >
                   <img
-                    src="../../assets/images/icon_eba_kids.png"
+                    src="../assets/images/icon_eba_kids.png"
                     alt="Icono Kids"
                     class="w-full h-full object-contain"
                   />
@@ -257,7 +254,7 @@
               </div>
               <div class="w-full h-40 rounded-xl overflow-hidden mb-5 relative">
                 <img
-                  src="../../assets/images/eba_kids.png"
+                  src="../assets/images/eba_kids.PNG"
                   alt="Clase Kids"
                   class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
                 />
@@ -281,7 +278,7 @@
                   class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center p-3 shadow-md group-hover:scale-110 transition group-hover:rotate-6"
                 >
                   <img
-                    src="../../assets/images/icon_eba_kids.png"
+                    src="../assets/images/icon_eba_kids.png"
                     alt="Icono Advanced"
                     class="w-full h-full object-contain"
                   />
@@ -293,7 +290,7 @@
               </div>
               <div class="w-full h-40 rounded-xl overflow-hidden mb-5 relative">
                 <img
-                  src="../../assets/images/eba_advanced.png"
+                  src="../assets/images/eba_advanced.PNG"
                   alt="Clase Advanced"
                   class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
                 />
@@ -317,7 +314,7 @@
                   class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center p-3 shadow-md group-hover:scale-110 transition group-hover:rotate-6"
                 >
                   <img
-                    src="../../assets/images/icon_eba_kids.png"
+                    src="../assets/images/icon_eba_kids.png"
                     alt="Icono Xpert"
                     class="w-full h-full object-contain"
                   />
@@ -329,7 +326,7 @@
               </div>
               <div class="w-full h-40 rounded-xl overflow-hidden mb-5 relative">
                 <img
-                  src="../../assets/images/eba_xpert.png"
+                  src="../assets/images/eba_xpert.PNG"
                   alt="Clase Xpert"
                   class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
                 />
@@ -395,8 +392,6 @@
           </div>
         </div>
       </section>
-
-      <!-- ... resto de las secciones (mantén todo el contenido existente) ... -->
     </main>
 
     <footer
@@ -406,7 +401,6 @@
         class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-navy via-cyanBright to-collegeOrange"
       ></div>
       <div class="max-w-7xl mx-auto px-6 py-16">
-        <!-- ... contenido del footer ... -->
       </div>
     </footer>
   </div>
@@ -415,12 +409,10 @@
 <script setup>
 import { ref } from 'vue'
 
-// Estados de accesibilidad
 const highContrast = ref(false)
 const largeText = ref(false)
 const reduceMotion = ref(false)
 
-// Funciones de accesibilidad
 const toggleContrast = () => {
   highContrast.value = !highContrast.value
   document.body.classList.toggle('high-contrast')
@@ -447,7 +439,6 @@ const toggleMobileMenu = () => {
 </script>
 
 <style scoped>
-/* Tipografía y Colores */
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -461,7 +452,6 @@ body {
   font-family: 'Reddit Sans', sans-serif;
 }
 
-/* Paleta College */
 .text-collegeOrange {
   color: #ff6b35;
 }
@@ -490,7 +480,6 @@ body {
   background-color: #085899;
 }
 
-/* Fondos y Efectos */
 .hero-pattern {
   background-color: #ffffff;
   background-image:
@@ -518,7 +507,6 @@ body {
   border-color: #ff6b35;
 }
 
-/* Configuración 3D */
 .perspective-1000 {
   perspective: 1000px;
 }
@@ -536,7 +524,6 @@ body {
   transform: rotateY(180deg);
 }
 
-/* Animaciones */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -570,7 +557,6 @@ body {
   animation: bounce-slow 3s infinite;
 }
 
-/* Clases de accesibilidad */
 :global(.high-contrast) {
   filter: contrast(150%);
 }

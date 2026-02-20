@@ -1,7 +1,5 @@
 <template>
-  <!-- FOOTER CON REDES SOCIALES (IMÁGENES PNG) -->
   <footer class="bg-slate-950 py-12 text-center text-gray-500 text-sm">
-    <!-- Botones de Redes Sociales -->
     <div class="flex justify-center gap-6 mb-8">
       <a href="#" target="_blank" class="block w-10 h-10">
         <img
