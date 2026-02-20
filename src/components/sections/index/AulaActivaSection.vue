@@ -1,7 +1,6 @@
 <template>
     <!-- NUEVA SECCIÓN: AMBIENTES DE APRENDIZAJE -->
     <section id="ambientes" class="py-24 px-6 relative overflow-hidden bg-navy text-white">
-        <!-- Fondo decorativo tipo 'Blueprint' o técnico -->
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/grid-me.png')] opacity-10"></div>
         
         <div class="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
