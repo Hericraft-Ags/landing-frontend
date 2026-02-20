@@ -1,7 +1,4 @@
 <template>
-    <!-- ========================================= -->
-    <!-- 1. BARRA DE ACCESIBILIDAD -->
-    <!-- ========================================= -->
     <div class="fixed top-0 w-full bg-dark-nav text-white z-[70] h-10 flex justify-between items-center px-4 text-[10px] sm:text-xs font-bold border-b border-gray-800">
         <div class="flex gap-2 sm:gap-4 items-center">
             <span class="text-cyan-bright hidden md:inline"><i class="fas fa-universal-access"></i> ACCESIBILIDAD:</span>
@@ -15,9 +12,7 @@
         </div>
     </div>
 
-    <!-- ========================================= -->
-    <!-- 2. HEADER / MENÚ SUPERIOR -->
-    <!-- ========================================= -->
+    <!-- HEADER / MENÚ SUPERIOR -->
     <nav class="fixed top-10 w-full bg-dark-nav backdrop-blur-md border-b border-gray-800 z-50 h-20 transition-all shadow-sm">
         <div class="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
             <!-- Logo -->
