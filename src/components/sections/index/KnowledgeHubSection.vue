@@ -6,7 +6,7 @@
             <div class="max-w-7xl mx-auto">
                 <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
                     <div>
-                        <span class="text-collegeOrange font-bold uppercase tracking-widest text-sm mb-2 block">Knowledge Hub</span>
+                        <span class="text-cyan-bright font-bold uppercase tracking-widest text-sm mb-2 block">Knowledge Hub</span>
                         <h2 class="text-3xl md:text-4xl font-display font-bold text-navy">Banco de Saberes</h2>
                         <p class="text-gray-500 mt-2 max-w-2xl">Recursos curados para potenciar tu desarrollo: Blogs, Podcasts, Revistas Digitales y más.</p>
                     </div>
