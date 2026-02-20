@@ -45,15 +45,15 @@ body.loading { overflow: hidden; }
 .text-collegeOrange { color: #FF6B00; }
 .text-teal { color: #0dbcc9; }
 .text-accentPink { color: #E91E63; }
-.text-navy { color: #171c24; /* Nuevo azul oscuro */ }
-.bg-navy { background-color: #171b21; /* Nuevo azul oscuro */ }
-.text-cyan-bright { color: #08be66; /* Nuevo cian brillante */ }
-.bg-cyan-bright { background-color: #08be66; /* Nuevo azul oscuro */ }
-.bg-dark-nav { background-color: #111319; /* Nuevo fondo de navegación */ }
+.text-navy { color: #171c24; }
+.bg-navy { background-color: #171b21; }
+.text-cyan-bright { color: #08be66; }
+.bg-cyan-bright { background-color: #08be66; }
+.bg-dark-nav { background-color: #111319; }
 
 /* Fondo de la sección Hero */
 .bg-hero-space {
-    background-image: linear-gradient(to bottom, rgba(23, 25, 28, 0.385), rgba(28, 28, 60, 0.385)), url('./assets/images/fondo_espacio.png'); /* Asegúrate de tener esta imagen */
+    background-image: linear-gradient(to bottom, rgba(23, 25, 28, 0.385), rgba(28, 28, 60, 0.385)), url('./assets/images/fondo_espacio.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
