@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- 1. BARRA DE ACCESIBILIDAD -->
     <div
       class="fixed top-0 w-full bg-dark-nav text-white z-[70] h-10 flex justify-between items-center px-4 text-[10px] sm:text-xs font-bold border-b border-gray-800"
     >
@@ -40,21 +39,18 @@
       </div>
     </div>
 
-    <!-- 2. NAVBAR PRINCIPAL -->
     <nav
       class="fixed top-10 w-full bg-dark-nav backdrop-blur-md border-b border-gray-800 z-50 h-20 transition-all shadow-sm"
     >
       <div class="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
-        <!-- Logo -->
         <a href="/" class="flex-shrink-0 cursor-pointer hover:opacity-80 transition">
           <img
-            src="../../assets/images/logo_hericraft.png"
+            src="../assets/images/logos/logo_hericraft.png"
             alt="Hericraft Logo"
             class="h-10 w-auto"
           />
         </a>
 
-        <!-- Menú Escritorio -->
         <div class="hidden lg:flex space-x-1 items-center text-white">
           <a
             href="/"
@@ -82,7 +78,6 @@
             >Processus</a
           >
 
-          <!-- Botón Iniciar Sesión (Premium Design) -->
           <a
             href="/login"
             class="ml-4 relative group px-6 py-2.5 rounded-full overflow-hidden shadow-lg shadow-lime-500/20 hover:shadow-lime-500/40 transition-all duration-300 transform hover:-translate-y-0.5"
@@ -109,7 +104,6 @@
         </button>
       </div>
 
-      <!-- Menú Móvil -->
       <div
         id="mobile-menu"
         class="hidden lg:hidden bg-dark-nav border-t border-gray-800 absolute w-full left-0 top-20 shadow-2xl p-6 space-y-4 h-[calc(100vh-80px)] z-40 overflow-y-auto pb-32 text-white"
@@ -128,7 +122,6 @@
     </nav>
 
     <main class="animate-fade-in pt-28">
-      <!-- 3. HERO: EL MANIFIESTO DOCENTE -->
       <section
         class="relative bg-gradient-to-b from-agoraDark to-oxfordGray pt-20 pb-28 px-6 overflow-hidden text-white"
       >
@@ -146,7 +139,7 @@
             </div>
 
             <img
-              src="../../assets/images/logo_agora.png"
+              src="../assets/images/logo_agora.png"
               alt="Logo Ágora"
               class="h-40 w-auto mb-2 drop-shadow-sm brightness-200"
             />
@@ -184,7 +177,7 @@
           <div class="relative hidden lg:flex items-center justify-center h-[500px]">
             <div class="relative z-10">
               <img
-                src="../../assets/images/hero_agora_network.png"
+                src="../assets/images/hero_agora_network.png"
                 alt="Red Docente Conectada"
                 class="w-full max-w-md object-contain drop-shadow-2xl animate-pulse-slow grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition duration-700"
               />
@@ -200,7 +193,6 @@
         </div>
       </section>
 
-      <!-- 4. EL KERNEL PEDAGÓGICO -->
       <section id="nucleo" class="py-24 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
           <div class="text-center mb-16">
@@ -215,7 +207,6 @@
           </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Nodo A -->
             <div
               class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-agoraLime transition group text-center card-hover"
             >
@@ -227,7 +218,6 @@
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Modelos globales</h3>
               <p class="text-sm text-gray-500">Tendencias educativas internacionales comparadas.</p>
             </div>
-            <!-- Nodo B -->
             <div
               class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-agoraLime transition group text-center card-hover"
             >
@@ -239,7 +229,6 @@
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Neurociencia</h3>
               <p class="text-sm text-gray-500">Cómo aprende el cerebro en la era digital.</p>
             </div>
-            <!-- Nodo C -->
             <div
               class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-agoraLime transition group text-center card-hover"
             >
@@ -251,7 +240,6 @@
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Metodologías ágiles</h3>
               <p class="text-sm text-gray-500">ABP, Flipped Classroom y Design Thinking.</p>
             </div>
-            <!-- Nodo D -->
             <div
               class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-agoraLime transition group text-center card-hover"
             >
@@ -267,7 +255,6 @@
         </div>
       </section>
 
-      <!-- SECCIÓN: HERICRAFT TOOLS (AI & Mapa Neuronal) -->
       <section class="py-24 px-6 bg-navy text-white relative overflow-hidden">
         <div class="absolute inset-0 opacity-20 pointer-events-none">
           <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -564,7 +551,6 @@
         </div>
       </section>
 
-      <!-- 5. LAS 5 GALAXIAS (ESPECIALIDADES) -->
       <section id="oferta" class="py-24 px-6 bg-oxfordGray relative overflow-hidden">
         <div
           class="absolute inset-0 opacity-10"
@@ -590,7 +576,6 @@
           </div>
 
           <div class="grid md:grid-cols-2 gap-8">
-            <!-- Galaxia A: Pedagogía & Neurociencia -->
             <div
               class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-pink-500 transition group relative overflow-hidden"
             >
@@ -638,7 +623,6 @@
               </a>
             </div>
 
-            <!-- Galaxia B: Gestión & Liderazgo -->
             <div
               class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-purple-500 transition group relative overflow-hidden"
             >
@@ -686,7 +670,6 @@
               </a>
             </div>
 
-            <!-- Galaxia C: Tech & IA Educativa -->
             <div
               class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-cyanBright transition group relative overflow-hidden"
             >
@@ -734,7 +717,6 @@
               </a>
             </div>
 
-            <!-- Galaxia D: Espacio & Entorno -->
             <div
               class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-collegeOrange transition group relative overflow-hidden"
             >
@@ -783,7 +765,6 @@
             </div>
           </div>
 
-          <!-- Galaxia Central: Sociedad & Futuro (Destacada) -->
           <div
             class="mt-8 bg-gradient-to-r from-agoraDark to-gray-800 rounded-2xl p-8 shadow-xl border border-gray-700 hover:border-agoraLime transition group relative overflow-hidden"
           >
@@ -824,7 +805,6 @@
         </div>
       </section>
 
-      <!-- 6. CREDENCIALES INTELIGENTES (BLOCKCHAIN & BADGES) -->
       <section class="py-24 px-6 bg-white relative overflow-hidden">
         <div class="max-w-6xl mx-auto">
           <div class="text-center mb-16">
@@ -843,7 +823,6 @@
           </div>
 
           <div class="grid md:grid-cols-2 gap-12 items-center">
-            <!-- Tarjeta Blockchain -->
             <div
               class="relative bg-gray-50 border border-gray-200 rounded-3xl p-8 hover:shadow-xl transition group overflow-hidden"
             >
@@ -872,7 +851,6 @@
               </div>
             </div>
 
-            <!-- Tarjeta Red Conocer -->
             <div
               class="relative bg-gray-50 border border-gray-200 rounded-3xl p-8 hover:shadow-xl transition group overflow-hidden"
             >
@@ -898,7 +876,7 @@
                   title="Liderazgo 5.0"
                 >
                   <img
-                    src="../../assets/images/badge_liderazgo.png"
+                    src="../assets/images/badge_liderazgo.png"
                     alt="Badge Liderazgo"
                     class="w-full h-full object-contain"
                   />
@@ -909,7 +887,7 @@
                   title="Neurodidáctica"
                 >
                   <img
-                    src="../../assets/images/badge_neuro.png"
+                    src="../assets/images/badge_neuro.png"
                     alt="Badge Neurodidáctica"
                     class="w-full h-full object-contain"
                   />
@@ -920,7 +898,7 @@
                   title="Gestión Ágil"
                 >
                   <img
-                    src="../../assets/images/badge_gestion.png"
+                    src="../assets/images/badge_gestion.png"
                     alt="Badge Gestión"
                     class="w-full h-full object-contain"
                   />
@@ -931,7 +909,6 @@
         </div>
       </section>
 
-      <!-- 7. CONEXIÓN A METANOIA -->
       <section class="relative py-24 px-6 bg-agoraDark text-white overflow-hidden">
         <div
           class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent opacity-10"
@@ -965,12 +942,12 @@
               class="relative bg-gray-900 rounded-3xl p-1 border border-gray-700 hover:border-pink-500 transition overflow-hidden"
             >
               <img
-                src="../../assets/images/isologo_metanoia.png"
+                src="../assets/images/isologo_metanoia.png"
                 alt="Metanoia Logo"
                 class="h-16 w-auto absolute top-6 left-6 z-20 drop-shadow-md"
               />
               <img
-                src="../../assets/images/hero_metanoia.jpg"
+                src="../assets/images//hero_metanoia.jpg"
                 alt="Familia Metanoia"
                 class="w-full h-64 object-cover rounded-2xl opacity-60 group-hover:opacity-80 transition duration-500"
               />
@@ -986,40 +963,39 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-slate-950 py-12 text-center text-gray-500 text-sm">
       <div class="flex justify-center gap-6 mb-8">
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/facebook.png"
+            src="../assets/images/facebook.png"
             alt="Facebook"
             class="w-full h-full object-contain social-btn-img"
           />
         </a>
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/instagram.png"
+            src="../assets/images/instagram.png"
             alt="Instagram"
             class="w-full h-full object-contain social-btn-img"
           />
         </a>
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/linkedin.png"
+            src="../assets/images/linkedin.png"
             alt="LinkedIn"
             class="w-full h-full object-contain social-btn-img"
           />
         </a>
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/spotify.png"
+            src="../assets/images/spotify.png"
             alt="Spotify"
             class="w-full h-full object-contain social-btn-img"
           />
         </a>
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/youtube.png"
+            src="../assets/images/youtube.png"
             alt="Youtube"
             class="w-full h-full object-contain social-btn-img"
           />
@@ -1036,12 +1012,10 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-// Estados de accesibilidad
 const highContrast = ref(false)
 const largeText = ref(false)
 const reduceMotion = ref(false)
 
-// Funciones de accesibilidad
 const toggleContrast = () => {
   highContrast.value = !highContrast.value
   document.body.classList.toggle('high-contrast')
@@ -1072,7 +1046,6 @@ const goToMetanoia = () => {
 </script>
 
 <style scoped>
-/* Estilos Personalizados Ágora */
 .bg-dark-nav {
   background-color: #2f302d;
 }
@@ -1139,7 +1112,6 @@ const goToMetanoia = () => {
   font-family: 'Reddit Sans', sans-serif;
 }
 
-/* Animaciones */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1186,7 +1158,6 @@ const goToMetanoia = () => {
   animation: spin-slow 8s linear infinite;
 }
 
-/* Configuración 3D */
 .perspective-1000 {
   perspective: 1000px;
 }
@@ -1204,7 +1175,6 @@ const goToMetanoia = () => {
   transform: rotateY(180deg);
 }
 
-/* Clases de accesibilidad */
 :global(.high-contrast) {
   filter: contrast(150%);
 }

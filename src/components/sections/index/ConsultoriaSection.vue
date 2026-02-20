@@ -1,18 +1,15 @@
 <template>
-  <!-- SERVICIOS CONSULTORÍA (MEJORADA) -->
   <section
     id="servicios"
     class="py-24 px-6 bg-white relative overflow-hidden"
     aria-labelledby="servicios-title"
   >
-    <!-- Elementos decorativos de fondo -->
     <div class="absolute inset-0 opacity-30 pointer-events-none">
       <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
       <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
     </div>
 
     <div class="max-w-7xl mx-auto relative z-10">
-      <!-- Encabezado mejorado -->
       <div class="text-center mb-16">
         <div
           class="inline-flex items-center gap-2 bg-navy/5 text-navy border border-navy/10 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-4"
@@ -37,7 +34,6 @@
         </p>
       </div>
 
-      <!-- Grid de servicios mejorado -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <ServiceCard
           v-for="service in services"
@@ -47,7 +43,6 @@
         />
       </div>
 
-      <!-- Call to action adicional -->
       <div class="text-center mt-16">
         <p class="text-gray-500 mb-6">¿Necesitas una solución personalizada?</p>
         <a
@@ -66,14 +61,12 @@
 import { ref, inject } from 'vue'
 import ServiceCard from '@/components/ui/ServiceCard.vue'
 
-// Inyectar preferencia de movimiento
 const reduceMotion = inject('reduceMotion', ref(false))
 
-// Datos de servicios con nombres de imágenes
 const services = [
   {
     id: 'diagnostico',
-    icon: 'diagnostic.svg', // Imagen en ../../assets/images/icon-diagnostico.svg
+    icon: 'diagnostic.svg',
     iconColor: 'text-blue-600',
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-100',
@@ -84,7 +77,7 @@ const services = [
   },
   {
     id: 'rvoe',
-    icon: 'rvoe.svg', // Imagen en ../../assets/images/icon-rvoe.svg
+    icon: 'rvoe.svg',
     iconColor: 'text-purple-600',
     bgColor: 'bg-purple-50',
     borderColor: 'border-purple-100',
@@ -96,7 +89,7 @@ const services = [
   },
   {
     id: 'edu-domain',
-    icon: 'extension.svg', // Imagen en ../../assets/images/icon-edu.svg
+    icon: 'extension.svg',
     iconColor: 'text-collegeOrange',
     bgColor: 'bg-orange-50',
     borderColor: 'border-orange-100',
@@ -107,7 +100,7 @@ const services = [
   },
   {
     id: 'ciberseguridad',
-    icon: 'cibersecurity.svg', // Imagen en ../../assets/images/icon-ciberseguridad.svg
+    icon: 'cibersecurity.svg',
     iconColor: 'text-red-600',
     bgColor: 'bg-red-50',
     borderColor: 'border-red-100',
@@ -118,7 +111,7 @@ const services = [
   },
   {
     id: 'arquitectura',
-    icon: 'design-solutions.svg', // Imagen en ../../assets/images/icon-arquitectura.svg
+    icon: 'design-solutions.svg',
     iconColor: 'text-teal-600',
     bgColor: 'bg-teal-50',
     borderColor: 'border-teal-100',
@@ -130,7 +123,7 @@ const services = [
   },
   {
     id: 'capacitacion',
-    icon: 'workshop.svg', // Imagen en ../../assets/images/icon-capacitacion.svg
+    icon: 'workshop.svg',
     iconColor: 'text-navy',
     bgColor: 'bg-gray-50',
     borderColor: 'border-gray-200',

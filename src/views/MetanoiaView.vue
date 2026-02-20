@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- 1. BARRA DE ACCESIBILIDAD -->
     <div
       class="fixed top-0 w-full bg-dark-nav text-white z-[70] h-10 flex justify-between items-center px-4 text-[10px] sm:text-xs font-bold border-b border-gray-800"
     >
@@ -48,7 +47,7 @@
         <!-- Logo -->
         <a href="/" class="flex-shrink-0 cursor-pointer hover:opacity-80 transition">
           <img
-            src="../../assets/images/logo_hericraft.png"
+            src="../assets/images/logos/logo_hericraft.png"
             alt="Hericraft Logo"
             class="h-10 w-auto"
           />
@@ -128,7 +127,6 @@
     </nav>
 
     <main class="animate-fade-in pt-28">
-      <!-- 3. HERO: EL CORAZÓN DE LA FAMILIA -->
       <section
         class="relative bg-gradient-to-b from-white to-metanoiaLight pt-20 pb-32 px-6 overflow-hidden"
       >
@@ -149,7 +147,7 @@
             </div>
 
             <img
-              src="../../assets/images/logo_metanoia.png"
+              src="../assets/images/logo_metanoia.png"
               alt="Logo Metanoia"
               class="h-28 w-auto mb-2 drop-shadow-sm"
             />
@@ -190,7 +188,7 @@
               class="absolute inset-0 bg-gradient-to-tr from-metanoiaPink to-purple-500 rounded-[3rem] opacity-20 rotate-3 scale-95 transition-transform group-hover:rotate-1"
             ></div>
             <img
-              src="../../assets/images/hero_metanoia_family.jpg"
+              src="../assets/images/hero_metanoia_family.jpg"
               alt="Familia Conectada y Feliz"
               class="relative rounded-[3rem] shadow-2xl border-4 border-white w-full object-cover transform transition duration-500 group-hover:-translate-y-2 h-[500px]"
             />
@@ -210,7 +208,7 @@
         </div>
       </section>
 
-      <!-- 4. LOS 4 PILARES DEL SER -->
+      <!-- PILARES DEL SER -->
       <section id="pilares" class="py-24 px-6 bg-white relative">
         <div class="max-w-6xl mx-auto">
           <div class="text-center mb-20">
@@ -295,7 +293,7 @@
         </div>
       </section>
 
-      <!-- 5. ESCUELA PARA PADRES & HIJOS -->
+      <!-- ESCUELA PARA PADRES & HIJOS -->
       <section id="programas" class="py-24 px-6 bg-navy text-white relative overflow-hidden">
         <div
           class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"
@@ -333,7 +331,7 @@
               </div>
               <div class="flex items-start gap-6">
                 <img
-                  src="../../assets/images/icon_padres.png"
+                  src="../assets/images/icon_padres.png"
                   alt="Padres"
                   class="w-20 h-20 object-contain p-2 bg-white/5 rounded-2xl"
                 />
@@ -368,7 +366,7 @@
               </div>
               <div class="flex items-start gap-6">
                 <img
-                  src="../../assets/images/icon_hijos.png"
+                  src="../assets/images/icon_hijos.png"
                   alt="Hijos"
                   class="w-20 h-20 object-contain p-2 bg-white/5 rounded-2xl"
                 />
@@ -395,7 +393,7 @@
         </div>
       </section>
 
-      <!-- 6. METODOLOGÍA PRAXIS TRAMA EN CASA -->
+      <!-- METODOLOGÍA PRAXIS TRAMA EN CASA -->
       <section class="py-24 px-6 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto relative z-10">
           <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -475,7 +473,7 @@
         </div>
       </section>
 
-      <!-- 7. LA TRÍADA EDUCATIVA -->
+      <!-- TRÍADA EDUCATIVA -->
       <section class="py-24 px-6 bg-metanoiaLight relative overflow-hidden">
         <div
           class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-30"
@@ -538,7 +536,7 @@
         </div>
       </section>
 
-      <!-- 8. CTA -->
+      <!-- CTA -->
       <section class="py-24 px-6 bg-white text-center">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-4xl font-metanoia font-black text-navy mb-8">
@@ -560,35 +558,35 @@
       <div class="flex justify-center gap-6 mb-8">
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/facebook.png"
+            src="../assets/images/facebook.png"
             alt="Facebook"
             class="w-full h-full object-contain social-btn-img"
           />
         </a>
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/instagram.png"
+            src="../assets/images/instagram.png"
             alt="Instagram"
             class="w-full h-full object-contain social-btn-img"
           />
         </a>
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/linkedin.png"
+            src="../assets/images/linkedin.png"
             alt="LinkedIn"
             class="w-full h-full object-contain social-btn-img"
           />
         </a>
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/spotify.png"
+            src="../assets/images/spotify.png"
             alt="Spotify"
             class="w-full h-full object-contain social-btn-img"
           />
         </a>
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/youtube.png"
+            src="../assets/images/youtube.png"
             alt="Youtube"
             class="w-full h-full object-contain social-btn-img"
           />
@@ -602,12 +600,10 @@
 <script setup>
 import { ref } from 'vue'
 
-// Estados de accesibilidad
 const highContrast = ref(false)
 const largeText = ref(false)
 const reduceMotion = ref(false)
 
-// Funciones de accesibilidad
 const toggleContrast = () => {
   highContrast.value = !highContrast.value
   document.body.classList.toggle('high-contrast')
@@ -634,7 +630,6 @@ const toggleMobileMenu = () => {
 </script>
 
 <style scoped>
-/* Estilos Personalizados Metanoia */
 .bg-dark-nav {
   background-color: #0a0e17;
 }
@@ -702,7 +697,6 @@ const toggleMobileMenu = () => {
   font-family: 'Reddit Sans', sans-serif;
 }
 
-/* Animaciones */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -750,7 +744,6 @@ const toggleMobileMenu = () => {
   animation: pulse-slow 4s infinite;
 }
 
-/* Clases de accesibilidad */
 :global(.high-contrast) {
   filter: contrast(150%);
 }

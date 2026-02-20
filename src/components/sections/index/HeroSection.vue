@@ -10,7 +10,6 @@
         class="relative bg-hero-space text-white pt-20 pb-32 px-6 overflow-hidden clip-diagonal"
         aria-labelledby="hero-title"
       >
-        <!-- Skip to content link (accesibilidad) -->
         <a
           href="#main-content"
           class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-bright text-black p-4 z-50 rounded"
@@ -19,7 +18,6 @@
         </a>
 
         <div class="max-w-7xl mx-auto relative z-10 text-center">
-          <!-- Badge mejorado -->
           <div
             class="inline-flex items-center gap-2 border border-cyan-bright/50 bg-cyan-bright/10 text-cyan-bright text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-8"
             :class="{ 'animate-fade-in': !reduceMotion }"
@@ -33,8 +31,6 @@
             ></span>
             Arquitectura Educativa 5.0
           </div>
-
-          <!-- Título con mejor semántica -->
           <h1
             id="hero-title"
             class="text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight"
@@ -45,8 +41,6 @@
               Innovación Educativa
             </span>
           </h1>
-
-          <!-- Descripción -->
           <p
             class="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
             :class="{ 'animate-fade-in': !reduceMotion }"
@@ -54,15 +48,12 @@
             Conectamos Alumnos, Docentes, Familias y Empresas a través de una matriz central que
             impulsa cuatro ecosistemas especializados.
           </p>
-
-          <!-- DIAGRAMA INTERACTIVO MEJORADO -->
           <div
             class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             :class="{ 'animate-fade-in': !reduceMotion }"
             role="group"
             aria-label="Ecosistemas educativos"
           >
-            <!-- College -->
             <EcosystemCard
               v-for="ecosystem in ecosystems"
               :key="ecosystem.id"

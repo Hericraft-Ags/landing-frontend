@@ -1,13 +1,9 @@
 <template>
-  <!-- ========================================= -->
-  <!-- SECCIÓN: CALL TO ACTION (MEJORADA) -->
-  <!-- ========================================= -->
   <section
     id="contacto"
     class="relative bg-navy py-24 px-6 text-white text-center overflow-hidden"
     aria-labelledby="cta-title"
   >
-    <!-- Elementos decorativos de fondo -->
     <div class="absolute inset-0 pointer-events-none">
       <!-- Círculos decorativos -->
       <div
@@ -17,7 +13,7 @@
         class="absolute bottom-0 right-0 w-96 h-96 bg-collegeOrange/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"
       ></div>
 
-      <!-- Patrón de grid sutil -->
+      <!-- Patrón grid -->
       <div
         class="absolute inset-0 opacity-10"
         style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png')"
@@ -25,7 +21,6 @@
     </div>
 
     <div class="max-w-4xl mx-auto relative z-10">
-      <!-- Badge opcional -->
       <div
         class="inline-flex items-center gap-2 bg-white/10 text-cyan-bright border border-cyan-bright/30 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6"
       >
@@ -33,7 +28,6 @@
         <span>Comienza tu transformación</span>
       </div>
 
-      <!-- Título principal -->
       <h2
         id="cta-title"
         class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight"
@@ -41,15 +35,13 @@
         ¿Listo para evolucionar?
       </h2>
 
-      <!-- Descripción (opcional) -->
       <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
         Descubre cómo nuestras soluciones educativas 5.0 pueden transformar tu institución. Agenda
         una consultoría gratuita.
       </p>
 
-      <!-- Botones de acción mejorados -->
       <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-        <!-- Botón 1: Agendar Reunión -->
+        <!-- Botón: Agendar Reunión -->
         <a
           :href="calendarLink"
           target="_blank"
@@ -68,7 +60,7 @@
           </span>
         </a>
 
-        <!-- Botón 2: Enviar Correo -->
+        <!-- Botón: Enviar Correo -->
         <a
           :href="emailLink"
           class="group relative px-8 py-4 rounded-full font-bold overflow-hidden transition-all duration-300 border-2 border-white/20 hover:border-cyan-bright/50 hover:shadow-xl hover:shadow-white/10 transform hover:-translate-y-1"
@@ -83,7 +75,6 @@
         </a>
       </div>
 
-      <!-- Información adicional (opcional) -->
       <div class="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
         <span class="flex items-center gap-2">
           <i class="fas fa-clock text-cyan-bright"></i>
@@ -105,7 +96,6 @@
 <script setup>
 import { computed } from 'vue'
 
-// Props (si necesitas personalizar desde el componente padre)
 const props = defineProps({
   calendarUrl: {
     type: String,
@@ -117,13 +107,11 @@ const props = defineProps({
   },
 })
 
-// Links computados (por si necesitas lógica adicional)
 const calendarLink = computed(() => props.calendarUrl)
 const emailLink = computed(() => `mailto:${props.emailAddress}`)
 </script>
 
 <style scoped>
-/* Colores personalizados */
 .bg-navy {
   background-color: #0a1931;
 }
@@ -140,7 +128,6 @@ const emailLink = computed(() => `mailto:${props.emailAddress}`)
   --tw-gradient-to: #ff6b35;
 }
 
-/* Animaciones adicionales */
 @keyframes pulse-slow {
   0%,
   100% {
@@ -151,7 +138,6 @@ const emailLink = computed(() => `mailto:${props.emailAddress}`)
   }
 }
 
-/* Mejoras de accesibilidad */
 @media (prefers-reduced-motion: reduce) {
   .group,
   .group *,
@@ -163,7 +149,6 @@ const emailLink = computed(() => `mailto:${props.emailAddress}`)
   }
 }
 
-/* Responsive */
 @media (max-width: 640px) {
   .group {
     width: 100%;

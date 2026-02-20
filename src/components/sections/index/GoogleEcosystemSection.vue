@@ -5,18 +5,15 @@
     aria-labelledby="google-title"
   >
     <div class="max-w-6xl mx-auto">
-      <!-- Barra de colores de Google con mejor semántica -->
       <div
         class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#4285F4] via-[#34A853] via-[#FBBC05] to-[#EA4335]"
         role="presentation"
         aria-hidden="true"
       ></div>
 
-      <!-- Card principal -->
       <div
         class="bg-white rounded-[2rem] shadow-xl border border-gray-100 overflow-hidden flex flex-col lg:flex-row"
       >
-        <!-- Columna de texto -->
         <div class="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
           <h3 id="google-title" class="text-3xl md:text-4xl font-display font-bold text-navy mb-6">
             Google Workspace for Education
@@ -28,7 +25,6 @@
             docente.
           </p>
 
-          <!-- Grid de características -->
           <div class="grid grid-cols-2 gap-4" role="list">
             <div
               v-for="feature in features"

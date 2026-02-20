@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- BARRA ACCESIBILIDAD -->
     <div
       class="fixed top-0 w-full bg-black text-white z-[70] h-10 flex justify-between items-center px-4 text-[10px] sm:text-xs font-bold border-b border-white/10"
     >
@@ -21,14 +20,13 @@
       </div>
     </div>
 
-    <!-- NAVBAR -->
     <nav
       class="fixed top-10 w-full bg-navy/95 backdrop-blur-md border-b border-white/10 z-50 h-20 transition-all shadow-lg"
     >
       <div class="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
         <a href="/">
           <img
-            src="../../assets/images/logo_hericraft.png"
+            src="../assets/images/logos/logo_hericraft.png"
             alt="Hericraft Logo"
             class="h-10 w-auto filter brightness-125"
           />
@@ -75,7 +73,6 @@
     </nav>
 
     <main class="animate-fade-in pt-28">
-      <!-- 1. HERO PROCESSUS -->
       <section
         class="relative bg-processus-gradient pt-20 pb-32 px-6 overflow-hidden min-h-[80vh] flex items-center"
       >
@@ -87,7 +84,7 @@
         <div class="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-16 items-center">
           <div class="space-y-8">
             <img
-              src="../../assets/images/logo_processus.png"
+              src="../assets/images/logo_processus.png"
               alt="Logo Processus"
               class="h-24 w-auto -ml-4 mb-4"
             />
@@ -156,7 +153,7 @@
         </div>
       </section>
 
-      <!-- 2. SOLUCIONES CORPORATIVAS -->
+      <!-- SOLUCIONES CORPORATIVAS -->
       <section class="py-24 px-6 bg-slate-900 relative">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-20">
@@ -247,7 +244,7 @@
         </div>
       </section>
 
-      <!-- 3. METODOLOGÍA PROCESSUS -->
+      <!-- METODOLOGÍA PROCESSUS -->
       <section class="py-24 px-6 bg-navy relative overflow-hidden">
         <div class="max-w-5xl mx-auto relative z-10">
           <div class="grid md:grid-cols-2 gap-16 items-center">
@@ -312,7 +309,7 @@
         </div>
       </section>
 
-      <!-- 4. CTA -->
+      <!-- CTA -->
       <section
         id="contacto"
         class="py-24 px-6 bg-gradient-to-b from-slate-900 to-black text-center"
@@ -339,40 +336,39 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-slate-950 py-12 text-center text-gray-500 text-sm">
       <div class="flex justify-center gap-6 mb-8">
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/facebook.png"
+            src="../assets/images/facebook.png"
             alt="Facebook"
             class="w-full h-full object-contain social-btn-img"
           />
         </a>
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/instagram.png"
+            src="../assets/images/instagram.png"
             alt="Instagram"
             class="w-full h-full object-contain social-btn-img"
           />
         </a>
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/linkedin.png"
+            src="../assets/images/linkedin.png"
             alt="LinkedIn"
             class="w-full h-full object-contain social-btn-img"
           />
         </a>
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/spotify.png"
+            src="../assets/images/spotify.png"
             alt="Spotify"
             class="w-full h-full object-contain social-btn-img"
           />
         </a>
         <a href="#" target="_blank" class="block w-10 h-10">
           <img
-            src="../../assets/images/youtube.png"
+            src="../assets/images/youtube.png"
             alt="Youtube"
             class="w-full h-full object-contain social-btn-img"
           />
@@ -386,11 +382,9 @@
 <script setup>
 import { ref } from 'vue'
 
-// Estados de accesibilidad
 const highContrast = ref(false)
 const largeText = ref(false)
 
-// Funciones de accesibilidad
 const toggleContrast = () => {
   highContrast.value = !highContrast.value
   document.body.classList.toggle('high-contrast')
@@ -412,13 +406,11 @@ const toggleMobileMenu = () => {
 </script>
 
 <style scoped>
-/* Estilos Processus */
 .font-brand-processus {
   font-family: 'Reddit Sans', sans-serif;
   letter-spacing: -0.01em;
 }
 
-/* Colores */
 .bg-navy {
   background-color: #0a2966;
 }
@@ -489,7 +481,6 @@ const toggleMobileMenu = () => {
   opacity: 0.9;
 }
 
-/* Animaciones */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -519,7 +510,6 @@ const toggleMobileMenu = () => {
   animation: pulse-slow 3s infinite;
 }
 
-/* Clases de accesibilidad */
 :global(.high-contrast) {
   filter: contrast(150%);
 }
