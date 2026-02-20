@@ -1,86 +1,170 @@
 <template>
-<!-- ========================================= -->
-<!-- NUEVA SECCIÓN: BANCO DE SABERES -->
-<!-- ========================================= -->
-        <section id="saberes" class="py-24 px-6 bg-slate-50 border-t border-slate-200">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-                    <div>
-                        <span class="text-collegeOrange font-bold uppercase tracking-widest text-sm mb-2 block">Knowledge Hub</span>
-                        <h2 class="text-3xl md:text-4xl font-display font-bold text-navy">Banco de Saberes</h2>
-                        <p class="text-gray-500 mt-2 max-w-2xl">Recursos curados para potenciar tu desarrollo: Blogs, Podcasts, Revistas Digitales y más.</p>
-                    </div>
-                    <a href="" class="text-navy font-bold hover:text-collegeOrange transition group flex items-center gap-2">
-                        Explorar biblioteca <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
-                    </a>
-                </div>
+  <!-- ========================================= -->
+  <!-- SECCIÓN: BANCO DE SABERES (MEJORADA) -->
+  <!-- ========================================= -->
+  <section
+    id="saberes"
+    class="py-24 px-6 bg-slate-50 border-t border-slate-200 relative overflow-hidden"
+    aria-labelledby="saberes-title"
+  >
+    <!-- Elementos decorativos de fondo -->
+    <div class="absolute inset-0 pointer-events-none opacity-20">
+      <div class="absolute top-0 left-0 w-64 h-64 bg-collegeOrange/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+    </div>
 
-                <!-- Grid de Contenido -->
-                <div class="grid md:grid-cols-3 gap-8">
-                    
-                    <!-- Card 1: Podcast -->
-                    <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover-effect flex flex-col h-full">
-                        <div class="relative h-48 overflow-hidden bg-gray-200">
-                            <!-- Etiqueta Tipo -->
-                            <div class="absolute top-4 left-4 bg-purple-600 text-white text-[10px] font-bold px-3 py-1 rounded-full z-10 uppercase tracking-wide">
-                                <i class="fas fa-microphone mr-1"></i> Podcast
-                            </div>
-                            <!-- Placeholder Imagen -->
-                            <img src="https://placehold.co/400x250/purple/white?text=Podcast+Hericraft" alt="Podcast" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="font-bold text-xl text-navy mb-3">El Futuro de la IA en el Aula</h3>
-                            <p class="text-gray-500 text-sm mb-4 line-clamp-3 flex-grow">
-                                Descubre cómo la inteligencia artificial está redefiniendo el rol del docente en este episodio especial con expertos de Google.
-                            </p>
-                            <div class="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center">
-                                <span class="text-xs text-gray-400"><i class="far fa-clock"></i> 25 min</span>
-                                <button class="text-purple-600 hover:text-purple-800"><i class="fas fa-play-circle text-2xl"></i></button>
-                            </div>
-                        </div>
-                    </article>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <!-- Encabezado mejorado -->
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div class="space-y-4">
+          <!-- Badge -->
+          <div
+            class="inline-flex items-center gap-2 bg-collegeOrange/10 text-collegeOrange border border-collegeOrange/20 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest"
+          >
+            <i class="fas fa-database"></i>
+            <span>Knowledge Hub</span>
+          </div>
 
-                    <!-- Card 2: Blog/Manual -->
-                    <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover-effect flex flex-col h-full">
-                        <div class="relative h-48 overflow-hidden bg-gray-200">
-                            <div class="absolute top-4 left-4 bg-blue-500 text-white text-[10px] font-bold px-3 py-1 rounded-full z-10 uppercase tracking-wide">
-                                <i class="fas fa-book mr-1"></i> Manual
-                            </div>
-                            <img src="https://placehold.co/400x250/2563eb/white?text=Manual+Google" alt="Manual" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="font-bold text-xl text-navy mb-3">Guía Práctica: Aulas Híbridas</h3>
-                            <p class="text-gray-500 text-sm mb-4 line-clamp-3 flex-grow">
-                                Manual paso a paso para configurar espacios de aprendizaje mixtos utilizando herramientas de Google Workspace for Education.
-                            </p>
-                            <div class="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center">
-                                <span class="text-xs text-gray-400"><i class="far fa-file-pdf"></i> PDF Descargable</span>
-                                <a href="#" class="text-blue-500 font-bold text-sm hover:underline">Descargar</a>
-                            </div>
-                        </div>
-                    </article>
+          <!-- Título -->
+          <h2
+            id="saberes-title"
+            class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-navy"
+          >
+            Banco de
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-collegeOrange to-purple-600"
+              >Saberes</span
+            >
+          </h2>
 
-                    <!-- Card 3: Revista Digital -->
-                    <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover-effect flex flex-col h-full">
-                        <div class="relative h-48 overflow-hidden bg-gray-200">
-                            <div class="absolute top-4 left-4 bg-collegeOrange text-white text-[10px] font-bold px-3 py-1 rounded-full z-10 uppercase tracking-wide">
-                                <i class="fas fa-newspaper mr-1"></i> Revista
-                            </div>
-                            <img src="https://placehold.co/400x250/ea580c/white?text=Revista+Edu+5.0" alt="Revista" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="font-bold text-xl text-navy mb-3">Hericraft Monthly: Edición Abril</h3>
-                            <p class="text-gray-500 text-sm mb-4 line-clamp-3 flex-grow">
-                                Entrevistas exclusivas, casos de éxito en Colegios y las últimas tendencias en infraestructura educativa.
-                            </p>
-                            <div class="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center">
-                                <span class="text-xs text-gray-400"><i class="far fa-eye"></i> Leer Online</span>
-                                <a href="#" class="text-collegeOrange font-bold text-sm hover:underline">Leer Ahora</a>
-                            </div>
-                        </div>
-                    </article>
+          <!-- Descripción -->
+          <p class="text-gray-500 max-w-2xl text-lg leading-relaxed">
+            Recursos curados para potenciar tu desarrollo: Blogs, Podcasts, Revistas Digitales y
+            más.
+          </p>
+        </div>
 
-                </div>
-            </div>
-        </section>
+        <!-- Enlace a biblioteca mejorado -->
+        <a
+          href="#"
+          class="group relative px-6 py-3 rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-collegeOrange/20"
+        >
+          <span
+            class="absolute inset-0 bg-gradient-to-r from-collegeOrange to-purple-600 transition-transform duration-300 group-hover:scale-105"
+          ></span>
+          <span
+            class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"
+          ></span>
+          <span class="relative flex items-center gap-2 text-white font-bold text-sm">
+            Explorar biblioteca completa
+            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+          </span>
+        </a>
+      </div>
+
+      <!-- Grid de Contenido -->
+      <div class="grid md:grid-cols-3 gap-8">
+        <KnowledgeCard
+          v-for="item in knowledgeItems"
+          :key="item.id"
+          :item="item"
+          :reduce-motion="reduceMotion"
+          @action-click="handleItemAction"
+        />
+      </div>
+
+      <!-- Sección de estadísticas (opcional) 
+      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-gray-200">
+        <div v-for="stat in stats" :key="stat.label" class="text-center">
+          <div class="text-2xl md:text-3xl font-bold text-navy mb-1">{{ stat.value }}</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider">{{ stat.label }}</div>
+        </div>
+      </div>-->
+    </div>
+  </section>
 </template>
+
+<script setup>
+import { ref, inject } from 'vue'
+import KnowledgeCard from '@/components/ui/KnowledgeCard.vue'
+
+// Inyectar preferencia de movimiento
+const reduceMotion = inject('reduceMotion', ref(false))
+
+// Datos de los items del banco de saberes
+const knowledgeItems = [
+  {
+    id: 'podcast-ia',
+    type: 'podcast',
+    typeLabel: 'Podcast',
+    typeColor: 'purple',
+    typeIcon: 'fas fa-microphone',
+    title: 'El Futuro de la IA en el Aula',
+    description:
+      'Descubre cómo la inteligencia artificial está redefiniendo el rol del docente en este episodio especial con expertos de Google.',
+    image: 'podcast.svg',
+    imageAlt: 'Podcast sobre IA en educación',
+    metadata: '25 min',
+    metadataIcon: 'far fa-clock',
+    actionLabel: 'Escuchar',
+    actionIcon: 'fas fa-play-circle',
+  },
+  {
+    id: 'manual-hibridas',
+    type: 'manual',
+    typeLabel: 'Manual',
+    typeColor: 'blue',
+    typeIcon: 'fas fa-book',
+    title: 'Guía Práctica: Aulas Híbridas',
+    description:
+      'Manual paso a paso para configurar espacios de aprendizaje mixtos utilizando herramientas de Google Workspace for Education.',
+    image: 'manuales.svg',
+    imageAlt: 'Manual de aulas híbridas',
+    metadata: 'PDF Descargable',
+    metadataIcon: 'far fa-file-pdf',
+    actionLabel: 'Descargar',
+    actionIcon: 'fas fa-download',
+  },
+  {
+    id: 'revista-abril',
+    type: 'revista',
+    typeLabel: 'Revista',
+    typeColor: 'orange',
+    typeIcon: 'fas fa-newspaper',
+    title: 'Hericraft Monthly: Edición Abril',
+    description:
+      'Entrevistas exclusivas, casos de éxito en Colegios y las últimas tendencias en infraestructura educativa.',
+    image: 'revistas.svg',
+    imageAlt: 'Revista educativa mensual',
+    metadata: 'Leer Online',
+    metadataIcon: 'far fa-eye',
+    actionLabel: 'Leer Ahora',
+    actionIcon: 'fas fa-arrow-right',
+  },
+]
+
+// Estadísticas
+const stats = [
+  { value: '50+', label: 'Podcasts' },
+  { value: '120+', label: 'Manuales' },
+  { value: '24', label: 'Revistas' },
+  { value: '15k', label: 'Descargas' },
+]
+
+// Manejador de acciones
+const handleItemAction = item => {
+  console.log('Acción en item:', item.title)
+  // Aquí iría la lógica según el tipo de item
+  switch (item.type) {
+    case 'podcast':
+      // Reproducir podcast
+      break
+    case 'manual':
+      // Descargar PDF
+      break
+    case 'revista':
+      // Abrir revista online
+      break
+  }
+}
+</script>
