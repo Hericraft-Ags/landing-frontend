@@ -8,7 +8,7 @@
                     <div>
                         <span class="text-cyan-bright font-bold uppercase tracking-widest text-sm mb-2 block">Knowledge Hub</span>
                         <h2 class="text-3xl md:text-4xl font-display font-bold text-navy">Banco de Saberes</h2>
-                        <p class="text-gray-500 mt-2 max-w-2xl">Recursos curados para potenciar tu desarrollo: Blogs, Podcasts, Revistas Digitales y más.</p>
+                        <p class="text-gray-500 mt-2 max-w-2xl">Recursos curados para potenciar tu desarrollo: Blogs, Podcasts, Revistas&nbsp;Digitales&nbsp;y&nbsp;más.</p>
                     </div>
                     <a href="" class="text-navy font-bold hover:text-collegeOrange transition group flex items-center gap-2">
                         Explorar biblioteca <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
