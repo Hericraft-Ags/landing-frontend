@@ -13,38 +13,64 @@
   --color-white: #ffffff;
 }
 
+* {
+  font-family: 'Montserrat';
+}
+
 /* Ajustes imágenes de botones */
 .social-btn-img {
-    transition: transform 0.3s ease, opacity 0.3s;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s;
 }
 .social-btn-img:hover {
-    transform: scale(1.1);
-    opacity: 0.9;
+  transform: scale(1.1);
+  opacity: 0.9;
 }
 
 /* Hover Cards Ecosistemas */
 .card-hover-effect {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .card-hover-effect:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-5px);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 /* Colores Base */
-.text-collegeOrange { color: #FF6B00; }
-.text-teal { color: #0dbcc9; }
-.text-accentPink { color: #E91E63; }
-.text-navy { color: #171c24; }
-.bg-navy { background-color: #171b21; }
-.text-cyan-bright { color: #08be66; }
-.bg-cyan-bright { background-color: #08be66; }
-.bg-dark-nav { background-color: #111319; }
+.text-collegeOrange {
+  color: #ff6b00;
+}
+.text-teal {
+  color: #0dbcc9;
+}
+.text-accentPink {
+  color: #e91e63;
+}
+.text-navy {
+  color: #171c24;
+}
+.bg-navy {
+  background-color: #171b21;
+}
+.text-cyan-bright {
+  color: #08be66;
+}
+.bg-cyan-bright {
+  background-color: #08be66;
+}
+.bg-dark-nav {
+  background-color: #111319;
+}
 
 /* Fondo de sección Hero */
 .bg-hero-space {
-    background-image: linear-gradient(to bottom, rgba(23, 25, 28, 0.385), rgba(28, 28, 60, 0.385)), url('./assets/images/fondo_espacio.png'); /* Asegúrate de tener esta imagen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image:
+    linear-gradient(to bottom, rgba(23, 25, 28, 0.385), rgba(28, 28, 60, 0.385)),
+    url('./assets/images/fondo_espacio.png'); /* Asegúrate de tener esta imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

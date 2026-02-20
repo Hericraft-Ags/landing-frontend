@@ -24,7 +24,11 @@ const routes = [
       {
         path: 'nosotros',
         component: NosotrosView,
-        meta: { themeColor: '#7c3aed' },
+        meta: {
+          themeColor: '#111319',
+          accessibilityColor: '#08BE66',
+          colorTextAccessibility: '#fff',
+        },
       },
     ],
   },

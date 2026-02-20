@@ -400,8 +400,7 @@
       <div
         class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-navy via-cyanBright to-collegeOrange"
       ></div>
-      <div class="max-w-7xl mx-auto px-6 py-16">
-      </div>
+      <div class="max-w-7xl mx-auto px-6 py-16"></div>
     </footer>
   </div>
 </template>

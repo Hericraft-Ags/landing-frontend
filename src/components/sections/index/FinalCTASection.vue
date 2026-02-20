@@ -5,15 +5,12 @@
     aria-labelledby="cta-title"
   >
     <div class="absolute inset-0 pointer-events-none">
-      <!-- Círculos decorativos -->
       <div
         class="absolute top-0 left-0 w-96 h-96 bg-cyan-bright/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"
       ></div>
       <div
         class="absolute bottom-0 right-0 w-96 h-96 bg-collegeOrange/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"
       ></div>
-
-      <!-- Patrón grid -->
       <div
         class="absolute inset-0 opacity-10"
         style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png')"
@@ -41,34 +38,33 @@
       </p>
 
       <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-        <!-- Botón: Agendar Reunión -->
         <a
           :href="calendarLink"
           target="_blank"
           rel="noopener noreferrer"
-          class="group relative px-8 py-4 rounded-full font-bold overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-cyan-bright/20 transform hover:-translate-y-1"
+          class="group relative px-8 py-4 rounded-full font-bold overflow-hidden transition-all duration-300 border-2 border-blue-500 hover:border-cyan-bright hover:shadow-lg hover:shadow-blue-500/30 text-center"
         >
           <span
-            class="absolute inset-0 bg-gradient-to-r from-cyan-bright to-blue-500 transition-transform duration-300 group-hover:scale-105"
+            class="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-bright opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           ></span>
           <span
-            class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"
-          ></span>
-          <span class="relative flex items-center gap-2 text-white">
+            class="relative flex items-center justify-center gap-2 text-blue-500 group-hover:text-white transition-colors duration-300"
+          >
             <i class="fas fa-calendar-check group-hover:scale-110 transition-transform"></i>
             Agendar Reunión
           </span>
         </a>
 
-        <!-- Botón: Enviar Correo -->
         <a
           :href="emailLink"
-          class="group relative px-8 py-4 rounded-full font-bold overflow-hidden transition-all duration-300 border-2 border-white/20 hover:border-cyan-bright/50 hover:shadow-xl hover:shadow-white/10 transform hover:-translate-y-1"
+          class="group relative px-8 py-4 rounded-full font-bold overflow-hidden transition-all duration-300 border-2 border-blue-500 hover:border-cyan-bright hover:shadow-lg hover:shadow-blue-500/30 text-center"
         >
           <span
-            class="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+            class="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-bright opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           ></span>
-          <span class="relative flex items-center gap-2 text-white">
+          <span
+            class="relative flex items-center justify-center gap-2 text-blue-500 group-hover:text-white transition-colors duration-300"
+          >
             <i class="fas fa-envelope group-hover:scale-110 transition-transform"></i>
             Enviar Correo
           </span>
@@ -120,12 +116,36 @@ const emailLink = computed(() => `mailto:${props.emailAddress}`)
   color: #06b6d4;
 }
 
-.from-cyan-bright {
-  --tw-gradient-from: #06b6d4;
+.border-blue-500 {
+  border-color: #3b82f6;
 }
 
-.to-collegeOrange {
-  --tw-gradient-to: #ff6b35;
+.text-blue-500 {
+  color: #3b82f6;
+}
+
+.from-blue-500 {
+  --tw-gradient-from: #3b82f6;
+}
+
+.to-cyan-bright {
+  --tw-gradient-to: #06b6d4;
+}
+
+.hover\:border-cyan-bright:hover {
+  border-color: #06b6d4;
+}
+
+.hover\:shadow-blue-500\/30:hover {
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+}
+
+.group {
+  transition: all 0.3s ease;
+}
+
+.group:hover .group-hover\:scale-110 {
+  transform: scale(1.1);
 }
 
 @keyframes pulse-slow {

@@ -13,7 +13,7 @@
       <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
         <div class="space-y-4">
           <div
-            class="inline-flex items-center gap-2 bg-collegeOrange/10 text-collegeOrange border border-collegeOrange/20 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest"
+            class="inline-flex items-center gap-2 text-green-600 border border-green-200 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest"
           >
             <i class="fas fa-database"></i>
             <span>Knowledge Hub</span>
@@ -23,14 +23,10 @@
             id="saberes-title"
             class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-navy"
           >
-            Banco de
-            <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-collegeOrange to-purple-600"
-              >Saberes</span
-            >
+            Banco de Saberes
           </h2>
 
-          <p class="text-gray-500 max-w-2xl text-lg leading-relaxed">
+          <p class="text-gray-500 text-lg leading-relaxed">
             Recursos curados para potenciar tu desarrollo: Blogs, Podcasts, Revistas Digitales y
             más.
           </p>
@@ -94,7 +90,7 @@ const knowledgeItems = [
     imageAlt: 'Podcast sobre IA en educación',
     metadata: '25 min',
     metadataIcon: 'far fa-clock',
-    actionLabel: 'Escuchar',
+    actionLabel: 'Reproducir',
     actionIcon: 'fas fa-play-circle',
   },
   {

@@ -7,7 +7,7 @@
       aria-label="Hericraft Design"
     >
       <i class="fas fa-cubes text-sm" aria-hidden="true"></i>
-      <span>Hericraft Design</span>
+      <span>Hericraft Studio</span>
     </div>
 
     <!-- Título -->
@@ -25,10 +25,8 @@
       cotización instantánea y un plano en PDF.
     </p>
 
-    <!-- Lista de características -->
     <AmbientesFeatureList :features="features" />
 
-    <!-- Botones de acción -->
     <AmbientesActions :reduce-motion="reduceMotion" @start-design="$emit('start-design')" />
   </div>
 </template>

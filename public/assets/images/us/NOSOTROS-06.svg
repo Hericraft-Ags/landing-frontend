@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        mask: url(#mask);
+      }
+
+      .cls-2 {
+        filter: url(#luminosity-noclip);
+      }
+
+      .cls-3 {
+        filter: url(#luminosity-noclip-3);
+      }
+
+      .cls-4 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7 {
+        mix-blend-mode: multiply;
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-9 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-10 {
+        isolation: isolate;
+      }
+
+      .cls-11 {
+        mask: url(#mask-2);
+      }
+
+      .cls-12 {
+        mask: url(#mask-3);
+      }
+
+      .cls-13 {
+        mask: url(#mask-1);
+      }
+
+      .cls-14 {
+        fill: url(#Degradado_sin_nombre_103);
+      }
+
+      .cls-5 {
+        fill: url(#radial-gradient-3);
+      }
+
+      .cls-6 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-7 {
+        fill: url(#radial-gradient-4);
+      }
+    </style>
+    <filter id="luminosity-noclip" x="49.4" y="45.53" width="413.67" height="413.67" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <filter id="luminosity-noclip-2" x="49.4" y="-8752" width="413.67" height="32766" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <mask id="mask-1" x="49.4" y="-8752" width="413.67" height="32766" maskUnits="userSpaceOnUse"/>
+    <radialGradient id="radial-gradient" cx="3557.49" cy="-230.87" fx="3557.49" fy="-230.87" r="359.57" gradientTransform="translate(-2032.79 414.87) scale(.65)" gradientUnits="userSpaceOnUse">
+      <stop offset=".88" stop-color="#000"/>
+      <stop offset=".9" stop-color="#2e2e2e"/>
+      <stop offset=".97" stop-color="#c3c3c3"/>
+      <stop offset="1" stop-color="#fff"/>
+    </radialGradient>
+    <mask id="mask" x="49.4" y="45.53" width="413.67" height="413.67" maskUnits="userSpaceOnUse">
+      <g class="cls-2">
+        <g class="cls-13">
+          <path class="cls-4" d="M256.23,45.53c-114.23,0-206.83,92.6-206.83,206.84s92.6,206.84,206.83,206.84,206.84-92.61,206.84-206.84S370.47,45.53,256.23,45.53h0Z"/>
+        </g>
+      </g>
+    </mask>
+    <radialGradient id="radial-gradient-2" cx="1328.85" cy="165.61" fx="1328.85" fy="165.61" r="273.77" gradientTransform="translate(-860.13 124.72) scale(.85)" gradientUnits="userSpaceOnUse">
+      <stop offset=".88" stop-color="#fff"/>
+      <stop offset=".9" stop-color="#d2d8db"/>
+      <stop offset=".97" stop-color="#3d5564"/>
+      <stop offset="1" stop-color="#022135"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient" x1="111.6" y1="93.82" x2="385.08" y2="421.31" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#312a30"/>
+      <stop offset="1" stop-color="#756a74"/>
+    </linearGradient>
+    <radialGradient id="Degradado_sin_nombre_103" data-name="Degradado sin nombre 103" cx="1191.7" cy="39.34" fx="1191.7" fy="39.34" r="383.53" gradientTransform="translate(-860.13 124.72) scale(.85)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#27e2f8"/>
+      <stop offset=".19" stop-color="#2ae4f2"/>
+      <stop offset=".43" stop-color="#35ebe2"/>
+      <stop offset=".68" stop-color="#47f6ca"/>
+      <stop offset=".77" stop-color="#43eec2"/>
+      <stop offset=".9" stop-color="#39daad"/>
+      <stop offset="1" stop-color="#30c89a"/>
+    </radialGradient>
+    <filter id="luminosity-noclip-3" x="41.45" y="45.53" width="413.68" height="413.67" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <filter id="luminosity-noclip-4" x="41.45" y="-8752" width="413.68" height="32766" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <mask id="mask-3" x="41.45" y="-8752" width="413.68" height="32766" maskUnits="userSpaceOnUse"/>
+    <radialGradient id="radial-gradient-3" cx="3525.08" cy="-255.02" fx="3525.08" fy="-255.02" r="313.88" gradientTransform="translate(-2032.79 414.87) scale(.65)" gradientUnits="userSpaceOnUse">
+      <stop offset=".84" stop-color="#000"/>
+      <stop offset=".85" stop-color="#121212"/>
+      <stop offset=".89" stop-color="#414141"/>
+      <stop offset=".93" stop-color="#8d8d8d"/>
+      <stop offset=".99" stop-color="#f4f4f4"/>
+      <stop offset="1" stop-color="#fff"/>
+    </radialGradient>
+    <mask id="mask-2" x="41.45" y="45.53" width="413.68" height="413.67" maskUnits="userSpaceOnUse">
+      <g class="cls-3">
+        <g class="cls-12">
+          <path class="cls-5" d="M248.29,45.53c-114.23,0-206.84,92.6-206.84,206.84s92.61,206.84,206.84,206.84,206.84-92.61,206.84-206.84S362.52,45.53,248.29,45.53h0Z"/>
+        </g>
+      </g>
+    </mask>
+    <radialGradient id="radial-gradient-4" cx="1304.18" cy="147.22" fx="1304.18" fy="147.22" r="238.98" gradientTransform="translate(-860.13 124.72) scale(.85)" gradientUnits="userSpaceOnUse">
+      <stop offset=".84" stop-color="#fff"/>
+      <stop offset=".85" stop-color="#ecf2f4"/>
+      <stop offset=".89" stop-color="#bdd0d9"/>
+      <stop offset=".94" stop-color="#719aae"/>
+      <stop offset="1" stop-color="#0a5074"/>
+      <stop offset="1" stop-color="#074e72"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient-2" x1="103.27" y1="78.62" x2="393.41" y2="426.08" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a0a0a0"/>
+      <stop offset="1" stop-color="#fbfbfb"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-10">
+    <g id="Capa_1" data-name="Capa 1">
+      <g>
+        <g class="cls-1">
+          <path class="cls-6" d="M256.23,45.53c-114.23,0-206.83,92.6-206.83,206.84s92.6,206.84,206.83,206.84,206.84-92.61,206.84-206.84S370.47,45.53,256.23,45.53h0Z"/>
+        </g>
+        <path class="cls-9" d="M248.33,44.24c-117.8,0-213.32,95.5-213.32,213.32s95.52,213.33,213.32,213.33,213.35-95.51,213.35-213.33S366.15,44.24,248.33,44.24h0Z"/>
+        <path class="cls-14" d="M248.33,44.24c-117.8,0-213.32,95.5-213.32,213.32s95.52,213.33,213.32,213.33,213.35-95.51,213.35-213.33S366.15,44.24,248.33,44.24h0Z"/>
+        <g class="cls-11">
+          <path class="cls-7" d="M248.29,45.53c-114.23,0-206.84,92.6-206.84,206.84s92.61,206.84,206.84,206.84,206.84-92.61,206.84-206.84S362.52,45.53,248.29,45.53h0Z"/>
+        </g>
+        <path class="cls-8" d="M248.33,49.87c111.66,0,202.5,90.83,202.5,202.48s-90.84,202.49-202.5,202.49S45.84,364,45.84,252.34,136.68,49.87,248.33,49.87M248.33,26.03C123.35,26.03,22,127.35,22,252.34s101.35,226.33,226.33,226.33,226.35-101.32,226.35-226.33S373.33,26.03,248.33,26.03h0Z"/>
+      </g>
+      <g>
+        <path d="M289.72,299.11c.56-2.63,9.12-6.74,11.77-8.64,82.49-59.46,22.51-186.21-74.57-161.16-70.19,18.12-89.81,109.16-34.67,156.05,2.74,2.33,17.81,11.69,18.27,12.7,2.3,5.1-1.89,9.82-7.41,8.11-12.32-3.79-32.17-25.36-38.97-36.34-52.59-84.91,37.23-186.97,128.18-145.78,75.14,34.03,79.48,139.23,8.66,180.13l.03,47.74c.42,1.73-2.55,5.26-3.89,5.26h-77.79l6.77,16.94,48.37-.02c1.12-.27,1.5-8.06,8.74-5.12,6.19,2.51,1.09,15.26-3.14,16.21l-57.61.18c-2.56.08-4.15-.89-5.39-3.06-3.82-6.68-5.66-17.33-9.35-24.44-1.27-1.48-6.81.39-7.95-4.72-.81-3.62-.74-26.75-.11-30.78.25-1.58,2.36-4.62,3.83-4.62h86.23c.78-5.36-1.05-13.7,0-18.65ZM289.72,329.02h-78.84v16.89h78.84v-16.89Z"/>
+        <path d="M270.14,262.99c-2.29,6.54-.12,20.23-8.9,21.02-4.4.4-20.05.66-23.82-.18-6.53-1.46-4.31-17.2-7.85-21.01-.4-.43-9.31-5.51-9.88-5.52-5.19-.08-15.59,7.89-20.75,4.47-3.48-2.31-10.25-18.46-13.26-22.65-1.62-8.23,13.27-11.66,13.97-18.79.2-1.99.25-8.67-.41-10.24-1.82-4.31-15.7-9.54-13.57-16.39l12.2-21.61c5.45-5.71,15.93,3.51,21.81,3.42,3.2-.05,6.08-5.67,11.89-4.83,4.39.63,5.72,6.35,2.57,9.52-.54.55-10.46,7.05-11.11,7.2-4.99,1.13-12.95-3.84-18.08-4.69l-6.69,10.94c-.24,1.63,12.63,9.3,13.29,14.02.32,2.33-.68,4.11-.71,6.25-.13,9.59,3.35,10.29-4.19,17.64-2.26,2.2-5.84,5.17-8.45,6.7l6.32,11.65c1.65,1.04,15.24-6.19,18.49-4.46,2.7,3.56,15.11,7.52,16.74,10.01,1.94,2.96,2.88,16.64,3.5,17.27h14.07c.62-4.43,1.17-9.85,2.46-14.08,1.91-6.29,4.56-4.8,9.28-7.61,2.29-1.36,7-5.42,9.09-5.73,3.92-.57,17.05,5.38,17.81,4.85l6.36-10.97c.25-1.69-12.64-9.39-13.29-14.02-.32-2.33.68-4.11.71-6.25.13-9.59-3.35-10.29,4.19-17.64,2.26-2.2,5.84-5.17,8.45-6.7l-6.42-11.89c-.73-.52-13.75,5.22-17.16,4.93-2.54-.22-5.81-3.7-8.32-5.1-2.39-1.33-5.83-2.27-7.77-3.49-3.93-2.48-4.52-14.31-5.38-18.91-.73-.75-17.45.95-20.93-.54-4.49-1.92-3.88-9.49,1.03-10.58,3.77-.84,19.42-.58,23.82-.18,9.17.83,5.93,14.19,9.13,20.43.26.5,8.86,5.89,9.48,6.07,3.03.84,13.47-4.64,17.44-5.21,4.26-.61,5.07,1.65,7.07,4.57,1.7,2.49,10.15,17.01,10.55,19.04,1.56,7.9-12.95,12.36-13.92,17.45-.33,1.7-.25,10.16.35,11.59.81,1.93,9.55,7.89,11.63,10.19,3.38,3.74,2.25,5.52.33,9.54-1.78,3.74-8.2,15.49-10.59,18.27-4.91,5.7-16.21-3.52-21.82-3.43-2.35.04-7.68,5.39-10.76,5.7Z"/>
+        <path d="M247.33,194.07c30.39-3.58,34.19,41.44,6.06,44.77-30.19,3.58-34.97-41.37-6.06-44.77ZM248,205.3c-13.56,2.2-11.25,24.75,4.59,22.18,13.56-2.2,11.25-24.75-4.59-22.18Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

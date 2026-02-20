@@ -34,6 +34,12 @@ const toggleMobileMenu = () => {
       <!-- Menú Escritorio -->
       <div class="hidden lg:flex space-x-1 items-center text-white">
         <RouterLink
+          to="/"
+          class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide rounded-full hover:bg-white/10"
+        >
+          Inicio
+        </RouterLink>
+        <RouterLink
           to="/nosotros"
           class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide rounded-full hover:bg-white/10"
         >
