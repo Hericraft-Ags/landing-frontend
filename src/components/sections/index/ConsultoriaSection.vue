@@ -22,10 +22,7 @@
           id="servicios-title"
           class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-navy mb-4"
         >
-          Consultoría
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
-            >especializada</span
-          >
+          Consultoría especializada
         </h2>
 
         <p class="text-gray-500 max-w-2xl mx-auto text-lg">

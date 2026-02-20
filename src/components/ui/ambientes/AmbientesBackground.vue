@@ -9,9 +9,7 @@
   </div>
 </template>
 
-<script setup>
-// Sin lógica adicional
-</script>
+<script setup></script>
 
 <style scoped>
 .from-cyan-bright\/5 {
