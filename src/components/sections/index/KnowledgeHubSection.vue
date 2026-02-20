@@ -26,7 +26,7 @@
                                 <i class="fas fa-microphone mr-1"></i> Podcast
                             </div>
                             <!-- Placeholder Imagen -->
-                            <img src="https://placehold.co/400x250/purple/white?text=Podcast+Hericraft" alt="Podcast" class="w-full h-full object-cover">
+                            <img src="../../../assets/images/INDEX-16.png" alt="Podcast" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="font-bold text-xl text-navy mb-3">El Futuro de la IA en el Aula</h3>
@@ -35,7 +35,7 @@
                             </p>
                             <div class="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center">
                                 <span class="text-xs text-gray-400"><i class="far fa-clock"></i> 25 min</span>
-                                <button class="text-purple-600 hover:text-purple-800"><i class="fas fa-play-circle text-2xl"></i></button>
+                                <a href="#" class="text-purple-500 font-bold text-sm hover:underline" alt="Reproducir">Reproducir</a>
                             </div>
                         </div>
                     </article>
@@ -46,7 +46,7 @@
                             <div class="absolute top-4 left-4 bg-blue-500 text-white text-[10px] font-bold px-3 py-1 rounded-full z-10 uppercase tracking-wide">
                                 <i class="fas fa-book mr-1"></i> Manual
                             </div>
-                            <img src="https://placehold.co/400x250/2563eb/white?text=Manual+Google" alt="Manual" class="w-full h-full object-cover">
+                            <img src="../../../assets/images/INDEX-17.png" alt="Manual" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="font-bold text-xl text-navy mb-3">Guía Práctica: Aulas Híbridas</h3>
@@ -55,7 +55,7 @@
                             </p>
                             <div class="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center">
                                 <span class="text-xs text-gray-400"><i class="far fa-file-pdf"></i> PDF Descargable</span>
-                                <a href="#" class="text-blue-500 font-bold text-sm hover:underline">Descargar</a>
+                                <a href="#" class="text-blue-500 font-bold text-sm hover:underline" alt="Descargar">Descargar</a>
                             </div>
                         </div>
                     </article>
@@ -63,10 +63,10 @@
                     <!-- Card 3: Revista Digital -->
                     <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover-effect flex flex-col h-full">
                         <div class="relative h-48 overflow-hidden bg-gray-200">
-                            <div class="absolute top-4 left-4 bg-collegeOrange text-white text-[10px] font-bold px-3 py-1 rounded-full z-10 uppercase tracking-wide">
-                                <i class="fas fa-newspaper mr-1"></i> Revista
+                            <div class="absolute top-4 left-4 bg-orange-500 text-white text-[10px] font-bold px-3 py-1 rounded-full z-10 uppercase tracking-wide">
+                                <i class="fas fa-book mr-1"></i> Revista
                             </div>
-                            <img src="https://placehold.co/400x250/ea580c/white?text=Revista+Edu+5.0" alt="Revista" class="w-full h-full object-cover">
+                            <img src="../../../assets/images/INDEX-18.png" alt="Revista" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="font-bold text-xl text-navy mb-3">Hericraft Monthly: Edición Abril</h3>
@@ -75,7 +75,7 @@
                             </p>
                             <div class="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center">
                                 <span class="text-xs text-gray-400"><i class="far fa-eye"></i> Leer Online</span>
-                                <a href="#" class="text-collegeOrange font-bold text-sm hover:underline">Leer Ahora</a>
+                                <a href="#" class="text-collegeOrange font-bold text-sm hover:underline" alt="Leer ahora">Leer Ahora</a>
                             </div>
                         </div>
                     </article>
