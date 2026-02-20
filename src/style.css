@@ -62,3 +62,13 @@ body.loading { overflow: hidden; }
 .studio-logo{
     padding: 10% 20% 20% 20%;
 }
+
+.aa-button{
+    border: 2px solid turquoise;
+}
+
+.aa-button:hover{
+    border: 2px solid var(--color-accent);
+    background: #ffffff20;
+    transition: 700ms;
+}
