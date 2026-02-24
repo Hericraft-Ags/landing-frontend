@@ -123,7 +123,7 @@
 
     <main class="animate-fade-in pt-28">
       <section
-        class="relative bg-gradient-to-b from-agoraDark to-oxfordGray pt-20 pb-28 px-6 overflow-hidden text-white"
+        class="relative agora-bg pt-20 pb-28 px-6 overflow-hidden text-white"
       >
         <div class="absolute inset-0 hero-pattern pointer-events-none"></div>
         <div
@@ -179,12 +179,9 @@
               <img
                 src="../assets/images/hero_agora_network.png"
                 alt="Red Docente Conectada"
-                class="w-full max-w-md object-contain drop-shadow-2xl animate-pulse-slow grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition duration-700"
+                class="w-full max-w-md object-contain drop-shadow-2xl opacity-90 hover:opacity-100 transition duration-700"
               />
             </div>
-            <div
-              class="absolute border border-agoraLime/20 rounded-full w-[400px] h-[400px] animate-spin-slow"
-            ></div>
             <div
               class="absolute border border-white/5 rounded-full w-[600px] h-[600px] animate-spin-slow"
               style="animation-direction: reverse"
@@ -213,7 +210,11 @@
               <div
                 class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center text-oxfordGray mb-6 text-3xl group-hover:bg-agoraLime group-hover:text-white transition transform group-hover:rotate-6"
               >
-                <i class="fas fa-globe-americas"></i>
+                <img
+                    src="../assets/images/AGORA-03.png"
+                    alt="Icono modelos globales"
+                    class="w-full h-full object-contain"
+                  />
               </div>
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Modelos globales</h3>
               <p class="text-sm text-gray-500">Tendencias educativas internacionales comparadas.</p>
@@ -224,7 +225,11 @@
               <div
                 class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center text-oxfordGray mb-6 text-3xl group-hover:bg-agoraLime group-hover:text-white transition transform group-hover:rotate-6"
               >
-                <i class="fas fa-brain"></i>
+                <img
+                    src="../assets/images/AGORA-04.png"
+                    alt="Icono neurociencia"
+                    class="w-full h-full object-contain"
+                  />
               </div>
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Neurociencia</h3>
               <p class="text-sm text-gray-500">Cómo aprende el cerebro en la era digital.</p>
@@ -235,7 +240,11 @@
               <div
                 class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center text-oxfordGray mb-6 text-3xl group-hover:bg-agoraLime group-hover:text-white transition transform group-hover:rotate-6"
               >
-                <i class="fas fa-tools"></i>
+                <img
+                    src="../assets/images/AGORA-05.png"
+                    alt="Icono metodologías ágiles"
+                    class="w-full h-full object-contain"
+                  />
               </div>
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Metodologías ágiles</h3>
               <p class="text-sm text-gray-500">ABP, Flipped Classroom y Design Thinking.</p>
@@ -246,7 +255,11 @@
               <div
                 class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center text-oxfordGray mb-6 text-3xl group-hover:bg-agoraLime group-hover:text-white transition transform group-hover:rotate-6"
               >
-                <i class="fas fa-pencil-ruler"></i>
+                <img
+                    src="../assets/images/AGORA-06.png"
+                    alt="Icono diseño curricular"
+                    class="w-full h-full object-contain"
+                  />
               </div>
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Diseño curricular</h3>
               <p class="text-sm text-gray-500">Planeación estratégica y evaluación formativa.</p>
@@ -593,8 +606,12 @@
                     >El Software Humano</span
                   >
                 </div>
-                <div class="bg-pink-500/20 p-3 rounded-xl">
-                  <i class="fas fa-brain text-pink-500 text-2xl"></i>
+                <div class="rounded-xl">
+                  <img
+                    src="../assets/images/AGORA-15.png"
+                    alt="Icono diseño curricular"
+                    class="w-20 h-20 object-contain"
+                  />
                 </div>
               </div>
 
@@ -640,8 +657,12 @@
                     >El Hardware Operativo</span
                   >
                 </div>
-                <div class="bg-purple-500/20 p-3 rounded-xl">
-                  <i class="fas fa-gavel text-purple-500 text-2xl"></i>
+                <div class="rounded-xl">
+                  <img
+                    src="../assets/images/AGORA-16.png"
+                    alt="Icono diseño curricular"
+                    class="w-20 h-20 object-contain"
+                  />
                 </div>
               </div>
 
@@ -671,7 +692,7 @@
             </div>
 
             <div
-              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-cyanBright transition group relative overflow-hidden"
+              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-cyan-400 transition group relative overflow-hidden"
             >
               <div
                 class="absolute top-0 right-0 w-24 h-24 bg-cyanBright/10 rounded-full blur-2xl -mr-8 -mt-8"
@@ -679,7 +700,7 @@
               <div class="flex items-start justify-between mb-6">
                 <div>
                   <h3
-                    class="text-2xl font-agora font-bold text-white group-hover:text-cyanBright transition"
+                    class="text-2xl font-agora font-bold text-white group-hover:text-cyan-400 transition"
                   >
                     Tech & IA Educativa
                   </h3>
@@ -687,8 +708,12 @@
                     >El Sistema Operativo</span
                   >
                 </div>
-                <div class="bg-cyanBright/20 p-3 rounded-xl">
-                  <i class="fas fa-robot text-cyanBright text-2xl"></i>
+                <div class="bg-cyanBright/20 rounded-xl">
+                  <img
+                    src="../assets/images/AGORA-17.png"
+                    alt="Icono diseño curricular"
+                    class="w-20 h-20 object-contain"
+                  />
                 </div>
               </div>
 
@@ -711,14 +736,14 @@
 
               <a
                 href="#"
-                class="inline-flex items-center text-xs font-bold text-cyanBright hover:text-white transition uppercase tracking-wide border-b border-cyanBright/30 pb-1 hover:border-white"
+                class="inline-flex items-center text-xs font-bold text-blue-500 hover:text-white transition uppercase tracking-wide border-b border-blue-500/30 pb-1 hover:border-white"
               >
                 Explorar Cursos <i class="fas fa-arrow-right ml-2"></i>
               </a>
             </div>
 
             <div
-              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-collegeOrange transition group relative overflow-hidden"
+              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-orange-500 transition group relative overflow-hidden"
             >
               <div
                 class="absolute top-0 right-0 w-24 h-24 bg-collegeOrange/10 rounded-full blur-2xl -mr-8 -mt-8"
@@ -726,7 +751,7 @@
               <div class="flex items-start justify-between mb-6">
                 <div>
                   <h3
-                    class="text-2xl font-agora font-bold text-white group-hover:text-collegeOrange transition"
+                    class="text-2xl font-agora font-bold text-white group-hover:text-orange-500 transition"
                   >
                     Espacio & Entorno
                   </h3>
@@ -734,8 +759,12 @@
                     >El Hardware Físico</span
                   >
                 </div>
-                <div class="bg-collegeOrange/20 p-3 rounded-xl">
-                  <i class="fas fa-cubes text-collegeOrange text-2xl"></i>
+                <div class="bg-collegeOrange/20 rounded-xl">
+                  <img
+                    src="../assets/images/AGORA-18.png"
+                    alt="Icono diseño curricular"
+                    class="w-20 h-20 object-contain"
+                  />
                 </div>
               </div>
 
@@ -758,7 +787,7 @@
 
               <a
                 href="#"
-                class="inline-flex items-center text-xs font-bold text-collegeOrange hover:text-white transition uppercase tracking-wide border-b border-collegeOrange/30 pb-1 hover:border-white"
+                class="inline-flex items-center text-xs font-bold text-orange-500 hover:text-white transition uppercase tracking-wide border-b border-orange-500/30 pb-1 hover:border-white"
               >
                 Explorar Cursos <i class="fas fa-arrow-right ml-2"></i>
               </a>
@@ -942,12 +971,12 @@
               class="relative bg-gray-900 rounded-3xl p-1 border border-gray-700 hover:border-pink-500 transition overflow-hidden"
             >
               <img
-                src="../assets/images/isologo_metanoia.png"
+                src="../assets/images/AGORA-25.png"
                 alt="Metanoia Logo"
                 class="h-16 w-auto absolute top-6 left-6 z-20 drop-shadow-md"
               />
               <img
-                src="../assets/images//hero_metanoia.jpg"
+                src="../assets/images/hero_metanoia.jpg"
                 alt="Familia Metanoia"
                 class="w-full h-64 object-cover rounded-2xl opacity-60 group-hover:opacity-80 transition duration-500"
               />
