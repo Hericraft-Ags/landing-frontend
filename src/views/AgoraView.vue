@@ -590,7 +590,7 @@
 
           <div class="grid md:grid-cols-2 gap-8">
             <div
-              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-pink-500 transition group relative overflow-hidden"
+              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-green-700 transition group relative overflow-hidden"
             >
               <div
                 class="absolute top-0 right-0 w-24 h-24 bg-pink-500/10 rounded-full blur-2xl -mr-8 -mt-8"
@@ -598,11 +598,11 @@
               <div class="flex items-start justify-between mb-6">
                 <div>
                   <h3
-                    class="text-2xl font-agora font-bold text-white group-hover:text-pink-500 transition"
+                    class="text-2xl font-agora font-bold text-white group-hover:text-green-700 transition"
                   >
                     Pedagogía & Neurociencia
                   </h3>
-                  <span class="text-xs font-bold text-pink-400 uppercase tracking-wide mt-1 block"
+                  <span class="text-xs font-bold text-green-500 uppercase tracking-wide mt-1 block"
                     >El Software Humano</span
                   >
                 </div>
@@ -634,26 +634,26 @@
 
               <a
                 href="#"
-                class="inline-flex items-center text-xs font-bold text-pink-500 hover:text-white transition uppercase tracking-wide border-b border-pink-500/30 pb-1 hover:border-white"
+                class="inline-flex items-center text-xs font-bold text-green-700 hover:text-white transition uppercase tracking-wide border-b border-green-700/30 pb-1 hover:border-white"
               >
                 Explorar Cursos <i class="fas fa-arrow-right ml-2"></i>
               </a>
             </div>
 
             <div
-              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-purple-500 transition group relative overflow-hidden"
+              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-lime-500 transition group relative overflow-hidden"
             >
               <div
-                class="absolute top-0 right-0 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl -mr-8 -mt-8"
+                class="absolute top-0 right-0 w-24 h-24 bg-lime-500/10 rounded-full blur-2xl -mr-8 -mt-8"
               ></div>
               <div class="flex items-start justify-between mb-6">
                 <div>
                   <h3
-                    class="text-2xl font-agora font-bold text-white group-hover:text-purple-500 transition"
+                    class="text-2xl font-agora font-bold text-white group-hover:text-lime-700 transition"
                   >
                     Gestión & Liderazgo
                   </h3>
-                  <span class="text-xs font-bold text-purple-400 uppercase tracking-wide mt-1 block"
+                  <span class="text-xs font-bold text-lime-500 uppercase tracking-wide mt-1 block"
                     >El Hardware Operativo</span
                   >
                 </div>
@@ -685,14 +685,14 @@
 
               <a
                 href="#"
-                class="inline-flex items-center text-xs font-bold text-purple-500 hover:text-white transition uppercase tracking-wide border-b border-purple-500/30 pb-1 hover:border-white"
+                class="inline-flex items-center text-xs font-bold text-lime-700 hover:text-white transition uppercase tracking-wide border-b border-lime-700/30 pb-1 hover:border-white"
               >
                 Explorar Cursos <i class="fas fa-arrow-right ml-2"></i>
               </a>
             </div>
 
             <div
-              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-cyan-400 transition group relative overflow-hidden"
+              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-blue-100 transition group relative overflow-hidden"
             >
               <div
                 class="absolute top-0 right-0 w-24 h-24 bg-cyanBright/10 rounded-full blur-2xl -mr-8 -mt-8"
@@ -700,11 +700,11 @@
               <div class="flex items-start justify-between mb-6">
                 <div>
                   <h3
-                    class="text-2xl font-agora font-bold text-white group-hover:text-cyan-400 transition"
+                    class="text-2xl font-agora font-bold text-white group-hover:text-blue-100 transition"
                   >
                     Tech & IA Educativa
                   </h3>
-                  <span class="text-xs font-bold text-cyan-400 uppercase tracking-wide mt-1 block"
+                  <span class="text-xs font-bold text-blue-100 uppercase tracking-wide mt-1 block"
                     >El Sistema Operativo</span
                   >
                 </div>
@@ -712,7 +712,7 @@
                   <img
                     src="../assets/images/AGORA-17.png"
                     alt="Icono diseño curricular"
-                    class="w-20 h-20 object-contain"
+                    class="w-20 h-20 object-contain brightness-200"
                   />
                 </div>
               </div>
@@ -736,14 +736,14 @@
 
               <a
                 href="#"
-                class="inline-flex items-center text-xs font-bold text-blue-500 hover:text-white transition uppercase tracking-wide border-b border-blue-500/30 pb-1 hover:border-white"
+                class="inline-flex items-center text-xs font-bold text-blue-100 hover:text-white transition uppercase tracking-wide border-b border-blue-100/30 pb-1 hover:border-white"
               >
                 Explorar Cursos <i class="fas fa-arrow-right ml-2"></i>
               </a>
             </div>
 
             <div
-              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-orange-500 transition group relative overflow-hidden"
+              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-yellow-300 transition group relative overflow-hidden"
             >
               <div
                 class="absolute top-0 right-0 w-24 h-24 bg-collegeOrange/10 rounded-full blur-2xl -mr-8 -mt-8"
@@ -751,11 +751,11 @@
               <div class="flex items-start justify-between mb-6">
                 <div>
                   <h3
-                    class="text-2xl font-agora font-bold text-white group-hover:text-orange-500 transition"
+                    class="text-2xl font-agora font-bold text-white group-hover:text-yellow-500 transition"
                   >
                     Espacio & Entorno
                   </h3>
-                  <span class="text-xs font-bold text-orange-400 uppercase tracking-wide mt-1 block"
+                  <span class="text-xs font-bold text-yellow-300 uppercase tracking-wide mt-1 block"
                     >El Hardware Físico</span
                   >
                 </div>
@@ -787,7 +787,7 @@
 
               <a
                 href="#"
-                class="inline-flex items-center text-xs font-bold text-orange-500 hover:text-white transition uppercase tracking-wide border-b border-orange-500/30 pb-1 hover:border-white"
+                class="inline-flex items-center text-xs font-bold text-yellow-500 hover:text-white transition uppercase tracking-wide border-b border-yellow-500/30 pb-1 hover:border-white"
               >
                 Explorar Cursos <i class="fas fa-arrow-right ml-2"></i>
               </a>
@@ -825,7 +825,7 @@
               </div>
               <a
                 href="#"
-                class="bg-agoraLime text-navy px-6 py-3 rounded-full font-bold text-sm hover:bg-white transition shadow-lg shrink-0"
+                class="bg-agoraLime text-agoraDark px-8 py-4 rounded-full font-bold hover:bg-white transition shadow-lg hover:shadow-lime-500/30 transform hover:-translate-y-1 flex items-center gap-2"
               >
                 Ver Programas Éticos
               </a>
