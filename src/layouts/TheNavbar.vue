@@ -108,7 +108,7 @@ const toggleMobileMenu = () => {
         </a>
 
         <a
-          href="#"
+          href="/inversionistas"
           class="ml-2 text-[10px] font-bold text-cyan-bright border border-cyan-bright/30 bg-green-50 px-3 py-1 rounded-full hover:bg-cyan-bright hover:text-white transition uppercase tracking-wide"
         >
           Inversionistas
@@ -154,7 +154,9 @@ const toggleMobileMenu = () => {
         Banco de saberes
       </a>
 
-      <a href="#" class="block text-lg font-bold text-cyan-bright"> Inversionistas </a>
+      <a href="/inversionistas" class="block text-lg font-bold text-cyan-bright">
+        Inversionistas
+      </a>
     </div>
   </nav>
 </template>
