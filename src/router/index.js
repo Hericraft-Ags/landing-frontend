@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import IndexView from '@/views/IndexView.vue'
-import MainLayout from '@/layouts/MainLayout.vue'
-import NosotrosView from '@/views/NosotrosView.vue'
-import CollegeView from '@/views/CollegeView.vue'
-import AgoraView from '@/views/AgoraView.vue'
-import MetanoiaView from '@/views/MetanoiaView.vue'
-import ProcessusView from '@/views/ProcessusView.vue'
+const IndexView = () => import('@/views/IndexView.vue')
+const MainLayout = () => import('@/layouts/MainLayout.vue')
+const NosotrosView = () => import('@/views/NosotrosView.vue')
+const CollegeView = () => import('@/views/CollegeView.vue')
+const AgoraView = () => import('@/views/AgoraView.vue')
+const MetanoiaView = () => import('@/views/MetanoiaView.vue')
+const ProcessusView = () => import('@/views/ProcessusView.vue')
+const InversionistasView = () => import('@/views/InversionistasView.vue')
 
 const routes = [
   {
@@ -47,6 +48,15 @@ const routes = [
   {
     path: '/processus',
     component: ProcessusView,
+  },
+  {
+    path: '/inversionistas',
+    component: InversionistasView,
+    meta: {
+      themeColor: '#020617',
+      accessibilityColor: '#020617',
+      colorTextAccessibility: '#fff',
+    },
   },
 ]
 
