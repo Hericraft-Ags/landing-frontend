@@ -176,7 +176,7 @@
                 Explorar Escuela para Padres <i class="fas fa-heart"></i>
               </a>
               <button
-                class="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-navy text-navy font-bold hover:bg-navy hover:text-white transition"
+                class="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-navy text-navy font-bold hover:bg-black hover:text-pink-700 transition shadow-lg hover:shadow-pink-500/30"
               >
                 <i class="fas fa-play-circle text-xl"></i> Ver Video Manifiesto
               </button>
@@ -188,7 +188,7 @@
               class="absolute inset-0 bg-gradient-to-tr from-metanoiaPink to-purple-500 rounded-[3rem] opacity-20 rotate-3 scale-95 transition-transform group-hover:rotate-1"
             ></div>
             <img
-              src="../assets/images/hero_metanoia_family.jpg"
+              src="../assets/images/METANOIA-01.png"
               alt="Familia Conectada y Feliz"
               class="relative rounded-[3rem] shadow-2xl border-4 border-white w-full object-cover transform transition duration-500 group-hover:-translate-y-2 h-[500px]"
             />
