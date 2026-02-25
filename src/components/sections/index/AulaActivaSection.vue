@@ -19,38 +19,32 @@
 </template>
 
 <script setup>
-import { ref, inject } from 'vue'
+import { ref, inject, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import AmbientesBackground from '@/components/ui/ambientes/AmbientesBackground.vue'
 import AmbientesContent from '@/components/ui/ambientes/AmbientesContent.vue'
 import AmbientesMockup from '@/components/ui/ambientes/AmbientesMockup.vue'
-//import AmbientesStats from '@/components/ui/ambientes/AmbientesStats.vue'
 
 const reduceMotion = inject('reduceMotion', ref(false))
+const { t } = useI18n()
 
-const features = [
+const features = computed(() => [
   {
     id: 'drag-drop',
     icon: 'fas fa-mouse-pointer',
-    text: 'Interfaz "Arrastra & Suelta" intuitiva',
+    text: t('index.feature_drag_drop'),
   },
   {
     id: 'pdf',
     icon: 'fas fa-file-pdf',
-    text: 'Descarga automática el presupuesto estimado en PDF',
+    text: t('index.feature_pdf'),
   },
   {
     id: 'chat',
     icon: 'fas fa-comments',
-    text: 'Chat directo con arquitectos educativos',
+    text: t('index.feature_chat'),
   },
-]
-
-const stats = [
-  { value: '500+', label: 'Espacios diseñados' },
-  { value: '15min', label: 'Tiempo promedio' },
-  { value: '98%', label: 'Satisfacción' },
-  { value: '24/7', label: 'Disponible' },
-]
+])
 
 const handleStartDesign = () => {
   console.log('Iniciar diseño de aula')

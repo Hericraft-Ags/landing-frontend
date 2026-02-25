@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 
 const props = defineProps({
   color: {
@@ -9,6 +10,7 @@ const props = defineProps({
   },
 })
 
+const { t } = useI18n()
 const isMobileOpen = ref(false)
 
 const toggleMobileMenu = () => {
@@ -37,13 +39,14 @@ const toggleMobileMenu = () => {
           to="/"
           class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide rounded-full hover:bg-white/10"
         >
-          Inicio
+          {{ $t('navbar.inicio') }}
         </RouterLink>
+
         <RouterLink
           to="/nosotros"
           class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide rounded-full hover:bg-white/10"
         >
-          Nosotros
+          {{ $t('navbar.nosotros') }}
         </RouterLink>
 
         <!-- Dropdown Ecosistemas -->
@@ -51,7 +54,7 @@ const toggleMobileMenu = () => {
           <button
             class="px-3 py-6 text-xs font-bold hover:text-cyan-bright flex items-center gap-1 uppercase tracking-wide focus:outline-none"
           >
-            Ecosistemas
+            {{ $t('navbar.ecosistemas') }}
             <i class="fas fa-chevron-down text-[10px]"></i>
           </button>
 
@@ -61,25 +64,25 @@ const toggleMobileMenu = () => {
             <div class="p-2">
               <a href="/college" class="block px-4 py-3 rounded-xl hover:bg-orange-50 transition">
                 <span class="block text-sm font-bold text-navy">
-                  <i class="fas fa-graduation-cap mr-2"></i> College
+                  <i class="fas fa-graduation-cap mr-2"></i> {{ $t('navbar.college') }}
                 </span>
               </a>
 
               <a href="/agora" class="block px-4 py-3 rounded-xl hover:bg-green-500/10 transition">
                 <span class="block text-sm font-bold text-navy">
-                  <i class="fas fa-chalkboard-teacher mr-2"></i> Ágora
+                  <i class="fas fa-chalkboard-teacher mr-2"></i> {{ $t('navbar.agora') }}
                 </span>
               </a>
 
               <a href="/metanoia" class="block px-4 py-3 rounded-xl hover:bg-pink-50 transition">
                 <span class="block text-sm font-bold text-navy">
-                  <i class="fas fa-heart mr-2"></i> Metanoia
+                  <i class="fas fa-heart mr-2"></i> {{ $t('navbar.metanoia') }}
                 </span>
               </a>
 
               <a href="/processus" class="block px-4 py-3 rounded-xl hover:bg-blue-50 transition">
                 <span class="block text-sm font-bold text-navy">
-                  <i class="fas fa-briefcase mr-2"></i> Processus
+                  <i class="fas fa-briefcase mr-2"></i> {{ $t('navbar.processus') }}
                 </span>
               </a>
             </div>
@@ -90,33 +93,37 @@ const toggleMobileMenu = () => {
           href="#ambientes"
           class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide"
         >
-          Ambientes
+          {{ $t('navbar.ambientes') }}
         </a>
 
         <a
           href="#servicios"
           class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide"
         >
-          Consultoría
+          {{ $t('navbar.consultoria') }}
         </a>
 
         <a
           href="#saberes"
           class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide"
         >
-          Saberes
+          {{ $t('navbar.saberes') }}
         </a>
 
         <a
           href="#"
           class="ml-2 text-[10px] font-bold text-cyan-bright border border-cyan-bright/30 bg-green-50 px-3 py-1 rounded-full hover:bg-cyan-bright hover:text-white transition uppercase tracking-wide"
         >
-          Inversionistas
+          {{ $t('navbar.inversionistas') }}
         </a>
       </div>
 
       <!-- Botón móvil -->
-      <button @click="toggleMobileMenu" class="lg:hidden text-white text-2xl p-2">
+      <button
+        @click="toggleMobileMenu"
+        class="lg:hidden text-white text-2xl p-2"
+        :aria-label="t('navbar.menu')"
+      >
         <i class="fas fa-bars"></i>
       </button>
     </div>
@@ -127,34 +134,64 @@ const toggleMobileMenu = () => {
       class="xl:hidden border-t border-gray-800 absolute w-full left-0 top-20 shadow-2xl p-6 space-y-4 h-[calc(100vh-80px)] z-40 overflow-y-auto pb-32 text-white"
       :style="{ backgroundColor: props.color }"
     >
-      <RouterLink to="/nosotros" class="block text-lg font-bold hover:text-cyan-bright">
-        Nosotros
+      <RouterLink
+        to="/nosotros"
+        class="block text-lg font-bold hover:text-cyan-bright"
+        @click="isMobileOpen = false"
+      >
+        {{ $t('navbar.nosotros') }}
       </RouterLink>
 
       <div class="grid grid-cols-2 gap-3 mb-6">
-        <a class="bg-white/10 p-3 rounded-xl text-center border border-white/20 font-bold">
-          College
+        <a
+          href="/college"
+          class="bg-white/10 p-3 rounded-xl text-center border border-white/20 font-bold hover:bg-white/20 transition"
+          @click="isMobileOpen = false"
+        >
+          {{ $t('navbar.college') }}
         </a>
-        <a class="bg-white/10 p-3 rounded-xl text-center border border-white/20 font-bold">
-          Ágora
+        <a
+          href="/agora"
+          class="bg-white/10 p-3 rounded-xl text-center border border-white/20 font-bold hover:bg-white/20 transition"
+          @click="isMobileOpen = false"
+        >
+          {{ $t('navbar.agora') }}
         </a>
-        <a class="bg-white/10 p-3 rounded-xl text-center border border-white/20 font-bold">
-          Metanoia
+        <a
+          href="/metanoia"
+          class="bg-white/10 p-3 rounded-xl text-center border border-white/20 font-bold hover:bg-white/20 transition"
+          @click="isMobileOpen = false"
+        >
+          {{ $t('navbar.metanoia') }}
         </a>
-        <a class="bg-white/10 p-3 rounded-xl text-center border border-white/20 font-bold">
-          Processus
+        <a
+          href="/processus"
+          class="bg-white/10 p-3 rounded-xl text-center border border-white/20 font-bold hover:bg-white/20 transition"
+          @click="isMobileOpen = false"
+        >
+          {{ $t('navbar.processus') }}
         </a>
       </div>
 
-      <a href="#ambientes" class="block text-lg font-bold hover:text-cyan-bright">
-        Diseño de ambientes
+      <a
+        href="#ambientes"
+        class="block text-lg font-bold hover:text-cyan-bright"
+        @click="isMobileOpen = false"
+      >
+        {{ $t('navbar.diseno_ambientes') }}
       </a>
 
-      <a href="#saberes" class="block text-lg font-bold hover:text-cyan-bright">
-        Banco de saberes
+      <a
+        href="#saberes"
+        class="block text-lg font-bold hover:text-cyan-bright"
+        @click="isMobileOpen = false"
+      >
+        {{ $t('navbar.banco_saberes') }}
       </a>
 
-      <a href="#" class="block text-lg font-bold text-cyan-bright"> Inversionistas </a>
+      <a href="#" class="block text-lg font-bold text-cyan-bright" @click="isMobileOpen = false">
+        {{ $t('navbar.inversionistas') }}
+      </a>
     </div>
   </nav>
 </template>

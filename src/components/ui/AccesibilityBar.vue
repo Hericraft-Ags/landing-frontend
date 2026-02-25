@@ -1,5 +1,6 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const props = defineProps({
   color: {
@@ -16,10 +17,11 @@ const props = defineProps({
   },
 })
 
+const { locale, t } = useI18n()
+
 const highContrast = ref(false)
 const textSize = ref(100)
 const reduceMotion = ref(false)
-const currentLang = ref('es')
 
 const toggleContrast = () => {
   highContrast.value = !highContrast.value
@@ -43,7 +45,6 @@ const toggleTextSize = () => {
   }
 
   document.documentElement.style.fontSize = `${textSize.value}%`
-
   localStorage.setItem('accessibility-text-size', textSize.value.toString())
 }
 
@@ -60,12 +61,17 @@ const toggleMotion = () => {
 }
 
 const changeLang = lang => {
-  currentLang.value = lang
-
+  locale.value = lang
   document.documentElement.lang = lang
   localStorage.setItem('accessibility-lang', lang)
   window.dispatchEvent(new CustomEvent('language-changed', { detail: lang }))
 }
+
+watch(locale, newLang => {
+  document.documentElement.lang = newLang
+  localStorage.setItem('accessibility-lang', newLang)
+  window.dispatchEvent(new CustomEvent('language-changed', { detail: newLang }))
+})
 
 onMounted(() => {
   const savedContrast = localStorage.getItem('accessibility-contrast')
@@ -87,9 +93,15 @@ onMounted(() => {
   }
 
   const savedLang = localStorage.getItem('accessibility-lang')
-  if (savedLang) {
-    currentLang.value = savedLang
+  if (savedLang && (savedLang === 'es' || savedLang === 'en')) {
+    locale.value = savedLang
     document.documentElement.lang = savedLang
+  } else {
+    const browserLang = navigator.language.split('-')[0]
+    if (browserLang === 'en') {
+      locale.value = 'en'
+      document.documentElement.lang = 'en'
+    }
   }
 })
 </script>
@@ -101,7 +113,7 @@ onMounted(() => {
   >
     <div class="flex gap-2 sm:gap-4 items-center">
       <span class="text-cyan-bright hidden md:inline" :style="{ color: accessibilityColor }">
-        <i class="fas fa-universal-access"></i> ACCESIBILIDAD:
+        <i class="fas fa-universal-access"></i> {{ $t('accessibilitybar.title') }}
       </span>
 
       <button
@@ -111,7 +123,7 @@ onMounted(() => {
         :style="{ color: colorTextAccessibility }"
       >
         <i class="fas fa-adjust"></i>
-        {{ highContrast ? 'Contraste Alto' : 'Contraste' }}
+        {{ highContrast ? $t('accessibilitybar.high_contrast') : $t('accessibilitybar.contrast') }}
       </button>
 
       <button
@@ -120,7 +132,7 @@ onMounted(() => {
         :style="{ color: colorTextAccessibility }"
       >
         <i class="fas fa-text-height"></i>
-        Texto {{ textSize }}%
+        {{ $t('accessibilitybar.text_size', { size: textSize }) }}
       </button>
 
       <button
@@ -129,7 +141,9 @@ onMounted(() => {
         :style="{ color: colorTextAccessibility }"
       >
         <i :class="reduceMotion ? 'fas fa-play-circle' : 'fas fa-pause-circle'"></i>
-        {{ reduceMotion ? 'Con Animación' : 'Sin Animación' }}
+        {{
+          reduceMotion ? $t('accessibilitybar.with_animation') : $t('accessibilitybar.no_animation')
+        }}
       </button>
     </div>
 
@@ -137,19 +151,19 @@ onMounted(() => {
       <button
         @click="changeLang('es')"
         class="font-bold transition"
-        :class="{ 'opacity-100': currentLang === 'es', 'opacity-50': currentLang !== 'es' }"
-        :style="{ color: currentLang === 'es' ? accessibilityColor : colorTextAccessibility }"
+        :class="{ 'opacity-100': locale === 'es', 'opacity-50': locale !== 'es' }"
+        :style="{ color: locale === 'es' ? accessibilityColor : colorTextAccessibility }"
       >
-        ES
+        {{ $t('accessibilitybar.es') }}
       </button>
       <span>|</span>
       <button
         @click="changeLang('en')"
         class="transition"
-        :class="{ 'opacity-100': currentLang === 'en', 'opacity-50': currentLang !== 'en' }"
-        :style="{ color: currentLang === 'en' ? accessibilityColor : colorTextAccessibility }"
+        :class="{ 'opacity-100': locale === 'en', 'opacity-50': locale !== 'en' }"
+        :style="{ color: locale === 'en' ? accessibilityColor : colorTextAccessibility }"
       >
-        EN
+        {{ $t('accessibilitybar.en') }}
       </button>
     </div>
   </div>

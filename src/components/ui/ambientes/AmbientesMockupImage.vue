@@ -20,11 +20,10 @@
         class="text-white text-sm font-medium bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/20"
       >
         <i class="fas fa-play-circle mr-2 text-cyan-bright"></i>
-        Ver demo interactiva
+        {{ $t('index.interactive_demo') }}
       </span>
     </div>
 
-    <!-- Indicador beta -->
     <div
       class="absolute top-4 right-4 bg-white/10 backdrop-blur px-3 py-1.5 rounded-full border border-white/20 flex items-center gap-2"
     >
@@ -46,6 +45,5 @@ const props = defineProps({
 
 defineEmits(['error'])
 
-// La ruta de la imagen
-const imageSrc = ref('https://placehold.co/600x400/1e293b/06b6d4?text=Interfaz+Dise%C3%B1ador+3D')
+const imageSrc = ref('https://placehold.co/600x400/1e293b/06b6d4?text=3D+Interface+Design')
 </script>

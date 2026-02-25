@@ -1,6 +1,5 @@
 <template>
   <div class="order-2 lg:order-1 space-y-8">
-    <!-- Badge -->
     <div
       class="inline-flex items-center gap-2 bg-white/10 text-cyan-bright border border-cyan-bright/30 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest"
       role="status"
@@ -10,19 +9,13 @@
       <span>Hericraft Studio</span>
     </div>
 
-    <!-- Título -->
     <h2 id="ambientes-title" class="text-4xl md:text-5xl font-display font-bold leading-tight">
-      Diseña tu aula activa <br />
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-bright to-teal-400">
-        En Tiempo Real
-      </span>
+      {{ $t('index.hericraft_studio_message_1') }} <br />
+      {{ $t('index.hericraft_studio_message_2') }}
     </h2>
 
-    <!-- Descripción -->
     <p class="text-gray-300 text-lg leading-relaxed max-w-xl">
-      Imagina, arrastra y construye espacios que transforman el aprendizaje. Nuestra herramienta
-      interactiva te permite visualizar mobiliario, tecnología y distribución, generando una
-      cotización instantánea y un plano en PDF.
+      {{ $t('index.hericraft_studio_subtitle') }}
     </p>
 
     <AmbientesFeatureList :features="features" />

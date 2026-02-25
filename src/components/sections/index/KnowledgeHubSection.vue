@@ -23,12 +23,11 @@
             id="saberes-title"
             class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-navy"
           >
-            Banco de Saberes
+            {{ $t('index.banco_title') }}
           </h2>
 
           <p class="text-gray-500 text-lg leading-relaxed">
-            Recursos curados para potenciar tu desarrollo: Blogs, Podcasts, Revistas Digitales y
-            más.
+            {{ $t('index.banco_subtitle') }}
           </p>
         </div>
 
@@ -37,13 +36,13 @@
           class="group relative px-6 py-3 rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-collegeOrange/20"
         >
           <span
-            class="absolute inset-0 bg-gradient-to-r from-collegeOrange to-purple-600 transition-transform duration-300 group-hover:scale-105"
+            class="absolute inset-0 z-0 bg-linear-to-r from-orange-500 to-purple-600 transition-transform duration-300 group-hover:scale-105"
           ></span>
           <span
-            class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"
+            class="absolute inset-0 z-10 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 skew-x-12"
           ></span>
-          <span class="relative flex items-center gap-2 text-white font-bold text-sm">
-            Explorar biblioteca completa
+          <span class="relative z-20 flex items-center gap-2 text-white font-bold text-sm">
+            {{ $t('index.banco_btn') }}
             <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
           </span>
         </a>
@@ -58,14 +57,6 @@
           @action-click="handleItemAction"
         />
       </div>
-
-      <!-- Sección de estadísticas
-      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-gray-200">
-        <div v-for="stat in stats" :key="stat.label" class="text-center">
-          <div class="text-2xl md:text-3xl font-bold text-navy mb-1">{{ stat.value }}</div>
-          <div class="text-xs text-gray-400 uppercase tracking-wider">{{ stat.label }}</div>
-        </div>
-      </div>-->
     </div>
   </section>
 </template>
@@ -125,13 +116,6 @@ const knowledgeItems = [
     actionLabel: 'Leer Ahora',
     actionIcon: 'fas fa-arrow-right',
   },
-]
-
-const stats = [
-  { value: '50+', label: 'Podcasts' },
-  { value: '120+', label: 'Manuales' },
-  { value: '24', label: 'Revistas' },
-  { value: '15k', label: 'Descargas' },
 ]
 
 const handleItemAction = item => {
