@@ -609,7 +609,7 @@
                 <div class="rounded-xl">
                   <img
                     src="../assets/images/AGORA-15.png"
-                    alt="Icono diseño curricular"
+                    alt="Icono pedagogia y neurociencia"
                     class="w-20 h-20 object-contain"
                   />
                 </div>
@@ -660,7 +660,7 @@
                 <div class="rounded-xl">
                   <img
                     src="../assets/images/AGORA-16.png"
-                    alt="Icono diseño curricular"
+                    alt="Icono gestión y liderazgo"
                     class="w-20 h-20 object-contain"
                   />
                 </div>
@@ -711,7 +711,7 @@
                 <div class="bg-cyanBright/20 rounded-xl">
                   <img
                     src="../assets/images/AGORA-17.png"
-                    alt="Icono diseño curricular"
+                    alt="Icono tecnologia e inteligencia artificial educativa"
                     class="w-20 h-20 object-contain brightness-200"
                   />
                 </div>
@@ -762,7 +762,7 @@
                 <div class="bg-collegeOrange/20 rounded-xl">
                   <img
                     src="../assets/images/AGORA-18.png"
-                    alt="Icono diseño curricular"
+                    alt="Icono espacio y entorno"
                     class="w-20 h-20 object-contain"
                   />
                 </div>
