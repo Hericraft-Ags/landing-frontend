@@ -6,14 +6,13 @@
         role="text"
       >
         <span class="sr-only">Sección:</span>
-        NUESTRO MANIFIESTO
+        {{ $t('index.manifiest') }}
       </span>
       <h2 id="educacion50-title" class="text-3xl md:text-5xl font-display font-bold text-navy mb-8">
-        Hacia la Educación 5.0
+        {{ $t('index.title_manifest') }}
       </h2>
       <p class="text-gray-600 max-w-3xl mx-auto mb-16 text-lg leading-relaxed">
-        Superamos la digitalización (4.0) para llegar a la humanización (5.0). La tecnología es el
-        medio; el bienestar humano es el fin.
+        {{ $t('index.subtitle_manifiest') }}
       </p>
 
       <div class="grid md:grid-cols-3 gap-8">
@@ -25,29 +24,32 @@
 
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import FeatureCard from '@/components/ui/FeatureCard.vue'
 
-const features = [
+const { t } = useI18n()
+
+const features = computed(() => [
   {
     id: 'invisible-tech',
-    title: 'Tecnología invisible',
-    description: 'Herramientas que potencian la conexión humana sin obstaculizarla.',
+    title: t('index.card_technology'),
+    description: t('index.card_technology_description'),
     icon: 'invisible-technology.svg',
-    alt: 'Icono de tecnología invisible',
+    alt: t('index.card_technology_alt', 'Icono de tecnología invisible'),
   },
   {
     id: 'wellness',
-    title: 'Bienestar integral',
-    description: 'Salud emocional y resiliencia como base del aprendizaje.',
+    title: t('index.card_wellness'),
+    description: t('index.card_wellness_description'),
     icon: 'bienestar.svg',
-    alt: 'Icono de bienestar integral',
+    alt: t('index.card_wellness_alt', 'Icono de bienestar integral'),
   },
   {
     id: 'social-impact',
-    title: 'Impacto social',
-    description: 'Proyectos que resuelven problemas reales de la comunidad.',
+    title: t('index.card_social_impact'),
+    description: t('index.card_social_impact_description'),
     icon: 'social-impact.svg',
-    alt: 'Icono de impacto social',
+    alt: t('index.card_social_impact_alt', 'Icono de impacto social'),
   },
-]
+])
 </script>

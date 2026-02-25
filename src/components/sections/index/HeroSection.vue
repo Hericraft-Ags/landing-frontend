@@ -29,24 +29,23 @@
               :class="{ 'animate-pulse': !reduceMotion }"
               aria-hidden="true"
             ></span>
-            Arquitectura Educativa 5.0
+            {{ $t('index.capsule_arquitecture') }}
           </div>
           <h1
             id="hero-title"
             class="text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight"
             :class="{ 'animate-fade-in': !reduceMotion }"
           >
-            El Universo de la<br />
+            {{ $t('index.header_message_white') }}<br />
             <span class="text-cyan-bright" aria-label="Innovación Educativa">
-              Innovación Educativa
+              {{ $t('index.header_message_green') }}
             </span>
           </h1>
           <p
             class="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
             :class="{ 'animate-fade-in': !reduceMotion }"
           >
-            Conectamos Alumnos, Docentes, Familias y Empresas a través de una matriz central que
-            impulsa cuatro ecosistemas especializados.
+            {{ $t('index.header_subtitle') }}
           </p>
           <div
             class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
@@ -69,20 +68,22 @@
 </template>
 
 <script setup>
-import { ref, onMounted, inject } from 'vue'
+import { ref, onMounted, inject, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import EcosystemCard from '@/components/ui/EcosystemCard.vue'
+import { useI18n } from 'vue-i18n'
 
 const reduceMotion = inject('reduceMotion', ref(false))
 const router = useRouter()
 
 const isLoading = ref(false)
+const { t } = useI18n()
 
-const ecosystems = [
+const ecosystems = computed(() => [
   {
     id: 'college',
     name: 'College',
-    description: 'Escuelas',
+    description: t('index.college_detail'),
     color: 'collegeOrange',
     icon: 'college-dark.svg',
     ariaLabel: 'Ecosistema College para escuelas',
@@ -91,7 +92,7 @@ const ecosystems = [
   {
     id: 'agora',
     name: 'Ágora',
-    description: 'Docentes',
+    description: t('index.agora_detail'),
     color: 'teal',
     icon: 'agora-dark.svg',
     ariaLabel: 'Ecosistema Ágora para docentes',
@@ -100,7 +101,7 @@ const ecosystems = [
   {
     id: 'metanoia',
     name: 'Metanoia',
-    description: 'Familias',
+    description: t('index.metanoia_detail'),
     color: 'accentPink',
     icon: 'metanoia-dark.svg',
     ariaLabel: 'Ecosistema Metanoia para familias',
@@ -109,29 +110,25 @@ const ecosystems = [
   {
     id: 'processus',
     name: 'Processus',
-    description: 'Empresas',
+    description: t('index.processus_detail'),
     color: 'blue-400',
     icon: 'processus-dark.svg',
     ariaLabel: 'Ecosistema Processus para empresas',
     route: '/processus',
   },
-]
+])
 
-// Manejador de clic mejorado
 const handleEcosystemClick = async ecosystem => {
   isLoading.value = true
 
   try {
-    // Si existe función global de intro, ejecutarla
     if (window.playIntroAndRedirect) {
       await window.playIntroAndRedirect(ecosystem.id)
     }
 
-    // Navegación con Vue Router
     await router.push(ecosystem.route)
   } catch (error) {
     console.error('Error al navegar:', error)
-    // Fallback a navegación tradicional
     window.location.href = `/${ecosystem.id}.html`
   } finally {
     isLoading.value = false
@@ -141,7 +138,7 @@ const handleEcosystemClick = async ecosystem => {
 onMounted(() => {
   if ('requestIdleCallback' in window) {
     requestIdleCallback(() => {
-      ecosystems.forEach(eco => {
+      ecosystems.value.forEach(eco => {
         const img = new Image()
         img.src = new URL(`../assets/images/logos/${eco.icon}`, import.meta.url).href
       })

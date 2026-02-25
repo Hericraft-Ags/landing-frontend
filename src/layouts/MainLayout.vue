@@ -31,6 +31,6 @@ const colorTextAccessibility = computed(() => {
       <router-view />
     </main>
 
-    <Footer />
+    <Footer :color="themeColor" />
   </div>
 </template>

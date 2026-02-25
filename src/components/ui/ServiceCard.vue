@@ -40,27 +40,15 @@
       {{ service.description }}
     </p>
 
-    <!-- Características
-    <ul class="space-y-2 mb-6" v-if="service.features">
-      <li
-        v-for="feature in service.features"
-        :key="feature"
-        class="flex items-center gap-2 text-xs text-gray-400"
-      >
-        <i class="fas fa-check-circle" :class="service.iconColor"></i>
-        {{ feature }}
-      </li>
-    </ul>-->
-
-    <a
-      href="#"
-      class="inline-flex items-center gap-2 text-sm font-medium transition-all duration-300 mx-auto w-full justify-center"
+    <button
+      @click="handleLearnMore(service)"
+      class="inline-flex items-center gap-2 text-sm font-medium transition-all duration-300 mx-auto w-full justify-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded-lg py-2"
       :class="[service.iconColor, 'group-hover:gap-3']"
-      @click.prevent="handleLearnMore(service)"
+      :aria-label="`Más información sobre ${service.title}`"
     >
-      Saber más
+      {{ $t('index.card_consultaria_more_info') }}
       <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
-    </a>
+    </button>
   </div>
 </template>
 
@@ -96,7 +84,7 @@ const handleImageError = event => {
 }
 
 const handleLearnMore = service => {
-  console.log('Saber más sobre:', service.title)
+  console.log('Abrir modal para:', service.title)
   emit('learn-more', service)
 }
 </script>
@@ -108,6 +96,12 @@ const handleLearnMore = service => {
 
 .group:hover {
   box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: inherit;
 }
 
 @media (prefers-reduced-motion: reduce) {

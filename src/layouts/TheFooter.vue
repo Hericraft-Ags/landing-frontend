@@ -1,6 +1,34 @@
+<script setup>
+import { useI18n } from 'vue-i18n'
+
+const props = defineProps({
+  color: {
+    type: String,
+    default: '#000',
+  },
+})
+
+const { t } = useI18n()
+
+const socialLinks = [
+  { name: t('footer.social_media.facebook'), icon: 'facebook.png', url: 'https://facebook.com' },
+  { name: t('footer.social_media.instagram'), icon: 'instagram.png', url: 'https://instagram.com' },
+  { name: t('footer.social_media.linkedin'), icon: 'linkedin.png', url: 'https://linkedin.com' },
+  { name: t('footer.social_media.spotify'), icon: 'spotify.png', url: 'https://spotify.com' },
+  { name: t('footer.social_media.youtube'), icon: 'youtube.png', url: 'https://youtube.com' },
+]
+
+const handleImageError = event => {
+  console.warn('Error cargando imagen:', event.target.src)
+  event.target.src = '/assets/images/placeholder.svg'
+  event.target.onerror = null
+}
+</script>
+
 <template>
   <footer
-    class="bg-slate-950 text-gray-400 text-sm border-t border-white/10 relative overflow-hidden"
+    class="text-gray-400 text-sm border-t border-white/10 relative overflow-hidden"
+    :style="{ backgroundColor: color }"
   >
     <div
       class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-navy via-cyanBright to-collegeOrange"
@@ -15,108 +43,115 @@
               alt="Hericraft"
               class="h-8 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
             />
-            <span class="font-display font-bold text-white text-lg tracking-wide">HERICRAFT</span>
           </a>
           <p class="leading-relaxed text-xs text-gray-500">
-            Transformamos la educación en México a través de espacios inteligentes, tecnología 4.0 y
-            mobiliario de alto impacto.
+            {{ $t('footer.description') }}
           </p>
           <div class="pt-2">
-            <span class="text-green-500 font-bold text-xs uppercase tracking-widest"
-              >Soluciones Integrales</span
-            >
+            <span class="text-green-500 font-bold text-xs uppercase tracking-widest">
+              {{ $t('footer.integral_solutions') }}
+            </span>
           </div>
         </div>
 
         <div>
-          <h3 class="text-white font-bold uppercase tracking-wider mb-6 text-xs">Ecosistema</h3>
+          <h3 class="text-white font-bold uppercase tracking-wider mb-6 text-xs">
+            {{ $t('footer.ecosystem') }}
+          </h3>
           <ul class="space-y-3">
             <li>
               <a
                 href="/ambientes"
-                class="hover:text-cyanBright transition-colors duration-300 flex items-center gap-2 group"
+                class="hover:text-[#06b6d4] transition-colors duration-300 hover:translate-x-1 flex items-center gap-2 group"
               >
-                <i
-                  class="fas fa-chevron-right text-[8px] group-hover:translate-x-1 transition-transform"
-                ></i>
-                Ambientes Activos
+                <i class="fas fa-chevron-right text-[8px]"></i>
+                {{ $t('footer.active_environments') }}
               </a>
             </li>
             <li>
               <a
                 href="/college"
-                class="hover:text-collegeOrange transition-colors duration-300 flex items-center gap-2 group"
+                class="hover:text-[#ff6b35] transition-colors duration-300 hover:translate-x-1 flex items-center gap-2 group"
               >
-                <i
-                  class="fas fa-chevron-right text-[8px] group-hover:translate-x-1 transition-transform"
-                ></i>
-                Mobiliario College
+                <i class="fas fa-chevron-right text-[8px]"></i>
+                {{ $t('footer.college') }}
               </a>
             </li>
             <li>
               <a
                 href="/agora"
-                class="hover:text-agoraLime transition-colors duration-300 flex items-center gap-2 group"
+                class="hover:text-[#8dc63f] transition-colors duration-300 hover:translate-x-1 flex items-center gap-2 group"
               >
-                <i
-                  class="fas fa-chevron-right text-[8px] group-hover:translate-x-1 transition-transform"
-                ></i>
-                Ágora
+                <i class="fas fa-chevron-right text-[8px]"></i>
+                {{ $t('footer.agora') }}
               </a>
             </li>
             <li>
               <a
                 href="/metanoia"
-                class="hover:text-metanoiaPink transition-colors duration-300 flex items-center gap-2 group"
+                class="hover:text-[#d5005f] transition-colors duration-300 hover:translate-x-1 flex items-center gap-2 group"
               >
-                <i
-                  class="fas fa-chevron-right text-[8px] group-hover:translate-x-1 transition-transform"
-                ></i>
-                Metanoia
+                <i class="fas fa-chevron-right text-[8px]"></i>
+                {{ $t('footer.metanoia') }}
+              </a>
+            </li>
+            <li>
+              <a
+                href="/processus"
+                class="hover:text-[#06b6d4] transition-colors duration-300 hover:translate-x-1 flex items-center gap-2 group"
+              >
+                <i class="fas fa-chevron-right text-[8px]"></i>
+                {{ $t('footer.processus') }}
               </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <h3 class="text-white font-bold uppercase tracking-wider mb-6 text-xs">Legal & Ayuda</h3>
+          <h3 class="text-white font-bold uppercase tracking-wider mb-6 text-xs">
+            {{ $t('footer.legal_help') }}
+          </h3>
           <ul class="space-y-3">
             <li>
               <a
                 href="#"
                 class="hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
-                >Aviso de Privacidad</a
               >
+                {{ $t('footer.privacy') }}
+              </a>
             </li>
             <li>
               <a
                 href="#"
                 class="hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
-                >Términos y Condiciones</a
               >
+                {{ $t('footer.terms') }}
+              </a>
             </li>
             <li>
               <a
                 href="#"
                 class="hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
-                >Preguntas Frecuentes</a
               >
+                {{ $t('footer.faq') }}
+              </a>
             </li>
             <li>
               <a
                 href="#"
                 class="hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
-                >Soporte Técnico</a
               >
+                {{ $t('footer.support') }}
+              </a>
             </li>
             <li>
               <a
                 href="https://ecommerce.soluciones-hericraft.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-cyanBright hover:underline inline-flex items-center gap-1"
+                class="text-[#06b6d4] hover:underline inline-flex items-center gap-1 hover:translate-x-1"
               >
-                Tienda en Línea
+                {{ $t('footer.online_store') }}
                 <i class="fas fa-external-link-alt text-[8px]"></i>
               </a>
             </li>
@@ -124,21 +159,28 @@
         </div>
 
         <div>
-          <h3 class="text-white font-bold uppercase tracking-wider mb-6 text-xs">Contacto</h3>
+          <h3 class="text-white font-bold uppercase tracking-wider mb-6 text-xs">
+            {{ $t('footer.contact') }}
+          </h3>
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
               <i class="fas fa-map-marker-alt text-collegeOrange mt-1"></i>
-              <span>Ciudad de México, México.<br />Cobertura Nacional.</span>
+              <span> {{ $t('footer.address') }}<br />{{ $t('footer.national_coverage') }} </span>
             </li>
             <li class="flex items-center gap-3">
               <i class="fas fa-phone text-cyanBright"></i>
-              <a href="tel:+525512345678" class="hover:text-white transition">+52 (55) 1234 5678</a>
+              <a href="tel:+524493932939" class="hover:text-white transition">
+                {{ $t('footer.phone') }}
+              </a>
             </li>
             <li class="flex items-center gap-3">
               <i class="fas fa-envelope text-purple-400"></i>
-              <a href="mailto:hola@hericraft.com" class="hover:text-white transition"
-                >hola@hericraft.com</a
+              <a
+                href="mailto:contacto@soluciones-hericraft.com"
+                class="hover:text-white transition"
               >
+                {{ $t('footer.email') }}
+              </a>
             </li>
           </ul>
         </div>
@@ -169,11 +211,10 @@
 
         <div class="text-center space-y-2">
           <p class="font-display font-semibold text-gray-300">
-            &copy; 2026 Hericraft Soluciones Integrales S.A. de C.V.
+            {{ $t('footer.copyright', { year: new Date().getFullYear() }) }}
           </p>
           <p class="text-xs text-gray-600">
-            Todos los derechos reservados. Desarrollado por el equipo de Tecnología Educativa
-            Hericraft.
+            {{ $t('footer.rights') }}
           </p>
         </div>
       </div>
@@ -181,51 +222,15 @@
   </footer>
 </template>
 
-<script setup>
-const socialLinks = [
-  { name: 'Facebook', icon: 'facebook.png', url: 'https://facebook.com' },
-  { name: 'Instagram', icon: 'instagram.png', url: 'https://instagram.com' },
-  { name: 'LinkedIn', icon: 'linkedin.png', url: 'https://linkedin.com' },
-  { name: 'Spotify', icon: 'spotify.png', url: 'https://spotify.com' },
-  { name: 'YouTube', icon: 'youtube.png', url: 'https://youtube.com' },
-]
-
-const handleImageError = event => {
-  console.warn('Error cargando imagen:', event.target.src)
-  event.target.src = '/assets/images/placeholder.svg'
-  event.target.onerror = null
-}
-</script>
-
 <style scoped>
 .bg-navy {
   background-color: #0a1931;
-}
-
-.text-cyanBright {
-  color: #06b6d4;
-}
-
-.text-collegeOrange {
-  color: #ff6b35;
-}
-
-.text-agoraLime {
-  color: #8dc63f;
-}
-
-.text-metanoiaPink {
-  color: #d5005f;
 }
 
 a,
 button,
 img {
   transition: all 0.3s ease;
-}
-
-a:hover i.fa-chevron-right {
-  transform: translateX(4px);
 }
 
 .bg-gradient-to-r {

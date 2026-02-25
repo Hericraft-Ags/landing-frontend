@@ -20,9 +20,9 @@
           </h3>
 
           <p class="text-gray-600 mb-8 leading-relaxed text-lg">
-            Somos tu Partner estratégico. Desde el trámite de tu dominio
-            <strong class="font-bold text-navy">.EDU</strong> hasta la certificación de tu equipo
-            docente.
+            {{ $t('index.google_partnet_part1') }}
+            <strong class="font-bold text-navy">.EDU</strong>
+            {{ $t('index.google_partnet_part2') }}
           </p>
 
           <div class="grid grid-cols-2 gap-4" role="list">
@@ -63,16 +63,18 @@
 </template>
 
 <script setup>
-import { ref, inject } from 'vue'
+import { ref, inject, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const reduceMotion = inject('reduceMotion', ref(false))
+const { t } = useI18n()
 
-const features = [
-  { text: 'Gestión de consola', icon: 'fas fa-check' },
-  { text: 'Chromebooks', icon: 'fas fa-check' },
-  { text: 'Certificación L1/L2', icon: 'fas fa-check' },
-  { text: 'Formación Trainers', icon: 'fas fa-check' },
-]
+const features = computed(() => [
+  { text: t('index.console_gestion'), icon: 'fas fa-check' },
+  { text: t('index.chromebooks'), icon: 'fas fa-check' },
+  { text: t('index.certification'), icon: 'fas fa-check' },
+  { text: t('index.trainers'), icon: 'fas fa-check' },
+])
 
 const googleWorkspaceImage = new URL('../../../assets/images/google-workspace.svg', import.meta.url)
   .href

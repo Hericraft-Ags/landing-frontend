@@ -19,6 +19,8 @@
         <i class="fas fa-ruler"></i>
       </div>
     </div>
-    <div class="text-[10px] text-gray-500"><i class="far fa-save mr-1"></i> auto-guardado</div>
+    <div class="text-[10px] text-gray-500">
+      <i class="far fa-save mr-1"></i>{{ $t('index.auto_save') }}
+    </div>
   </div>
 </template>

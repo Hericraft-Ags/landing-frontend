@@ -22,19 +22,18 @@
         class="inline-flex items-center gap-2 bg-white/10 text-cyan-bright border border-cyan-bright/30 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6"
       >
         <i class="fas fa-rocket"></i>
-        <span>Comienza tu transformación</span>
+        <span>{{ $t('index.capsule_evol') }}</span>
       </div>
 
       <h2
         id="cta-title"
         class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight"
       >
-        ¿Listo para evolucionar?
+        {{ $t('index.evol_title') }}
       </h2>
 
       <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-        Descubre cómo nuestras soluciones educativas 5.0 pueden transformar tu institución. Agenda
-        una consultoría gratuita.
+        {{ $t('index.evol_subtitle') }}
       </p>
 
       <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
@@ -51,7 +50,7 @@
             class="relative flex items-center justify-center gap-2 text-blue-500 group-hover:text-white transition-colors duration-300"
           >
             <i class="fas fa-calendar-check group-hover:scale-110 transition-transform"></i>
-            Agendar Reunión
+            {{ $t('index.reunion_btn') }}
           </span>
         </a>
 
@@ -66,7 +65,7 @@
             class="relative flex items-center justify-center gap-2 text-blue-500 group-hover:text-white transition-colors duration-300"
           >
             <i class="fas fa-envelope group-hover:scale-110 transition-transform"></i>
-            Enviar Correo
+            {{ $t('index.send_email') }}
           </span>
         </a>
       </div>
@@ -74,15 +73,19 @@
       <div class="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
         <span class="flex items-center gap-2">
           <i class="fas fa-clock text-cyan-bright"></i>
-          Respuesta en <strong class="text-white ml-1">24-48h</strong>
+          <strong class="text-white ml-1">{{ $t('index.tag_answer') }}</strong>
         </span>
         <span class="flex items-center gap-2">
           <i class="fas fa-headset text-collegeOrange"></i>
-          <span>Soporte <strong class="text-white ml-1">personalizado</strong></span>
+          <span
+            ><strong class="text-white ml-1">{{ $t('index.tag_support') }}</strong></span
+          >
         </span>
         <span class="flex items-center gap-2">
           <i class="fas fa-shield-alt text-green-500"></i>
-          <span>Consulta <strong class="text-white ml-1">sin compromiso</strong></span>
+          <span
+            ><strong class="text-white ml-1">{{ $t('index.tag_consulta') }}</strong></span
+          >
         </span>
       </div>
     </div>

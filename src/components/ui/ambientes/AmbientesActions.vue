@@ -12,7 +12,7 @@
         class="relative flex items-center justify-center gap-2 text-blue-500 group-hover:text-white transition-colors duration-300"
       >
         <i class="fas fa-magic group-hover:rotate-12 transition-transform duration-300"></i>
-        Iniciar diseño
+        {{ $t('index.start_design_btn') }}
       </span>
     </button>
 
@@ -27,7 +27,7 @@
       <span
         class="relative flex items-center justify-center gap-2 text-blue-500 group-hover:text-white transition-colors duration-300"
       >
-        Ver galería de espacios
+        {{ $t('index.view_gallery_btn') }}
         <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
       </span>
     </a>

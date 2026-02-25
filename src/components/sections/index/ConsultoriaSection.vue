@@ -15,19 +15,18 @@
           class="inline-flex items-center gap-2 bg-navy/5 text-navy border border-navy/10 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-4"
         >
           <i class="fas fa-headset"></i>
-          <span>Asesoría Experta</span>
+          <span>{{ $t('index.capsule_asesoria') }}</span>
         </div>
 
         <h2
           id="servicios-title"
           class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-navy mb-4"
         >
-          Consultoría especializada
+          {{ $t('index.consultoria_title') }}
         </h2>
 
         <p class="text-gray-500 max-w-2xl mx-auto text-lg">
-          Acompañamiento experto para la excelencia educativa. Transformamos tu institución con
-          soluciones a medida.
+          {{ $t('index.consultoria_subtitle') }}
         </p>
       </div>
 
@@ -41,12 +40,12 @@
       </div>
 
       <div class="text-center mt-16">
-        <p class="text-gray-500 mb-6">¿Necesitas una solución personalizada?</p>
+        <p class="text-gray-500 mb-6">{{ $t('index.consultoria_help') }}</p>
         <a
           href="#contacto"
           class="inline-flex items-center gap-3 bg-navy text-white px-8 py-4 rounded-full font-bold hover:bg-green-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
         >
-          Agenda una consultoría gratuita
+          {{ $t('index.consultoria_button') }}
           <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
         </a>
       </div>
@@ -55,12 +54,14 @@
 </template>
 
 <script setup>
-import { ref, inject } from 'vue'
+import { ref, inject, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import ServiceCard from '@/components/ui/ServiceCard.vue'
 
 const reduceMotion = inject('reduceMotion', ref(false))
+const { t } = useI18n()
 
-const services = [
+const services = computed(() => [
   {
     id: 'diagnostico',
     icon: 'diagnostic.svg',
@@ -68,9 +69,13 @@ const services = [
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-100',
     hoverColor: 'group-hover:border-blue-200',
-    title: 'Diagnóstico de innovación',
-    description: 'Evaluación profunda de madurez tecnológica y pedagógica de tu institución.',
-    features: ['Análisis FODA', 'Benchmarking', 'Plan de acción'],
+    title: t('index.diagnostico.title'),
+    description: t('index.diagnostico.description'),
+    features: [
+      t('index.diagnostico.feature_1'),
+      t('index.diagnostico.feature_2'),
+      t('index.diagnostico.feature_3'),
+    ],
   },
   {
     id: 'rvoe',
@@ -79,10 +84,9 @@ const services = [
     bgColor: 'bg-purple-50',
     borderColor: 'border-purple-100',
     hoverColor: 'group-hover:border-purple-200',
-    title: 'Gestión de RVOE',
-    description:
-      'Acompañamiento integral en trámites ante la SEP para validez oficial de estudios.',
-    features: ['Asesoría legal', 'Documentación', 'Seguimiento'],
+    title: t('index.rvoe.title'),
+    description: t('index.rvoe.description'),
+    features: [t('index.rvoe.feature_1'), t('index.rvoe.feature_2'), t('index.rvoe.feature_3')],
   },
   {
     id: 'edu-domain',
@@ -91,9 +95,13 @@ const services = [
     bgColor: 'bg-orange-50',
     borderColor: 'border-orange-100',
     hoverColor: 'group-hover:border-orange-200',
-    title: 'Extensión .EDU',
-    description: 'Gestión y obtención de dominios educativos oficiales para tu institución.',
-    features: ['Registro ante NIC', 'Configuración', 'Mantenimiento'],
+    title: t('index.edu_domain.title'),
+    description: t('index.edu_domain.description'),
+    features: [
+      t('index.edu_domain.feature_1'),
+      t('index.edu_domain.feature_2'),
+      t('index.edu_domain.feature_3'),
+    ],
   },
   {
     id: 'ciberseguridad',
@@ -102,9 +110,13 @@ const services = [
     bgColor: 'bg-red-50',
     borderColor: 'border-red-100',
     hoverColor: 'group-hover:border-red-200',
-    title: 'Ciberseguridad educativa',
-    description: 'Implementación de protocolos de seguridad y protección de datos sensibles.',
-    features: ['Auditoría', 'Firewalls', 'Capacitación'],
+    title: t('index.ciberseguridad.title'),
+    description: t('index.ciberseguridad.description'),
+    features: [
+      t('index.ciberseguridad.feature_1'),
+      t('index.ciberseguridad.feature_2'),
+      t('index.ciberseguridad.feature_3'),
+    ],
   },
   {
     id: 'arquitectura',
@@ -113,10 +125,13 @@ const services = [
     bgColor: 'bg-teal-50',
     borderColor: 'border-teal-100',
     hoverColor: 'group-hover:border-teal-200',
-    title: 'Diseño de soluciones',
-    description:
-      'Arquitectura tecnológica a medida para los desafíos específicos de tu institución.',
-    features: ['Infraestructura', 'Software', 'Integración'],
+    title: t('index.arquitectura.title'),
+    description: t('index.arquitectura.description'),
+    features: [
+      t('index.arquitectura.feature_1'),
+      t('index.arquitectura.feature_2'),
+      t('index.arquitectura.feature_3'),
+    ],
   },
   {
     id: 'capacitacion',
@@ -125,9 +140,13 @@ const services = [
     bgColor: 'bg-gray-50',
     borderColor: 'border-gray-200',
     hoverColor: 'group-hover:border-gray-300',
-    title: 'Capacitación 5.0',
-    description: 'Talleres y conferencias para actualizar a tu equipo en tendencias educativas.',
-    features: ['Docentes', 'Directivos', 'Administrativos'],
+    title: t('index.capacitacion.title'),
+    description: t('index.capacitacion.description'),
+    features: [
+      t('index.capacitacion.feature_1'),
+      t('index.capacitacion.feature_2'),
+      t('index.capacitacion.feature_3'),
+    ],
   },
-]
+])
 </script>
