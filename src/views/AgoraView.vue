@@ -901,33 +901,33 @@
 
               <div class="flex gap-3">
                 <div
-                  class="w-12 h-12 rounded-full bg-white border-2 border-agoraLime p-1 shadow-sm hover:scale-110 transition cursor-help"
+                  class="w-12 h-12 rounded-full bg-white border-2 border-lime-500 p-1 shadow-sm hover:scale-110 transition cursor-help"
                   title="Liderazgo 5.0"
                 >
                   <img
-                    src="../assets/images/badge_liderazgo.png"
+                    src="../assets/images/AGORA-22.png"
                     alt="Badge Liderazgo"
                     class="w-full h-full object-contain"
                   />
                 </div>
 
                 <div
-                  class="w-12 h-12 rounded-full bg-white border-2 border-purple-500 p-1 shadow-sm hover:scale-110 transition cursor-help"
+                  class="w-12 h-12 rounded-full bg-white border-2 border-green-500 p-1 shadow-sm hover:scale-110 transition cursor-help"
                   title="Neurodidáctica"
                 >
                   <img
-                    src="../assets/images/badge_neuro.png"
+                    src="../assets/images/AGORA-23.png"
                     alt="Badge Neurodidáctica"
                     class="w-full h-full object-contain"
                   />
                 </div>
 
                 <div
-                  class="w-12 h-12 rounded-full bg-white border-2 border-collegeOrange p-1 shadow-sm hover:scale-110 transition cursor-help"
+                  class="w-12 h-12 rounded-full bg-white border-2 border-gray-700 p-1 shadow-sm hover:scale-110 transition cursor-help"
                   title="Gestión Ágil"
                 >
                   <img
-                    src="../assets/images/badge_gestion.png"
+                    src="../assets/images/AGORA-24.png"
                     alt="Badge Gestión"
                     class="w-full h-full object-contain"
                   />
@@ -973,10 +973,10 @@
               <img
                 src="../assets/images/AGORA-25.png"
                 alt="Metanoia Logo"
-                class="h-16 w-auto absolute top-6 left-6 z-20 drop-shadow-md"
+                class="h-14 w-auto absolute top-6 left-6 z-20 drop-shadow-md"
               />
               <img
-                src="../assets/images/hero_metanoia.jpg"
+                src="../assets/images/METANOIA-01.png"
                 alt="Familia Metanoia"
                 class="w-full h-64 object-cover rounded-2xl opacity-60 group-hover:opacity-80 transition duration-500"
               />

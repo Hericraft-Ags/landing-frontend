@@ -402,7 +402,7 @@
                 class="absolute inset-0 bg-gradient-to-tr from-metanoiaPink to-purple-500 rounded-[2rem] opacity-20 rotate-3 transform group-hover:rotate-1 transition duration-500"
               ></div>
               <img
-                src="../../assets/images/metanoia_praxis.jpg"
+                src="../assets/images/METANOIA-01.png"
                 alt="Familia Aprendiendo Juntos"
                 class="relative rounded-[2rem] shadow-2xl border-4 border-white w-full object-cover"
               />
