@@ -7,6 +7,9 @@ const AgoraView = () => import('@/views/AgoraView.vue')
 const MetanoiaView = () => import('@/views/MetanoiaView.vue')
 const ProcessusView = () => import('@/views/ProcessusView.vue')
 const InversionistasView = () => import('@/views/InversionistasView.vue')
+const PrivacityView = () => import('@/views/PrivacityView.vue')
+const ThermsView = () => import('@/views/ThermsView.vue')
+const QuestionsView = () => import('@/views/QuestionsView.vue')
 
 const routes = [
   {
@@ -25,6 +28,33 @@ const routes = [
       {
         path: 'nosotros',
         component: NosotrosView,
+        meta: {
+          themeColor: '#111319',
+          accessibilityColor: '#08BE66',
+          colorTextAccessibility: '#fff',
+        },
+      },
+      {
+        path: 'aviso-privacidad',
+        component: PrivacityView,
+        meta: {
+          themeColor: '#111319',
+          accessibilityColor: '#08BE66',
+          colorTextAccessibility: '#fff',
+        },
+      },
+      {
+        path: 'terminos-y-condiciones',
+        component: ThermsView,
+        meta: {
+          themeColor: '#111319',
+          accessibilityColor: '#08BE66',
+          colorTextAccessibility: '#fff',
+        },
+      },
+      {
+        path: 'preguntas-frecuentes',
+        component: QuestionsView,
         meta: {
           themeColor: '#111319',
           accessibilityColor: '#08BE66',

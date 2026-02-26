@@ -37,7 +37,7 @@
             :class="{ 'animate-fade-in': !reduceMotion }"
           >
             {{ $t('index.header_message_white') }}<br />
-            <span class="text-cyan-bright" aria-label="Innovación Educativa">
+            <span class="text-cyan-bright" aria-label="{{ $t('index.header_message_green') }}">
               {{ $t('index.header_message_green') }}
             </span>
           </h1>
@@ -86,7 +86,7 @@ const ecosystems = computed(() => [
     description: t('index.college_detail'),
     color: 'collegeOrange',
     icon: 'college-dark.svg',
-    ariaLabel: 'Ecosistema College para escuelas',
+    ariaLabel: t('index.college_detail_ariaLabel'),
     route: '/college',
   },
   {
@@ -95,7 +95,7 @@ const ecosystems = computed(() => [
     description: t('index.agora_detail'),
     color: 'teal',
     icon: 'agora-dark.svg',
-    ariaLabel: 'Ecosistema Ágora para docentes',
+    ariaLabel: t('index.agora_detail_ariaLabel'),
     route: '/agora',
   },
   {
@@ -104,7 +104,7 @@ const ecosystems = computed(() => [
     description: t('index.metanoia_detail'),
     color: 'accentPink',
     icon: 'metanoia-dark.svg',
-    ariaLabel: 'Ecosistema Metanoia para familias',
+    ariaLabel: t('index.metanoia_detail_ariaLabel'),
     route: '/metanoia',
   },
   {
@@ -113,7 +113,7 @@ const ecosystems = computed(() => [
     description: t('index.processus_detail'),
     color: 'blue-400',
     icon: 'processus-dark.svg',
-    ariaLabel: 'Ecosistema Processus para empresas',
+    ariaLabel: t('index.processus_detail_ariaLabel'),
     route: '/processus',
   },
 ])
