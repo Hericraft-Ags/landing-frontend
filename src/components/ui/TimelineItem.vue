@@ -23,10 +23,10 @@ const props = defineProps({
 
 const dotClass = computed(() => {
   const colors = {
-    navy: 'bg-navy',
-    cyan: 'bg-cyan',
-    green: 'bg-green',
+    navy: 'bg-[#0a2966]',
+    cyan: 'bg-[#06b6d4]',
+    green: 'bg-[#39cc7f]',
   }
-  return colors[props.color] || 'bg-navy'
+  return colors[props.color] || 'bg-[#0a2966]'
 })
 </script>

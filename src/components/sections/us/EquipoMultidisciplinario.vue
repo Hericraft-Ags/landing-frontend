@@ -30,49 +30,50 @@
 
 <script setup>
 import DepartmentCard from '@/components/ui/DeparmentCard.vue'
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-const departments = [
+const { t } = useI18n()
+
+const departmentColors = ['blue', 'purple', 'pink', 'orange', 'green', 'gray']
+const icons = ['fa-lightbulb', 'fa-code', 'fa-pen-nib', 'fa-video', 'fa-handshake', 'fa-users-cog']
+
+const departments = computed(() => [
   {
-    name: 'Innovación e Investigación',
-    description:
-      'El laboratorio pedagógico donde nace el modelo PRAXIS y se diseñan los currículos del futuro.',
-    icon: 'fa-lightbulb',
-    color: 'blue',
+    name: t('us.innovation_title'),
+    description: t('us.innovation_description'),
+    icon: icons[0],
+    color: departmentColors[0],
   },
   {
-    name: 'Desarrollo Web',
-    description:
-      'Arquitectos digitales que construyen nuestras plataformas LMS, aplicaciones y garantizan la ciberseguridad.',
-    icon: 'fa-code',
-    color: 'purple',
+    name: t('us.web_develop_title'),
+    description: t('us.web_develop_description'),
+    icon: icons[1],
+    color: departmentColors[1],
   },
   {
-    name: 'Diseño Gráfico y Editorial',
-    description:
-      'Creadores de la identidad visual, manuales didácticos y experiencias de usuario (UI/UX) intuitivas.',
-    icon: 'fa-pen-nib',
-    color: 'pink',
+    name: t('us.design_title'),
+    description: t('us.design_description'),
+    icon: icons[2],
+    color: departmentColors[2],
   },
   {
-    name: 'Medios Digitales',
-    description:
-      'Producción audiovisual de alto nivel, animación y creación de contenido educativo multimedia.',
-    icon: 'fa-video',
-    color: 'orange',
+    name: t('us.digital_title'),
+    description: t('us.digital_description'),
+    icon: icons[3],
+    color: departmentColors[3],
   },
   {
-    name: 'Vinculación y Ventas',
-    description:
-      'El puente estratégico con instituciones y partners. Gestión de relaciones y expansión de mercado.',
-    icon: 'fa-handshake',
-    color: 'green',
+    name: t('us.sales_title'),
+    description: t('us.sales_description'),
+    icon: icons[4],
+    color: departmentColors[4],
   },
   {
-    name: 'Administración y RH',
-    description:
-      'El pilar que sostiene la operación. Gestión de talento, finanzas y cultura organizacional.',
-    icon: 'fa-users-cog',
-    color: 'gray',
+    name: t('us.rh_title'),
+    description: t('us.rh_description'),
+    icon: icons[5],
+    color: departmentColors[5],
   },
-]
+])
 </script>

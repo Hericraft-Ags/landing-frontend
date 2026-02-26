@@ -1,10 +1,10 @@
 <template>
-  <section class="relative bg-hero-space text-white pt-40 pb-28 px-6 overflow-hidden">
+  <section class="relative bg-hero-space text-white pt-40 pb-32 px-6 overflow-hidden">
     <div
       class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"
     ></div>
     <div
-      class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-cyan/20 to-transparent pointer-events-none"
+      class="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-cyan/20 to-transparent pointer-events-none"
     ></div>
 
     <div class="max-w-4xl mx-auto relative z-10 text-center">
@@ -12,17 +12,16 @@
         class="inline-flex items-center gap-2 border border-cyan/50 bg-cyan/10 text-cyan text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6"
       >
         <span class="w-2 h-2 rounded-full bg-cyan animate-pulse"></span>
-        Nuestra Esencia
+        {{ $t('us.capsule_scense') }}
       </div>
 
       <h1 class="text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight">
-        Nacidos en el Aula, <br />
-        <span class="text-gray-400"> Para Transformarla. </span>
+        {{ $t('us.header_message') }} <br />
+        <span class="text-gray-400"> {{ $t('us.header_message_2') }} </span>
       </h1>
 
       <p class="text-xl text-gray-200 leading-relaxed max-w-2xl mx-auto">
-        Somos un equipo multidisciplinario de pedagogos, ingenieros y diseñadores unidos por una
-        misión: cerrar la brecha entre la tecnología y el humanismo.
+        {{ $t('us.header_slogan') }}
       </p>
     </div>
   </section>
