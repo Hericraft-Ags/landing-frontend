@@ -123,7 +123,7 @@
 
     <main class="animate-fade-in pt-28">
       <section
-        class="relative bg-gradient-to-b from-agoraDark to-oxfordGray pt-20 pb-28 px-6 overflow-hidden text-white"
+        class="relative agora-bg pt-20 pb-28 px-6 overflow-hidden text-white"
       >
         <div class="absolute inset-0 hero-pattern pointer-events-none"></div>
         <div
@@ -179,12 +179,9 @@
               <img
                 src="../assets/images/hero_agora_network.png"
                 alt="Red Docente Conectada"
-                class="w-full max-w-md object-contain drop-shadow-2xl animate-pulse-slow grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition duration-700"
+                class="w-full max-w-md object-contain drop-shadow-2xl opacity-90 hover:opacity-100 transition duration-700"
               />
             </div>
-            <div
-              class="absolute border border-agoraLime/20 rounded-full w-[400px] h-[400px] animate-spin-slow"
-            ></div>
             <div
               class="absolute border border-white/5 rounded-full w-[600px] h-[600px] animate-spin-slow"
               style="animation-direction: reverse"
@@ -213,7 +210,11 @@
               <div
                 class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center text-oxfordGray mb-6 text-3xl group-hover:bg-agoraLime group-hover:text-white transition transform group-hover:rotate-6"
               >
-                <i class="fas fa-globe-americas"></i>
+                <img
+                    src="../assets/images/AGORA-03.png"
+                    alt="Icono modelos globales"
+                    class="w-full h-full object-contain"
+                  />
               </div>
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Modelos globales</h3>
               <p class="text-sm text-gray-500">Tendencias educativas internacionales comparadas.</p>
@@ -224,7 +225,11 @@
               <div
                 class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center text-oxfordGray mb-6 text-3xl group-hover:bg-agoraLime group-hover:text-white transition transform group-hover:rotate-6"
               >
-                <i class="fas fa-brain"></i>
+                <img
+                    src="../assets/images/AGORA-04.png"
+                    alt="Icono neurociencia"
+                    class="w-full h-full object-contain"
+                  />
               </div>
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Neurociencia</h3>
               <p class="text-sm text-gray-500">Cómo aprende el cerebro en la era digital.</p>
@@ -235,7 +240,11 @@
               <div
                 class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center text-oxfordGray mb-6 text-3xl group-hover:bg-agoraLime group-hover:text-white transition transform group-hover:rotate-6"
               >
-                <i class="fas fa-tools"></i>
+                <img
+                    src="../assets/images/AGORA-05.png"
+                    alt="Icono metodologías ágiles"
+                    class="w-full h-full object-contain"
+                  />
               </div>
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Metodologías ágiles</h3>
               <p class="text-sm text-gray-500">ABP, Flipped Classroom y Design Thinking.</p>
@@ -246,7 +255,11 @@
               <div
                 class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center text-oxfordGray mb-6 text-3xl group-hover:bg-agoraLime group-hover:text-white transition transform group-hover:rotate-6"
               >
-                <i class="fas fa-pencil-ruler"></i>
+                <img
+                    src="../assets/images/AGORA-06.png"
+                    alt="Icono diseño curricular"
+                    class="w-full h-full object-contain"
+                  />
               </div>
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Diseño curricular</h3>
               <p class="text-sm text-gray-500">Planeación estratégica y evaluación formativa.</p>
@@ -577,7 +590,7 @@
 
           <div class="grid md:grid-cols-2 gap-8">
             <div
-              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-pink-500 transition group relative overflow-hidden"
+              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-green-700 transition group relative overflow-hidden"
             >
               <div
                 class="absolute top-0 right-0 w-24 h-24 bg-pink-500/10 rounded-full blur-2xl -mr-8 -mt-8"
@@ -585,16 +598,20 @@
               <div class="flex items-start justify-between mb-6">
                 <div>
                   <h3
-                    class="text-2xl font-agora font-bold text-white group-hover:text-pink-500 transition"
+                    class="text-2xl font-agora font-bold text-white group-hover:text-green-700 transition"
                   >
                     Pedagogía & Neurociencia
                   </h3>
-                  <span class="text-xs font-bold text-pink-400 uppercase tracking-wide mt-1 block"
+                  <span class="text-xs font-bold text-green-500 uppercase tracking-wide mt-1 block"
                     >El Software Humano</span
                   >
                 </div>
-                <div class="bg-pink-500/20 p-3 rounded-xl">
-                  <i class="fas fa-brain text-pink-500 text-2xl"></i>
+                <div class="rounded-xl">
+                  <img
+                    src="../assets/images/AGORA-15.png"
+                    alt="Icono pedagogia y neurociencia"
+                    class="w-20 h-20 object-contain"
+                  />
                 </div>
               </div>
 
@@ -617,31 +634,35 @@
 
               <a
                 href="#"
-                class="inline-flex items-center text-xs font-bold text-pink-500 hover:text-white transition uppercase tracking-wide border-b border-pink-500/30 pb-1 hover:border-white"
+                class="inline-flex items-center text-xs font-bold text-green-700 hover:text-white transition uppercase tracking-wide border-b border-green-700/30 pb-1 hover:border-white"
               >
                 Explorar Cursos <i class="fas fa-arrow-right ml-2"></i>
               </a>
             </div>
 
             <div
-              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-purple-500 transition group relative overflow-hidden"
+              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-lime-500 transition group relative overflow-hidden"
             >
               <div
-                class="absolute top-0 right-0 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl -mr-8 -mt-8"
+                class="absolute top-0 right-0 w-24 h-24 bg-lime-500/10 rounded-full blur-2xl -mr-8 -mt-8"
               ></div>
               <div class="flex items-start justify-between mb-6">
                 <div>
                   <h3
-                    class="text-2xl font-agora font-bold text-white group-hover:text-purple-500 transition"
+                    class="text-2xl font-agora font-bold text-white group-hover:text-lime-700 transition"
                   >
                     Gestión & Liderazgo
                   </h3>
-                  <span class="text-xs font-bold text-purple-400 uppercase tracking-wide mt-1 block"
+                  <span class="text-xs font-bold text-lime-500 uppercase tracking-wide mt-1 block"
                     >El Hardware Operativo</span
                   >
                 </div>
-                <div class="bg-purple-500/20 p-3 rounded-xl">
-                  <i class="fas fa-gavel text-purple-500 text-2xl"></i>
+                <div class="rounded-xl">
+                  <img
+                    src="../assets/images/AGORA-16.png"
+                    alt="Icono gestión y liderazgo"
+                    class="w-20 h-20 object-contain"
+                  />
                 </div>
               </div>
 
@@ -664,14 +685,14 @@
 
               <a
                 href="#"
-                class="inline-flex items-center text-xs font-bold text-purple-500 hover:text-white transition uppercase tracking-wide border-b border-purple-500/30 pb-1 hover:border-white"
+                class="inline-flex items-center text-xs font-bold text-lime-700 hover:text-white transition uppercase tracking-wide border-b border-lime-700/30 pb-1 hover:border-white"
               >
                 Explorar Cursos <i class="fas fa-arrow-right ml-2"></i>
               </a>
             </div>
 
             <div
-              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-cyanBright transition group relative overflow-hidden"
+              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-blue-100 transition group relative overflow-hidden"
             >
               <div
                 class="absolute top-0 right-0 w-24 h-24 bg-cyanBright/10 rounded-full blur-2xl -mr-8 -mt-8"
@@ -679,16 +700,20 @@
               <div class="flex items-start justify-between mb-6">
                 <div>
                   <h3
-                    class="text-2xl font-agora font-bold text-white group-hover:text-cyanBright transition"
+                    class="text-2xl font-agora font-bold text-white group-hover:text-blue-100 transition"
                   >
                     Tech & IA Educativa
                   </h3>
-                  <span class="text-xs font-bold text-cyan-400 uppercase tracking-wide mt-1 block"
+                  <span class="text-xs font-bold text-blue-100 uppercase tracking-wide mt-1 block"
                     >El Sistema Operativo</span
                   >
                 </div>
-                <div class="bg-cyanBright/20 p-3 rounded-xl">
-                  <i class="fas fa-robot text-cyanBright text-2xl"></i>
+                <div class="bg-cyanBright/20 rounded-xl">
+                  <img
+                    src="../assets/images/AGORA-17.png"
+                    alt="Icono tecnologia e inteligencia artificial educativa"
+                    class="w-20 h-20 object-contain brightness-200"
+                  />
                 </div>
               </div>
 
@@ -711,14 +736,14 @@
 
               <a
                 href="#"
-                class="inline-flex items-center text-xs font-bold text-cyanBright hover:text-white transition uppercase tracking-wide border-b border-cyanBright/30 pb-1 hover:border-white"
+                class="inline-flex items-center text-xs font-bold text-blue-100 hover:text-white transition uppercase tracking-wide border-b border-blue-100/30 pb-1 hover:border-white"
               >
                 Explorar Cursos <i class="fas fa-arrow-right ml-2"></i>
               </a>
             </div>
 
             <div
-              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-collegeOrange transition group relative overflow-hidden"
+              class="bg-agoraDark rounded-2xl p-8 shadow-lg border border-gray-700 hover:border-yellow-300 transition group relative overflow-hidden"
             >
               <div
                 class="absolute top-0 right-0 w-24 h-24 bg-collegeOrange/10 rounded-full blur-2xl -mr-8 -mt-8"
@@ -726,16 +751,20 @@
               <div class="flex items-start justify-between mb-6">
                 <div>
                   <h3
-                    class="text-2xl font-agora font-bold text-white group-hover:text-collegeOrange transition"
+                    class="text-2xl font-agora font-bold text-white group-hover:text-yellow-500 transition"
                   >
                     Espacio & Entorno
                   </h3>
-                  <span class="text-xs font-bold text-orange-400 uppercase tracking-wide mt-1 block"
+                  <span class="text-xs font-bold text-yellow-300 uppercase tracking-wide mt-1 block"
                     >El Hardware Físico</span
                   >
                 </div>
-                <div class="bg-collegeOrange/20 p-3 rounded-xl">
-                  <i class="fas fa-cubes text-collegeOrange text-2xl"></i>
+                <div class="bg-collegeOrange/20 rounded-xl">
+                  <img
+                    src="../assets/images/AGORA-18.png"
+                    alt="Icono espacio y entorno"
+                    class="w-20 h-20 object-contain"
+                  />
                 </div>
               </div>
 
@@ -758,7 +787,7 @@
 
               <a
                 href="#"
-                class="inline-flex items-center text-xs font-bold text-collegeOrange hover:text-white transition uppercase tracking-wide border-b border-collegeOrange/30 pb-1 hover:border-white"
+                class="inline-flex items-center text-xs font-bold text-yellow-500 hover:text-white transition uppercase tracking-wide border-b border-yellow-500/30 pb-1 hover:border-white"
               >
                 Explorar Cursos <i class="fas fa-arrow-right ml-2"></i>
               </a>
@@ -796,7 +825,7 @@
               </div>
               <a
                 href="#"
-                class="bg-agoraLime text-navy px-6 py-3 rounded-full font-bold text-sm hover:bg-white transition shadow-lg shrink-0"
+                class="bg-agoraLime text-agoraDark px-8 py-4 rounded-full font-bold hover:bg-white transition shadow-lg hover:shadow-lime-500/30 transform hover:-translate-y-1 flex items-center gap-2"
               >
                 Ver Programas Éticos
               </a>
@@ -872,33 +901,33 @@
 
               <div class="flex gap-3">
                 <div
-                  class="w-12 h-12 rounded-full bg-white border-2 border-agoraLime p-1 shadow-sm hover:scale-110 transition cursor-help"
+                  class="w-12 h-12 rounded-full bg-white border-2 border-lime-500 p-1 shadow-sm hover:scale-110 transition cursor-help"
                   title="Liderazgo 5.0"
                 >
                   <img
-                    src="../assets/images/badge_liderazgo.png"
+                    src="../assets/images/AGORA-22.png"
                     alt="Badge Liderazgo"
                     class="w-full h-full object-contain"
                   />
                 </div>
 
                 <div
-                  class="w-12 h-12 rounded-full bg-white border-2 border-purple-500 p-1 shadow-sm hover:scale-110 transition cursor-help"
+                  class="w-12 h-12 rounded-full bg-white border-2 border-green-500 p-1 shadow-sm hover:scale-110 transition cursor-help"
                   title="Neurodidáctica"
                 >
                   <img
-                    src="../assets/images/badge_neuro.png"
+                    src="../assets/images/AGORA-23.png"
                     alt="Badge Neurodidáctica"
                     class="w-full h-full object-contain"
                   />
                 </div>
 
                 <div
-                  class="w-12 h-12 rounded-full bg-white border-2 border-collegeOrange p-1 shadow-sm hover:scale-110 transition cursor-help"
+                  class="w-12 h-12 rounded-full bg-white border-2 border-gray-700 p-1 shadow-sm hover:scale-110 transition cursor-help"
                   title="Gestión Ágil"
                 >
                   <img
-                    src="../assets/images/badge_gestion.png"
+                    src="../assets/images/AGORA-24.png"
                     alt="Badge Gestión"
                     class="w-full h-full object-contain"
                   />
@@ -942,12 +971,12 @@
               class="relative bg-gray-900 rounded-3xl p-1 border border-gray-700 hover:border-pink-500 transition overflow-hidden"
             >
               <img
-                src="../assets/images/isologo_metanoia.png"
+                src="../assets/images/AGORA-25.png"
                 alt="Metanoia Logo"
-                class="h-16 w-auto absolute top-6 left-6 z-20 drop-shadow-md"
+                class="h-14 w-auto absolute top-6 left-6 z-20 drop-shadow-md"
               />
               <img
-                src="../assets/images//hero_metanoia.jpg"
+                src="../assets/images/METANOIA-01.png"
                 alt="Familia Metanoia"
                 class="w-full h-64 object-cover rounded-2xl opacity-60 group-hover:opacity-80 transition duration-500"
               />

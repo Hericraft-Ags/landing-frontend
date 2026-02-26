@@ -176,7 +176,7 @@
                 Explorar Escuela para Padres <i class="fas fa-heart"></i>
               </a>
               <button
-                class="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-navy text-navy font-bold hover:bg-navy hover:text-white transition"
+                class="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-navy text-navy font-bold hover:bg-black hover:text-pink-700 transition shadow-lg hover:shadow-pink-500/30"
               >
                 <i class="fas fa-play-circle text-xl"></i> Ver Video Manifiesto
               </button>
@@ -188,7 +188,7 @@
               class="absolute inset-0 bg-gradient-to-tr from-metanoiaPink to-purple-500 rounded-[3rem] opacity-20 rotate-3 scale-95 transition-transform group-hover:rotate-1"
             ></div>
             <img
-              src="../assets/images/hero_metanoia_family.jpg"
+              src="../assets/images/METANOIA-01.png"
               alt="Familia Conectada y Feliz"
               class="relative rounded-[3rem] shadow-2xl border-4 border-white w-full object-cover transform transition duration-500 group-hover:-translate-y-2 h-[500px]"
             />
@@ -229,9 +229,9 @@
             <div
               class="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-lg soft-shadow card-interaction group text-center relative overflow-hidden"
             >
-              <div class="absolute top-0 left-0 w-full h-2 bg-blue-400"></div>
+              <div class="absolute top-0 left-0 w-full h-2 bg-pink-500"></div>
               <div
-                class="w-20 h-20 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-blue-500 mb-6 text-3xl group-hover:bg-blue-500 group-hover:text-white transition duration-300"
+                class="w-20 h-20 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-pink-500 mb-6 text-3xl group-hover:bg-pink-500 group-hover:text-white transition duration-300"
               >
                 <i class="fas fa-brain"></i>
               </div>
@@ -246,9 +246,9 @@
             <div
               class="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-lg soft-shadow card-interaction group text-center relative overflow-hidden"
             >
-              <div class="absolute top-0 left-0 w-full h-2 bg-green-400"></div>
+              <div class="absolute top-0 left-0 w-full h-2 bg-rose-500"></div>
               <div
-                class="w-20 h-20 mx-auto bg-green-50 rounded-full flex items-center justify-center text-green-500 mb-6 text-3xl group-hover:bg-green-500 group-hover:text-white transition duration-300"
+                class="w-20 h-20 mx-auto bg-green-50 rounded-full flex items-center justify-center text-rose-500 mb-6 text-3xl group-hover:bg-rose-500 group-hover:text-white transition duration-300"
               >
                 <i class="fas fa-heartbeat"></i>
               </div>
@@ -262,9 +262,9 @@
             <div
               class="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-lg soft-shadow card-interaction group text-center relative overflow-hidden"
             >
-              <div class="absolute top-0 left-0 w-full h-2 bg-purple-400"></div>
+              <div class="absolute top-0 left-0 w-full h-2 bg-fuchsia-700"></div>
               <div
-                class="w-20 h-20 mx-auto bg-purple-50 rounded-full flex items-center justify-center text-purple-500 mb-6 text-3xl group-hover:bg-purple-500 group-hover:text-white transition duration-300"
+                class="w-20 h-20 mx-auto bg-purple-50 rounded-full flex items-center justify-center text-fuchsia-700 mb-6 text-3xl group-hover:bg-fuchsia-700 group-hover:text-white transition duration-300"
               >
                 <i class="fas fa-spa"></i>
               </div>
@@ -278,9 +278,9 @@
             <div
               class="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-lg soft-shadow card-interaction group text-center relative overflow-hidden"
             >
-              <div class="absolute top-0 left-0 w-full h-2 bg-collegeOrange"></div>
+              <div class="absolute top-0 left-0 w-full h-2 bg-purple-700"></div>
               <div
-                class="w-20 h-20 mx-auto bg-orange-50 rounded-full flex items-center justify-center text-collegeOrange mb-6 text-3xl group-hover:bg-collegeOrange group-hover:text-white transition duration-300"
+                class="w-20 h-20 mx-auto bg-orange-50 rounded-full flex items-center justify-center text-purple-700 mb-6 text-3xl group-hover:bg-purple-700 group-hover:text-white transition duration-300"
               >
                 <i class="fas fa-users"></i>
               </div>
@@ -312,7 +312,7 @@
             </div>
             <div class="mt-6 md:mt-0">
               <button
-                class="text-white border border-white/30 px-6 py-3 rounded-full hover:bg-white hover:text-navy transition text-sm font-bold"
+                class="text-white border border-white/30 px-6 py-3 rounded-full hover:bg-white hover:text-indigo-950 transition text-sm font-bold"
               >
                 Ver Calendario Completo
               </button>
@@ -331,9 +331,9 @@
               </div>
               <div class="flex items-start gap-6">
                 <img
-                  src="../assets/images/icon_padres.png"
+                  src="../assets/images/METANOIA-08.png"
                   alt="Padres"
-                  class="w-20 h-20 object-contain p-2 bg-white/5 rounded-2xl"
+                  class="w-40 h-40 object-contain p-2 bg-white/5 rounded-2xl"
                 />
                 <div>
                   <h3
@@ -366,9 +366,9 @@
               </div>
               <div class="flex items-start gap-6">
                 <img
-                  src="../assets/images/icon_hijos.png"
+                  src="../assets/images/METANOIA-12.png"
                   alt="Hijos"
-                  class="w-20 h-20 object-contain p-2 bg-white/5 rounded-2xl"
+                  class="w-40 h-40 object-contain p-2 bg-white/5 rounded-2xl"
                 />
                 <div>
                   <h3
@@ -402,7 +402,7 @@
                 class="absolute inset-0 bg-gradient-to-tr from-metanoiaPink to-purple-500 rounded-[2rem] opacity-20 rotate-3 transform group-hover:rotate-1 transition duration-500"
               ></div>
               <img
-                src="../../assets/images/metanoia_praxis.jpg"
+                src="../assets/images/METANOIA-01.png"
                 alt="Familia Aprendiendo Juntos"
                 class="relative rounded-[2rem] shadow-2xl border-4 border-white w-full object-cover"
               />
