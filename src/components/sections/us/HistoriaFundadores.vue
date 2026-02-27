@@ -20,7 +20,7 @@
             class="absolute inset-0 bg-cyan/10 rounded-2xl transform translate-x-4 translate-y-4"
           ></div>
           <img
-            src="https://placehold.co/600x700/0A2966/FFFFFF?text=Fundadores+Hericraft"
+            src="../../../assets/images/NOSOTROS-10.png"
             alt="Fundadores Hericraft"
             class="rounded-2xl shadow-2xl relative w-full object-cover filter grayscale hover:grayscale-0 transition duration-500"
           />
@@ -76,21 +76,21 @@ const founders = [
   {
     name: 'Ricardo A. Villegas',
     role: 'Innovación',
-    image: '/assets/images/founders/ricardo.jpg',
+    image: '/assets/images/NOSOTROS-12.png',
     borderColor: 'cyan',
     roleColor: 'green',
   },
   {
     name: 'Héctor N. Prieto',
     role: 'Dirección General',
-    image: '/assets/images/founders/hector.jpg',
+    image: '/assets/images/founders/NOSOTROS-13.png',
     borderColor: 'navy',
     roleColor: 'green',
   },
   {
     name: 'Marco A. Gómez',
     role: 'Operaciones',
-    image: '/assets/images/founders/marco.jpg',
+    image: '/assets/images/founders/NOSOTROS-11.png',
     borderColor: 'navy',
     roleColor: 'green',
   },
