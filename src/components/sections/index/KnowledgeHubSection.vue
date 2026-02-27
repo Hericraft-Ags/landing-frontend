@@ -33,15 +33,15 @@
 
         <a
           href="#"
-          class="group relative px-6 py-3 rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-collegeOrange/20"
+          class="group relative px-6 py-3 rounded-full overflow-hidden border border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-orange-200"
         >
           <span
-            class="absolute inset-0 z-0 bg-linear-to-r from-orange-500 to-purple-600 transition-transform duration-300 group-hover:scale-105"
+            class="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-105"
           ></span>
           <span
             class="absolute inset-0 z-10 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 skew-x-12"
           ></span>
-          <span class="relative z-20 flex items-center gap-2 text-white font-bold text-sm">
+          <span class="relative z-20 flex items-center gap-2 text-gray-900 font-bold text-sm">
             {{ $t('index.banco_btn') }}
             <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
           </span>
