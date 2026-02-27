@@ -155,7 +155,7 @@
             <h1 class="text-5xl lg:text-6xl font-metanoia font-black text-navy leading-[1.1]">
               El hogar como <br />
               <span
-                class="text-transparent bg-clip-text bg-gradient-to-r from-metanoiaPink to-purple-600"
+                class="bg-clip-text text-pink-700"
                 >Laboratorio de Vida.</span
               >
             </h1>
@@ -496,9 +496,9 @@
               class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition transform hover:-translate-y-2 opacity-80 hover:opacity-100"
             >
               <img
-                src="../../assets/images/isologo_college.png"
+                src="../assets/images/METANOIA-12-1.png"
                 alt="College"
-                class="h-12 w-auto mx-auto mb-4 grayscale hover:grayscale-0 transition"
+                class="h-18 w-auto mx-auto mb-4 grayscale hover:grayscale-0 transition"
               />
               <h4 class="font-bold text-navy text-lg">El Alumno</h4>
               <p class="text-xs text-gray-500">Recibe educación académica.</p>
@@ -513,9 +513,9 @@
                 CONEXIÓN VITAL
               </div>
               <img
-                src="../../assets/images/isologo_metanoia.png"
+                src="../assets/images/METANOIA-13.png"
                 alt="Metanoia"
-                class="h-16 w-auto mx-auto mb-6"
+                class="h-18 w-auto mx-auto mb-6"
               />
               <h4 class="font-bold text-metanoiaPink text-2xl">La Familia</h4>
               <p class="text-sm text-gray-600 mt-2">Soporte emocional y valoral.</p>
@@ -525,9 +525,9 @@
               class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition transform hover:-translate-y-2 opacity-80 hover:opacity-100"
             >
               <img
-                src="../../assets/images/isologo_agora.png"
+                src="../assets/images/METANOIA-14.png"
                 alt="Ágora"
-                class="h-12 w-auto mx-auto mb-4 grayscale hover:grayscale-0 transition"
+                class="h-18 w-auto mx-auto mb-4 grayscale hover:grayscale-0 transition"
               />
               <h4 class="font-bold text-navy text-lg">El Docente</h4>
               <p class="text-xs text-gray-500">Guía el proceso pedagógico.</p>
