@@ -149,7 +149,7 @@
             <img
               src="../assets/images/logo_metanoia.png"
               alt="Logo Metanoia"
-              class="h-28 w-auto mb-2 drop-shadow-sm"
+              class="h-40 w-auto mb-2 drop-shadow-sm"
             />
 
             <h1 class="text-5xl lg:text-6xl font-metanoia font-black text-navy leading-[1.1]">
