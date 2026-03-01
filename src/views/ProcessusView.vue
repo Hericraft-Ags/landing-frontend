@@ -21,7 +21,7 @@
     </div>
 
     <nav
-      class="fixed top-10 w-full bg-navy/95 backdrop-blur-md border-b border-white/10 z-50 h-20 transition-all shadow-lg"
+      class="fixed top-10 w-full bg-slate-900 backdrop-blur-md border-b border-gray-800 z-50 h-20 transition-all shadow-sm"
     >
       <div class="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
         <a href="/">
@@ -86,7 +86,7 @@
             <img
               src="../assets/images/logo_processus.png"
               alt="Logo Processus"
-              class="h-24 w-auto -ml-4 mb-4"
+              class="h-40 w-auto -ml-4 mb-4"
             />
 
             <div class="flex gap-3 text-xs font-bold tracking-widest uppercase text-cyan mb-4">
@@ -101,7 +101,7 @@
               class="text-5xl lg:text-7xl font-brand-processus font-black text-white leading-none"
             >
               Ingeniería del <br />
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan to-blue-400"
+              <span class="bg-clip-text text-cyan"
                 >Aprendizaje Corporativo.</span
               >
             </h1>
@@ -136,7 +136,7 @@
             ></div>
 
             <img
-              src="../../assets/images/hero_processus.jpg"
+              src="../assets/images/online-learning-experience.jpg"
               class="relative rounded-2xl shadow-2xl border border-white/10 w-full object-cover"
               alt="Corporate LMS"
             />
@@ -172,7 +172,11 @@
               <div
                 class="w-16 h-16 bg-navy border border-cyan/30 rounded-2xl flex items-center justify-center text-cyan text-3xl mb-8 group-hover:scale-110 transition shadow-[0_0_20px_rgba(14,241,235,0.2)]"
               >
-                <i class="fas fa-door-open"></i>
+                <img
+                src="../assets/images/PROCESSUS-03.png"
+                alt="Onboarding digital"
+                class="h-16 w-auto"
+                />
               </div>
               <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan transition">
                 Onboarding Digital
@@ -199,7 +203,11 @@
               <div
                 class="w-16 h-16 bg-navy border border-cyan/30 rounded-2xl flex items-center justify-center text-cyan text-3xl mb-8 group-hover:scale-110 transition shadow-[0_0_20px_rgba(14,241,235,0.2)]"
               >
-                <i class="fas fa-server"></i>
+                <img
+                src="../assets/images/PROCESSUS-04.png"
+                alt="Onboarding digital"
+                class="h-16 w-auto"
+                />
               </div>
               <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan transition">
                 LMS Empresarial
@@ -222,7 +230,11 @@
               <div
                 class="w-16 h-16 bg-navy border border-cyan/30 rounded-2xl flex items-center justify-center text-cyan text-3xl mb-8 group-hover:scale-110 transition shadow-[0_0_20px_rgba(14,241,235,0.2)]"
               >
-                <i class="fas fa-film"></i>
+                <img
+                src="../assets/images/PROCESSUS-05.png"
+                alt="Onboarding digital"
+                class="h-16 w-auto"
+                />
               </div>
               <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan transition">
                 Fábrica de Contenidos
@@ -312,7 +324,7 @@
       <!-- CTA -->
       <section
         id="contacto"
-        class="py-24 px-6 bg-gradient-to-b from-slate-900 to-black text-center"
+        class="py-24 px-6 text-center bg-blue-900"
       >
         <h2 class="text-3xl md:text-4xl font-brand-processus text-white mb-6">
           Potencia tu Capital Humano
@@ -336,7 +348,7 @@
       </section>
     </main>
 
-    <footer class="bg-slate-950 py-12 text-center text-gray-500 text-sm">
+    <footer class="bg-slate-900 py-12 text-center text-gray-500 text-sm">
       <div class="flex justify-center gap-6 mb-8">
         <a href="#" target="_blank" class="block w-10 h-10">
           <img

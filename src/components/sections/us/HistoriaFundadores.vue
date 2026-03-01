@@ -72,7 +72,7 @@ const founders = computed(() => [
             class="absolute inset-0 bg-cyan/10 rounded-2xl transform translate-x-4 translate-y-4"
           ></div>
           <img
-            src="https://placehold.co/600x700/0A2966/FFFFFF?text=Fundadores+Hericraft"
+            src="../../../assets/images/NOSOTROS-10.png"
             alt="Fundadores Hericraft"
             class="rounded-2xl shadow-2xl relative w-full object-cover filter grayscale hover:grayscale-0 transition duration-500"
           />
@@ -97,3 +97,53 @@ const founders = computed(() => [
     </div>
   </section>
 </template>
+
+<script setup>
+import TimelineItem from '@/components/ui/TimelineItem.vue'
+import FounderCard from '@/components/ui/FounderCard.vue'
+
+const timelineItems = [
+  {
+    year: '2022',
+    title: 'La Idea',
+    description: 'Nace de la necesidad de unir tecnología y pedagogía real.',
+    color: 'navy',
+  },
+  {
+    year: '2023',
+    title: 'Constitución',
+    description: 'Se funda legalmente Hericraft en Aguascalientes.',
+    color: 'cyan',
+  },
+  {
+    year: 'Hoy',
+    title: 'Expansión',
+    description: 'Impacto en +5,000 estudiantes en México.',
+    color: 'green',
+  },
+]
+
+const founders = [
+  {
+    name: 'Ricardo A. Villegas',
+    role: 'Innovación',
+    image: '/assets/images/NOSOTROS-12.png',
+    borderColor: 'cyan',
+    roleColor: 'green',
+  },
+  {
+    name: 'Héctor N. Prieto',
+    role: 'Dirección General',
+    image: '/assets/images/founders/NOSOTROS-13.png',
+    borderColor: 'navy',
+    roleColor: 'green',
+  },
+  {
+    name: 'Marco A. Gómez',
+    role: 'Operaciones',
+    image: '/assets/images/founders/NOSOTROS-11.png',
+    borderColor: 'navy',
+    roleColor: 'green',
+  },
+]
+</script>
