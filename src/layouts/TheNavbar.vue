@@ -25,7 +25,7 @@ const toggleMobileMenu = () => {
   >
     <div class="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
       <!-- Logo -->
-      <RouterLink to="/" class="flex-shrink-0 cursor-pointer hover:opacity-80 transition">
+      <RouterLink to="/" class="shrink-0 cursor-pointer hover:opacity-80 transition">
         <img
           src="../assets/images/logos/logo_hericraft.png"
           alt="Hericraft Logo"
@@ -91,28 +91,28 @@ const toggleMobileMenu = () => {
 
         <a
           href="#ambientes"
-          class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide"
+          class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide hover:bg-white/10 rounded-full"
         >
           {{ $t('navbar.ambientes') }}
         </a>
 
         <a
           href="#servicios"
-          class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide"
+          class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide hover:bg-white/10 rounded-full"
         >
           {{ $t('navbar.consultoria') }}
         </a>
 
         <a
           href="#saberes"
-          class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide"
+          class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide hover:bg-white/10 rounded-full"
         >
           {{ $t('navbar.saberes') }}
         </a>
 
         <a
           href="/inversionistas"
-          class="ml-2 text-[10px] font-bold text-cyan-bright border border-cyan-bright/30 bg-green-50 px-3 py-1 rounded-full hover:bg-cyan-bright hover:text-white transition uppercase tracking-wide"
+          class="ml-2 text-[10px] font-bold text-cyan-bright border border-cyan-bright/30 bg-green-50 px-3 py-1 rounded-full hover:bg-[#08be66] hover:text-white transition uppercase tracking-wide"
         >
           {{ $t('navbar.inversionistas') }}
         </a>

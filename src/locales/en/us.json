@@ -1,0 +1,88 @@
+{
+  "capsule_scense": "Our Essence",
+  "header_message": "Born in the Classroom,",
+  "header_message_2": "To Transform It.",
+  "header_slogan": "We are a multidisciplinary team of pedagogues, engineers and designers united by one mission: to bridge the gap between technology and humanism.",
+  "philosophy_part1": "We believe in the transformative power of education when it is built with",
+  "philosophy_highlight": "purpose, heart and science",
+  "philosophy_part2": "Our philosophy is born from a deep love for the human being and their infinite capacity to grow, dream and create. We know that every girl and boy, young person and adult, is a unique universe that deserves to be discovered, understood and guided.",
+  "vision_part1": "We are driven by a clear vision: education is not just teaching, it is forming people with character, conscience and purpose. That is why we design experiences that activate the mind, move the heart and awaken the will. We integrate the best of pedagogy, neuroeducation, technology and art to form integral, creative and resilient individuals, capable of transforming their environment with",
+  "vision_highlight": "ethics, compassion and courage",
+  "vision_part2": ".",
+  "beliefs_part1": "We do not believe in empty formulas or dehumanized systems. We believe in a living, immersive and meaningful education that connects with emotions, respects the rhythms of each being, and ignites the spark of",
+  "beliefs_highlight": "'I can'",
+  "beliefs_part2": "We believe in environments that inspire, in questions that move the soul and in challenges that build character.",
+  "movement_text": "Hericraft is more than an educational company.",
+  "movement_text_2": "It is a movement. A calling. A promise.",
+  "promise_text": "The promise of putting soul into every classroom, heart into every experience, and science into every decision.",
+  "future_text": "We educate for the present, but we design for a more humane, more just and brighter future. Because we know that whoever touches a mind, transforms a destiny; and whoever touches a soul, ignites generations.",
+  "modelo_educativo": "Educational Model",
+  "modelo_descripcion": "Our own pedagogical model that integrates technology with humanism.",
+  "items": [
+    {
+      "title": "Knowing",
+      "description": "Research and theory."
+    },
+    {
+      "title": "Building",
+      "description": "Maker Action and Prototyping."
+    },
+    {
+      "title": "Sharing",
+      "description": "Collaboration and Community."
+    },
+    {
+      "title": "Being",
+      "description": "Ethics and Human Development."
+    },
+    {
+      "title": "Transforming",
+      "description": "Metacognition and Evolution."
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2022",
+      "title": "The Idea",
+      "description": "Born from the need to unite technology and real pedagogy."
+    },
+    {
+      "year": "2023",
+      "title": "Constitution",
+      "description": "Hericraft is legally founded in Aguascalientes."
+    },
+    {
+      "year": "Today",
+      "title": "Expansion",
+      "description": "Impact on +5,000 students in Mexico."
+    }
+  ],
+  "visionary_leadership": "Visionary Leadership",
+  "ricardo": {
+    "name": "Ricardo A. Villegas",
+    "role": "Innovation"
+  },
+  "hector": {
+    "name": "Héctor N. Prieto",
+    "role": "General Director"
+  },
+  "marco": {
+    "name": "Marco A. Gómez",
+    "role": "Operations"
+  },
+  "our_motor": "Our Engine",
+  "our_motor_ecosystem": "The Team Behind the Ecosystem",
+  "our_motor_slogan": "6 specialized departments working in sync to create world-class educational experiences.",
+  "innovation_title": "Innovation and Research",
+  "innovation_description": "The pedagogical laboratory where the PRAXIS model is born and future curricula are designed.",
+  "web_develop_title": "Web Development",
+  "web_develop_description": "Digital architects who build our LMS platforms, applications, and ensure cybersecurity.",
+  "design_title": "Graphic and Editorial Design",
+  "design_description": "Creators of visual identity, educational manuals, and intuitive UI/UX experiences.",
+  "digital_title": "Digital Media",
+  "digital_description": "High-level audiovisual production, animation, and creation of multimedia educational content.",
+  "sales_title": "Partnerships and Sales",
+  "sales_description": "The strategic bridge with institutions and partners. Relationship management and market expansion.",
+  "rh_title": "Administration and HR",
+  "rh_description": "The pillar that sustains operations. Talent management, finance, and organizational culture."
+}

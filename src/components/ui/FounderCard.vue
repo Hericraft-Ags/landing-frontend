@@ -24,20 +24,20 @@ const props = defineProps({
 
 const borderClass = computed(() => {
   const borders = {
-    cyan: 'border-4 border-cyan',
-    navy: 'border-4 border-navy',
-    collegeOrange: 'border-4 border-collegeOrange',
+    cyan: 'border-4 border-[#06b6d4]',
+    navy: 'border-4 border-[#0a2966]',
+    collegeOrange: 'border-4 border-[#ff6b35]',
   }
-  return borders[props.borderColor] || 'border-4 border-navy'
+  return borders[props.borderColor] || 'border-4 border-[#0a2966]'
 })
 
 const roleClass = computed(() => {
   const roles = {
-    cyan: 'text-cyan',
-    navy: 'text-navy',
-    collegeOrange: 'text-collegeOrange',
+    cyan: 'text-[#06b6d4]',
+    navy: 'text-[#0a2966]',
+    collegeOrange: 'text-[#ff6b35]',
   }
-  return roles[props.roleColor] || 'text-navy'
+  return roles[props.roleColor] || 'text-[#0a2966]'
 })
 
 const handleImageError = event => {

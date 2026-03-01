@@ -114,7 +114,7 @@ const handleImageError = event => {
           <ul class="space-y-3">
             <li>
               <a
-                href="#"
+                href="/aviso-privacidad"
                 class="hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
               >
                 {{ $t('footer.privacy') }}
@@ -122,7 +122,7 @@ const handleImageError = event => {
             </li>
             <li>
               <a
-                href="#"
+                href="/terminos-y-condiciones"
                 class="hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
               >
                 {{ $t('footer.terms') }}
@@ -130,18 +130,10 @@ const handleImageError = event => {
             </li>
             <li>
               <a
-                href="#"
+                href="/preguntas-frecuentes"
                 class="hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
               >
                 {{ $t('footer.faq') }}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
-              >
-                {{ $t('footer.support') }}
               </a>
             </li>
             <li>
@@ -179,7 +171,7 @@ const handleImageError = event => {
                 href="mailto:contacto@soluciones-hericraft.com"
                 class="hover:text-white transition"
               >
-                {{ $t('footer.email') }}
+                contacto@soluciones-hericraft.com
               </a>
             </li>
           </ul>

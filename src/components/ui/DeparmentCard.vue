@@ -29,8 +29,8 @@ const borderClass = computed(() => {
     blue: 'border-l-4 border-blue-500',
     purple: 'border-l-4 border-purple-500',
     pink: 'border-l-4 border-pink-500',
-    orange: 'border-l-4 border-collegeOrange',
-    green: 'border-l-4 border-green',
+    orange: 'border-l-4 border-[#ff6b00]',
+    green: 'border-l-4 border-[#08be66]',
     gray: 'border-l-4 border-gray-500',
   }
   return borders[props.color] || 'border-l-4 border-gray-300'
@@ -42,7 +42,7 @@ const iconBgClass = computed(() => {
     purple: 'bg-purple-100',
     pink: 'bg-pink-100',
     orange: 'bg-orange-100',
-    green: 'bg-green/20',
+    green: 'bg-[#08be66]/20',
     gray: 'bg-gray-200',
   }
   return backgrounds[props.color] || 'bg-gray-100'
@@ -52,9 +52,9 @@ const iconColorClass = computed(() => {
   const colors = {
     blue: 'text-blue-600',
     purple: 'text-purple-600',
-    pink: 'text-accentPink',
-    orange: 'text-collegeOrange',
-    green: 'text-green',
+    pink: 'text-[#e91e63]',
+    orange: 'text-[#ff6b00]',
+    green: 'text-[#08be66]',
     gray: 'text-gray-600',
   }
   return colors[props.color] || 'text-gray-600'
