@@ -122,9 +122,7 @@
     </nav>
 
     <main class="animate-fade-in pt-28">
-      <section
-        class="relative agora-bg pt-20 pb-28 px-6 overflow-hidden text-white"
-      >
+      <section class="relative agora-bg pt-20 pb-28 px-6 overflow-hidden text-white">
         <div class="absolute inset-0 hero-pattern pointer-events-none"></div>
         <div
           class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-agoraLime/10 rounded-full blur-3xl translate-y-1/3 translate-x-1/4"
@@ -211,10 +209,10 @@
                 class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center text-oxfordGray mb-6 text-3xl group-hover:bg-agoraLime group-hover:text-white transition transform group-hover:rotate-6"
               >
                 <img
-                    src="../assets/images/AGORA-03.png"
-                    alt="Icono modelos globales"
-                    class="w-full h-full object-contain"
-                  />
+                  src="../assets/images/AGORA-03.png"
+                  alt="Icono modelos globales"
+                  class="w-full h-full object-contain"
+                />
               </div>
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Modelos globales</h3>
               <p class="text-sm text-gray-500">Tendencias educativas internacionales comparadas.</p>
@@ -226,10 +224,10 @@
                 class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center text-oxfordGray mb-6 text-3xl group-hover:bg-agoraLime group-hover:text-white transition transform group-hover:rotate-6"
               >
                 <img
-                    src="../assets/images/AGORA-04.png"
-                    alt="Icono neurociencia"
-                    class="w-full h-full object-contain"
-                  />
+                  src="../assets/images/AGORA-04.png"
+                  alt="Icono neurociencia"
+                  class="w-full h-full object-contain"
+                />
               </div>
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Neurociencia</h3>
               <p class="text-sm text-gray-500">Cómo aprende el cerebro en la era digital.</p>
@@ -241,10 +239,10 @@
                 class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center text-oxfordGray mb-6 text-3xl group-hover:bg-agoraLime group-hover:text-white transition transform group-hover:rotate-6"
               >
                 <img
-                    src="../assets/images/AGORA-05.png"
-                    alt="Icono metodologías ágiles"
-                    class="w-full h-full object-contain"
-                  />
+                  src="../assets/images/AGORA-05.png"
+                  alt="Icono metodologías ágiles"
+                  class="w-full h-full object-contain"
+                />
               </div>
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Metodologías ágiles</h3>
               <p class="text-sm text-gray-500">ABP, Flipped Classroom y Design Thinking.</p>
@@ -256,10 +254,10 @@
                 class="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center text-oxfordGray mb-6 text-3xl group-hover:bg-agoraLime group-hover:text-white transition transform group-hover:rotate-6"
               >
                 <img
-                    src="../assets/images/AGORA-06.png"
-                    alt="Icono diseño curricular"
-                    class="w-full h-full object-contain"
-                  />
+                  src="../assets/images/AGORA-06.png"
+                  alt="Icono diseño curricular"
+                  class="w-full h-full object-contain"
+                />
               </div>
               <h3 class="font-bold text-oxfordGray mb-2 text-lg">Diseño curricular</h3>
               <p class="text-sm text-gray-500">Planeación estratégica y evaluación formativa.</p>

@@ -1,0 +1,117 @@
+{
+  "hero_badge": "School Ecosystem",
+  "hero_title_part1": "Innovating the present,",
+  "hero_title_part2": "improving the future.",
+  "hero_description": "The STEAM+ ecosystem that transforms schools and homes. From school curriculum to learning adventures at home.",
+  "hero_schools_btn": "For Schools",
+  "hero_families_btn": "For Families",
+  "hero_badge_standards": "Aligned with standards",
+  "hero_badge_certifications": "ISTE / Cognia",
+
+  "eba_badge": "Institutional Solution",
+  "eba_title": "EBA CURRICULAR PROGRAM",
+  "eba_description": "Applied Basic Education. We integrate technology, ethics and critical thinking into the school schedule, aligned with NEM.",
+  "eba_view_pdf": "View complete curricular program (PDF)",
+
+  "levels": [
+    {
+      "id": "kids",
+      "title": "EBA Kids",
+      "description": "Playful introduction to STEAM concepts. We awaken curiosity through exploration.",
+      "badge": "Elementary"
+    },
+    {
+      "id": "advanced",
+      "title": "EBA Advanced",
+      "description": "Learn to integrate technology as a tool in every aspect of your life. Complex projects with social impact.",
+      "badge": "Middle School"
+    },
+    {
+      "id": "xpert",
+      "title": "EBA Xpert",
+      "description": "Specialty areas implementing technology tools, math concepts and science integration.",
+      "badge": "High School"
+    }
+  ],
+
+  "virtual_lab_title": "VIRTUAL LAB",
+  "virtual_lab_description": "A safe environment where students interact with simulators of hand tools, power tools, CNC machines and technological components before touching real hardware.",
+  "virtual_lab_button": "Request school demo",
+  "virtual_lab_caption": "Interact with the test lab. Experience College.",
+
+  "praxis_badge": "Pedagogical Engine",
+  "praxis_title": "The PRAXIS Cycle",
+  "praxis_subtitle": "Like a loom that interweaves theory with practice, our methodology weaves knowledge and skills in three continuous phases.",
+  "praxis_step1_title": "1. FRAME",
+  "praxis_step1_subtitle": "The Design",
+  "praxis_step1_description": "We prepare the warp. This is the strategic planning phase where we define the challenge, select the tools and structure the purpose of learning.",
+  "praxis_step2_title": "2. FLOW",
+  "praxis_step2_subtitle": "The Action",
+  "praxis_step2_description": "We weave the experience. This is the moment of total immersion (\"Flow State\"). Students experiment, create and connect ideas in a dynamic environment.",
+  "praxis_step3_title": "3. SNAP",
+  "praxis_step3_subtitle": "The Closure",
+  "praxis_step3_description": "We capture the weave. Critical reflection and evaluation phase. We analyze the final result, celebrate achievements and identify areas for improvement.",
+
+  "companions_badge": "Role-Based Learning",
+  "companions_title": "Your Digital Companions",
+  "companions_description": "Our digital characters guide your training in a 100% safe environment. Hover over them to discover their different facets.",
+
+  "safety_title": "Safe digital environment",
+  "safety_description": "Your safety is our priority. In our videos and materials, no real people appear, only digital avatars. This creates a risk-free learning environment focused 100% on content.",
+  "safety_privacy": "Privacy",
+  "safety_protection": "Child protection",
+
+  "profile_title": "Your professional profile",
+  "profile_description": "Each completed mission adds points to your profile. We align your favorite activities with Future Careers and develop your Power Skills (Leadership, Resilience, Communication).",
+  "profile_button": "Discover your ideal career",
+
+  "companion_kiby_name": "Kiby",
+  "companion_kiby_role": "Main Guide",
+  "companion_lider_name": "Leader",
+  "companion_lider_role": "Management",
+  "companion_cientifica_name": "Scientist",
+  "companion_cientifica_role": "Research",
+  "companion_constructor_name": "Builder",
+  "companion_constructor_role": "Engineering",
+  "companion_comunicologa_name": "Communicator",
+  "companion_comunicologa_role": "Social Media",
+  "companion_artista_name": "Artist",
+  "companion_artista_role": "Creativity",
+
+  "parents_title_part1": "Dad or Mom?",
+  "parents_title_part2": "This is the gift that transforms.",
+  "parents_description": "Boost your children's talent without the hassle of commuting. Receive progress reports and watch them develop real skills for professional life.",
+  "parents_feature_schedule": "No fixed schedules",
+  "parents_feature_safe": "Safe environment",
+  "parents_button": "Request information",
+
+  "after_school_badge": "Home Schooling STEAM+",
+  "after_school_title_highlight": "After School",
+  "after_school_description": "Forget boring classes! We turn your living room into an Innovation Lab. Receive your kit, connect to the mission and build the future from home.",
+
+  "after_school_kit_title": "1. Maker Physical Kit",
+  "after_school_kit_description": "No impossible shopping lists. Receive a box with electronics, sensors and tools ready to create real prototypes.",
+  "after_school_kit_badge": "DELIVERED TO YOUR DOOR",
+  "after_school_kit_button": "Order my Kit Now",
+
+  "after_school_platform_title": "2. Mission Platform",
+  "after_school_platform_description": "The curriculum is experienced like a video game. Unlock levels, earn badges and level up your professional profile while learning programming and design.",
+  "after_school_platform_feature_1": "24/7 Access",
+  "after_school_platform_feature_2": "Weekly challenges",
+
+  "after_school_mentorship_title": "3. Live Mentorship",
+  "after_school_mentorship_description": "You are not alone in space. Connect with our Expert Mentors to solve technical questions and present your inventions in community.",
+  "after_school_mentorship_feature_1": "Live sessions",
+  "after_school_mentorship_feature_2": "Personalized feedback",
+
+  "events": {
+    "gathering_title": "Gathering of Giants",
+    "gathering_description": "The congress where our students showcase their projects, connect with experts and celebrate innovation.",
+    "gathering_badge": "Annual Event",
+    "franchise_title": "College Franchises",
+    "franchise_description": "Turnkey model for entrepreneurs. Bring certified STEAM education to your community.",
+    "agora_title": "Go to Ágora",
+    "agora_description": "Are you a teacher? Discover our continuous training and pedagogical certification.",
+    "view_details": "View Details"
+  }
+}
