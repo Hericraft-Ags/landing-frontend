@@ -101,9 +101,7 @@
               class="text-5xl lg:text-7xl font-brand-processus font-black text-white leading-none"
             >
               Ingeniería del <br />
-              <span class="bg-clip-text text-cyan"
-                >Aprendizaje Corporativo.</span
-              >
+              <span class="bg-clip-text text-cyan">Aprendizaje Corporativo.</span>
             </h1>
 
             <p
@@ -173,9 +171,9 @@
                 class="w-16 h-16 bg-navy border border-cyan/30 rounded-2xl flex items-center justify-center text-cyan text-3xl mb-8 group-hover:scale-110 transition shadow-[0_0_20px_rgba(14,241,235,0.2)]"
               >
                 <img
-                src="../assets/images/PROCESSUS-03.png"
-                alt="Onboarding digital"
-                class="h-16 w-auto"
+                  src="../assets/images/PROCESSUS-03.png"
+                  alt="Onboarding digital"
+                  class="h-16 w-auto"
                 />
               </div>
               <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan transition">
@@ -204,9 +202,9 @@
                 class="w-16 h-16 bg-navy border border-cyan/30 rounded-2xl flex items-center justify-center text-cyan text-3xl mb-8 group-hover:scale-110 transition shadow-[0_0_20px_rgba(14,241,235,0.2)]"
               >
                 <img
-                src="../assets/images/PROCESSUS-04.png"
-                alt="Onboarding digital"
-                class="h-16 w-auto"
+                  src="../assets/images/PROCESSUS-04.png"
+                  alt="Onboarding digital"
+                  class="h-16 w-auto"
                 />
               </div>
               <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan transition">
@@ -231,9 +229,9 @@
                 class="w-16 h-16 bg-navy border border-cyan/30 rounded-2xl flex items-center justify-center text-cyan text-3xl mb-8 group-hover:scale-110 transition shadow-[0_0_20px_rgba(14,241,235,0.2)]"
               >
                 <img
-                src="../assets/images/PROCESSUS-05.png"
-                alt="Onboarding digital"
-                class="h-16 w-auto"
+                  src="../assets/images/PROCESSUS-05.png"
+                  alt="Onboarding digital"
+                  class="h-16 w-auto"
                 />
               </div>
               <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan transition">
@@ -322,10 +320,7 @@
       </section>
 
       <!-- CTA -->
-      <section
-        id="contacto"
-        class="py-24 px-6 text-center bg-blue-900"
-      >
+      <section id="contacto" class="py-24 px-6 text-center bg-blue-900">
         <h2 class="text-3xl md:text-4xl font-brand-processus text-white mb-6">
           Potencia tu Capital Humano
         </h2>

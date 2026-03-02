@@ -1,8 +1,7 @@
 <template>
   <a
     :href="link"
-    class="block rounded-3xl p-8 border flex items-start gap-6 transition cursor-pointer group"
-    :class="cardClass"
+    class="block bg-slate-50 rounded-3xl p-8 border border-gray-100 flex items-start gap-6 transition cursor-pointer group hover:shadow-xl transform hover:-translate-y-1"
   >
     <!-- Icono -->
     <div
@@ -14,10 +13,14 @@
     <!-- Contenido -->
     <div class="flex-1">
       <h4
-        class="font-bold text-navy text-xl group-hover:text-[#ff6b35] transition flex items-center gap-2"
+        class="font-bold text-navy text-xl transition flex items-center gap-2"
+        :class="hoverColorClass"
       >
         {{ title }}
-        <i class="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 transition"></i>
+        <i
+          class="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 transition"
+          :class="hoverColorClass"
+        ></i>
       </h4>
       <p class="text-gray-600 text-sm mt-2 leading-relaxed">
         {{ description }}
@@ -48,45 +51,34 @@ const props = defineProps({
   },
   color: {
     type: String,
-    default: 'orange',
-    validator: value => ['orange', 'blue'].includes(value),
+    default: 'purple',
+    validator: value => ['purple', 'orange', 'blue'].includes(value),
   },
 })
 
-// Clase para la tarjeta según el color
-const cardClass = computed(() => {
-  const classes = {
-    orange: 'bg-orange-50 border-orange-100 hover:border-[#ff6b35]/50 hover:bg-orange-100/50',
-    blue: 'bg-blue-50 border-blue-100 hover:border-[#2563eb]/50 hover:bg-blue-100/50',
-  }
-  return classes[props.color] || classes.orange
-})
-
-// Función para obtener URL de imagen desde public
 const getImageUrl = imageName => {
-  // Si ya es una URL completa, la devolvemos tal cual
   if (imageName.startsWith('http') || imageName.startsWith('/')) {
     return imageName
   }
-  // Si no, asumimos que está en assets/images
   return `/assets/images/${imageName}`
 }
+
+const hoverColorClass = computed(() => {
+  const colors = {
+    purple: 'group-hover:text-collegePurple',
+    orange: 'group-hover:text-collegeOrange',
+    blue: 'group-hover:text-collegeBlue',
+  }
+  return colors[props.color] || 'group-hover:text-collegePurple'
+})
 </script>
 
 <style scoped>
-/* Transiciones suaves */
-.group {
+a {
   transition: all 0.3s ease;
 }
 
-/* Efecto hover para el icono */
-.group:hover img {
-  transform: scale(1.1);
-}
-
-/* Efecto para la flecha */
-.group:hover i.fa-chevron-right {
-  opacity: 1;
+.group:hover i {
   transform: translateX(4px);
 }
 </style>

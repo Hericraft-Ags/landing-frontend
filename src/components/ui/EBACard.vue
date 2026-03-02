@@ -1,6 +1,7 @@
 <template>
   <div
     class="bg-slate-50 p-6 rounded-3xl shadow-sm border border-gray-100 card-hover-effect group relative overflow-hidden flex flex-col"
+    :class="borderHoverClass"
   >
     <div class="absolute top-0 left-0 w-full h-1" :class="`bg-linear-to-r ${gradient}`"></div>
 
@@ -34,6 +35,8 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+
 const props = defineProps({
   title: {
     type: String,
@@ -59,6 +62,20 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  borderColor: {
+    type: String,
+    default: 'orange',
+    validator: value => ['orange', 'purple', 'blue'].includes(value),
+  },
+})
+
+const borderHoverClass = computed(() => {
+  const colors = {
+    orange: 'hover:border-[#ff6b35]',
+    purple: 'hover:border-[#7c3aed]',
+    blue: 'hover:border-[#2563eb]',
+  }
+  return colors[props.borderColor] || 'hover:border-[#ff6b35]'
 })
 
 const getImageUrl = imageName => {
@@ -69,6 +86,7 @@ const getImageUrl = imageName => {
 <style scoped>
 .card-hover-effect {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-width: 1px;
 }
 
 .card-hover-effect:hover {
@@ -76,6 +94,6 @@ const getImageUrl = imageName => {
   box-shadow:
     0 20px 25px -5px rgba(37, 99, 235, 0.15),
     0 10px 10px -5px rgba(37, 99, 235, 0.1);
-  border-color: #ff6b35;
+  border-width: 1px;
 }
 </style>

@@ -19,9 +19,7 @@
           class="h-40 w-auto mb-2 drop-shadow-sm"
         />
 
-        <h1
-          class="text-5xl md:text-6xl font-display font-bold text-navy leading-tight text-gray-800"
-        >
+        <h1 class="text-5xl md:text-6xl font-display font-bold leading-tight text-gray-800">
           {{ $t('college.hero_title_part1') }} <br />
           <span class="text-[#ff6b00] bg-clip-text bg-linear-to-r from-[#ff6b00] to-red-500">
             {{ $t('college.hero_title_part2') }}
@@ -58,12 +56,13 @@
         ></div>
         <img
           src="/assets/images/college/hero_college.jpg"
-          :alt="$t('college.hero.image_alt')"
+          :alt="$t('college.hero_image_alt')"
           class="relative rounded-4xl shadow-2xl border-4 border-white w-full object-cover transform transition duration-500 group-hover:-translate-y-2"
         />
 
+        <!-- Badge con animación de flotación -->
         <div
-          class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl flex items-center gap-3 animate-bounce-slow border-l-4 border-collegeYellow hidden md:flex"
+          class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl flex items-center gap-3 border-l-4 border-[#fbbf24] hidden md:flex animate-float"
         >
           <div class="bg-yellow-100 p-2 rounded-full text-[#fbbf24]">
             <i class="fas fa-star"></i>
@@ -77,3 +76,72 @@
     </div>
   </section>
 </template>
+
+<style scoped>
+/* Animación de flotación */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Resto de estilos existentes */
+.hero-pattern {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(#ff6b35 0.5px, transparent 0.5px), radial-gradient(#2563eb 0.5px, #ffffff 0.5px);
+  background-size: 20px 20px;
+  background-position:
+    0 0,
+    10px 10px;
+  opacity: 0.4;
+}
+
+.clip-wave-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Mantenemos la clase por si se usa en otro lado */
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>

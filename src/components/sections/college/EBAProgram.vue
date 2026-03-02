@@ -35,6 +35,7 @@
           :badge="level.badge"
           :gradient="level.gradient"
           :icon="level.icon"
+          :border-color="level.borderColor"
         />
       </div>
 
@@ -42,7 +43,6 @@
     </div>
   </section>
 </template>
-
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -62,6 +62,7 @@ const ebaLevels = computed(() => [
     image: 'eba_kids.png',
     gradient: 'from-yellow-400 to-orange-400',
     icon: 'college-01.png',
+    borderColor: 'orange',
   },
   {
     id: t('college.levels.1.id'),
@@ -71,6 +72,7 @@ const ebaLevels = computed(() => [
     image: 'eba_advanced.png',
     gradient: 'from-purple-500 to-indigo-600',
     icon: 'college-02.png',
+    borderColor: 'purple',
   },
   {
     id: t('college.levels.2.id'),
@@ -80,6 +82,7 @@ const ebaLevels = computed(() => [
     image: 'eba_xpert.png',
     gradient: 'from-blue-400 to-blue-600',
     icon: 'college-03.png',
+    borderColor: 'blue',
   },
 ])
 </script>

@@ -1,24 +1,41 @@
+/* style.css */
 @import 'tailwindcss';
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
+/* Importar fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Definir tema personalizado */
+@theme {
+  --font-sans: 'Montserrat', sans-serif;
+  --font-hand: 'Caveat', cursive;
+
+  --color-primary: #22c55e;
+  --color-primary-dark: #16a34a;
+  --color-secondary: #0f172a;
+  --color-accent: #38bdf8;
+  --color-background: #0b1120;
+  --color-surface: #111827;
+  --color-muted: #6b7280;
+  --color-light: #f3f4f6;
+  --color-white: #ffffff;
+
+  /* Colores personalizados */
+  --color-collegeOrange: #ff6b00;
+  --color-teal: #0dbcc9;
+  --color-accentPink: #e91e63;
+  --color-navy: #171c24;
+  --color-cyan-bright: #08be66;
+  --color-metanoiaPink: #d5005f;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Clases personalizadas */
 .font-hand {
   font-family: 'Caveat', cursive;
-}
-:root {
-  --font-sans: 'Montserrat', sans-serif;
-  --color-primary: #22c55e; /* Verde principal */
-  --color-primary-dark: #16a34a; /* Verde hover */
-  --color-secondary: #0f172a; /* Azul oscuro hero */
-  --color-accent: #38bdf8; /* Azul acento */
-  --color-background: #0b1120; /* Fondo oscuro */
-  --color-surface: #111827; /* Cards oscuras */
-  --color-muted: #6b7280; /* Texto secundario */
-  --color-light: #f3f4f6; /* Secciones claras */
-  --color-white: #ffffff;
-}
-
-* {
-  font-family: 'Montserrat';
 }
 
 /* Ajustes imágenes de botones */
@@ -43,7 +60,7 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Colores Base */
+/* Colores Base (como fallback) */
 .text-collegeOrange {
   color: #ff6b00;
 }
@@ -82,5 +99,49 @@
 }
 
 .agora-bg {
-  background: linear-gradient(180deg,rgba(12, 14, 14, 1) 50%, rgba(35, 42, 56, 1) 100%);
+  background: linear-gradient(180deg, rgba(12, 14, 14, 1) 50%, rgba(35, 42, 56, 1) 100%);
+}
+.text-agoraLime {
+  color: #8dc63f;
+}
+
+.bg-dark-nav {
+  background-color: #2f302d;
+}
+.bg-agoraDark {
+  background-color: #121212;
+}
+.bg-oxfordGray {
+  background-color: #2d3748;
+}
+.bg-navy {
+  background-color: #0a1931;
+}
+.text-agoraLime {
+  color: #8dc63f;
+}
+.bg-agoraLime {
+  background-color: #8dc63f;
+}
+.text-collegeOrange {
+  color: #ff6b35;
+}
+.bg-collegeOrange {
+  background-color: #ff6b35;
+}
+.text-cyanBright {
+  color: #00c2ff;
+}
+.bg-cyanBright {
+  background-color: #00c2ff;
+}
+
+.hero-pattern {
+  background-image:
+    radial-gradient(#8dc63f 0.5px, transparent 0.5px), radial-gradient(#2d3748 0.5px, #000000 0.5px);
+  background-size: 20px 20px;
+  background-position:
+    0 0,
+    10px 10px;
+  opacity: 0.2;
 }

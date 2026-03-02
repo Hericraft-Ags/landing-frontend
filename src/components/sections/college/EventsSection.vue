@@ -19,7 +19,7 @@
             :description="$t('college.events.franchise_description')"
             :icon="franchiseIcon"
             :link="franchiseLink"
-            color="orange"
+            color="purple"
           />
 
           <SecondaryCard
@@ -27,7 +27,7 @@
             :description="$t('college.events.agora_description')"
             :icon="agoraIcon"
             :link="agoraLink"
-            color="blue"
+            color="purple"
           />
         </div>
       </div>
@@ -40,10 +40,10 @@ import EventCard from '@/components/ui/EventCard.vue'
 import SecondaryCard from '@/components/ui/SecondaryCard.vue'
 
 // Rutas para imágenes en public
-const gatheringImage = '/assets/images/college/encuentro_gigantes.jpg'
+const gatheringImage = '/assets/images/college/college-14.png'
 const gatheringLink = '/#'
-const franchiseIcon = '/assets/images/logo_store_college.svg'
+const franchiseIcon = '/assets/images/college/college-12.png'
 const franchiseLink = '/#'
-const agoraIcon = '/assets/images/college/logo_agora.png'
-const agoraLink = '/#'
+const agoraIcon = '/assets/images/college/college-13.png'
+const agoraLink = '/agora'
 </script>
