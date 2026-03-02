@@ -154,10 +154,7 @@
 
             <h1 class="text-5xl lg:text-6xl font-metanoia font-black text-navy leading-[1.1]">
               El hogar como <br />
-              <span
-                class="bg-clip-text text-pink-700"
-                >Laboratorio de Vida.</span
-              >
+              <span class="bg-clip-text text-pink-700">Laboratorio de Vida.</span>
             </h1>
 
             <p

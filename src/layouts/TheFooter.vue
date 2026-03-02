@@ -35,7 +35,7 @@ const handleImageError = event => {
     ></div>
 
     <div class="max-w-7xl mx-auto px-6 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 text-gray-200">
         <div class="space-y-4">
           <a href="/" class="flex items-center gap-2 mb-4">
             <img
@@ -44,7 +44,7 @@ const handleImageError = event => {
               class="h-8 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
             />
           </a>
-          <p class="leading-relaxed text-xs text-gray-500">
+          <p class="leading-relaxed text-xs text-gray-200">
             {{ $t('footer.description') }}
           </p>
           <div class="pt-2">
@@ -205,7 +205,7 @@ const handleImageError = event => {
           <p class="font-display font-semibold text-gray-300">
             {{ $t('footer.copyright', { year: new Date().getFullYear() }) }}
           </p>
-          <p class="text-xs text-gray-600">
+          <p class="text-xs text-gray-300">
             {{ $t('footer.rights') }}
           </p>
         </div>

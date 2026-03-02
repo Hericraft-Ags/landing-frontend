@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[#085899] rounded-[3rem] p-8 md:p-12 text-white relative overflow-hidden shadow-2xl"
+    class="bg-gray-500 rounded-[3rem] p-8 md:p-12 text-white relative overflow-hidden shadow-2xl"
   >
     <div class="relative z-10 flex flex-col lg:flex-row gap-12 items-center">
       <div class="lg:w-1/2">

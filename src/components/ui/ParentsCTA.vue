@@ -46,7 +46,6 @@
 </template>
 
 <script setup>
-// Eliminamos import { computed } porque no se usa
 const iconSchedule = '/assets/images/college/college-10.png'
 const iconSafe = '/assets/images/college/college-11.png'
 </script>

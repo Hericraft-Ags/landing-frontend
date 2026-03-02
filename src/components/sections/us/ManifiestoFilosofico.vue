@@ -1,11 +1,12 @@
 <template>
   <section class="py-24 bg-[#fdfdfd] relative border-b border-gray-100">
-    <div
-      class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-navy via-cyan to-green"
-    ></div>
+    <div class="absolute top-0 left-0 w-full h-2 bg-linear-to-r from-navy via-cyan to-green"></div>
 
     <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-      <div class="font-hand text-2xl md:text-3xl text-navy leading-relaxed space-y-8">
+      <div
+        class="font-hand text-2xl md:text-3xl text-navy leading-relaxed space-y-8"
+        style="font-family: 'Caveat', cursive"
+      >
         <p>
           {{ $t('us.philosophy_part1') }}
           <span class="text-green font-bold">{{ $t('us.philosophy_highlight') }}</span>
@@ -50,7 +51,15 @@
 </template>
 
 <style scoped>
-@import '@/style.css';
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+:global(.font-hand) {
+  font-family: 'Caveat', cursive;
+}
+
+.font-hand {
+  font-family: 'Caveat', cursive;
+}
 
 .text-navy {
   color: #0a2966;

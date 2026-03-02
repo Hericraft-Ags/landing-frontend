@@ -5,13 +5,12 @@
   >
     <div class="p-8 pb-0">
       <div class="flex justify-between items-start mb-4">
-        <h3
-          class="text-2xl font-display font-bold text-navy group-hover:text-collegePurple transition"
-        >
+        <h3 class="text-2xl font-display font-bold text-navy transition" :class="hoverColorClass">
           {{ title }}
         </h3>
         <div
-          class="bg-collegePurple text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide"
+          class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide"
+          :class="badgeColorClass"
         >
           {{ badge }}
         </div>
@@ -20,7 +19,8 @@
         {{ description }}
       </p>
       <span
-        class="inline-flex items-center gap-2 text-sm font-bold text-collegePurple uppercase tracking-wider mb-6 group-hover:gap-3 transition-all"
+        class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider mb-6 group-hover:gap-3 transition-all"
+        :class="textColorClass"
       >
         {{ $t('college.events.view_details') }} <i class="fas fa-arrow-right"></i>
       </span>
@@ -67,17 +67,13 @@ const props = defineProps({
   },
 })
 
-// Función para obtener URL de imagen desde public
 const getImageUrl = imageName => {
-  // Si ya es una URL completa, la devolvemos tal cual
   if (imageName.startsWith('http') || imageName.startsWith('/')) {
     return imageName
   }
-  // Si no, asumimos que está en assets/images
   return `/assets/images/${imageName}`
 }
 
-// Clase para el color del texto en hover (para usar en el futuro)
 const hoverColorClass = computed(() => {
   const colors = {
     purple: 'group-hover:text-collegePurple',
@@ -87,29 +83,34 @@ const hoverColorClass = computed(() => {
   return colors[props.color] || 'group-hover:text-collegePurple'
 })
 
-// Clase para el color del badge
+const textColorClass = computed(() => {
+  const colors = {
+    purple: 'text-collegePurple',
+    orange: 'text-collegeOrange',
+    blue: 'text-collegeBlue',
+  }
+  return colors[props.color] || 'text-collegePurple'
+})
+
 const badgeColorClass = computed(() => {
   const colors = {
-    purple: 'bg-collegePurple',
-    orange: 'bg-collegeOrange',
-    blue: 'bg-collegeBlue',
+    purple: 'bg-collegePurple text-white',
+    orange: 'bg-collegeOrange text-white',
+    blue: 'bg-collegeBlue text-white',
   }
-  return colors[props.color] || 'bg-collegePurple'
+  return colors[props.color] || 'bg-collegePurple text-white'
 })
 </script>
 
 <style scoped>
-/* Transiciones suaves */
 .group {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Efecto de escala para la imagen */
 .group:hover img {
   transform: scale(1.1);
 }
 
-/* Efecto para el texto "Ver Detalles" */
 .group:hover span {
   gap: 0.75rem;
 }
