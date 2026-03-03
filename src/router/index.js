@@ -3,7 +3,7 @@ const IndexView = () => import('@/views/IndexView.vue')
 const MainLayout = () => import('@/layouts/MainLayout.vue')
 const NosotrosView = () => import('@/views/NosotrosView.vue')
 const CollegeView = () => import('@/views/CollegeView.vue')
-const AgoraView2 = () => import('@/views/AgoraView_2.vue')
+const MetanoiaView2 = () => import('@/views/MetanoiaView_2.vue')
 const AgoraView = () => import('@/views/AgoraView.vue')
 const MetanoiaView = () => import('@/views/MetanoiaView.vue')
 const ProcessusView = () => import('@/views/ProcessusView.vue')
@@ -54,6 +54,15 @@ const routes = [
         },
       },
       {
+        path: 'metanoia',
+        component: MetanoiaView,
+        meta: {
+          themeColor: '#0a0e17',
+          accessibilityColor: '#d5005f',
+          colorTextAccessibility: '#fff',
+        },
+      },
+      {
         path: 'aviso-privacidad',
         component: PrivacityView,
         meta: {
@@ -83,12 +92,8 @@ const routes = [
     ],
   },
   {
-    path: '/agora2',
-    component: AgoraView2,
-  },
-  {
-    path: '/metanoia',
-    component: MetanoiaView,
+    path: '/metanoia2',
+    component: MetanoiaView2,
   },
   {
     path: '/processus',
