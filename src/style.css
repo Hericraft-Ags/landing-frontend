@@ -200,3 +200,9 @@ body {
   border: 2px solid #0ef1eb;
   border-radius: 50%;
 }
+
+.glass-header {
+  background: rgba(10, 41, 102, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

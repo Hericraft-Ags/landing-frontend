@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, watch, nextTick } from 'vue'
 import { Line } from 'vue-chartjs'
+import { useI18n } from 'vue-i18n'
 import {
   Chart as ChartJS,
   Title,
@@ -24,13 +25,18 @@ ChartJS.register(
   Filler
 )
 
+const { t } = useI18n()
 const chartRef = ref(null)
 
 const data = ref({
-  labels: ['2026 (Inv)', '2027 (Crecimiento)', '2028 (Escalamiento)'],
+  labels: [
+    t('investors.chart_label_2026'),
+    t('investors.chart_label_2027'),
+    t('investors.chart_label_2028'),
+  ],
   datasets: [
     {
-      label: 'Ingresos Totales (MXN)',
+      label: t('investors.chart_ingresos_label'),
       data: [5.8, 19.4, 21.02],
       borderColor: '#00F0FF',
       backgroundColor: null,
@@ -40,7 +46,7 @@ const data = ref({
       fill: false,
     },
     {
-      label: 'EBITDA (MXN)',
+      label: t('investors.chart_ebitda_label'),
       data: [1.4, 11.5, 13.09],
       borderColor: '#A855F7',
       backgroundColor: null,
@@ -121,15 +127,18 @@ onMounted(() => {
 <template>
   <section class="w-full bg-[#020617]" id="metricas">
     <div class="max-w-7xl mx-auto py-20 px-4">
-      <h2 class="text-3xl font-bold text-white mb-8">Proyección Financiera</h2>
+      <h2 class="text-3xl font-bold text-white mb-8">{{ t('investors.financial_title') }}</h2>
+
       <div class="flex flex-col sm:flex-row justify-between items-center my-8 gap-4 px-4">
-        <p class="text-gray-400">Crecimiento proyectado post-inversión (Cifras en MXN).</p>
+        <p class="text-gray-400">{{ t('investors.financial_description') }}</p>
         <div class="flex flex-row gap-15 sm:gap-6">
           <div class="flex items-center gap-2 text-sm text-gray-400 flex-row">
-            <span class="w-3 h-3 rounded-full bg-[#00F0FF]"></span> Ingresos Totales
+            <span class="w-3 h-3 rounded-full bg-[#00F0FF]"></span>
+            {{ t('investors.financial_ingresos_label') }}
           </div>
           <div class="flex items-center gap-2 text-sm text-gray-400">
-            <span class="w-3 h-3 rounded-full bg-purple-500"></span> EBITDA
+            <span class="w-3 h-3 rounded-full bg-purple-500"></span>
+            {{ t('investors.financial_ebitda_label') }}
           </div>
         </div>
       </div>
@@ -139,22 +148,31 @@ onMounted(() => {
           <Line ref="chartRef" :data="data" :options="options" />
         </div>
       </div>
+
       <div class="flex justify-evenly mt-10 gap-8 flex-wrap">
         <div class="text-white flex flex-col items-center text-center mt-6 gap-2">
-          <span class="text-xl sm:text-3xl font-bold glow-text"> $4M </span>
-          <span class="uppercase text-xs sm:text-s"> Facturación actual </span>
+          <span class="text-xl sm:text-3xl font-bold glow-text">
+            {{ t('investors.metric_1_value') }}
+          </span>
+          <span class="uppercase text-xs sm:text-s"> {{ t('investors.metric_1_label') }} </span>
         </div>
         <div class="text-white flex flex-col items-center text-center mt-6 gap-2">
-          <span class="text-xl sm:text-3xl font-bold glow-text"> 63% </span>
-          <span class="uppercase text-xs sm:text-s"> Avance Producto </span>
+          <span class="text-xl sm:text-3xl font-bold glow-text">
+            {{ t('investors.metric_2_value') }}
+          </span>
+          <span class="uppercase text-xs sm:text-s"> {{ t('investors.metric_2_label') }} </span>
         </div>
         <div class="text-white flex flex-col items-center text-center mt-6 gap-2">
-          <span class="text-xl sm:text-3xl font-bold glow-text"> $60k </span>
-          <span class="uppercase text-xs sm:text-s"> CAC (MXN) </span>
+          <span class="text-xl sm:text-3xl font-bold glow-text">
+            {{ t('investors.metric_3_value') }}
+          </span>
+          <span class="uppercase text-xs sm:text-s"> {{ t('investors.metric_3_label') }} </span>
         </div>
         <div class="text-white flex flex-col items-center text-center mt-6 gap-2">
-          <span class="text-xl sm:text-3xl font-bold glow-text text-[#00F0FF]"> $1.08M </span>
-          <span class="uppercase text-xs sm:text-s"> LTV (MXN) </span>
+          <span class="text-xl sm:text-3xl font-bold glow-text text-[#00F0FF]">
+            {{ t('investors.metric_4_value') }}
+          </span>
+          <span class="uppercase text-xs sm:text-s"> {{ t('investors.metric_4_label') }} </span>
         </div>
       </div>
     </div>

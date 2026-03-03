@@ -2,39 +2,47 @@
 import TeamCard from './TeamCard.vue'
 import RequestSection from './RequestSection.vue'
 import Aurora from '@/components/animations/backgrounds/Aurora.vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
   <section class="relative w-full min-h-screen bg-[#0A1931] overflow-hidden">
     <div class="max-w-7xl mx-auto flex-col lg:flex-row items-center gap-12 px-4 sm:px-4 py-30">
       <h2 class="text-2xl sm:text-4xl font-bold mb-6 leading-tight text-white inline">
-        El equipo ideal
+        {{ t('investors.team_title') }}
       </h2>
+
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full items-center">
         <TeamCard
-          name="Ricardo Vásquez"
-          role="Vision / producto"
-          description="Embajador STEAM en México. +12 años de experiencia. Ha impactado a +20,000 estudiantes. Creador del currículo EBA de College."
-          initials="RV"
+          :name="t('investors.team_member_1_name')"
+          :role="t('investors.team_member_1_role')"
+          :description="t('investors.team_member_1_description')"
+          :initials="t('investors.team_member_1_initials')"
           borderColor="cyan-500"
         />
+
         <TeamCard
-          name="Marco Gómez"
-          role="Ventas / Red"
-          description="+25 años de experiencia directiva. Red de contactos de alto nivel en el mercado educativo. Directivo en redes de colegios prestigiosos."
-          initials="MG"
+          :name="t('investors.team_member_2_name')"
+          :role="t('investors.team_member_2_role')"
+          :description="t('investors.team_member_2_description')"
+          :initials="t('investors.team_member_2_initials')"
           borderColor="gray-400"
         />
+
         <TeamCard
-          name="Héctor Prieto"
-          role="Formación"
-          description="Único Google Innovator en la región. Fundador de GEG Aguascalientes. Ha capacitado a +500 docentes en ecosistemas digitales."
-          initials="HP"
+          :name="t('investors.team_member_3_name')"
+          :role="t('investors.team_member_3_role')"
+          :description="t('investors.team_member_3_description')"
+          :initials="t('investors.team_member_3_initials')"
           borderColor="blue-500"
         />
       </div>
+
       <RequestSection />
     </div>
+
     <div class="absolute bottom-0 w-full z-0">
       <div class="aurora-container">
         <Aurora
