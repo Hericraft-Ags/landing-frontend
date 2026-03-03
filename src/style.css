@@ -155,3 +155,48 @@ body {
 .bg-metanoiaPink {
   background-color: #d5005f;
 }
+.text-cyan {
+  color: #0ef1eb;
+}
+.bg-cyan {
+  background-color: #0ef1eb;
+}
+.bg-processus-gradient {
+  background: linear-gradient(160deg, #0a2966 0%, #132496 100%);
+}
+
+.bg-tech-grid {
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+}
+
+.card-processus {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(14, 241, 235, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-processus:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #0ef1eb;
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(14, 241, 235, 0.1);
+}
+
+.process-step {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid rgba(14, 241, 235, 0.2);
+}
+
+.process-step::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: #0a2966;
+  border: 2px solid #0ef1eb;
+  border-radius: 50%;
+}
