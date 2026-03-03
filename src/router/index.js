@@ -10,6 +10,7 @@ const InversionistasView = () => import('@/views/InversionistasView.vue')
 const PrivacityView = () => import('@/views/PrivacityView.vue')
 const ThermsView = () => import('@/views/ThermsView.vue')
 const QuestionsView = () => import('@/views/QuestionsView.vue')
+const AmbientesView = () => import('@/views/AmbientesView.vue')
 
 const routes = [
   {
@@ -71,6 +72,15 @@ const routes = [
         },
       },
       {
+        path: 'ambientes',
+        component: AmbientesView,
+        meta: {
+          themeColor: '#0B2966',
+          accessibilityColor: '#0EF1EB',
+          colorTextAccessibility: '#fff',
+        },
+      },
+      {
         path: 'aviso-privacidad',
         component: PrivacityView,
         meta: {
@@ -104,7 +114,7 @@ const routes = [
     component: InversionistasView,
     meta: {
       themeColor: '#020617',
-      accessibilityColor: '#020617',
+      accessibilityColor: '#00f0ff',
       colorTextAccessibility: '#fff',
     },
   },

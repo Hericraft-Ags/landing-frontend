@@ -90,7 +90,7 @@ const toggleMobileMenu = () => {
         </div>
 
         <a
-          href="#ambientes"
+          href="/#ambientes"
           class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide hover:bg-white/10 rounded-full"
         >
           {{ $t('navbar.ambientes') }}

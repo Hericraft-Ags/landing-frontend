@@ -2,6 +2,9 @@
 import InvestorCard from './InvestorCard.vue'
 import { RouterLink } from 'vue-router'
 import LightRays from '@/components/animations/backgrounds/LightRays.vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -24,66 +27,82 @@ import LightRays from '@/components/animations/backgrounds/LightRays.vue'
           class="w-full h-full"
         />
       </div>
+
       <div class="flex-1 text-start lg:text-left px-10">
         <div class="mb-8">
           <span
             class="text-yellow-400 text-sm font-bold px-6 py-2 border border-gray-200/20 rounded-lg bg-gray-600/20 inline-flex items-center gap-4 glow-gold"
           >
-            <i class="fas fa-bolt text-yellow-400 glow-gold"></i>
-            Oportunidad de inversion
+            <i :class="[t('investors.hero_badge_icon'), 'text-yellow-400 glow-gold']"></i>
+            {{ t('investors.hero_badge') }}
           </span>
         </div>
+
         <h1 class="text-[2.6rem] sm:text-6xl font-bold mb-6 leading-tight">
-          El Sistema Operativo de la <span class="glow-text">Educación 5.0</span>
+          {{ t('investors.hero_title_part1') }}
+          <span class="glow-text">{{ t('investors.hero_title_part2') }}</span>
         </h1>
+
         <p class="text-lg sm:text-lg text-gray-300/80 leading-relaxed max-w-2xl my-6">
-          Estamos construyendo el <span class="font-bold">"Google de la educación STEAM"</span> en
-          Latinoamérica.
+          {{ t('investors.hero_description_part1') }}
+          <span class="font-bold">"{{ t('investors.hero_description_highlight') }}"</span>
+          {{ t('investors.hero_description_part2') }}
         </p>
+
         <p class="text-lg sm:text-lg text-gray-300/80 leading-relaxed max-w-2xl my-6">
-          <span class="font-bold">Mercado Objetivo:</span> 5.3 Millones de estudiantes en escuelas
-          privadas de México.
+          <span class="font-bold">{{ t('investors.hero_market_label') }}</span>
+          {{ t('investors.hero_market_value') }}
         </p>
+
         <div class="flex mt-4 gap-2">
           <RouterLink
             to="/contacto"
             class="px-3 py-2 flex items-center bg-[#00F0FF] overflow-hidden text-black font-bold rounded-full transition-all duration-300 shadow-[0_0_12px_rgba(0,240,255,0.6)] hover:shadow-[0_0_20px_rgba(0,240,255,0.8)]"
           >
-            <span class="sm:hidden whitespace-nowrap">Agendar reunión</span>
-            <span class="hidden sm:inline whitespace-nowrap">Agendar reunión con Founders</span>
+            <span class="sm:hidden whitespace-nowrap">{{
+              t('investors.hero_button_primary_mobile')
+            }}</span>
+            <span class="hidden sm:inline whitespace-nowrap">{{
+              t('investors.hero_button_primary_desktop')
+            }}</span>
           </RouterLink>
+
           <a
             href="#metricas"
             class="px-6 py-2 bg-investorGold whitespace-nowrap text-white border border-gray-400 font-bold rounded-full hover:bg-gray-400/10 transition-all duration-300 inline-block"
           >
-            Ver tracción
+            {{ t('investors.hero_button_secondary') }}
             <i class="fas fa-arrow-down ml-2 text-white"></i>
           </a>
         </div>
       </div>
+
       <div class="flex-1 relative">
         <div class="grid grid-cols-2 gap-2 sm:gap-4 relative">
           <div
             class="absolute -top-10 -right-10 w-28 h-32 bg-investorGold/20 rounded-full blur-2xl animate-pulse"
           ></div>
+
           <InvestorCard
-            title="LTV / CAC"
-            value="18:1"
-            subtitle="Máquina de Ventas"
+            :title="t('investors.card_1_title')"
+            :value="t('investors.card_1_value')"
+            :subtitle="t('investors.card_1_subtitle')"
             borderColor="border-investorTeal border-[#00f0ff]"
             subtitleColor="text-green-400"
             icon="fas fa-arrow-up"
           />
+
           <InvestorCard
-            title="Facturación (2024-25)"
-            value="$4.03 M"
-            subtitle="MXN (Validado)"
+            :title="t('investors.card_2_title')"
+            :value="t('investors.card_2_value')"
+            :subtitle="t('investors.card_2_subtitle')"
             borderColor="border-investorTeal border-purple-600"
             subtitleColor="text-gray-400"
           />
+
           <InvestorCard
-            title="Proyección Revenue 2028"
-            value="$18.2 M"
+            :title="t('investors.card_3_title')"
+            :value="t('investors.card_3_value')"
             borderColor="border-investorTeal border-yellow-600"
             subtitleColor="text-gray-400"
             icon="fas fa-chart-line text-yellow-300 glow-icon"

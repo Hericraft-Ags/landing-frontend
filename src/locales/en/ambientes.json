@@ -1,0 +1,42 @@
+{
+  "hero_badge": "Educational Innovation 5.0",
+  "hero_title_part1": "Transform your School into a",
+  "hero_title_part2": "Future Laboratory",
+  "hero_description": "Leave behind rows of desks. Design spaces that inspire creativity, collaboration and technology. Easy, fast and tailored to your needs.",
+  "hero_cta": "Design Now",
+
+  "pasos_title": "How to design your ideal classroom?",
+  "pasos_subtitle": "Use our smart tool in 3 simple steps:",
+  "paso_1_title": "Define the Space",
+  "paso_1_description": "Enter the measurements of your current classroom and the number of students you want to serve.",
+  "paso_2_title": "Customize",
+  "paso_2_description": "Select the type of classroom (Maker, STEAM) and activate special zones like Robotics.",
+  "paso_3_title": "Quote",
+  "paso_3_description": "View the estimated investment instantly and send the design to our team.",
+
+  "taller_title": "Virtual Design Workshop",
+  "taller_description": "Configure options on the left panel and see the result on the right floor plan.",
+  "taller_status": "Active System",
+  "taller_loader": "Loading Hericraft Studio...",
+
+  "beneficios_badge": "Strategic Vision",
+  "beneficios_title": "Why invest in Active Environments?",
+  "beneficio_1_title": "Prestige and Enrollment",
+  "beneficio_1_description": "Schools with Maker and STEAM labs attract 30% more enrollments by positioning themselves as innovation leaders.",
+  "beneficio_2_title": "Talent Retention",
+  "beneficio_2_description": "Teachers and students feel more motivated in spaces that break monotony and foster real creativity.",
+  "beneficio_3_title": "Global Competitiveness",
+  "beneficio_3_description": "Prepare your students with the skills (Soft Skills & Tech) demanded by international Industry 4.0.",
+
+  "tienda_title": "Just looking for equipment?",
+  "tienda_description": "If you already have the space and only need robotics kits, 3D printers or loose furniture, visit our direct store.",
+  "tienda_button": "Go to Online Store",
+
+  "nota_title": "Important Note on Estimates",
+  "nota_text": "The prices, configurations and distributions shown in the \"Hericraft Studio\" application are <span class=\"font-bold\">exclusively estimates and for illustrative purposes only</span>. Final costs may vary depending on geographic location, actual physical conditions of the property, fluctuations in material costs and specific technical requirements. This tool serves to generate a personalized preliminary budget. To obtain a formal and binding quote, validation by a specialized Hericraft advisor is essential.",
+
+  "contacto_title": "Need personalized assistance?",
+  "contacto_description": "Our educational advisors are available to conduct a technical visit to your institution.",
+  "contacto_phone": "Call Corporate",
+  "contacto_email": "Contact Support"
+}

@@ -1,0 +1,42 @@
+{
+  "hero_badge": "Innovación Educativa 5.0",
+  "hero_title_part1": "Transforme su Escuela en un",
+  "hero_title_part2": "Laboratorio de Futuro",
+  "hero_description": "Deje atrás las filas de pupitres. Diseñe espacios que inspiren creatividad, colaboración y tecnología. Fácil, rápido y a su medida.",
+  "hero_cta": "Diseñar Ahora",
+
+  "pasos_title": "¿Cómo diseñar su aula ideal?",
+  "pasos_subtitle": "Utilice nuestra herramienta inteligente en 3 sencillos pasos:",
+  "paso_1_title": "Defina el Espacio",
+  "paso_1_description": "Ingrese las medidas de su salón actual y la cantidad de alumnos que desea atender.",
+  "paso_2_title": "Personalice",
+  "paso_2_description": "Seleccione el tipo de aula (Maker, STEAM) y active zonas especiales como Robótica.",
+  "paso_3_title": "Cotice",
+  "paso_3_description": "Visualice la inversión estimada al instante y envíe el diseño a nuestro equipo.",
+
+  "taller_title": "Taller de Diseño Virtual",
+  "taller_description": "Configure las opciones en el panel izquierdo y vea el resultado en el plano derecho.",
+  "taller_status": "Sistema Activo",
+  "taller_loader": "Cargando Hericraft Studio...",
+
+  "beneficios_badge": "Visión Estratégica",
+  "beneficios_title": "¿Por qué invertir en Ambientes Activos?",
+  "beneficio_1_title": "Prestigio y Matrícula",
+  "beneficio_1_description": "Las escuelas con laboratorios Maker y STEAM atraen un 30% más de inscripciones al posicionarse como líderes en innovación.",
+  "beneficio_2_title": "Retención de Talento",
+  "beneficio_2_description": "Profesores y alumnos se sienten más motivados en espacios que rompen la monotonía y fomentan la creatividad real.",
+  "beneficio_3_title": "Competitividad Global",
+  "beneficio_3_description": "Prepare a sus estudiantes con las habilidades (Soft Skills & Tech) que demanda la industria 4.0 internacional.",
+
+  "tienda_title": "¿Solo busca equipamiento?",
+  "tienda_description": "Si ya cuenta con el espacio y solo requiere kits de robótica, impresoras 3D o mobiliario suelto, visite nuestra tienda directa.",
+  "tienda_button": "Ir a Tienda Online",
+
+  "nota_title": "Nota Importante sobre Estimaciones",
+  "nota_text": "Los precios, configuraciones y distribuciones mostrados en la aplicación \"Hericraft Studio\" son <span class=\"font-bold\">exclusivamente estimativos y con fines ilustrativos</span>. Los costos finales pueden variar dependiendo de la ubicación geográfica, condiciones físicas reales del inmueble, fluctuaciones en el costo de materiales y requerimientos técnicos específicos. Esta herramienta sirve para generar un presupuesto preliminar personalizado. Para obtener una cotización formal y vinculante, es indispensable la validación por parte de un asesor especializado de Hericraft.",
+
+  "contacto_title": "¿Necesita asistencia personalizada?",
+  "contacto_description": "Nuestros asesores educativos están disponibles para realizar una visita técnica a su institución.",
+  "contacto_phone": "Llamar a Corporativo",
+  "contacto_email": "Contactar Soporte"
+}

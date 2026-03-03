@@ -1,7 +1,9 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-
+import { useI18n } from 'vue-i18n'
 import StatusBadge from '../components/sections/investors/StatusBadge.vue'
+
+const { t } = useI18n()
 
 const props = defineProps({
   color: {
@@ -29,22 +31,22 @@ const props = defineProps({
           to="/"
           class="hidden sm:flex px-3 py-2 text-xs font-bold text-[#00f0ff] transition uppercase tracking-wide rounded-full hover:bg-white/10"
         >
-          Investor Relations
+          {{ t('investors.nav_investor_relations') }}
         </RouterLink>
       </div>
       <div class="flex items-center gap-1">
-        <StatusBadge> Ronda Seed Activa </StatusBadge>
+        <StatusBadge> {{ t('investors.nav_status_badge') }} </StatusBadge>
         <RouterLink
           to="/ecosistema"
           class="px-3 py-2 text-xs font-bold text-gray-300 transition uppercase tracking-wide rounded-full hover:bg-white/10"
         >
-          Ecosistema
+          {{ t('investors.nav_ecosistema') }}
         </RouterLink>
         <RouterLink
           to="/ecosistema"
           class="px-4 py-2 text-center sm:py-2 text-xs font-bold whitespace-nowrap text-black bg-white transition uppercase rounded-2xl hover:bg-[#00f0ff]"
         >
-          Solicitar Pitch Deck
+          {{ t('investors.nav_pitch_deck') }}
         </RouterLink>
       </div>
     </nav>
