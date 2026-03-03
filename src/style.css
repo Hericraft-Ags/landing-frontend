@@ -145,3 +145,13 @@ body {
     10px 10px;
   opacity: 0.2;
 }
+
+.bg-metanoiaLight {
+  background-color: #fff0f5;
+}
+.bg-metanoiaDeep {
+  background-color: #880038;
+}
+.bg-metanoiaPink {
+  background-color: #d5005f;
+}
