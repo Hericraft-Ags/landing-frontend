@@ -9,18 +9,20 @@ const { t } = useI18n()
 
 <template>
   <section class="relative w-full min-h-screen bg-[#0A1931] overflow-hidden">
-    <div class="max-w-7xl mx-auto flex-col lg:flex-row items-center gap-12 px-4 sm:px-4 py-30">
-      <h2 class="text-2xl sm:text-4xl font-bold mb-6 leading-tight text-white inline">
+    <div class="max-w-7xl mx-auto flex flex-col items-center gap-16 px-4 sm:px-6 py-20 md:py-24">
+      <!-- Título con más separación -->
+      <h2 class="text-2xl sm:text-4xl font-bold text-white text-center mb-8 md:mb-12">
         {{ t('investors.team_title') }}
       </h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full items-center">
+      <!-- Grid de tarjetas con separación interna -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
         <TeamCard
           :name="t('investors.team_member_1_name')"
           :role="t('investors.team_member_1_role')"
           :description="t('investors.team_member_1_description')"
           :initials="t('investors.team_member_1_initials')"
-          borderColor="cyan-500"
+          border-color="cyan-500"
         />
 
         <TeamCard
@@ -28,7 +30,7 @@ const { t } = useI18n()
           :role="t('investors.team_member_2_role')"
           :description="t('investors.team_member_2_description')"
           :initials="t('investors.team_member_2_initials')"
-          borderColor="gray-400"
+          border-color="gray-400"
         />
 
         <TeamCard
@@ -36,11 +38,14 @@ const { t } = useI18n()
           :role="t('investors.team_member_3_role')"
           :description="t('investors.team_member_3_description')"
           :initials="t('investors.team_member_3_initials')"
-          borderColor="blue-500"
+          border-color="blue-500"
         />
       </div>
 
-      <RequestSection />
+      <!-- Separación antes de RequestSection -->
+      <div class="mt-16 w-full">
+        <RequestSection />
+      </div>
     </div>
 
     <div class="absolute bottom-0 w-full z-0">

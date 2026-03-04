@@ -143,8 +143,9 @@ onMounted(() => {
         </div>
       </div>
 
-      <div class="w-full bg-gray-800 rounded-lg flex items-center justify-center">
-        <div class="h-70 sm:h-120 w-full px-6 py-4">
+      <!-- Contenedor del gráfico con altura adecuada -->
+      <div class="w-full bg-gray-800 rounded-lg flex items-center justify-center p-4">
+        <div class="w-full h-[300px] sm:h-[400px] md:h-[450px]">
           <Line ref="chartRef" :data="data" :options="options" />
         </div>
       </div>

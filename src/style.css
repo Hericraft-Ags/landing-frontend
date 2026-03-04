@@ -1,208 +1,118 @@
 /* style.css */
-@import 'tailwindcss';
-
-/* Importar fuentes de Google */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-/* Definir tema personalizado */
-@theme {
-  --font-sans: 'Montserrat', sans-serif;
-  --font-hand: 'Caveat', cursive;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  --color-primary: #22c55e;
-  --color-primary-dark: #16a34a;
-  --color-secondary: #0f172a;
-  --color-accent: #38bdf8;
-  --color-background: #0b1120;
-  --color-surface: #111827;
-  --color-muted: #6b7280;
-  --color-light: #f3f4f6;
-  --color-white: #ffffff;
-
-  /* Colores personalizados */
-  --color-collegeOrange: #ff6b00;
-  --color-teal: #0dbcc9;
-  --color-accentPink: #e91e63;
-  --color-navy: #171c24;
-  --color-cyan-bright: #08be66;
-  --color-metanoiaPink: #d5005f;
+/* Variables CSS personalizadas (opcional) */
+:root {
+  --color-navy: #0a2966;
+  --color-cyan: #0ef1eb;
+  --color-collegeOrange: #ff6b35;
 }
 
-body {
-  font-family: var(--font-sans);
+/* Clases personalizadas que no cubre Tailwind */
+@layer components {
+  .glass-header {
+    background: rgba(10, 41, 102, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .bg-hero-space {
+    background-image:
+      linear-gradient(to bottom, rgba(23, 25, 28, 0.385), rgba(28, 28, 60, 0.385)),
+      url('./assets/images/fondo_espacio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .agora-bg {
+    background: linear-gradient(180deg, rgba(12, 14, 14, 1) 50%, rgba(35, 42, 56, 1) 100%);
+  }
+
+  .bg-processus-gradient {
+    background: linear-gradient(160deg, #0a2966 0%, #132496 100%);
+  }
+
+  .card-processus {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(14, 241, 235, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .card-processus:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #0ef1eb;
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(14, 241, 235, 0.1);
+  }
+
+  .process-step {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid rgba(14, 241, 235, 0.2);
+  }
+
+  .process-step::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background: #0a2966;
+    border: 2px solid #0ef1eb;
+    border-radius: 50%;
+  }
+
+  .hero-pattern {
+    background-image:
+      radial-gradient(#8dc63f 0.5px, transparent 0.5px),
+      radial-gradient(#2d3748 0.5px, #000000 0.5px);
+    background-size: 20px 20px;
+    background-position:
+      0 0,
+      10px 10px;
+    opacity: 0.2;
+  }
+
+  .social-btn-img {
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s;
+  }
+
+  .social-btn-img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+
+  .card-hover-effect {
+    transition: all 0.3s ease;
+  }
+
+  .card-hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
 }
 
-/* Clases personalizadas */
-.font-hand {
-  font-family: 'Caveat', cursive;
-}
+/* Clases de utilidad personalizadas */
+@layer utilities {
+  .font-hand {
+    font-family: 'Caveat', cursive;
+  }
 
-/* Ajustes imágenes de botones */
-.social-btn-img {
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s;
-}
-.social-btn-img:hover {
-  transform: scale(1.1);
-  opacity: 0.9;
-}
-
-/* Hover Cards Ecosistemas */
-.card-hover-effect {
-  transition: all 0.3s ease;
-}
-.card-hover-effect:hover {
-  transform: translateY(-5px);
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Colores Base (como fallback) */
-.text-collegeOrange {
-  color: #ff6b00;
-}
-.text-teal {
-  color: #0dbcc9;
-}
-.text-accentPink {
-  color: #e91e63;
-}
-.text-navy {
-  color: #171c24;
-}
-.bg-navy {
-  background-color: #171b21;
-}
-.text-cyan-bright {
-  color: #08be66;
-}
-.bg-cyan-bright {
-  background-color: #08be66;
-}
-.bg-dark-nav {
-  background-color: #111319;
-}
-.text-metanoiaPink {
-  color: #d5005f;
-}
-
-.bg-hero-space {
-  background-image:
-    linear-gradient(to bottom, rgba(23, 25, 28, 0.385), rgba(28, 28, 60, 0.385)),
-    url('./assets/images/fondo_espacio.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.agora-bg {
-  background: linear-gradient(180deg, rgba(12, 14, 14, 1) 50%, rgba(35, 42, 56, 1) 100%);
-}
-.text-agoraLime {
-  color: #8dc63f;
-}
-
-.bg-dark-nav {
-  background-color: #2f302d;
-}
-.bg-agoraDark {
-  background-color: #121212;
-}
-.bg-oxfordGray {
-  background-color: #2d3748;
-}
-.bg-navy {
-  background-color: #0a1931;
-}
-.text-agoraLime {
-  color: #8dc63f;
-}
-.bg-agoraLime {
-  background-color: #8dc63f;
-}
-.text-collegeOrange {
-  color: #ff6b35;
-}
-.bg-collegeOrange {
-  background-color: #ff6b35;
-}
-.text-cyanBright {
-  color: #00c2ff;
-}
-.bg-cyanBright {
-  background-color: #00c2ff;
-}
-
-.hero-pattern {
-  background-image:
-    radial-gradient(#8dc63f 0.5px, transparent 0.5px), radial-gradient(#2d3748 0.5px, #000000 0.5px);
-  background-size: 20px 20px;
-  background-position:
-    0 0,
-    10px 10px;
-  opacity: 0.2;
-}
-
-.bg-metanoiaLight {
-  background-color: #fff0f5;
-}
-.bg-metanoiaDeep {
-  background-color: #880038;
-}
-.bg-metanoiaPink {
-  background-color: #d5005f;
-}
-.text-cyan {
-  color: #0ef1eb;
-}
-.bg-cyan {
-  background-color: #0ef1eb;
-}
-.bg-processus-gradient {
-  background: linear-gradient(160deg, #0a2966 0%, #132496 100%);
-}
-
-.bg-tech-grid {
-  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
-}
-
-.card-processus {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(14, 241, 235, 0.1);
-  transition: all 0.3s ease;
-}
-
-.card-processus:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: #0ef1eb;
-  transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(14, 241, 235, 0.1);
-}
-
-.process-step {
-  position: relative;
-  padding-left: 2rem;
-  border-left: 2px solid rgba(14, 241, 235, 0.2);
-}
-
-.process-step::before {
-  content: '';
-  position: absolute;
-  left: -9px;
-  top: 0;
-  width: 16px;
-  height: 16px;
-  background: #0a2966;
-  border: 2px solid #0ef1eb;
-  border-radius: 50%;
-}
-
-.glass-header {
-  background: rgba(10, 41, 102, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  .text-glow-cyan {
+    text-shadow:
+      0 0 8px rgba(14, 241, 235, 0.5),
+      0 0 16px rgba(14, 241, 235, 0.3);
+  }
 }
