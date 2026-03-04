@@ -132,7 +132,7 @@ onMounted(() => {
         :style="{ color: colorTextAccessibility }"
       >
         <i class="fas fa-text-height"></i>
-        {{ $t('accessibilitybar.text_size', { size: textSize }) }}
+        {{ $t('accessibilitybar.text_size') }} {{ textSize }}%
       </button>
 
       <button
