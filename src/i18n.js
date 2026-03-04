@@ -1,8 +1,7 @@
 import { createI18n } from 'vue-i18n'
+
 function loadLocaleMessages() {
   const messages = import.meta.glob('./locales/*/*.json', { eager: true })
-  console.log('Archivos encontrados por glob:', Object.keys(messages))
-
   const loadedMessages = {}
 
   for (const path in messages) {
@@ -10,23 +9,30 @@ function loadLocaleMessages() {
     if (matched) {
       const locale = matched[1]
       const fileName = matched[2]
-
-      if (!loadedMessages[locale]) {
-        loadedMessages[locale] = {}
-      }
+      if (!loadedMessages[locale]) loadedMessages[locale] = {}
       loadedMessages[locale][fileName] = messages[path].default
     }
   }
+
+  // Log para confirmar
+  console.log('Locales cargados:', Object.keys(loadedMessages))
+  console.log('Keys ES:', Object.keys(loadedMessages.es || {}))
+
   return loadedMessages
 }
+
+const messages = loadLocaleMessages()
+
 const i18n = createI18n({
-  locale: 'es',
-  fallbackLocale: 'es',
-  messages: loadLocaleMessages(),
   legacy: false,
   globalInjection: true,
+  locale: 'es',
+  fallbackLocale: 'es',
+  messages,
   missingWarn: false,
   fallbackWarn: false,
 })
 
+// Exporta también los mensajes para debug
+export const loadedMessages = messages
 export default i18n

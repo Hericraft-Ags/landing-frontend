@@ -2,7 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import './style.css'
-import i18n from './i18n'
+import i18n, { loadedMessages } from './i18n'
+console.log('i18n messages en main:', JSON.stringify(loadedMessages).slice(0, 200))
 
 const app = createApp(App)
 
