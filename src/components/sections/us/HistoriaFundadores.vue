@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'
 import TimelineItem from '@/components/ui/TimelineItem.vue'
 import FounderCard from '@/components/ui/FounderCard.vue'
 
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 
 const timelineColors = ['navy', 'cyan', 'green']
 

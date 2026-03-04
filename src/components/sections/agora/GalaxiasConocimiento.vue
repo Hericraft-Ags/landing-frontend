@@ -82,7 +82,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import GalaxiaCard from '@/components/ui/GalaxiaCard.vue'
 
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 
 const galaxies = computed(() => [
   {

@@ -49,8 +49,7 @@ import { useI18n } from 'vue-i18n'
 import EBACard from '@/components/ui/EBACard.vue'
 import VirtualLab from './VirtualLab.vue'
 
-const { t } = useI18n()
-
+const { t } = useI18n({ useScope: 'global' })
 const pdfLink = 'https://soluciones-hericraft.aflip.in/ff0ae8643c.html'
 
 const ebaLevels = computed(() => [

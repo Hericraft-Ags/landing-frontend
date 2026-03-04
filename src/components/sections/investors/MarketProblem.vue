@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import EcosystemCard from '@/components/ui/EcosystemCard.vue'
 
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 const reduceMotion = inject('reduceMotion', ref(false))
 const router = useRouter()
 

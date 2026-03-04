@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 const IndexView = () => import('@/views/IndexView.vue')
 const MainLayout = () => import('@/layouts/MainLayout.vue')
+const InvestorsLayout = () => import('@/layouts/InvestorsLayout.vue')
 const NosotrosView = () => import('@/views/NosotrosView.vue')
 const CollegeView = () => import('@/views/CollegeView.vue')
 const AgoraView = () => import('@/views/AgoraView.vue')
@@ -111,12 +112,18 @@ const routes = [
   },
   {
     path: '/inversionistas',
-    component: InversionistasView,
-    meta: {
-      themeColor: '#020617',
-      accessibilityColor: '#00f0ff',
-      colorTextAccessibility: '#fff',
-    },
+    component: InvestorsLayout,
+    children: [
+      {
+        path: '',
+        component: InversionistasView,
+        meta: {
+          themeColor: '#020617',
+          accessibilityColor: '#00f0ff',
+          colorTextAccessibility: '#fff',
+        },
+      },
+    ],
   },
 ]
 

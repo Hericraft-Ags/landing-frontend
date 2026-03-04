@@ -77,7 +77,7 @@ const reduceMotion = inject('reduceMotion', ref(false))
 const router = useRouter()
 
 const isLoading = ref(false)
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 
 const ecosystems = computed(() => [
   {

@@ -67,7 +67,7 @@ import { ref, inject, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const reduceMotion = inject('reduceMotion', ref(false))
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 
 const features = computed(() => [
   { text: t('index.console_gestion'), icon: 'fas fa-check' },

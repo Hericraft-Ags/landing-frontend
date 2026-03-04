@@ -50,7 +50,7 @@ import CompanionCard from '@/components/ui/CompanionCard.vue'
 import SafetyCard from '@/components/ui/SafetyCard.vue'
 import ProfileCard from '@/components/ui/ProfileCard.vue'
 
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 
 const companions = computed(() => [
   {

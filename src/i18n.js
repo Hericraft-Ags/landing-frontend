@@ -1,6 +1,7 @@
 import { createI18n } from 'vue-i18n'
 function loadLocaleMessages() {
   const messages = import.meta.glob('./locales/*/*.json', { eager: true })
+  console.log('Archivos encontrados por glob:', Object.keys(messages))
 
   const loadedMessages = {}
 
@@ -24,6 +25,8 @@ const i18n = createI18n({
   messages: loadLocaleMessages(),
   legacy: false,
   globalInjection: true,
+  missingWarn: false,
+  fallbackWarn: false,
 })
 
 export default i18n

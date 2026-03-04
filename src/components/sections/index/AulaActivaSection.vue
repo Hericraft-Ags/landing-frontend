@@ -26,7 +26,7 @@ import AmbientesContent from '@/components/ui/ambientes/AmbientesContent.vue'
 import AmbientesMockup from '@/components/ui/ambientes/AmbientesMockup.vue'
 
 const reduceMotion = inject('reduceMotion', ref(false))
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 
 const features = computed(() => [
   {

@@ -43,7 +43,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import PraxisCard from '@/components/ui/PraxisCard.vue'
 
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 
 const praxisItems = computed(() => [
   {

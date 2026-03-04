@@ -17,7 +17,7 @@ const props = defineProps({
   },
 })
 
-const { locale, t } = useI18n()
+const { locale, t } = useI18n({ useScope: 'global' })
 
 const highContrast = ref(false)
 const textSize = ref(100)

@@ -8,7 +8,7 @@ const props = defineProps({
   },
 })
 
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 
 const socialLinks = [
   { name: t('footer.social_media.facebook'), icon: 'facebook.png', url: 'https://facebook.com' },

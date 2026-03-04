@@ -55,7 +55,7 @@ import { useI18n } from 'vue-i18n'
 import AfterSchoolCard from '@/components/ui/AfterSchoolCard.vue'
 import ParentsCTA from '@/components/ui/ParentsCTA.vue'
 
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 
 const afterSchoolCards = computed(() => [
   {

@@ -27,9 +27,10 @@ const colorTextAccessibility = computed(() => {
     />
     <InverstorsNav :color="themeColor" />
     <main class="flex-1">
-      <slot />
+      <router-view />
+      <!-- Cambiado de slot a router-view -->
     </main>
 
-    <Footer />
+    <Footer :color="themeColor" />
   </div>
 </template>

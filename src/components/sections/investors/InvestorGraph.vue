@@ -25,7 +25,7 @@ ChartJS.register(
   Filler
 )
 
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 const chartRef = ref(null)
 
 const data = ref({

@@ -44,7 +44,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import CertificationCard from '@/components/ui/CertificationCard.vue'
 
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 
 const badgeItems = computed(() => [
   {

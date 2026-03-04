@@ -4,7 +4,7 @@ import RequestSection from './RequestSection.vue'
 import Aurora from '@/components/animations/backgrounds/Aurora.vue'
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
