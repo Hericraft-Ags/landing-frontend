@@ -42,10 +42,13 @@
   "capsule_asesoria": "Asesoría Experta",
   "consultoria_title": "Consultoría especializada",
   "consultoria_subtitle": "Acompañamiento experto para la excelencia educativa. Transformamos tu institución con soluciones a medida.",
-  "diaganostico_description": "Evaluación profunda de madurez tecnológica y pedagógica de tu institución.",
-  "diaganostico_feature_1": "Análisis FODA",
-  "diaganostico_feature_2": "Benchmarking",
-  "diaganostico_feature_3": "Plan de acción",
+  "diagnostico": {
+    "title": "Diagnóstico de innovación",
+    "description": "Evaluación profunda de madurez tecnológica y pedagógica de tu institución.",
+    "feature_1": "Análisis FODA",
+    "feature_2": "Benchmarking",
+    "feature_3": "Plan de acción"
+  },
   "rvoe": {
     "title": "Gestión de RVOE",
     "description": "Acompañamiento integral en trámites ante la SEP para validez oficial de estudios.",

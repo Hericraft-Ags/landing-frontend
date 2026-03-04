@@ -69,12 +69,12 @@ const services = computed(() => [
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-100',
     hoverColor: 'group-hover:border-blue-200',
-    title: t('index.diagnostico_title'),
-    description: t('index.diagnostico_description'),
+    title: t('index.diagnostico.title'),
+    description: t('index.diagnostico.description'),
     features: [
-      t('index.diagnostico_feature_1'),
-      t('index.diagnostico_feature_2'),
-      t('index.diagnostico_feature_3'),
+      t('index.diagnostico.feature_1'),
+      t('index.diagnostico.feature_2'),
+      t('index.diagnostico.feature_3'),
     ],
   },
   {

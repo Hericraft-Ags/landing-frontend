@@ -3,7 +3,15 @@ import { createI18n } from 'vue-i18n'
 function flattenMessages(obj, prefix = '') {
   return Object.keys(obj).reduce((acc, key) => {
     const fullKey = prefix ? `${prefix}.${key}` : key
-    if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
+    if (Array.isArray(obj[key])) {
+      obj[key].forEach((item, index) => {
+        if (typeof item === 'object' && item !== null) {
+          Object.assign(acc, flattenMessages(item, `${fullKey}.${index}`))
+        } else {
+          acc[`${fullKey}.${index}`] = item
+        }
+      })
+    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
       Object.assign(acc, flattenMessages(obj[key], fullKey))
     } else {
       acc[fullKey] = obj[key]
