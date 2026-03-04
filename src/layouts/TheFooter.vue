@@ -23,6 +23,7 @@ const handleImageError = event => {
   event.target.src = '/assets/images/placeholder.svg'
   event.target.onerror = null
 }
+const currentYear = new Date().getFullYear()
 </script>
 
 <template>
