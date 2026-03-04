@@ -9,30 +9,27 @@ function loadLocaleMessages() {
     if (matched) {
       const locale = matched[1]
       const fileName = matched[2]
+
       if (!loadedMessages[locale]) loadedMessages[locale] = {}
-      loadedMessages[locale][fileName] = messages[path].default
+
+      const fileMessages = messages[path].default
+      for (const key in fileMessages) {
+        loadedMessages[locale][`${fileName}.${key}`] = fileMessages[key]
+      }
     }
   }
 
-  // Log para confirmar
-  console.log('Locales cargados:', Object.keys(loadedMessages))
-  console.log('Keys ES:', Object.keys(loadedMessages.es || {}))
-
   return loadedMessages
 }
-
-const messages = loadLocaleMessages()
 
 const i18n = createI18n({
   legacy: false,
   globalInjection: true,
   locale: 'es',
   fallbackLocale: 'es',
-  messages,
+  messages: loadLocaleMessages(),
   missingWarn: false,
   fallbackWarn: false,
 })
 
-// Exporta también los mensajes para debug
-export const loadedMessages = messages
 export default i18n
