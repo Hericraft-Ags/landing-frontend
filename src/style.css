@@ -1,14 +1,118 @@
-@import 'tailwindcss';
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-@theme {
-  --font-sans: 'Montserrat', sans-serif;
-  --color-primary: #22c55e; /* Verde principal */
-  --color-primary-dark: #16a34a; /* Verde hover */
-  --color-secondary: #0f172a; /* Azul oscuro hero */
-  --color-accent: #38bdf8; /* Azul acento */
-  --color-background: #0b1120; /* Fondo oscuro */
-  --color-surface: #111827; /* Cards oscuras */
-  --color-muted: #6b7280; /* Texto secundario */
-  --color-light: #f3f4f6; /* Secciones claras */
-  --color-white: #ffffff;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables CSS personalizadas (opcional) */
+:root {
+  --color-navy: #0a2966;
+  --color-cyan: #0ef1eb;
+  --color-collegeOrange: #ff6b35;
+}
+
+/* Clases personalizadas que no cubre Tailwind */
+@layer components {
+  .glass-header {
+    background: rgba(10, 41, 102, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .bg-hero-space {
+    background-image:
+      linear-gradient(to bottom, rgba(23, 25, 28, 0.385), rgba(28, 28, 60, 0.385)),
+      url('./assets/images/fondo_espacio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .agora-bg {
+    background: linear-gradient(180deg, rgba(12, 14, 14, 1) 50%, rgba(35, 42, 56, 1) 100%);
+  }
+
+  .bg-processus-gradient {
+    background: linear-gradient(160deg, #0a2966 0%, #132496 100%);
+  }
+
+  .card-processus {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(14, 241, 235, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .card-processus:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #0ef1eb;
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(14, 241, 235, 0.1);
+  }
+
+  .process-step {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid rgba(14, 241, 235, 0.2);
+  }
+
+  .process-step::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background: #0a2966;
+    border: 2px solid #0ef1eb;
+    border-radius: 50%;
+  }
+
+  .hero-pattern {
+    background-image:
+      radial-gradient(#8dc63f 0.5px, transparent 0.5px),
+      radial-gradient(#2d3748 0.5px, #000000 0.5px);
+    background-size: 20px 20px;
+    background-position:
+      0 0,
+      10px 10px;
+    opacity: 0.2;
+  }
+
+  .social-btn-img {
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s;
+  }
+
+  .social-btn-img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+
+  .card-hover-effect {
+    transition: all 0.3s ease;
+  }
+
+  .card-hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* Clases de utilidad personalizadas */
+@layer utilities {
+  .font-hand {
+    font-family: 'Caveat', cursive;
+  }
+
+  .text-glow-cyan {
+    text-shadow:
+      0 0 8px rgba(14, 241, 235, 0.5),
+      0 0 16px rgba(14, 241, 235, 0.3);
+  }
 }
