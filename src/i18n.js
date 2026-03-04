@@ -1,5 +1,17 @@
 import { createI18n } from 'vue-i18n'
 
+function flattenMessages(obj, prefix = '') {
+  return Object.keys(obj).reduce((acc, key) => {
+    const fullKey = prefix ? `${prefix}.${key}` : key
+    if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
+      Object.assign(acc, flattenMessages(obj[key], fullKey))
+    } else {
+      acc[fullKey] = obj[key]
+    }
+    return acc
+  }, {})
+}
+
 function loadLocaleMessages() {
   const messages = import.meta.glob('./locales/*/*.json', { eager: true })
   const loadedMessages = {}
@@ -13,9 +25,8 @@ function loadLocaleMessages() {
       if (!loadedMessages[locale]) loadedMessages[locale] = {}
 
       const fileMessages = messages[path].default
-      for (const key in fileMessages) {
-        loadedMessages[locale][`${fileName}.${key}`] = fileMessages[key]
-      }
+      const flattened = flattenMessages(fileMessages, fileName)
+      Object.assign(loadedMessages[locale], flattened)
     }
   }
 
