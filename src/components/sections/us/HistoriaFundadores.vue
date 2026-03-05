@@ -4,6 +4,10 @@ import { useI18n } from 'vue-i18n'
 import TimelineItem from '@/components/ui/TimelineItem.vue'
 import FounderCard from '@/components/ui/FounderCard.vue'
 
+import ricardoImg from '@/assets/images/us/NOSOTROS-12.png'
+import hectorImg from '@/assets/images/us/NOSOTROS-13.png'
+import marcoImg from '@/assets/images/us/NOSOTROS-11.png'
+
 const { t } = useI18n({ useScope: 'global' })
 
 const timelineColors = ['navy', 'cyan', 'green']
@@ -34,19 +38,19 @@ const founders = computed(() => [
     id: 'ricardo',
     name: t('us.ricardo.name'),
     role: t('us.ricardo.role'),
-    image: '/assets/images/founders/ricardo.jpg',
+    image: ricardoImg,
   },
   {
     id: 'hector',
     name: t('us.hector.name'),
     role: t('us.hector.role'),
-    image: '/assets/images/founders/hector.jpg',
+    image: hectorImg,
   },
   {
     id: 'marco',
     name: t('us.marco.name'),
     role: t('us.marco.role'),
-    image: '/assets/images/founders/marco.jpg',
+    image: marcoImg,
   },
 ])
 </script>
@@ -72,7 +76,7 @@ const founders = computed(() => [
             class="absolute inset-0 bg-cyan/10 rounded-2xl transform translate-x-4 translate-y-4"
           ></div>
           <img
-            src="../../../assets/images/NOSOTROS-10.png"
+            src="@/assets/images/us/NOSOTROS-10.png"
             alt="Fundadores Hericraft"
             class="rounded-2xl shadow-2xl relative w-full object-cover filter grayscale hover:grayscale-0 transition duration-500"
           />

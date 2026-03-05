@@ -4,6 +4,10 @@ import RequestSection from './RequestSection.vue'
 import Aurora from '@/components/animations/backgrounds/Aurora.vue'
 import { useI18n } from 'vue-i18n'
 
+import ricardoImg from '@/assets/images/us/NOSOTROS-12.png'
+import hectorImg from '@/assets/images/us/NOSOTROS-13.png'
+import marcoImg from '@/assets/images/us/NOSOTROS-11.png'
+
 const { t } = useI18n({ useScope: 'global' })
 </script>
 
@@ -22,6 +26,7 @@ const { t } = useI18n({ useScope: 'global' })
           :role="t('investors.team_member_1_role')"
           :description="t('investors.team_member_1_description')"
           :initials="t('investors.team_member_1_initials')"
+          :image="ricardoImg"
           border-color="cyan-500"
         />
 
@@ -30,6 +35,7 @@ const { t } = useI18n({ useScope: 'global' })
           :role="t('investors.team_member_2_role')"
           :description="t('investors.team_member_2_description')"
           :initials="t('investors.team_member_2_initials')"
+          :image="marcoImg"
           border-color="gray-400"
         />
 
@@ -38,6 +44,7 @@ const { t } = useI18n({ useScope: 'global' })
           :role="t('investors.team_member_3_role')"
           :description="t('investors.team_member_3_description')"
           :initials="t('investors.team_member_3_initials')"
+          :image="hectorImg"
           border-color="blue-500"
         />
       </div>
