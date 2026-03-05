@@ -23,6 +23,7 @@ const handleImageError = event => {
   event.target.src = '/assets/images/placeholder.svg'
   event.target.onerror = null
 }
+const currentYear = new Date().getFullYear()
 </script>
 
 <template>
@@ -203,7 +204,7 @@ const handleImageError = event => {
 
         <div class="text-center space-y-2">
           <p class="font-display font-semibold text-gray-300">
-            {{ $t('footer.copyright', { year: new Date().getFullYear() }) }}
+            © {{ currentYear }} {{ $t('footer.copyright') }}
           </p>
           <p class="text-xs text-gray-300">
             {{ $t('footer.rights') }}

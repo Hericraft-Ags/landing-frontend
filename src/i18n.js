@@ -1,8 +1,27 @@
 import { createI18n } from 'vue-i18n'
+
+function flattenMessages(obj, prefix = '') {
+  return Object.keys(obj).reduce((acc, key) => {
+    const fullKey = prefix ? `${prefix}.${key}` : key
+    if (Array.isArray(obj[key])) {
+      obj[key].forEach((item, index) => {
+        if (typeof item === 'object' && item !== null) {
+          Object.assign(acc, flattenMessages(item, `${fullKey}.${index}`))
+        } else {
+          acc[`${fullKey}.${index}`] = item
+        }
+      })
+    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+      Object.assign(acc, flattenMessages(obj[key], fullKey))
+    } else {
+      acc[fullKey] = obj[key]
+    }
+    return acc
+  }, {})
+}
+
 function loadLocaleMessages() {
   const messages = import.meta.glob('./locales/*/*.json', { eager: true })
-  console.log('Archivos encontrados por glob:', Object.keys(messages))
-
   const loadedMessages = {}
 
   for (const path in messages) {
@@ -11,20 +30,23 @@ function loadLocaleMessages() {
       const locale = matched[1]
       const fileName = matched[2]
 
-      if (!loadedMessages[locale]) {
-        loadedMessages[locale] = {}
-      }
-      loadedMessages[locale][fileName] = messages[path].default
+      if (!loadedMessages[locale]) loadedMessages[locale] = {}
+
+      const fileMessages = messages[path].default
+      const flattened = flattenMessages(fileMessages, fileName)
+      Object.assign(loadedMessages[locale], flattened)
     }
   }
+
   return loadedMessages
 }
+
 const i18n = createI18n({
+  legacy: false,
+  globalInjection: true,
   locale: 'es',
   fallbackLocale: 'es',
   messages: loadLocaleMessages(),
-  legacy: false,
-  globalInjection: true,
   missingWarn: false,
   fallbackWarn: false,
 })

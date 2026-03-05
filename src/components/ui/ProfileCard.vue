@@ -14,10 +14,10 @@
         >
           <i class="fas fa-id-card"></i>
         </div>
-        <h3 class="text-xl font-bold text-[#93c5fd]">{{ $t('college.profile_title') }}</h3>
+        <h3 class="text-xl font-bold text-gray-200">{{ $t('college.profile_title') }}</h3>
       </div>
 
-      <p class="text-[#93c5fd] text-sm leading-relaxed mb-6">
+      <p class="text-gray-200 text-sm leading-relaxed mb-6">
         {{ $t('college.profile_description') }}
       </p>
 
