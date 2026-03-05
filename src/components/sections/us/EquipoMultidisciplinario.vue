@@ -3,14 +3,13 @@
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <span class="text-green font-bold uppercase tracking-widest text-sm mb-2 block">
-          Nuestro Motor
+          {{ $t('us.our_motor') }}
         </span>
         <h2 class="text-3xl md:text-4xl font-display font-bold text-navy">
-          El Equipo Detrás del Ecosistema
+          {{ $t('us.our_motor_ecosystem') }}
         </h2>
         <p class="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
-          6 departamentos especializados trabajando en sincronía para crear experiencias educativas
-          de clase mundial.
+          {{ $t('us.our_motor_slogan') }}
         </p>
       </div>
 
