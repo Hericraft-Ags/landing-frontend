@@ -72,7 +72,7 @@ const knowledgeItems = [
     id: 'podcast-ia',
     type: 'podcast',
     typeLabel: 'Podcast',
-    typeColor: 'purple',
+    typeColor: 'blue',
     typeIcon: 'fas fa-microphone',
     title: 'El Futuro de la IA en el Aula',
     description:
@@ -104,7 +104,7 @@ const knowledgeItems = [
     id: 'revista-abril',
     type: 'revista',
     typeLabel: 'Revista',
-    typeColor: 'orange',
+    typeColor: 'blue',
     typeIcon: 'fas fa-newspaper',
     title: 'Hericraft Monthly: Edición Abril',
     description:
