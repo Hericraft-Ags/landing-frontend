@@ -27,7 +27,7 @@ const { t } = useI18n({ useScope: 'global' })
           :description="t('investors.team_member_1_description')"
           :initials="t('investors.team_member_1_initials')"
           :image="ricardoImg"
-          border-color="cyan-500"
+          border-color="blue-500"
         />
 
         <TeamCard
@@ -36,7 +36,7 @@ const { t } = useI18n({ useScope: 'global' })
           :description="t('investors.team_member_2_description')"
           :initials="t('investors.team_member_2_initials')"
           :image="marcoImg"
-          border-color="gray-400"
+          border-color="blue-500"
         />
 
         <TeamCard
