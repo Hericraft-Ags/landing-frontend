@@ -19,7 +19,7 @@
           >
             {{ $t('metanoia.metodologia_badge') }}
           </span>
-          <h2 class="text-4xl font-metanoia font-black text-navy mb-6">
+          <h2 class="text-4xl font-metanoia font-black text-[#5f5e5e] mb-6">
             {{ $t('metanoia.metodologia_title_part1') }}
             <span class="text-metanoiaPink">{{ $t('metanoia.metodologia_title_part2') }}</span>
           </h2>

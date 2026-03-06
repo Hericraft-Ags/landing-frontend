@@ -1,7 +1,7 @@
 <template>
   <section class="py-24 px-6 bg-white text-center">
     <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl font-metanoia font-black text-navy mb-8">
+      <h2 class="text-4xl font-metanoia font-black text-[#5f5e5e] mb-8">
         {{ $t('metanoia.cta_title') }}
       </h2>
       <div class="flex justify-center">

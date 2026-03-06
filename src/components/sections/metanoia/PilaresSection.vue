@@ -5,7 +5,7 @@
         <span class="text-metanoiaPink font-bold uppercase tracking-widest text-sm mb-2 block">
           {{ $t('metanoia.pilares_badge') }}
         </span>
-        <h2 class="text-4xl font-metanoia font-black text-navy">
+        <h2 class="text-4xl font-metanoia font-black text-[#5f5e5e]">
           {{ $t('metanoia.pilares_title') }}
         </h2>
         <p class="text-gray-500 mt-4 max-w-2xl mx-auto text-lg">
