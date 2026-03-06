@@ -11,11 +11,11 @@ const props = defineProps({
 const { t } = useI18n({ useScope: 'global' })
 
 const socialLinks = [
-  { name: t('footer.social_media.facebook'), icon: 'facebook.png', url: 'https://facebook.com' },
-  { name: t('footer.social_media.instagram'), icon: 'instagram.png', url: 'https://instagram.com' },
-  { name: t('footer.social_media.linkedin'), icon: 'linkedin.png', url: 'https://linkedin.com' },
-  { name: t('footer.social_media.spotify'), icon: 'spotify.png', url: 'https://spotify.com' },
-  { name: t('footer.social_media.youtube'), icon: 'youtube.png', url: 'https://youtube.com' },
+  { name: t('footer.social_media.facebook'), icon: 'facebook.png', url: 'https://www.facebook.com/hericraft.mx' },
+  { name: t('footer.social_media.instagram'), icon: 'instagram.png', url: 'https://www.instagram.com/hericraft_' },
+  { name: t('footer.social_media.linkedin'), icon: 'linkedin.png', url: 'https://www.linkedin.com/company/hericraft' },
+  { name: t('footer.social_media.spotify'), icon: 'spotify.png', url: 'https://open.spotify.com/show/396uMypo9yXnES83jA9O1N?si=e8f702b0c9d84b95' },
+  { name: t('footer.social_media.youtube'), icon: 'youtube.png', url: 'https://youtube.com/@hericrafteducacion?feature=shared ' },
 ]
 
 const handleImageError = event => {
