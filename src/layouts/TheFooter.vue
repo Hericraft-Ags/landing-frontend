@@ -157,17 +157,17 @@ const currentYear = new Date().getFullYear()
           </h3>
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
-              <i class="fas fa-map-marker-alt text-collegeOrange mt-1"></i>
+              <i class="fas fa-map-marker-alt text-[#49E7B2] mt-1"></i>
               <span> {{ $t('footer.address') }}<br />{{ $t('footer.national_coverage') }} </span>
             </li>
             <li class="flex items-center gap-3">
-              <i class="fas fa-phone text-cyanBright"></i>
+              <i class="fas fa-phone text-[#27E2F8]"></i>
               <a href="tel:+524493932939" class="hover:text-white transition">
                 {{ $t('footer.phone') }}
               </a>
             </li>
             <li class="flex items-center gap-3">
-              <i class="fas fa-envelope text-purple-400"></i>
+              <i class="fas fa-envelope text-[#D8D8D8]"></i>
               <a
                 href="mailto:contacto@soluciones-hericraft.com"
                 class="hover:text-white transition"
