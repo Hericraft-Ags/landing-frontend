@@ -24,6 +24,10 @@ const props = defineProps({
     required: false,
     default: 'gray-300',
   },
+  image: {
+    type: String,
+    required: false,
+  },
 })
 
 // Mapeo de colores para el borde del círculo
@@ -55,10 +59,20 @@ const textColorClass = computed(() => {
   >
     <!-- Círculo con iniciales - CORREGIDO -->
     <div
-      class="flex bg-[#0A1931] rounded-full w-24 h-24 items-center justify-center border-4 flex-shrink-0"
+      class="flex bg-[#0A1931] rounded-full w-24 h-24 items-center justify-center border-4 flex-shrink-0 overflow-hidden"
       :class="borderClass"
     >
-      <span class="text-3xl font-semibold text-white">{{ props.initials }}</span>
+      <img
+        v-if="image"
+        :src="image"
+        class="w-full h-full object-cover"
+      />
+      <div
+        v-else
+        class="text-3xl font-semibold text-white"
+      >
+        {{ props.initials }}
+      </div>
     </div>
 
     <!-- Información del miembro del equipo -->

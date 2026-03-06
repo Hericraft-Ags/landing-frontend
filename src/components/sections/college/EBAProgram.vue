@@ -17,7 +17,7 @@
         <a
           :href="pdfLink"
           target="_blank"
-          class="inline-flex items-center gap-2 bg-white border-2 border-[#ff6b35] text-[#ff6b35] px-6 py-3 rounded-full font-bold hover:bg-[#ff6b35] hover:text-gray-600 transition shadow-lg group"
+          class="inline-flex items-center gap-2 bg-white border-2 border-[#ff6b35] text-[#ff6b35] px-6 py-3 rounded-full font-bold hover:bg-[#ff6b35] hover:text-white transition shadow-lg group"
         >
           <i class="fas fa-file-pdf text-xl"></i>
           {{ $t('college.eba_view_pdf') }}
