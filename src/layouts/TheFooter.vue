@@ -11,11 +11,11 @@ const props = defineProps({
 const { t } = useI18n({ useScope: 'global' })
 
 const socialLinks = [
-  { name: t('footer.social_media.facebook'), icon: 'facebook.png', url: 'https://facebook.com' },
-  { name: t('footer.social_media.instagram'), icon: 'instagram.png', url: 'https://instagram.com' },
-  { name: t('footer.social_media.linkedin'), icon: 'linkedin.png', url: 'https://linkedin.com' },
-  { name: t('footer.social_media.spotify'), icon: 'spotify.png', url: 'https://spotify.com' },
-  { name: t('footer.social_media.youtube'), icon: 'youtube.png', url: 'https://youtube.com' },
+  { name: t('footer.social_media.facebook'), icon: 'facebook.png', url: 'https://www.facebook.com/hericraft.mx' },
+  { name: t('footer.social_media.instagram'), icon: 'instagram.png', url: 'https://www.instagram.com/hericraft_' },
+  { name: t('footer.social_media.linkedin'), icon: 'linkedin.png', url: 'https://www.linkedin.com/company/hericraft' },
+  { name: t('footer.social_media.spotify'), icon: 'spotify.png', url: 'https://open.spotify.com/show/396uMypo9yXnES83jA9O1N?si=e8f702b0c9d84b95' },
+  { name: t('footer.social_media.youtube'), icon: 'youtube.png', url: 'https://youtube.com/@hericrafteducacion?feature=shared ' },
 ]
 
 const handleImageError = event => {
@@ -157,17 +157,17 @@ const currentYear = new Date().getFullYear()
           </h3>
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
-              <i class="fas fa-map-marker-alt text-collegeOrange mt-1"></i>
+              <i class="fas fa-map-marker-alt text-[#49E7B2] mt-1"></i>
               <span> {{ $t('footer.address') }}<br />{{ $t('footer.national_coverage') }} </span>
             </li>
             <li class="flex items-center gap-3">
-              <i class="fas fa-phone text-cyanBright"></i>
+              <i class="fas fa-phone text-[#27E2F8]"></i>
               <a href="tel:+524493932939" class="hover:text-white transition">
                 {{ $t('footer.phone') }}
               </a>
             </li>
             <li class="flex items-center gap-3">
-              <i class="fas fa-envelope text-purple-400"></i>
+              <i class="fas fa-envelope text-[#D8D8D8]"></i>
               <a
                 href="mailto:contacto@soluciones-hericraft.com"
                 class="hover:text-white transition"

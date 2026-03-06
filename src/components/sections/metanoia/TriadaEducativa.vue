@@ -10,7 +10,7 @@
     </div>
 
     <div class="max-w-5xl mx-auto text-center relative z-10">
-      <h2 class="text-3xl font-bold text-navy mb-6">{{ $t('metanoia.triada_title') }}</h2>
+      <h2 class="text-3xl font-bold text-[#5f5e5e] mb-6">{{ $t('metanoia.triada_title') }}</h2>
       <p class="text-gray-600 mb-16 max-w-3xl mx-auto text-lg">
         {{ $t('metanoia.triada_description') }}
       </p>

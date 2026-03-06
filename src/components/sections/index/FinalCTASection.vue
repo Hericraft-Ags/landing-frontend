@@ -72,17 +72,17 @@
 
       <div class="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
         <span class="flex items-center gap-2">
-          <i class="fas fa-clock text-cyan-bright"></i>
+          <i class="fas fa-clock text-[#49E7B2]"></i>
           <strong class="text-white ml-1">{{ $t('index.tag_answer') }}</strong>
         </span>
         <span class="flex items-center gap-2">
-          <i class="fas fa-headset text-collegeOrange"></i>
+          <i class="fas fa-headset text-[#27E2F8]"></i>
           <span
             ><strong class="text-white ml-1">{{ $t('index.tag_support') }}</strong></span
           >
         </span>
         <span class="flex items-center gap-2">
-          <i class="fas fa-shield-alt text-green-500"></i>
+          <i class="fas fa-shield-alt text-[#D8D8D8]"></i>
           <span
             ><strong class="text-white ml-1">{{ $t('index.tag_consulta') }}</strong></span
           >

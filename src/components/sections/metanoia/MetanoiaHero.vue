@@ -20,7 +20,7 @@
 
         <img :src="logoMetanoia" alt="Logo Metanoia" class="h-40 w-auto mb-2 drop-shadow-sm" />
 
-        <h1 class="text-5xl lg:text-6xl font-metanoia font-black text-navy leading-[1.1]">
+        <h1 class="text-5xl lg:text-6xl font-metanoia font-black text-[#5f5e5e] leading-[1.1]">
           {{ $t('metanoia.hero_title_part1') }} <br />
           <span class="bg-clip-text text-pink-700">{{ $t('metanoia.hero_title_part2') }}</span>
         </h1>
@@ -39,7 +39,7 @@
             {{ $t('metanoia.hero_button_primary') }} <i class="fas fa-heart"></i>
           </a>
           <button
-            class="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-navy text-navy font-bold hover:bg-black hover:text-pink-700 transition shadow-lg hover:shadow-pink-500/30"
+            class="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-[#5f5e5e] text-[#5f5e5e] font-bold hover:bg-black hover:text-pink-700 transition shadow-lg hover:shadow-pink-500/30"
           >
             <i class="fas fa-play-circle text-xl"></i> {{ $t('metanoia.hero_button_secondary') }}
           </button>
