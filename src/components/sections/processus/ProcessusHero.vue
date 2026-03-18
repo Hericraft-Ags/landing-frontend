@@ -31,11 +31,12 @@
         </p>
 
         <div class="flex flex-wrap gap-4 pt-6">
-          <button
+          <a
+            href="mailto:contacto@soluciones-hericraft.com"
             class="bg-cyan text-navy px-8 py-4 rounded-xl font-bold hover:bg-white transition shadow-lg shadow-cyan/30 transform hover:-translate-y-1"
           >
             {{ $t('processus.hero_button_primary') }}
-          </button>
+          </a>
           <button
             class="flex items-center gap-3 px-6 py-4 rounded-xl border border-white/30 text-white font-bold hover:bg-white/10 transition"
           >

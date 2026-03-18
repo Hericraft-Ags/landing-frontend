@@ -42,7 +42,7 @@
       <div class="text-center mt-16">
         <p class="text-gray-500 mb-6">{{ $t('index.consultoria_help') }}</p>
         <a
-          href="#contacto"
+          href="mailto:contacto@soluciones-hericraft.com"
           class="inline-flex items-center gap-3 bg-navy text-white px-8 py-4 rounded-full font-bold hover:bg-green-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
         >
           {{ $t('index.consultoria_button') }}

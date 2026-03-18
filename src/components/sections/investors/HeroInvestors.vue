@@ -55,8 +55,8 @@ const { t } = useI18n()
         </p>
 
         <div class="flex mt-4 gap-2">
-          <RouterLink
-            to="/contacto"
+          <a
+            href="mailto:contacto@soluciones-hericraft.com"
             class="px-3 py-2 flex items-center bg-[#00F0FF] overflow-hidden text-black font-bold rounded-full transition-all duration-300 shadow-[0_0_12px_rgba(0,240,255,0.6)] hover:shadow-[0_0_20px_rgba(0,240,255,0.8)]"
           >
             <span class="sm:hidden whitespace-nowrap">{{
@@ -65,7 +65,7 @@ const { t } = useI18n()
             <span class="hidden sm:inline whitespace-nowrap">{{
               t('investors.hero_button_primary_desktop')
             }}</span>
-          </RouterLink>
+          </a>
 
           <a
             href="#metricas"

@@ -10,11 +10,12 @@
         <p class="text-gray-300 text-lg mb-8 leading-relaxed">
           {{ $t('college.virtual_lab_description') }}
         </p>
-        <button
+        <a
+          href="mailto:contacto@soluciones-hericraft.com"
           class="bg-[#2563eb] hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition shadow-lg shadow-blue-500/30"
         >
           {{ $t('college.virtual_lab_button') }}
-        </button>
+        </a>
       </div>
 
       <div class="lg:w-1/2 w-full">
