@@ -35,7 +35,7 @@
 
     <div class="relative z-10 flex-shrink-0 w-full md:w-auto">
       <a
-        href="#contacto"
+        href="mailto:contacto@soluciones-hericraft.com"
         class="inline-flex w-full md:w-auto items-center justify-center gap-3 bg-white text-[#ff6b35] font-bold px-8 py-4 rounded-full hover:bg-[#fbbf24] transition transform hover:scale-105 shadow-xl"
       >
         {{ $t('college.parents_button') }}

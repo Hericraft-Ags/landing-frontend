@@ -62,15 +62,8 @@ const textColorClass = computed(() => {
       class="flex bg-[#0A1931] rounded-full w-24 h-24 items-center justify-center border-4 flex-shrink-0 overflow-hidden"
       :class="borderClass"
     >
-      <img
-        v-if="image"
-        :src="image"
-        class="w-full h-full object-cover"
-      />
-      <div
-        v-else
-        class="text-3xl font-semibold text-white"
-      >
+      <img v-if="image" :src="image" class="w-full h-full object-cover" />
+      <div v-else class="text-3xl font-semibold text-white">
         {{ props.initials }}
       </div>
     </div>

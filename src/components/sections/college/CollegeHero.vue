@@ -41,7 +41,7 @@
             <i class="fas fa-school group-hover:scale-110 transition"></i>
           </a>
           <a
-            href="#"
+            href="#afterschool"
             class="bg-white text-[#2563eb] border-2 border-collegeBlue px-8 py-4 rounded-full font-bold shadow-sm hover:bg-blue-50 transition flex items-center gap-2"
           >
             {{ $t('college.hero_families_btn') }}

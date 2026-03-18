@@ -37,17 +37,17 @@ const props = defineProps({
       <div class="flex items-center gap-1">
         <StatusBadge> {{ t('investors.nav_status_badge') }} </StatusBadge>
         <RouterLink
-          to="/ecosistema"
+          to="/"
           class="px-3 py-2 text-xs font-bold text-gray-300 transition uppercase tracking-wide rounded-full hover:bg-white/10"
         >
           {{ t('investors.nav_ecosistema') }}
         </RouterLink>
-        <RouterLink
-          to="/ecosistema"
+        <a
+          href="mailto:contacto@soluciones-hericraft.com"
           class="px-4 py-2 text-center sm:py-2 text-xs font-bold whitespace-nowrap text-black bg-white transition uppercase rounded-2xl hover:bg-[#00f0ff]"
         >
           {{ t('investors.nav_pitch_deck') }}
-        </RouterLink>
+        </a>
       </div>
     </nav>
   </header>

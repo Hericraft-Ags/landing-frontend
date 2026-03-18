@@ -23,56 +23,19 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-5 gap-6 mb-16">
-        <PraxisCard
-          v-for="(item, index) in praxisItems"
-          :key="item.title"
-          :number="index + 1"
-          :title="item.title"
-          :description="item.description"
-          :color="item.color"
-          :featured="item.featured"
-        />
+      <div class="grid md:grid-cols-3 gap-6 mb-6">
+        <img src="/assets/images/us/NOSOTROS-03.svg" alt="" />
+        <img src="/assets/images/us/NOSOTROS-04.svg" alt="" />
+        <img src="/assets/images/us/NOSOTROS-05.svg" alt="" />
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import PraxisCard from '@/components/ui/PraxisCard.vue'
 
 const { t } = useI18n({ useScope: 'global' })
-
-const praxisItems = computed(() => [
-  {
-    title: t('us.items.0.title'),
-    description: t('us.items.0.description'),
-    color: 'navy',
-  },
-  {
-    title: t('us.items.1.title'),
-    description: t('us.items.1.description'),
-    color: 'orange',
-  },
-  {
-    title: t('us.items.2.title'),
-    description: t('us.items.2.description'),
-    color: 'green',
-    featured: true,
-  },
-  {
-    title: t('us.items.3.title'),
-    description: t('us.items.3.description'),
-    color: 'pink',
-  },
-  {
-    title: t('us.items.4.title'),
-    description: t('us.items.4.description'),
-    color: 'cyan',
-  },
-])
 </script>
 
 <style scoped>

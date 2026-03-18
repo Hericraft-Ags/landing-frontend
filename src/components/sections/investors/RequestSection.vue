@@ -57,15 +57,17 @@ const { t } = useI18n({ useScope: 'global' })
     </div>
 
     <div
-      class="w-full px-4 mt-10 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-10 z-2"
+      class="w-full px-4 mt-10 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-10 z-10"
     >
       <a
-        class="flex items-center gap-2 px-8 py-3 bg-[#00F0FF] text-black rounded-full font-bold hover:scale-105 transition-transform duration-300"
+        href="mailto:contacto@soluciones-hericraft.com"
+        class="flex items-center cursor-pointer gap-2 px-8 py-3 bg-[#00F0FF] text-black rounded-full font-bold hover:scale-105 transition-transform duration-300"
       >
         <i class="fas fa-file-pdf glow-red"></i>
         {{ t('investors.ask_button_deck') }}
       </a>
       <a
+        href="mailto:contacto@soluciones-hericraft.com"
         class="flex items-center gap-2 text-white px-8 py-3 font-bold border border-gray500/30 rounded-full hover:bg-white/10 transition-colors"
       >
         <i class="fas fa-calendar-alt"></i>

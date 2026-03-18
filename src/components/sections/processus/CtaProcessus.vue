@@ -7,13 +7,14 @@
       {{ $t('processus.cta_description') }}
     </p>
     <div class="flex justify-center gap-4 flex-wrap">
-      <button
+      <a
+        href="mailto:contacto@soluciones-hericraft.com"
         class="bg-cyan text-navy px-10 py-4 rounded-full font-bold hover:bg-white transition shadow-[0_0_30px_rgba(14,241,235,0.3)]"
       >
         {{ $t('processus.cta_button_primary') }}
-      </button>
+      </a>
       <a
-        :href="`mailto:${email}`"
+        href="mailto:contacto@soluciones-hericraft.com"
         class="border border-white/30 text-white px-10 py-4 rounded-full font-bold hover:bg-white/10 transition"
       >
         {{ $t('processus.cta_button_secondary') }}
