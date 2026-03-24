@@ -46,7 +46,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-// 👇 Props (para hacerlo reutilizable)
+// Props (para hacerlo reutilizable)
 const props = defineProps({
   images: {
     type: Array,
