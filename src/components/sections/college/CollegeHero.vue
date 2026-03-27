@@ -54,10 +54,13 @@
         <div
           class="absolute inset-0 bg-linear-to-tr from-collegeOrange to-collegeBlue rounded-4xl opacity-20 rotate-6 scale-95 transition-transform group-hover:rotate-3"
         ></div>
-        <img
-          src="/assets/images/college/hero_college.jpg"
-          :alt="$t('college.hero_image_alt')"
-          class="relative rounded-4xl shadow-2xl border-4 border-white w-full object-cover transform transition duration-500 group-hover:-translate-y-2"
+        <Carousel
+          :images="[
+            '/assets/images/college/carousel1.webp',
+            '/assets/images/college/carousel2.webp',
+            '/assets/images/college/carousel3.webp',
+            '/assets/images/college/carousel4.webp'
+          ]"
         />
 
         <!-- Badge con animación de flotación -->
@@ -145,3 +148,7 @@
   }
 }
 </style>
+
+<script setup>
+import Carousel from '@/components/ui/Carousel.vue'
+</script>

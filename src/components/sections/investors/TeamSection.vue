@@ -6,7 +6,7 @@ import { useI18n } from 'vue-i18n'
 
 import ricardoImg from '@/assets/images/us/NOSOTROS-12.png'
 import hectorImg from '@/assets/images/us/NOSOTROS-13.png'
-import marcoImg from '@/assets/images/us/NOSOTROS-11.png'
+import marcoImg from '@/assets/images/us/NOSOTROS-14.png'
 
 const { t } = useI18n({ useScope: 'global' })
 </script>
