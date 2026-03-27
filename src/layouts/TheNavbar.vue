@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
+import { ref, computed } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
 const props = defineProps({
@@ -11,11 +11,63 @@ const props = defineProps({
 })
 
 const { t } = useI18n({ useScope: 'global' })
+const route = useRoute()
 const isMobileOpen = ref(false)
 
 const toggleMobileMenu = () => {
   isMobileOpen.value = !isMobileOpen.value
 }
+
+// Definir las rutas de ecosistemas y sus URLs de inicio de sesión
+const ecosystemLoginUrls = {
+  '/college': 'https://education.soluciones-hericraft.com',
+  '/agora': 'https://agora.soluciones-hericraft.com',
+  '/metanoia': 'https://metanoia.soluciones-hericraft.com',
+  '/processus': 'https://processus.soluciones-hericraft.com',
+}
+
+// Determinar si la ruta actual es un ecosistema
+const isEcosystemRoute = computed(() => {
+  return ecosystemLoginUrls[route.path] !== undefined
+})
+
+// Configuración del botón dinámico
+const dynamicButton = computed(() => {
+  if (isEcosystemRoute.value) {
+    // En ecosistemas: mostrar "Iniciar Sesión" con enlace externo
+    return {
+      text: t('navbar.iniciar_sesion'),
+      to: ecosystemLoginUrls[route.path],
+      isExternal: true,
+      class:
+        'ml-2 relative group px-4 py-2 rounded-full overflow-hidden shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300 transform hover:-translate-y-0.5',
+    }
+  }
+  // En otras rutas: mostrar "Inversionistas" con enlace interno
+  return {
+    text: t('navbar.inversionistas'),
+    to: '/inversionistas',
+    isExternal: false,
+    class:
+      'ml-2 text-[10px] font-bold text-cyan-bright border border-cyan-bright/30 bg-green-50 px-3 py-1 rounded-full hover:bg-[#08be66] hover:text-white transition uppercase tracking-wide',
+  }
+})
+
+// Configuración del botón móvil
+const mobileButton = computed(() => {
+  if (isEcosystemRoute.value) {
+    return {
+      text: t('navbar.iniciar_sesion'),
+      to: ecosystemLoginUrls[route.path],
+      isExternal: true,
+    }
+  }
+  return {
+    text: t('navbar.inversionistas'),
+    to: '/inversionistas',
+    isExternal: false,
+  }
+})
 </script>
 
 <template>
@@ -122,11 +174,31 @@ const toggleMobileMenu = () => {
           {{ $t('navbar.saberes') }}
         </a>
 
-        <RouterLink
-          to="/inversionistas"
-          class="ml-2 text-[10px] font-bold text-cyan-bright border border-cyan-bright/30 bg-green-50 px-3 py-1 rounded-full hover:bg-[#08be66] hover:text-white transition uppercase tracking-wide"
+        <!-- Botón dinámico: Inversionistas o Iniciar Sesión -->
+        <a
+          v-if="dynamicButton.isExternal"
+          :href="dynamicButton.to"
+          target="_blank"
+          rel="noopener noreferrer"
+          :class="dynamicButton.class"
         >
-          {{ $t('navbar.inversionistas') }}
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-cyan-bright to-cyan-600 transition-all duration-300 group-hover:brightness-110"
+          ></div>
+          <div
+            class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"
+          ></div>
+          <div
+            class="relative flex items-center gap-2 text-white font-bold text-[11px] uppercase tracking-wider"
+          >
+            <i
+              class="fas fa-sign-in-alt text-sm group-hover:scale-110 transition-transform duration-300"
+            ></i>
+            <span>{{ dynamicButton.text }}</span>
+          </div>
+        </a>
+        <RouterLink v-else :to="dynamicButton.to" :class="dynamicButton.class">
+          {{ dynamicButton.text }}
         </RouterLink>
       </div>
 
@@ -201,12 +273,24 @@ const toggleMobileMenu = () => {
         {{ $t('navbar.banco_saberes') }}
       </a>
 
+      <!-- Botón móvil dinámico -->
+      <a
+        v-if="mobileButton.isExternal"
+        :href="mobileButton.to"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block w-full bg-gradient-to-r from-cyan-bright to-cyan-600 text-center py-3 rounded-full font-bold text-white uppercase tracking-wide"
+        @click="isMobileOpen = false"
+      >
+        {{ mobileButton.text }}
+      </a>
       <RouterLink
-        to="/inversionistas"
+        v-else
+        :to="mobileButton.to"
         class="block text-lg font-bold text-cyan-bright"
         @click="isMobileOpen = false"
       >
-        {{ $t('navbar.inversionistas') }}
+        {{ mobileButton.text }}
       </RouterLink>
     </div>
   </nav>

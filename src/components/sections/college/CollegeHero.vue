@@ -59,7 +59,7 @@
             '/assets/images/college/carousel1.webp',
             '/assets/images/college/carousel2.webp',
             '/assets/images/college/carousel3.webp',
-            '/assets/images/college/carousel4.webp'
+            '/assets/images/college/carousel4.webp',
           ]"
         />
 
