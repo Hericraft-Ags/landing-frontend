@@ -62,29 +62,41 @@ const toggleMobileMenu = () => {
             class="absolute left-1/2 -translate-x-1/2 top-16 w-64 bg-white rounded-2xl shadow-xl border border-gray-100 hidden group-hover:block overflow-hidden animate-fade-in z-50"
           >
             <div class="p-2">
-              <a href="/college" class="block px-4 py-3 rounded-xl hover:bg-orange-50 transition">
+              <RouterLink
+                to="/college"
+                class="block px-4 py-3 rounded-xl hover:bg-orange-50 transition"
+              >
                 <span class="block text-sm font-bold text-navy">
                   <i class="fas fa-graduation-cap mr-2"></i> {{ $t('navbar.college') }}
                 </span>
-              </a>
+              </RouterLink>
 
-              <a href="/agora" class="block px-4 py-3 rounded-xl hover:bg-green-500/10 transition">
+              <RouterLink
+                to="/agora"
+                class="block px-4 py-3 rounded-xl hover:bg-green-500/10 transition"
+              >
                 <span class="block text-sm font-bold text-navy">
                   <i class="fas fa-chalkboard-teacher mr-2"></i> {{ $t('navbar.agora') }}
                 </span>
-              </a>
+              </RouterLink>
 
-              <a href="/metanoia" class="block px-4 py-3 rounded-xl hover:bg-pink-50 transition">
+              <RouterLink
+                to="/metanoia"
+                class="block px-4 py-3 rounded-xl hover:bg-pink-50 transition"
+              >
                 <span class="block text-sm font-bold text-navy">
                   <i class="fas fa-heart mr-2"></i> {{ $t('navbar.metanoia') }}
                 </span>
-              </a>
+              </RouterLink>
 
-              <a href="/processus" class="block px-4 py-3 rounded-xl hover:bg-blue-50 transition">
+              <RouterLink
+                to="/processus"
+                class="block px-4 py-3 rounded-xl hover:bg-blue-50 transition"
+              >
                 <span class="block text-sm font-bold text-navy">
                   <i class="fas fa-briefcase mr-2"></i> {{ $t('navbar.processus') }}
                 </span>
-              </a>
+              </RouterLink>
             </div>
           </div>
         </div>
@@ -110,12 +122,12 @@ const toggleMobileMenu = () => {
           {{ $t('navbar.saberes') }}
         </a>
 
-        <a
-          href="/inversionistas"
+        <RouterLink
+          to="/inversionistas"
           class="ml-2 text-[10px] font-bold text-cyan-bright border border-cyan-bright/30 bg-green-50 px-3 py-1 rounded-full hover:bg-[#08be66] hover:text-white transition uppercase tracking-wide"
         >
           {{ $t('navbar.inversionistas') }}
-        </a>
+        </RouterLink>
       </div>
 
       <!-- Botón móvil -->
@@ -143,34 +155,34 @@ const toggleMobileMenu = () => {
       </RouterLink>
 
       <div class="grid grid-cols-2 gap-3 mb-6">
-        <a
-          href="/college"
+        <RouterLink
+          to="/college"
           class="bg-white/10 p-3 rounded-xl text-center border border-white/20 font-bold hover:bg-white/20 transition"
           @click="isMobileOpen = false"
         >
           {{ $t('navbar.college') }}
-        </a>
-        <a
-          href="/agora"
+        </RouterLink>
+        <RouterLink
+          to="/agora"
           class="bg-white/10 p-3 rounded-xl text-center border border-white/20 font-bold hover:bg-white/20 transition"
           @click="isMobileOpen = false"
         >
           {{ $t('navbar.agora') }}
-        </a>
-        <a
-          href="/metanoia"
+        </RouterLink>
+        <RouterLink
+          to="/metanoia"
           class="bg-white/10 p-3 rounded-xl text-center border border-white/20 font-bold hover:bg-white/20 transition"
           @click="isMobileOpen = false"
         >
           {{ $t('navbar.metanoia') }}
-        </a>
-        <a
-          href="/processus"
+        </RouterLink>
+        <RouterLink
+          to="/processus"
           class="bg-white/10 p-3 rounded-xl text-center border border-white/20 font-bold hover:bg-white/20 transition"
           @click="isMobileOpen = false"
         >
           {{ $t('navbar.processus') }}
-        </a>
+        </RouterLink>
       </div>
 
       <a
@@ -189,9 +201,13 @@ const toggleMobileMenu = () => {
         {{ $t('navbar.banco_saberes') }}
       </a>
 
-      <a href="#" class="block text-lg font-bold text-cyan-bright" @click="isMobileOpen = false">
+      <RouterLink
+        to="/inversionistas"
+        class="block text-lg font-bold text-cyan-bright"
+        @click="isMobileOpen = false"
+      >
         {{ $t('navbar.inversionistas') }}
-      </a>
+      </RouterLink>
     </div>
   </nav>
 </template>
