@@ -73,6 +73,6 @@
 </template>
 
 <script setup>
-const logoProcessus = '/assets/images/logos/processus-dark.svg'
+const logoProcessus = '/assets/images/logos/PROCESSUS-02.svg'
 const heroImage = '/assets/images/processus/online-learning-experience.jpg'
 </script>
