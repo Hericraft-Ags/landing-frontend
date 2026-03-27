@@ -50,16 +50,16 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const props = defineProps({
   images: {
     type: Array,
-    required: true
+    required: true,
   },
   autoplay: {
     type: Boolean,
-    default: true
+    default: true,
   },
   intervalTime: {
     type: Number,
-    default: 4000
-  }
+    default: 4000,
+  },
 })
 
 const currentIndex = ref(0)
@@ -70,8 +70,7 @@ const nextSlide = () => {
 }
 
 const prevSlide = () => {
-  currentIndex.value =
-    (currentIndex.value - 1 + props.images.length) % props.images.length
+  currentIndex.value = (currentIndex.value - 1 + props.images.length) % props.images.length
 }
 
 // autoplay configurable
