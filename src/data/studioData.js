@@ -385,5 +385,5 @@ export const CONTACT_CONFIG = {
   whatsapp: '5215512345678', // Cambia por tu número real
   email: 'ventas@hericraft.com', // Cambia por tu email real
   phone: '+52 (55) 1234 5678',
-  calendarLink: 'https://calendly.com/tu-usuario/consultoria',
+  calendarLink: 'https://calendar.app.google/m8Nm6uY8akzCJua96',
 }
