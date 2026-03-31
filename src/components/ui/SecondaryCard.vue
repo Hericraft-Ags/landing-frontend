@@ -22,7 +22,7 @@
           :class="hoverColorClass"
         ></i>
       </h4>
-      <p class="text-gray-600 text-sm mt-2 leading-relaxed">
+      <p class="text-gray-600 text-sm mt-2 leading-relaxed whitespace-pre-line">
         <p v-html="description"></p>
       </p>
     </div>
