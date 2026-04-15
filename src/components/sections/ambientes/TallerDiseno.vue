@@ -26,16 +26,53 @@
         </div>
       </div>
 
+      <!-- Contenedor con Sidebar y Canvas -->
       <div
-        class="rounded-2xl overflow-hidden shadow-2xl border border-gray-700 bg-gray-900 h-[850px] relative"
+        class="rounded-2xl overflow-hidden shadow-2xl border border-gray-700 bg-gray-900 h-[850px] flex"
       >
-        <div id="studio-root" class="w-full h-full"></div>
-        <div
-          id="loader"
-          class="absolute inset-0 flex flex-col items-center justify-center bg-gray-900 text-white z-0"
-        >
-          <i class="fas fa-circle-notch fa-spin text-4xl text-cyanBright mb-4"></i>
-          <p class="text-lg animate-pulse">{{ $t('ambientes.taller_loader') }}</p>
+        <!-- Sidebar -->
+        <div class="w-80 lg:w-96 flex-shrink-0">
+          <StudioSidebar
+            :room-type="roomType"
+            :shape="shape"
+            :width="dimensions.width"
+            :length="dimensions.length"
+            :students="students"
+            :finish-tier="finishTier"
+            :kit-tier="kitTier"
+            :active-zones="activeZones"
+            :level="level"
+            @update:room-type="roomType = $event"
+            @update:shape="shape = $event"
+            @update:width="dimensions.width = $event"
+            @update:length="dimensions.length = $event"
+            @update:students="students = $event"
+            @update:finish-tier="finishTier = $event"
+            @update:kit-tier="kitTier = $event"
+            @update:active-zones="activeZones = $event"
+            @update:level="level = $event"
+          />
+        </div>
+
+        <!-- Canvas -->
+        <div class="flex-1 relative overflow-hidden">
+          <CanvasStudio
+            :width="dimensions.width"
+            :length="dimensions.length"
+            :student-tables-count="studentTablesCount"
+            :active-zones="activeZones"
+            :room-type-id="roomType"
+            :shape-config="currentShape"
+            :students="students"
+            :level="level"
+          />
+          <div
+            v-if="showLoader"
+            class="absolute inset-0 flex flex-col items-center justify-center bg-gray-900 text-white z-20"
+          >
+            <i class="fas fa-circle-notch fa-spin text-4xl text-cyanBright mb-4"></i>
+            <p class="text-lg animate-pulse">{{ $t('ambientes.taller_loader') }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -43,13 +80,25 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { ref, computed } from 'vue'
+import StudioSidebar from '@/components/ui/canvas/StudioSidebar.vue'
+import CanvasStudio from '@/components/ui/canvas/CanvasStudio.vue'
+import { ROOM_SHAPES } from '@/data/studioData'
 
-onMounted(() => {
-  // Simular carga del estudio
-  setTimeout(() => {
-    const loader = document.getElementById('loader')
-    if (loader) loader.style.display = 'none'
-  }, 1500)
-})
+const showLoader = ref(true)
+const roomType = ref('maker')
+const shape = ref('rectangular')
+const dimensions = ref({ width: 12, length: 10 })
+const students = ref(24)
+const level = ref('secundaria')
+const finishTier = ref('standard')
+const kitTier = ref('sencillo')
+const activeZones = ref([])
+
+const currentShape = computed(() => ROOM_SHAPES[shape.value])
+const studentTablesCount = computed(() => Math.ceil(students.value / 8))
+
+setTimeout(() => {
+  showLoader.value = false
+}, 1500)
 </script>
