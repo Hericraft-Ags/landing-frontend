@@ -162,7 +162,7 @@ const currentYear = new Date().getFullYear()
                 href="https://ecommerce.soluciones-hericraft.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-[#06b6d4] hover:underline inline-flex items-center gap-1 hover:translate-x-1"
+                class="text-[#27E2F8] hover:underline inline-flex items-center gap-1 hover:translate-x-1"
               >
                 {{ $t('footer.online_store') }}
                 <i class="fas fa-external-link-alt text-[8px]"></i>
@@ -178,11 +178,23 @@ const currentYear = new Date().getFullYear()
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
               <i class="fas fa-map-marker-alt text-[#49E7B2] mt-1"></i>
-              <span> {{ $t('footer.address') }}<br />{{ $t('footer.national_coverage') }} </span>
+              <a
+                href="https://maps.app.goo.gl/P7xvmRRCo8zPDU5C8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-[#27E2F8] hover:underline inline-flex items-center gap-1 hover:translate-x-1 ml-2"
+              >
+                {{ $t('footer.address') }}<br />{{ $t('footer.national_coverage') }}
+              </a>
             </li>
             <li class="flex items-center gap-3">
               <i class="fas fa-phone text-[#27E2F8]"></i>
-              <a href="tel:+524493932939" class="hover:text-white transition">
+              <a 
+                href="https://wa.link/92t4xt"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-[#27E2F8] hover:underline inline-flex items-center gap-1 hover:translate-x-1 ml-2"
+              >
                 {{ $t('footer.phone') }}
               </a>
             </li>
@@ -190,7 +202,7 @@ const currentYear = new Date().getFullYear()
               <i class="fas fa-envelope text-[#D8D8D8]"></i>
               <a
                 href="mailto:contacto@soluciones-hericraft.com"
-                class="hover:text-white transition"
+                class="text-[#27E2F8] hover:underline inline-flex items-center gap-1 hover:translate-x-1 ml-2"
               >
                 contacto@soluciones-hericraft.com
               </a>

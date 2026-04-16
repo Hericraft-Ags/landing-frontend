@@ -22,7 +22,7 @@
         class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider mb-6 group-hover:gap-3 transition-all"
         :class="textColorClass"
       >
-        {{ $t('college.events.view_details') }} <i class="fas fa-arrow-right"></i>
+        {{ $t('college.events.view_details') }}
       </span>
     </div>
     <div class="relative h-48 mt-4 overflow-hidden rounded-b-3xl">
