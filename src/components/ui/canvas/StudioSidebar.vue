@@ -8,17 +8,25 @@
     >
       <div>
         <h1 class="font-bold text-white text-lg tracking-wide">
-          Hericraft <span class="text-blueprint-cyan">Studio</span>
+          {{ t('studio.title') }} <span class="text-blueprint-cyan">Studio</span>
         </h1>
-        <p class="text-[10px] text-gray-400 uppercase tracking-widest">Configurador v3.2</p>
+        <p class="text-[10px] text-gray-400 uppercase tracking-widest">
+          {{ t('studio.subtitle') }}
+        </p>
       </div>
       <div class="flex gap-2">
         <button
           @click="$emit('show-help')"
           class="text-blueprint-orange hover:bg-white/10 p-2 rounded-full transition"
-          title="Ayuda"
+          :title="t('studio.help')"
         >
           <i class="fas fa-life-ring animate-pulse"></i>
+        </button>
+        <button
+          @click="$emit('close-sidebar')"
+          class="lg:hidden text-gray-400 hover:text-white p-2"
+        >
+          <i class="fas fa-chevron-left"></i>
         </button>
       </div>
     </div>
@@ -29,21 +37,21 @@
       <section
         class="bg-slate-900/50 p-2 rounded-xl border border-slate-700 flex justify-between items-center"
       >
-        <label class="text-xs font-bold text-gray-300 ml-2">Nivel Académico</label>
+        <label class="text-xs font-bold text-gray-300 ml-2">{{ t('studio.academic_level') }}</label>
         <select
           v-model="localLevel"
           class="bg-slate-800 border border-slate-600 rounded-lg text-xs p-1.5 text-blueprint-cyan outline-none"
         >
-          <option value="primaria">Primaria (6-12 años)</option>
-          <option value="secundaria">Secundaria (12-15 años)</option>
-          <option value="bachillerato">Bachillerato (15-18 años)</option>
+          <option value="primaria">{{ t('studio.primaria') }}</option>
+          <option value="secundaria">{{ t('studio.secundaria') }}</option>
+          <option value="bachillerato">{{ t('studio.bachillerato') }}</option>
         </select>
       </section>
 
       <!-- 1. Ambiente -->
       <section>
         <h3 class="text-xs font-bold text-blueprint-orange uppercase mb-3 flex items-center gap-2">
-          <i class="fas fa-layer-group"></i> 1. Ambiente
+          <i class="fas fa-layer-group"></i> 1. {{ t('studio.environment') }}
         </h3>
         <div class="grid grid-cols-2 gap-2">
           <button
@@ -58,7 +66,7 @@
             "
           >
             <i v-if="localRoomType === room.id" class="fas fa-check-circle"></i>
-            {{ room.name }}
+            {{ t(`studio.room_types.${room.id}`) }}
           </button>
         </div>
       </section>
@@ -66,8 +74,15 @@
       <!-- 2. Geometría -->
       <section>
         <div class="flex items-center mb-2">
-          <h3 class="text-xs font-bold text-blueprint-orange uppercase">2. Geometría</h3>
-          <InfoTooltip :data="learningContext.geometry" />
+          <h3 class="text-xs font-bold text-blueprint-orange uppercase">
+            2. {{ t('studio.geometry') }}
+          </h3>
+          <InfoTooltip
+            :data="{
+              title: $t('studio.tooltips.geometry_title'),
+              text: $t('studio.tooltips.geometry_text'),
+            }"
+          />
         </div>
         <div class="flex gap-2 mb-3">
           <button
@@ -81,13 +96,14 @@
                 : 'bg-slate-900 border-slate-600 text-gray-400'
             "
           >
-            {{ s.label }}
+            {{ t(`studio.shapes.${s.id}`) }}
           </button>
         </div>
         <div class="flex gap-3 text-xs">
           <div class="flex-1 relative">
-            <label class="absolute -top-2 left-2 px-1 bg-slate-800 text-[9px] text-blueprint-cyan"
-              >Ancho (m)</label
+            <label
+              class="absolute -top-2 left-2 px-1 bg-slate-800 text-[9px] text-blueprint-cyan"
+              >{{ t('studio.width') }}</label
             >
             <input
               type="number"
@@ -96,8 +112,9 @@
             />
           </div>
           <div class="flex-1 relative">
-            <label class="absolute -top-2 left-2 px-1 bg-slate-800 text-[9px] text-blueprint-cyan"
-              >Largo (m)</label
+            <label
+              class="absolute -top-2 left-2 px-1 bg-slate-800 text-[9px] text-blueprint-cyan"
+              >{{ t('studio.length') }}</label
             >
             <input
               type="number"
@@ -111,19 +128,29 @@
       <!-- 3. Densidad Pedagógica -->
       <section>
         <div class="flex items-center mb-2">
-          <h3 class="text-xs font-bold text-blueprint-orange uppercase">3. Densidad Pedagógica</h3>
-          <InfoTooltip :data="learningContext.capacity" />
+          <h3 class="text-xs font-bold text-blueprint-orange uppercase">
+            3. {{ t('studio.density') }}
+          </h3>
+          <InfoTooltip
+            :data="{
+              title: $t('studio.tooltips.capacity_title'),
+              text: $t('studio.tooltips.capacity_text'),
+            }"
+            position="right"
+          />
         </div>
         <div class="bg-slate-900 p-3 rounded-xl border border-slate-700">
           <div class="flex justify-between items-center mb-2">
-            <span class="text-xl font-bold text-white">
-              {{ localStudents }} <span class="text-xs font-normal text-gray-400">Alumnos</span>
-            </span>
+            <span class="text-xl font-bold text-white"
+              >{{ localStudents }}
+              <span class="text-xs font-normal text-gray-400">{{
+                t('studio.students')
+              }}</span></span
+            >
             <span
               class="text-xs bg-blueprint-cyan/10 text-blueprint-cyan px-2 py-1 rounded border border-blueprint-cyan/30"
+              >{{ studentTablesCount }} {{ t('studio.tables') }}</span
             >
-              {{ studentTablesCount }} Mesas
-            </span>
           </div>
           <input
             type="range"
@@ -139,8 +166,15 @@
       <!-- 4. Zonas Especializadas -->
       <section v-if="currentRoom && currentRoom.zones">
         <div class="flex items-center mb-2">
-          <h3 class="text-xs font-bold text-blueprint-orange uppercase">4. Zonas Especializadas</h3>
-          <InfoTooltip :data="learningContext.zones" />
+          <h3 class="text-xs font-bold text-blueprint-orange uppercase">
+            4. {{ t('studio.zones') }}
+          </h3>
+          <InfoTooltip
+            :data="{
+              title: $t('studio.tooltips.zones_title'),
+              text: $t('studio.tooltips.zones_text'),
+            }"
+          />
         </div>
         <div class="space-y-2">
           <button
@@ -157,7 +191,7 @@
             <span class="flex items-center gap-2 text-lg">
               <span class="w-6 text-center">{{ z.icon }}</span>
               <span :class="{ 'text-xs font-bold': activeZones.includes(z.id) }">{{
-                z.label
+                t(`studio.zones_names.${z.id}`)
               }}</span>
             </span>
             <i v-if="activeZones.includes(z.id)" class="fas fa-check text-blueprint-cyan"></i>
@@ -168,17 +202,32 @@
       <!-- 5. Acabados -->
       <section>
         <div class="flex items-center mb-2">
-          <h3 class="text-xs font-bold text-blueprint-orange uppercase">5. Acabados</h3>
-          <InfoTooltip :data="learningContext.acoustics" />
+          <h3 class="text-xs font-bold text-blueprint-orange uppercase">
+            5. {{ t('studio.finishes') }}
+          </h3>
+          <InfoTooltip
+            :data="{
+              title: $t('studio.tooltips.acoustics_title'),
+              text: $t('studio.tooltips.acoustics_text'),
+            }"
+          />
         </div>
         <div class="relative">
           <select
             v-model="localFinishTier"
             class="w-full bg-slate-900 border border-slate-600 rounded-lg p-2.5 text-xs text-white appearance-none cursor-pointer focus:border-blueprint-cyan outline-none"
           >
-            <option value="basic">Nivel Básico ($2,500/m²)</option>
-            <option value="standard">Nivel Estándar ($4,200/m²)</option>
-            <option value="premium">Nivel Premium ($6,500/m²)</option>
+            <option value="basic">
+              {{ t('studio.finish_basic') }} (${{ PRICING.finishes.basic }}{{ t('studio.per_m2') }})
+            </option>
+            <option value="standard">
+              {{ t('studio.finish_standard') }} (${{ PRICING.finishes.standard
+              }}{{ t('studio.per_m2') }})
+            </option>
+            <option value="premium">
+              {{ t('studio.finish_premium') }} (${{ PRICING.finishes.premium
+              }}{{ t('studio.per_m2') }})
+            </option>
           </select>
           <i
             class="fas fa-chevron-down absolute right-3 top-3 text-xs text-gray-400 pointer-events-none"
@@ -194,7 +243,7 @@
       <!-- 6. Kit -->
       <section class="pb-4">
         <h3 class="text-xs font-bold text-blueprint-orange uppercase mb-3">
-          6. Kit {{ currentRoom?.name?.split(' ')[0] || '' }}
+          6. {{ t('studio.kit') }} {{ currentRoom?.name?.split(' ')[0] || '' }}
         </h3>
         <div class="grid grid-cols-3 gap-2">
           <button
@@ -208,7 +257,9 @@
                 : 'bg-slate-900 border-slate-700 text-gray-500 hover:border-gray-500'
             "
           >
-            <span class="text-[9px] uppercase font-bold tracking-wide">{{ tier }}</span>
+            <span class="text-[9px] uppercase font-bold tracking-wide">{{
+              t(`studio.kit_${tier}`)
+            }}</span>
             <span class="text-[10px] text-blueprint-orange font-mono"
               >${{ getKitCost(tier) }}k</span
             >
@@ -223,10 +274,12 @@
     <!-- Footer Presupuesto -->
     <div class="p-4 bg-slate-900 border-t border-slate-700 shrink-0">
       <div class="flex justify-between items-end mb-3">
-        <span class="text-xs text-gray-400 uppercase tracking-widest">Inversión Total</span>
-        <span class="text-2xl font-bold font-mono text-green-400 tracking-tighter">
-          ${{ totalBudget.toLocaleString() }}
-        </span>
+        <span class="text-xs text-gray-400 uppercase tracking-widest">{{
+          t('studio.total_investment')
+        }}</span>
+        <span class="text-2xl font-bold font-mono text-green-400 tracking-tighter"
+          >${{ totalBudget.toLocaleString() }}</span
+        >
       </div>
       <div class="flex w-full h-2 rounded-full overflow-hidden bg-slate-800 mb-4">
         <div
@@ -250,7 +303,7 @@
         @click="$emit('request-quote')"
         class="w-full bg-blueprint-cyan text-navy font-bold py-3 rounded-lg hover:bg-cyan-400 transition shadow-[0_0_20px_rgba(14,241,235,0.4)] transform hover:scale-[1.02]"
       >
-        Agendar Reunión y Cotizar
+        {{ t('studio.schedule_meeting') }}
       </button>
     </div>
   </div>
@@ -258,14 +311,36 @@
 
 <script setup>
 import { computed, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 import InfoTooltip from './InfoTooltip.vue'
-import {
-  ROOM_TYPES,
-  ROOM_SHAPES,
-  PRICING,
-  FINISH_DESCRIPTIONS,
-  LEARNING_CONTEXT,
-} from '@/data/studioData'
+import { ROOM_TYPES, ROOM_SHAPES, PRICING, FINISH_DESCRIPTIONS } from '@/data/studioData'
+
+const { t, locale } = useI18n()
+
+const tooltips = {
+  geometry: computed(() => ({
+    title: t('studio.tooltips.geometry_title'),
+    text: t('studio.tooltips.geometry_text'),
+  })),
+  capacity: computed(() => ({
+    title: t('studio.tooltips.capacity_title'),
+    text: t('studio.tooltips.capacity_text'),
+  })),
+  zones: computed(() => ({
+    title: t('studio.tooltips.zones_title'),
+    text: t('studio.tooltips.zones_text'),
+  })),
+  acoustics: computed(() => ({
+    title: t('studio.tooltips.acoustics_title'),
+    text: t('studio.tooltips.acoustics_text'),
+  })),
+}
+
+// También puedes agregar un watcher para depurar
+watch(locale, newLocale => {
+  console.log('Idioma cambiado a:', newLocale)
+  // Los computed se actualizarán automáticamente
+})
 
 const props = defineProps({
   roomType: { type: String, default: 'maker' },
@@ -293,7 +368,6 @@ const emit = defineEmits([
   'update:level',
 ])
 
-const learningContext = LEARNING_CONTEXT
 const roomTypes = Object.values(ROOM_TYPES)
 const roomShapes = Object.values(ROOM_SHAPES)
 
@@ -405,6 +479,29 @@ const budgetPercentages = computed(() => {
     kit: (currentKit.cost / total) * 100,
   }
 })
+
+watch(localRoomType, (newRoomType, oldRoomType) => {
+  if (newRoomType !== oldRoomType) {
+    // Limpiar todas las zonas activas
+    emit('update:activeZones', [])
+  }
+})
+
+watch(
+  () => props.roomType,
+  () => {
+    const currentRoom = ROOM_TYPES[props.roomType]
+    if (currentRoom && props.activeZones.length > 0) {
+      const validZones = props.activeZones.filter(zoneId =>
+        currentRoom.zones.some(z => z.id === zoneId)
+      )
+      if (validZones.length !== props.activeZones.length) {
+        emit('update:activeZones', validZones)
+      }
+    }
+  },
+  { immediate: true }
+)
 </script>
 
 <style scoped>

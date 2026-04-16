@@ -1,0 +1,13 @@
+{
+  "title": "¡Casi listo!",
+  "description": "Envía tu diseño a nuestro equipo de ingeniería para agendar una sesión de validación.",
+  "your_name": "Tu Nombre",
+  "your_name_placeholder": "Ej. Prof. Juan Pérez",
+  "school_name": "Nombre de la Escuela",
+  "school_name_placeholder": "Ej. Colegio Innovation",
+  "whatsapp": "Enviar por WhatsApp",
+  "email": "Enviar por Correo",
+  "fill_fields": "Por favor completa tu nombre y escuela.",
+  "whatsapp_pending": "Funcionalidad de WhatsApp pendiente de implementar.",
+  "email_pending": "Funcionalidad de Correo pendiente de implementar."
+}

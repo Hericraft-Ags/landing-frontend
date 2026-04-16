@@ -1,31 +1,21 @@
 <template>
   <div
-    class="absolute top-20 left-1/2 -translate-x-1/2 z-30 transition-all duration-300 animate-float"
+    class="absolute top-1 left-1/2 -translate-x-1/2 z-30 transition-all duration-300 animate-float"
   >
-    <!-- Contenedor principal: Nombre + Dimensiones juntos -->
+    <!-- Contenedor principal: Nombre + Dimensiones juntos en la misma línea -->
     <div
       class="bg-black/70 backdrop-blur-md rounded-xl border border-blueprint-cyan/40 shadow-2xl overflow-hidden"
     >
-      <!-- Nombre del ambiente -->
-      <div class="text-center px-4 pt-2 pb-0">
+      <div class="flex items-center justify-center gap-2 px-4 py-2 whitespace-nowrap">
         <h3 class="text-white font-bold text-sm">
           {{ roomName }}
         </h3>
-      </div>
-
-      <!-- Métricas principales (m² y PAX en la misma línea) -->
-      <div class="flex items-center justify-center gap-4 px-4 py-1 border-t border-white/10">
-        <div class="flex items-baseline gap-1">
-          <span class="text-blueprint-cyan text-base font-mono font-bold">{{
-            area.toFixed(1)
-          }}</span>
-          <span class="text-gray-400 text-[9px] uppercase tracking-wide">m²</span>
-        </div>
-        <div class="w-px h-4 bg-white/20"></div>
-        <div class="flex items-baseline gap-1">
-          <span class="text-blueprint-cyan text-base font-mono font-bold">{{ students }}</span>
-          <span class="text-gray-400 text-[9px] uppercase tracking-wide">PAX</span>
-        </div>
+        <span class="text-gray-500 text-[9px]">|</span>
+        <span class="text-blueprint-cyan text-base font-mono font-bold">{{ area.toFixed(1) }}</span>
+        <span class="text-gray-400 text-[9px] uppercase tracking-wide">m²</span>
+        <span class="text-gray-500 text-[9px]">|</span>
+        <span class="text-blueprint-cyan text-base font-mono font-bold">{{ students }}</span>
+        <span class="text-gray-400 text-[9px] uppercase tracking-wide">PAX</span>
       </div>
     </div>
 

@@ -1,0 +1,81 @@
+{
+  "title": "Hericraft Studio",
+  "subtitle": "Configurator v3.2",
+  "help": "Help",
+
+  "academic_level": "Academic Level",
+  "primaria": "Elementary (6-12 years)",
+  "secundaria": "Middle School (12-15 years)",
+  "bachillerato": "High School (15-18 years)",
+
+  "environment": "Environment",
+  "geometry": "Geometry",
+  "density": "Pedagogical Density",
+  "zones": "Specialized Zones",
+  "finishes": "Finishes",
+  "kit": "Kit",
+
+  "width": "Width (m)",
+  "length": "Length (m)",
+  "students": "Students",
+  "tables": "Tables",
+
+  "finish_basic": "Basic Level",
+  "finish_standard": "Standard Level",
+  "finish_premium": "Premium Level",
+  "per_m2": "/m²",
+
+  "kit_sencillo": "basic",
+  "kit_avanzado": "advanced",
+  "kit_experto": "expert",
+
+  "total_investment": "Total Investment",
+  "schedule_meeting": "Schedule Meeting and Quote",
+
+  "shapes": {
+    "rectangular": "Rectangular",
+    "l_shape": "L-Shape",
+    "pentagonal": "Pentagonal",
+    "circular": "Circular"
+  },
+
+  "room_types": {
+    "maker": "Maker Industrial Classroom",
+    "steam": "STEAM Laboratory",
+    "media": "Media Lab",
+    "green": "Green Lab",
+    "wellness": "Physical Ed Tech"
+  },
+
+  "zones_names": {
+    "carpentry": "Carpentry",
+    "cnc": "Digital Fab",
+    "electronics": "Mechatronics",
+    "metal": "Metalworking",
+    "wet": "Wet Zone",
+    "robotics": "VEX Arena",
+    "chemistry": "Chemistry",
+    "chroma": "Chroma Set",
+    "post": "Editing",
+    "audio": "Recording",
+    "animation": "Animation",
+    "hydro": "Hydroponics",
+    "recycle": "Recycling",
+    "compost": "Composting",
+    "garden": "Gardening",
+    "bio": "Biometrics",
+    "active": "TRX Zone",
+    "fitness": "Training",
+    "analysis": "Analysis"
+  },
+  "tooltips": {
+    "geometry_title": "Why does shape matter?",
+    "geometry_text": "Classroom geometry defines acoustics and sight lines. Rectangular classrooms favor direct instruction, while circular or 'L' shapes create natural niches for collaborative work without distractions.",
+    "zones_title": "Active Zoning",
+    "zones_text": "In Education 5.0, the classroom is not a single block. It is divided into 'micro-environments' (zones) that allow different teams to work on different projects simultaneously.",
+    "acoustics_title": "Impact of Finishes",
+    "acoustics_text": "Noise is the #1 enemy of learning. 'Premium' finishes include sound-absorbing panels and technical floors that reduce reverberation, increasing information retention by up to 30%.",
+    "capacity_title": "Pedagogical Density",
+    "capacity_text": "We calculate tables for 8 students to encourage 'Learning Cells'. Groups larger than 8 dilute participation; groups smaller than 4 limit diversity of ideas."
+  }
+}
