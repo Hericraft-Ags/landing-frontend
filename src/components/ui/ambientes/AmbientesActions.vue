@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-col sm:flex-row gap-4 pt-4">
-    <button
+    <RouterLink
+      to="/ambientes"
       @click="$emit('start-design')"
       class="group relative px-8 py-4 rounded-full font-bold overflow-hidden transition-all duration-300 border-2 border-blue-500 hover:border-cyan-bright hover:shadow-lg hover:shadow-blue-500/30 text-center"
       :class="{ 'transition-none': reduceMotion }"
@@ -14,7 +15,7 @@
         <i class="fas fa-magic group-hover:rotate-12 transition-transform duration-300"></i>
         {{ $t('index.start_design_btn') }}
       </span>
-    </button>
+    </RouterLink>
 
     <a
       href="#galeria"

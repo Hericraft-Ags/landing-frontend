@@ -1,0 +1,13 @@
+{
+  "title": "Almost ready!",
+  "description": "Send your design to our engineering team to schedule a validation session.",
+  "your_name": "Your Name",
+  "your_name_placeholder": "Ex. Prof. Juan Pérez",
+  "school_name": "School Name",
+  "school_name_placeholder": "Ex. Innovation School",
+  "whatsapp": "Send via WhatsApp",
+  "email": "Send via Email",
+  "fill_fields": "Please fill in your name and school.",
+  "whatsapp_pending": "WhatsApp functionality pending implementation.",
+  "email_pending": "Email functionality pending implementation."
+}
