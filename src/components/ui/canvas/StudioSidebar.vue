@@ -174,6 +174,7 @@
               title: $t('studio.tooltips.zones_title'),
               text: $t('studio.tooltips.zones_text'),
             }"
+            position="right"
           />
         </div>
         <div class="space-y-2">
@@ -210,6 +211,7 @@
               title: $t('studio.tooltips.acoustics_title'),
               text: $t('studio.tooltips.acoustics_text'),
             }"
+            position="right"
           />
         </div>
         <div class="relative">
@@ -266,7 +268,7 @@
           </button>
         </div>
         <div class="mt-2 text-center text-[10px] text-gray-400">
-          {{ currentKitInfo?.desc || 'Selecciona un kit' }}
+          {{ currentKitDesc }}
         </div>
       </section>
     </div>
@@ -313,34 +315,9 @@
 import { computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import InfoTooltip from './InfoTooltip.vue'
-import { ROOM_TYPES, ROOM_SHAPES, PRICING, FINISH_DESCRIPTIONS } from '@/data/studioData'
+import { ROOM_TYPES, ROOM_SHAPES, PRICING } from '@/data/studioData'
 
 const { t, locale } = useI18n()
-
-const tooltips = {
-  geometry: computed(() => ({
-    title: t('studio.tooltips.geometry_title'),
-    text: t('studio.tooltips.geometry_text'),
-  })),
-  capacity: computed(() => ({
-    title: t('studio.tooltips.capacity_title'),
-    text: t('studio.tooltips.capacity_text'),
-  })),
-  zones: computed(() => ({
-    title: t('studio.tooltips.zones_title'),
-    text: t('studio.tooltips.zones_text'),
-  })),
-  acoustics: computed(() => ({
-    title: t('studio.tooltips.acoustics_title'),
-    text: t('studio.tooltips.acoustics_text'),
-  })),
-}
-
-// También puedes agregar un watcher para depurar
-watch(locale, newLocale => {
-  console.log('Idioma cambiado a:', newLocale)
-  // Los computed se actualizarán automáticamente
-})
 
 const props = defineProps({
   roomType: { type: String, default: 'maker' },
@@ -407,10 +384,19 @@ const localKitTier = computed({
   set: val => emit('update:kitTier', val),
 })
 
+const localLevel = computed({
+  get: () => props.level,
+  set: val => emit('update:level', val),
+})
+
 const activeZones = computed({
   get: () => props.activeZones,
   set: val => emit('update:activeZones', val),
 })
+
+// Computed values
+const currentRoom = computed(() => ROOM_TYPES[localRoomType.value])
+const currentShape = computed(() => ROOM_SHAPES[localShape.value])
 
 const toggleZone = id => {
   if (activeZones.value.includes(id)) {
@@ -423,19 +409,19 @@ const toggleZone = id => {
   }
 }
 
-const localLevel = computed({
-  get: () => props.level,
-  set: val => emit('update:level', val),
+// Descripción de acabados traducida
+const currentFinishDesc = computed(() => {
+  const roomId = localRoomType.value
+  const finish = localFinishTier.value
+  return t(`studio.finish_descriptions.${roomId}.${finish}`, 'Seleccione un nivel')
 })
 
-const currentRoom = computed(() => ROOM_TYPES[localRoomType.value])
-const currentShape = computed(() => ROOM_SHAPES[localShape.value])
-const currentFinishDesc = computed(
-  () => FINISH_DESCRIPTIONS[localRoomType.value]?.[localFinishTier.value] || 'Seleccione un nivel'
-)
-const currentKitInfo = computed(
-  () => PRICING.equipmentKits[localRoomType.value]?.[localKitTier.value]
-)
+// Descripción del kit traducida
+const currentKitDesc = computed(() => {
+  const roomId = localRoomType.value
+  const tier = localKitTier.value
+  return t(`studio.kit_descriptions.${roomId}.${tier}`, 'Selecciona un kit')
+})
 
 const realArea = computed(
   () => localWidth.value * localLength.value * (currentShape.value?.areaFactor || 1)
@@ -482,7 +468,6 @@ const budgetPercentages = computed(() => {
 
 watch(localRoomType, (newRoomType, oldRoomType) => {
   if (newRoomType !== oldRoomType) {
-    // Limpiar todas las zonas activas
     emit('update:activeZones', [])
   }
 })
@@ -490,10 +475,10 @@ watch(localRoomType, (newRoomType, oldRoomType) => {
 watch(
   () => props.roomType,
   () => {
-    const currentRoom = ROOM_TYPES[props.roomType]
-    if (currentRoom && props.activeZones.length > 0) {
+    const currentRoomData = ROOM_TYPES[props.roomType]
+    if (currentRoomData && props.activeZones.length > 0) {
       const validZones = props.activeZones.filter(zoneId =>
-        currentRoom.zones.some(z => z.id === zoneId)
+        currentRoomData.zones.some(z => z.id === zoneId)
       )
       if (validZones.length !== props.activeZones.length) {
         emit('update:activeZones', validZones)
