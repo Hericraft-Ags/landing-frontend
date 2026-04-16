@@ -153,12 +153,12 @@ const mobileButton = computed(() => {
           </div>
         </div>
 
-        <a
-          href="/#ambientes"
+        <RouterLink
+          to="/ambientes"
           class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide hover:bg-white/10 rounded-full"
         >
           {{ $t('navbar.ambientes') }}
-        </a>
+        </RouterLink>
 
         <a
           href="#servicios"

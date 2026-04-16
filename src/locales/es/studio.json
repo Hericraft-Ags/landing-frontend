@@ -1,0 +1,138 @@
+{
+  "title": "Hericraft Studio",
+  "subtitle": "Configurador v3.2",
+  "help": "Ayuda",
+
+  "academic_level": "Nivel Académico",
+  "primaria": "Primaria (6-12 años)",
+  "secundaria": "Secundaria (12-15 años)",
+  "bachillerato": "Bachillerato (15-18 años)",
+
+  "environment": "Ambiente",
+  "geometry": "Geometría",
+  "density": "Densidad Pedagógica",
+  "zones": "Zonas Especializadas",
+  "finishes": "Acabados",
+  "kit": "Kit",
+
+  "width": "Ancho (m)",
+  "length": "Largo (m)",
+  "students": "Alumnos",
+  "tables": "Mesas",
+
+  "finish_basic": "Nivel Básico",
+  "finish_standard": "Nivel Estándar",
+  "finish_premium": "Nivel Premium",
+  "per_m2": "/m²",
+
+  "kit_sencillo": "sencillo",
+  "kit_avanzado": "avanzado",
+  "kit_experto": "experto",
+
+  "total_investment": "Inversión Total",
+  "schedule_meeting": "Agendar Reunión y Cotizar",
+
+  "shapes": {
+    "rectangular": "Rectangular",
+    "l_shape": "Forma en L",
+    "pentagonal": "Pentagonal",
+    "circular": "Circular"
+  },
+
+  "room_types": {
+    "maker": "Aula Maker Industrial",
+    "steam": "Laboratorio STEAM",
+    "media": "Media Lab",
+    "green": "Green Lab",
+    "wellness": "Ed. Física Tech"
+  },
+
+  "zones_names": {
+    "carpentry": "Carpintería",
+    "cnc": "Fab. Digital",
+    "electronics": "Mecatrónica",
+    "metal": "Metalmecánica",
+    "wet": "Zona Húmeda",
+    "robotics": "Arena VEX",
+    "chemistry": "Química",
+    "chroma": "Set Chroma",
+    "post": "Edición",
+    "audio": "Grabación",
+    "animation": "Animación",
+    "hydro": "Hidroponía",
+    "recycle": "Reciclaje",
+    "compost": "Compostaje",
+    "garden": "Jardinería",
+    "bio": "Biometría",
+    "active": "Zona TRX",
+    "fitness": "Entrenamiento",
+    "analysis": "Análisis"
+  },
+  "tooltips": {
+    "geometry_title": "¿Por qué importa la forma?",
+    "geometry_text": "La geometría del aula define la acústica y las líneas de visión. Un aula rectangular favorece la instrucción directa, mientras que formas circulares o en 'L' crean nichos naturales para el trabajo colaborativo sin distracciones.",
+    "zones_title": "Zonificación Activa",
+    "zones_text": "En la educación 5.0, el aula no es un bloque único. Se divide en 'micro-ambientes' (zonas) que permiten a diferentes equipos trabajar en distintos proyectos simultáneamente.",
+    "acoustics_title": "Impacto de los Acabados",
+    "acoustics_text": "El ruido es el enemigo #1 del aprendizaje. Los acabados 'Premium' incluyen paneles fonoabsorbentes y pisos técnicos que reducen la reverberación, aumentando la retención de información hasta un 30%.",
+    "capacity_title": "Densidad Pedagógica",
+    "capacity_text": "Calculamos mesas para 8 estudiantes para fomentar 'Células de Aprendizaje'. Grupos mayores a 8 diluyen la participación; grupos menores a 4 limitan la diversidad de ideas."
+  },
+  "finish_descriptions": {
+    "maker": {
+      "basic": "✅ Incluye: Piso de concreto pulido (uso rudo), pintura epóxica en muros, iluminación LED industrial básica.",
+      "standard": "✅ Incluye: Piso vinílico de alto tráfico, red eléctrica aérea (tipo canastilla), tratamiento acústico básico en techo.",
+      "premium": "✅ Incluye: Piso técnico elevado (anti-estático), sistema de extracción de polvos centralizado, insonorización total (muros y techo)."
+    },
+    "steam": {
+      "basic": "✅ Incluye: Piso cerámico antideslizante, mesas con superficie de resina, tarjas estándar de acero inoxidable.",
+      "standard": "✅ Incluye: Piso epóxico resistente a químicos, grifería especializada de laboratorio, duchas de emergencia y lavaojos.",
+      "premium": "✅ Incluye: Islas de servicio (gas/agua/aire/datos) bajando del techo, campanas de extracción inteligentes con sensores."
+    },
+    "media": {
+      "basic": "✅ Incluye: Alfombra modular básica, paredes pintadas en tonos oscuros (mate), cortinas blackout manuales.",
+      "standard": "✅ Incluye: Piso flotante laminado, paneles acústicos en muros (cobertura 40%), rieles de iluminación dirigible.",
+      "premium": "✅ Incluye: Construcción 'Box in Box' (aislamiento total), diseño acústico de estudio profesional, parrilla de iluminación DMX."
+    },
+    "green": {
+      "basic": "✅ Incluye: Piso lavable con coladeras simples, pintura lavable antihongos.",
+      "standard": "✅ Incluye: Piso con pendiente pronunciada a canaleta, iluminación de crecimiento (Grow lights) en zonas de cultivo.",
+      "premium": "✅ Incluye: Sistema de riego automatizado integrado en muros, control de clima (humedad/temp) automatizado."
+    },
+    "wellness": {
+      "basic": "✅ Incluye: Piso laminado deportivo básico, pared de espejos.",
+      "standard": "✅ Incluye: Piso de caucho reciclado (alto impacto), sistema de ventilación forzada.",
+      "premium": "✅ Incluye: Piso de madera flotante profesional (amortiguante), sistema de monitoreo ambiental (CO2)."
+    }
+  },
+  "kit_descriptions": {
+    "maker": {
+      "sencillo": "Manual Maker: Martillos, desarmadores, prensas, seguetas, EPP básico.",
+      "avanzado": "Power Tools: Taladros inalámbricos, caladoras, lijadoras, Dremels.",
+      "experto": "Industrial IoT: Osciloscopios, fuentes, sensores industriales, Soldadura TIG."
+    },
+    "steam": {
+      "sencillo": "Ciencia Básica: Probetas, vasos precipitado, microscopios monoculares.",
+      "avanzado": "Robótica VEX: Kits competencia VEX/LEGO, sensores color/distancia.",
+      "experto": "Bio-Tech: Microscopios digitales, incubadoras, análisis ADN."
+    },
+    "media": {
+      "sencillo": "Vlogger Kit: Aros de luz, mics lavalier, trípies smartphone.",
+      "avanzado": "Studio Stream: Cámaras DSLR 4K, Iluminación Softbox, Consola Audio.",
+      "experto": "Cine Digital: Cámaras RED, Grúa, Rieles, Iluminación DMX."
+    },
+    "green": {
+      "sencillo": "Huerto Escolar: Palas, rastrillos, regaderas, semillas.",
+      "avanzado": "Hidroponía: Bombas agua, medidores PH/EC, solución nutritiva.",
+      "experto": "Agro-Tech: Sensores humedad suelo IoT, riego por App."
+    },
+    "wellness": {
+      "sencillo": "Yoga & Flex: Tapetes yoga, bloques, bandas.",
+      "avanzado": "Entrenamiento: Pesas rusas, TRX, balones medicinales.",
+      "experto": "Sports Science: Sensores velocidad, análisis salto, medidores lactato."
+    }
+  },
+  "area_unit": "m²",
+  "pax_unit": "PAX",
+  "density_alert": "Densidad Alta: {ratio}m²/alumno (Rec: {recommended})"
+}

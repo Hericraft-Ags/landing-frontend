@@ -28,6 +28,6 @@
 </template>
 
 <script setup>
-const telefono = '+525512345678'
-const email = 'hola@hericraft.com'
+const telefono = '+524493932939'
+const email = 'contacto@soluciones-hericraft.com'
 </script>

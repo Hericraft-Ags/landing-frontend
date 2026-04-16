@@ -1,0 +1,138 @@
+{
+  "title": "Hericraft Studio",
+  "subtitle": "Configurator v3.2",
+  "help": "Help",
+
+  "academic_level": "Academic Level",
+  "primaria": "Elementary (6-12 years)",
+  "secundaria": "Middle School (12-15 years)",
+  "bachillerato": "High School (15-18 years)",
+
+  "environment": "Environment",
+  "geometry": "Geometry",
+  "density": "Pedagogical Density",
+  "zones": "Specialized Zones",
+  "finishes": "Finishes",
+  "kit": "Kit",
+
+  "width": "Width (m)",
+  "length": "Length (m)",
+  "students": "Students",
+  "tables": "Tables",
+
+  "finish_basic": "Basic Level",
+  "finish_standard": "Standard Level",
+  "finish_premium": "Premium Level",
+  "per_m2": "/m²",
+
+  "kit_sencillo": "basic",
+  "kit_avanzado": "advanced",
+  "kit_experto": "expert",
+
+  "total_investment": "Total Investment",
+  "schedule_meeting": "Schedule Meeting and Quote",
+
+  "shapes": {
+    "rectangular": "Rectangular",
+    "l_shape": "L-Shape",
+    "pentagonal": "Pentagonal",
+    "circular": "Circular"
+  },
+
+  "room_types": {
+    "maker": "Maker Industrial Classroom",
+    "steam": "STEAM Laboratory",
+    "media": "Media Lab",
+    "green": "Green Lab",
+    "wellness": "Physical Ed Tech"
+  },
+
+  "zones_names": {
+    "carpentry": "Carpentry",
+    "cnc": "Digital Fab",
+    "electronics": "Mechatronics",
+    "metal": "Metalworking",
+    "wet": "Wet Zone",
+    "robotics": "VEX Arena",
+    "chemistry": "Chemistry",
+    "chroma": "Chroma Set",
+    "post": "Editing",
+    "audio": "Recording",
+    "animation": "Animation",
+    "hydro": "Hydroponics",
+    "recycle": "Recycling",
+    "compost": "Composting",
+    "garden": "Gardening",
+    "bio": "Biometrics",
+    "active": "TRX Zone",
+    "fitness": "Training",
+    "analysis": "Analysis"
+  },
+  "tooltips": {
+    "geometry_title": "Why does shape matter?",
+    "geometry_text": "Classroom geometry defines acoustics and sight lines. Rectangular classrooms favor direct instruction, while circular or 'L' shapes create natural niches for collaborative work without distractions.",
+    "zones_title": "Active Zoning",
+    "zones_text": "In Education 5.0, the classroom is not a single block. It is divided into 'micro-environments' (zones) that allow different teams to work on different projects simultaneously.",
+    "acoustics_title": "Impact of Finishes",
+    "acoustics_text": "Noise is the #1 enemy of learning. 'Premium' finishes include sound-absorbing panels and technical floors that reduce reverberation, increasing information retention by up to 30%.",
+    "capacity_title": "Pedagogical Density",
+    "capacity_text": "We calculate tables for 8 students to encourage 'Learning Cells'. Groups larger than 8 dilute participation; groups smaller than 4 limit diversity of ideas."
+  },
+  "finish_descriptions": {
+    "maker": {
+      "basic": "✅ Includes: Polished concrete floor (heavy-duty), epoxy paint on walls, basic industrial LED lighting.",
+      "standard": "✅ Includes: High-traffic vinyl flooring, overhead electrical grid (basket type), basic acoustic ceiling treatment.",
+      "premium": "✅ Includes: Raised technical floor (anti-static), centralized dust extraction system, total soundproofing (walls and ceiling)."
+    },
+    "steam": {
+      "basic": "✅ Includes: Anti-slip ceramic floor, resin surface tables, standard stainless steel sinks.",
+      "standard": "✅ Includes: Chemical-resistant epoxy flooring, specialized laboratory faucets, emergency showers and eyewash stations.",
+      "premium": "✅ Includes: Service islands (gas/water/air/data) hanging from ceiling, intelligent extraction hoods with sensors."
+    },
+    "media": {
+      "basic": "✅ Includes: Basic modular carpet, matte dark painted walls, manual blackout curtains.",
+      "standard": "✅ Includes: Floating laminate flooring, acoustic wall panels (40% coverage), directional lighting rails.",
+      "premium": "✅ Includes: 'Box in Box' construction (total isolation), professional studio acoustic design, DMX lighting grid."
+    },
+    "green": {
+      "basic": "✅ Includes: Washable floor with simple drains, anti-mold washable paint.",
+      "standard": "✅ Includes: Floor with pronounced slope to drainage, grow lights in cultivation areas.",
+      "premium": "✅ Includes: Automated irrigation system integrated into walls, automated climate control (humidity/temp)."
+    },
+    "wellness": {
+      "basic": "✅ Includes: Basic sports laminate flooring, mirror wall.",
+      "standard": "✅ Includes: Recycled rubber flooring (high impact), forced ventilation system.",
+      "premium": "✅ Includes: Professional floating wooden floor (shock-absorbing), environmental monitoring system (CO2)."
+    }
+  },
+  "kit_descriptions": {
+    "maker": {
+      "sencillo": "Maker Manual: Hammers, screwdrivers, clamps, hacksaws, basic PPE.",
+      "avanzado": "Power Tools: Cordless drills, jigsaws, sanders, Dremels.",
+      "experto": "Industrial IoT: Oscilloscopes, power supplies, industrial sensors, TIG welding."
+    },
+    "steam": {
+      "sencillo": "Basic Science: Beakers, graduated cylinders, monocular microscopes.",
+      "avanzado": "VEX Robotics: VEX/LEGO competition kits, color/distance sensors.",
+      "experto": "Bio-Tech: Digital microscopes, incubators, DNA analysis."
+    },
+    "media": {
+      "sencillo": "Vlogger Kit: Ring lights, lavalier mics, smartphone tripods.",
+      "avanzado": "Studio Stream: 4K DSLR cameras, Softbox lighting, Audio console.",
+      "experto": "Digital Cinema: RED cameras, Crane, Rails, DMX lighting."
+    },
+    "green": {
+      "sencillo": "School Garden: Shovels, rakes, watering cans, seeds.",
+      "avanzado": "Hydroponics: Water pumps, PH/EC meters, nutrient solution.",
+      "experto": "Agro-Tech: IoT soil moisture sensors, App-controlled irrigation."
+    },
+    "wellness": {
+      "sencillo": "Yoga & Flex: Yoga mats, blocks, resistance bands.",
+      "avanzado": "Training: Kettlebells, TRX, medicine balls.",
+      "experto": "Sports Science: Speed sensors, jump analysis, lactate meters."
+    }
+  },
+  "area_unit": "m²",
+  "pax_unit": "PAX",
+  "density_alert": "High Density: {ratio}m²/student (Rec: {recommended})"
+}
