@@ -131,3 +131,7 @@
 .tooltip-enter-active {
   animation: tooltipFadeIn 0.2s ease-out;
 }
+
+.text-green {
+  color: #39cc7f;
+}
