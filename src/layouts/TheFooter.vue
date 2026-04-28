@@ -189,7 +189,7 @@ const currentYear = new Date().getFullYear()
             </li>
             <li class="flex items-center gap-3">
               <i class="fas fa-phone text-[#27E2F8]"></i>
-              <a 
+              <a
                 href="https://wa.link/92t4xt"
                 target="_blank"
                 rel="noopener noreferrer"
