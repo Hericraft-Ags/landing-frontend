@@ -39,7 +39,7 @@
   "metodologia_item_2_title": "Andamiaje Afectivo",
   "metodologia_item_2_description": "Ofrecemos una compañía amorosa que brinda seguridad incondicional para que los hijos se atrevan a explorar y equivocarse.",
   "metodologia_item_3_title": "El Ágora Familiar",
-  "metodologia_item_3_description": "Instauramos rituales de diálogo en casa para compartir aprendizajes, dudas y sueños sin la presión de las calificaciones.",
+  "metodologia_item_3_description": "Fomentamos el diálogo en casa para compartir aprendizajes, dudas y sueños sin la presión de las calificaciones.",
   "triada_title": "El Eslabón que une el Universo",
   "triada_description": "Metanoia no trabaja sola. Somos el pegamento que asegura que lo aprendido en la escuela (College) y guiado por el maestro (Ágora) se consolide en el hogar.",
   "triada_connection": "CONEXIÓN VITAL",
@@ -51,5 +51,6 @@
   "triada_agora_desc": "Guía el proceso pedagógico.",
   "cta_title": "¿Listo para fortalecer tu núcleo familiar?",
   "cta_button": "Suscribirme a Metanoia",
-  "view_calendar": "Ver Calendario"
+  "view_calendar": "Ver Calendario",
+  "coming_soon": "Próximamente"
 }

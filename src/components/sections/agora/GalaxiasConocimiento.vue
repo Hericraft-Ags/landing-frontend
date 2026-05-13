@@ -31,6 +31,9 @@
           :objective="galaxy.objective"
           :icon="galaxy.icon"
           :color="galaxy.color"
+          :galaxy-id="galaxy.id"
+          :button-text="galaxy.buttonText"
+          @open-modal="handleOpenModal"
         />
       </div>
 
@@ -65,27 +68,44 @@
               {{ $t('agora.society_objective_text') }}
             </p>
           </div>
-          <a
-            href="#"
+          <!--<button
+            @click="openSocietyModal"
             class="bg-agoraLime text-agoraDark px-8 py-4 rounded-full font-bold hover:bg-white transition shadow-lg hover:shadow-lime-500/30 transform hover:-translate-y-1 flex items-center gap-2"
           >
             {{ $t('agora.society_button') }}
-          </a>
+            <i class="fas fa-arrow-right"></i>
+          </button>-->
         </div>
       </div>
     </div>
+
+    <!-- Modal de cursos -->
+    <CourseModal
+      :is-open="modalOpen"
+      :galaxy-id="selectedGalaxyId"
+      :galaxy-name="selectedGalaxyName"
+      @close="modalOpen = false"
+      @select-course="handleSelectCourse"
+    />
   </section>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import GalaxiaCard from '@/components/ui/GalaxiaCard.vue'
+import CourseModal from '@/components/ui/GalaxiaModal.vue'
 
 const { t } = useI18n({ useScope: 'global' })
 
+// Estado del modal
+const modalOpen = ref(false)
+const selectedGalaxyId = ref(null)
+const selectedGalaxyName = ref('')
+
 const galaxies = computed(() => [
   {
+    id: 1,
     title: t('agora.galaxy_1_title'),
     subtitle: t('agora.galaxy_1_subtitle'),
     challenge: t('agora.galaxy_1_challenge'),
@@ -94,6 +114,7 @@ const galaxies = computed(() => [
     color: 'green',
   },
   {
+    id: 2,
     title: t('agora.galaxy_2_title'),
     subtitle: t('agora.galaxy_2_subtitle'),
     challenge: t('agora.galaxy_2_challenge'),
@@ -102,14 +123,17 @@ const galaxies = computed(() => [
     color: 'lime',
   },
   {
+    id: 3,
     title: t('agora.galaxy_3_title'),
     subtitle: t('agora.galaxy_3_subtitle'),
     challenge: t('agora.galaxy_3_challenge'),
     objective: t('agora.galaxy_3_objective'),
     icon: 'AGORA-17.png',
     color: 'blue',
+    buttonText: t('agora.explore_courses'),
   },
   {
+    id: 4,
     title: t('agora.galaxy_4_title'),
     subtitle: t('agora.galaxy_4_subtitle'),
     challenge: t('agora.galaxy_4_challenge'),
@@ -118,4 +142,16 @@ const galaxies = computed(() => [
     color: 'yellow',
   },
 ])
+
+const handleOpenModal = ({ galaxyId, galaxyName }) => {
+  selectedGalaxyId.value = galaxyId
+  selectedGalaxyName.value = galaxyName
+  modalOpen.value = true
+}
+
+/*const openSocietyModal = () => {
+  selectedGalaxyId.value = 'society'
+  selectedGalaxyName.value = t('agora.society_title')
+  modalOpen.value = true
+}*/
 </script>

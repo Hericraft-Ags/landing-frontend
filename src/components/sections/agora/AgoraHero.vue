@@ -37,11 +37,11 @@
           >
             {{ $t('agora.hero_button_primary') }} <i class="fas fa-arrow-down"></i>
           </a>
-          <button
+          <!--<button
             class="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-gray-500 text-gray-300 font-bold hover:border-white hover:text-white transition"
           >
             <i class="fas fa-play-circle text-xl"></i> {{ $t('agora.hero_button_secondary') }}
-          </button>
+          </button>-->
         </div>
       </div>
 

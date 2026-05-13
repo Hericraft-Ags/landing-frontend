@@ -39,22 +39,10 @@
     <p class="text-gray-500 text-sm leading-relaxed mb-4 text-center">
       {{ service.description }}
     </p>
-
-    <button
-      @click="handleLearnMore(service)"
-      class="inline-flex items-center gap-2 text-sm font-medium transition-all duration-300 mx-auto w-full justify-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded-lg py-2"
-      :class="[service.iconColor, 'group-hover:gap-3']"
-      :aria-label="`Más información sobre ${service.title}`"
-    >
-      {{ $t('index.card_consultaria_more_info') }}
-      <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
-    </button>
   </div>
 </template>
 
 <script setup>
-import { inject } from 'vue'
-
 const props = defineProps({
   service: {
     type: Object,
@@ -65,8 +53,6 @@ const props = defineProps({
     default: false,
   },
 })
-
-const emit = defineEmits(['learn-more'])
 
 const getImageUrl = imageName => {
   try {
@@ -81,11 +67,6 @@ const handleImageError = event => {
   console.warn('Error cargando imagen:', props.service.icon)
   event.target.src =
     "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='%239CA3AF'%3E%3Cpath d='M4 6h16v12H4V6zm2 2v8h12V8H6z'/%3E%3C/svg%3E"
-}
-
-const handleLearnMore = service => {
-  console.log('Abrir modal para:', service.title)
-  emit('learn-more', service)
 }
 </script>
 
