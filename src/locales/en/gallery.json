@@ -1,0 +1,54 @@
+{
+  "gallery": {
+    "title": "Environments Gallery",
+    "subtitle": "Get inspired by our designs",
+    "loading": "Loading gallery...",
+    "error": "Error loading images",
+    "retry": "Retry",
+    "no_images": "No images in this category",
+    "select_another_category": "Select another category to see more images",
+    "featured": "Featured",
+    "categories": {
+      "all": "All",
+      "classroom": "Classrooms",
+      "lab": "Laboratories",
+      "library": "Libraries",
+      "outdoor": "Outdoor Spaces",
+      "common": "Common Areas"
+    },
+    "images": {
+      "classroom_steam": {
+        "title": "Innovative STEAM Classroom",
+        "description": "Space designed to foster creativity and collaborative learning with cutting-edge technology. Includes teamwork areas, digital whiteboards, and multimedia equipment."
+      },
+      "robotics_lab": {
+        "title": "Robotics Laboratory",
+        "description": "Complete equipment for educational robotics and programming practices. Includes robotics kits, computers, and prototyping area."
+      },
+      "digital_library": {
+        "title": "Digital Library",
+        "description": "Reading space with access to digital resources and collaborative study area. Features tablets, computers, and an extensive digital book collection."
+      },
+      "outdoor_rest": {
+        "title": "Green Rest Area",
+        "description": "Outdoor relaxation area designed for students to rest and socialize between classes. Includes benches, picnic tables, and green areas."
+      },
+      "maker_classroom": {
+        "title": "Maker Classroom",
+        "description": "Digital fabrication workshop equipped with 3D printers, laser cutters, and prototyping tools to foster creativity and entrepreneurship."
+      },
+      "science_lab": {
+        "title": "Science Laboratory",
+        "description": "Modern facilities for scientific experiments and research projects. Equipped with microscopes, lab materials, and experimentation area."
+      },
+      "reading_room": {
+        "title": "Reading Room",
+        "description": "Quiet and cozy space for individual reading and studying. Natural lighting and ergonomic furniture."
+      },
+      "games_area": {
+        "title": "Games Area",
+        "description": "Recreational space with board games, consoles, and entertainment areas for students' social development."
+      }
+    }
+  }
+}

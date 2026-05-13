@@ -18,13 +18,6 @@
             {{ $t('metanoia.programas_title') }}
           </h2>
         </div>
-        <div class="mt-6 md:mt-0">
-          <button
-            class="text-white border border-white/30 px-6 py-3 rounded-full hover:bg-white hover:text-indigo-950 transition text-sm font-bold"
-          >
-            {{ $t('metanoia.view_calendar') }}
-          </button>
-        </div>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
@@ -33,7 +26,8 @@
           :description="$t('metanoia.programa_parents_description')"
           image="METANOIA-08.png"
           :badge="$t('metanoia.programa_parents_badge')"
-          :link-text="$t('metanoia.programa_parents_link')"
+          :link="null"
+          :link-text="null"
           type="parents"
         />
 
@@ -42,7 +36,8 @@
           :description="$t('metanoia.programa_children_description')"
           image="METANOIA-12.png"
           :badge="$t('metanoia.programa_children_badge')"
-          :link-text="$t('metanoia.programa_children_link')"
+          :link="null"
+          :link-text="null"
           type="children"
         />
       </div>

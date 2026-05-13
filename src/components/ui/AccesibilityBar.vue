@@ -108,7 +108,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="fixed top-0 w-full h-10 flex justify-between items-center px-4 text-[10px] sm:text-xs font-bold border-b border-gray-800 z-[70]"
+    class="fixed top-0 w-full h-10 flex justify-between items-center px-4 text-[10px] sm:text-xs font-bold border-b border-gray-800 z-[40]"
     :style="{ backgroundColor: color }"
   >
     <div class="flex gap-2 sm:gap-4 items-center">

@@ -42,13 +42,25 @@
       </div>
     </div>
 
-    <a
-      href="#"
+    <!-- Botón que abre el modal -->
+    <button
+      v-if="buttonText && buttonText.trim() !== ''"
+      @click="openCourseModal"
       class="inline-flex items-center text-xs font-bold transition uppercase tracking-wide border-b pb-1 hover:border-white"
       :class="linkClass"
     >
-      {{ $t('agora.explore_courses') }} <i class="fas fa-arrow-right ml-2"></i>
-    </a>
+      {{ buttonText }}
+      <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+    </button>
+
+    <button
+      v-else
+      disabled
+      class="inline-flex items-center text-xs font-bold uppercase tracking-wide text-gray-500 cursor-not-allowed opacity-60"
+    >
+      {{ $t('agora.coming_soon') || 'Próximamente' }}
+      <i class="fas fa-clock ml-2"></i>
+    </button>
   </div>
 </template>
 
@@ -81,7 +93,17 @@ const props = defineProps({
     default: 'green',
     validator: value => ['green', 'lime', 'blue', 'yellow'].includes(value),
   },
+  galaxyId: {
+    type: [String, Number],
+    required: true,
+  },
+  buttonText: {
+    type: String,
+    default: null,
+  },
 })
+
+const emit = defineEmits(['open-modal'])
 
 const colorConfig = {
   green: {
@@ -130,5 +152,15 @@ const iconBgClass = computed(() => colorConfig[props.color].iconBg)
 const iconBrightness = computed(() => colorConfig[props.color].iconBrightness)
 const linkClass = computed(() => colorConfig[props.color].link)
 
-const getImageUrl = imageName => `/assets/images/agora/${imageName}`
+const getImageUrl = imageName => {
+  if (!imageName) return '/assets/images/agora/placeholder.png'
+  return `/assets/images/agora/${imageName}`
+}
+
+const openCourseModal = () => {
+  emit('open-modal', {
+    galaxyId: props.galaxyId,
+    galaxyName: props.title,
+  })
+}
 </script>

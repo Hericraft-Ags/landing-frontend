@@ -22,13 +22,25 @@
         <p class="text-gray-400 text-sm mb-6 leading-relaxed">
           {{ description }}
         </p>
+        <!-- Enlace activo si existe -->
         <a
+          v-if="hasLink"
           :href="link"
           class="font-bold text-sm uppercase tracking-wide hover:text-white transition flex items-center gap-2"
           :class="linkColorClass"
         >
-          {{ linkText }} <i class="fas fa-arrow-right"></i>
+          {{ linkText }}
+          <i class="fas fa-arrow-right"></i>
         </a>
+        <!-- Estado "Próximamente" si no hay enlace -->
+        <button
+          v-else
+          disabled
+          class="font-bold text-sm uppercase tracking-wide text-gray-500 cursor-not-allowed flex items-center gap-2 opacity-60"
+        >
+          {{ $t('metanoia.coming_soon') || 'Próximamente' }}
+          <i class="fas fa-clock"></i>
+        </button>
       </div>
     </div>
   </div>
@@ -36,6 +48,9 @@
 
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const props = defineProps({
   title: {
@@ -56,17 +71,29 @@ const props = defineProps({
   },
   link: {
     type: String,
-    default: '#',
+    default: null,
   },
   linkText: {
     type: String,
-    required: true, // Ahora es requerido para personalizar el texto
+    default: null,
   },
   type: {
     type: String,
     default: 'parents',
     validator: value => ['parents', 'children'].includes(value),
   },
+})
+
+// Computed para verificar si hay un enlace válido
+const hasLink = computed(() => {
+  return props.link && props.link.trim() !== '' && props.link !== '#'
+})
+
+// Texto por defecto si no se proporciona linkText pero hay enlace
+const defaultLinkText = computed(() => {
+  return props.type === 'parents'
+    ? t('metanoia.explore_program') || 'Explorar programa'
+    : t('metanoia.explore_activity') || 'Explorar actividad'
 })
 
 const borderHoverClass = computed(() => {
