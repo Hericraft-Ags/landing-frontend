@@ -1,0 +1,52 @@
+{
+  "title": "Galería de Ambientes",
+  "subtitle": "Inspírate con nuestros diseños",
+  "loading": "Cargando galería...",
+  "error": "Error al cargar las imágenes",
+  "retry": "Reintentar",
+  "no_images": "No hay imágenes en esta categoría",
+  "select_another_category": "Selecciona otra categoría para ver más imágenes",
+  "featured": "Destacado",
+  "categories": {
+    "all": "Todos",
+    "classroom": "Aulas",
+    "lab": "Laboratorios",
+    "library": "Bibliotecas",
+    "outdoor": "Espacios Exteriores",
+    "common": "Áreas Comunes"
+  },
+  "images": {
+    "classroom_steam": {
+      "title": "Aula STEAM Innovadora",
+      "description": "Espacio diseñado para fomentar la creatividad y el aprendizaje colaborativo con tecnología de punta. Incluye zonas de trabajo en equipo, pizarras digitales y equipos multimedia."
+    },
+    "robotics_lab": {
+      "title": "Laboratorio de Robótica",
+      "description": "Equipamiento completo para prácticas de robótica educativa y programación. Incluye kits de robótica, computadoras y área de prototipado."
+    },
+    "digital_library": {
+      "title": "Biblioteca Digital",
+      "description": "Espacio de lectura con acceso a recursos digitales y zona de estudio colaborativo. Cuenta con tablets, computadoras y una amplia colección de libros digitales."
+    },
+    "outdoor_rest": {
+      "title": "Zona Verde de Descanso",
+      "description": "Área de relajación al aire libre diseñada para que los estudiantes puedan descansar y socializar entre clases. Incluye bancas, mesas de picnic y zonas verdes."
+    },
+    "maker_classroom": {
+      "title": "Aula Maker",
+      "description": "Taller de fabricación digital equipado con impresoras 3D, cortadoras láser y herramientas de prototipado para fomentar la creatividad y el emprendimiento."
+    },
+    "science_lab": {
+      "title": "Laboratorio de Ciencias",
+      "description": "Instalaciones modernas para experimentos científicos y proyectos de investigación. Equipado con microscopios, material de laboratorio y zona de experimentación."
+    },
+    "reading_room": {
+      "title": "Sala de Lectura",
+      "description": "Espacio tranquilo y acogedor para la lectura individual y el estudio. Iluminación natural y mobiliario ergonómico."
+    },
+    "games_area": {
+      "title": "Área de Juegos",
+      "description": "Espacio recreativo con juegos de mesa, consolas y áreas de entretenimiento para el desarrollo social de los estudiantes."
+    }
+  }
+}

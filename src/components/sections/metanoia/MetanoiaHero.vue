@@ -38,11 +38,11 @@
           >
             {{ $t('metanoia.hero_button_primary') }} <i class="fas fa-heart"></i>
           </a>
-          <button
+          <!--<button
             class="flex items-center gap-3 px-6 py-4 rounded-full border-2 border-[#5f5e5e] text-[#5f5e5e] font-bold hover:bg-black hover:text-pink-700 transition shadow-lg hover:shadow-pink-500/30"
           >
             <i class="fas fa-play-circle text-xl"></i> {{ $t('metanoia.hero_button_secondary') }}
-          </button>
+          </button>-->
         </div>
       </div>
 

@@ -17,8 +17,8 @@
       </span>
     </RouterLink>
 
-    <a
-      href="#galeria"
+    <button
+      @click="openGallery"
       class="group relative px-8 py-4 rounded-full font-bold overflow-hidden transition-all duration-300 border-2 border-blue-500 hover:border-cyan-bright hover:shadow-lg hover:shadow-blue-500/30 text-center"
       :class="{ 'transition-none': reduceMotion }"
     >
@@ -31,11 +31,21 @@
         {{ $t('index.view_gallery_btn') }}
         <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
       </span>
-    </a>
+    </button>
+
+    <!-- Modal de galería -->
+    <GalleryModal
+      :is-open="showGallery"
+      :reduce-motion="reduceMotion"
+      @close="showGallery = false"
+    />
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import GalleryModal from '@/components/ui/GalleryModal.vue'
+
 defineProps({
   reduceMotion: {
     type: Boolean,
@@ -44,6 +54,12 @@ defineProps({
 })
 
 defineEmits(['start-design'])
+
+const showGallery = ref(false)
+
+const openGallery = () => {
+  showGallery.value = true
+}
 </script>
 
 <style scoped>

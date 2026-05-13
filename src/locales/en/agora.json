@@ -40,7 +40,7 @@
   "monthly_progress": "+2 this month",
 
   "galaxies_badge": "Specialization Paths",
-  "galaxies_title": "The 5 Galaxies of Knowledge",
+  "galaxies_title": "The 5 areas of knowledge",
   "galaxies_description": "It's not enough to know how to teach; the 5.0 teacher masters multiple dimensions. We have structured our offer into 5 Galaxies that respond to the critical challenges of today's education.",
 
   "galaxy_1_title": "Pedagogy & Neuroscience",
@@ -92,5 +92,6 @@
   "next_title": "Metanoia",
   "next_description": "Learning doesn't end in the classroom. Discover the space designed for family transformation, where parents and guardians acquire tools for parenting in the digital age.",
   "next_for_families": "For families",
-  "next_button": "Explore Metanoia"
+  "next_button": "Explore Metanoia",
+  "coming_soon": "Coming Soon"
 }
