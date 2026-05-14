@@ -257,13 +257,13 @@ const mobileButton = computed(() => {
         </RouterLink>
       </div>
 
-      <a
-        href="#ambientes"
+      <RouterLink
+        to="/ambientes"
         class="block text-lg font-bold hover:text-cyan-bright"
         @click="isMobileOpen = false"
       >
         {{ $t('navbar.diseno_ambientes') }}
-      </a>
+      </RouterLink>
 
       <a
         href="#saberes"

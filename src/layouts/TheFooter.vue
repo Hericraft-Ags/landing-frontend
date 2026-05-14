@@ -58,13 +58,13 @@ const currentYear = new Date().getFullYear()
     <div class="max-w-7xl mx-auto px-6 py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 text-gray-200">
         <div class="space-y-4">
-          <a href="/" class="flex items-center gap-2 mb-4">
+          <RouterLink to="/" class="flex items-center gap-2 mb-4">
             <img
               src="/assets/images/logos/logo_hericraft.png"
               alt="Hericraft"
               class="h-8 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
             />
-          </a>
+          </RouterLink>
           <p class="leading-relaxed text-xs text-gray-200">
             {{ $t('footer.description') }}
           </p>
@@ -81,49 +81,49 @@ const currentYear = new Date().getFullYear()
           </h3>
           <ul class="space-y-3">
             <li>
-              <a
-                href="/ambientes"
+              <RouterLink
+                to="/ambientes"
                 class="hover:text-[#06b6d4] transition-colors duration-300 hover:translate-x-1 flex items-center gap-2 group"
               >
                 <i class="fas fa-chevron-right text-[8px]"></i>
                 {{ $t('footer.active_environments') }}
-              </a>
+              </RouterLink>
             </li>
             <li>
-              <a
-                href="/college"
+              <RouterLink
+                to="/college"
                 class="hover:text-[#ff6b35] transition-colors duration-300 hover:translate-x-1 flex items-center gap-2 group"
               >
                 <i class="fas fa-chevron-right text-[8px]"></i>
                 {{ $t('footer.college') }}
-              </a>
+              </RouterLink>
             </li>
             <li>
-              <a
-                href="/agora"
+              <RouterLink
+                to="/agora"
                 class="hover:text-[#8dc63f] transition-colors duration-300 hover:translate-x-1 flex items-center gap-2 group"
               >
                 <i class="fas fa-chevron-right text-[8px]"></i>
                 {{ $t('footer.agora') }}
-              </a>
+              </RouterLink>
             </li>
             <li>
-              <a
-                href="/metanoia"
+              <RouterLink
+                to="/metanoia"
                 class="hover:text-[#d5005f] transition-colors duration-300 hover:translate-x-1 flex items-center gap-2 group"
               >
                 <i class="fas fa-chevron-right text-[8px]"></i>
                 {{ $t('footer.metanoia') }}
-              </a>
+              </RouterLink>
             </li>
             <li>
-              <a
-                href="/processus"
+              <RouterLink
+                to="/processus"
                 class="hover:text-[#06b6d4] transition-colors duration-300 hover:translate-x-1 flex items-center gap-2 group"
               >
                 <i class="fas fa-chevron-right text-[8px]"></i>
                 {{ $t('footer.processus') }}
-              </a>
+              </RouterLink>
             </li>
           </ul>
         </div>
@@ -134,28 +134,28 @@ const currentYear = new Date().getFullYear()
           </h3>
           <ul class="space-y-3">
             <li>
-              <a
-                href="/aviso-privacidad"
+              <RouterLink
+                to="/aviso-privacidad"
                 class="hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
               >
                 {{ $t('footer.privacy') }}
-              </a>
+              </RouterLink>
             </li>
             <li>
-              <a
-                href="/terminos-y-condiciones"
+              <RouterLink
+                to="/terminos-y-condiciones"
                 class="hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
               >
                 {{ $t('footer.terms') }}
-              </a>
+              </RouterLink>
             </li>
             <li>
-              <a
-                href="/preguntas-frecuentes"
+              <RouterLink
+                to="/preguntas-frecuentes"
                 class="hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
               >
                 {{ $t('footer.faq') }}
-              </a>
+              </RouterLink>
             </li>
             <li>
               <a
@@ -182,7 +182,7 @@ const currentYear = new Date().getFullYear()
                 href="https://maps.app.goo.gl/P7xvmRRCo8zPDU5C8"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-[#27E2F8] hover:underline inline-flex items-center gap-1 hover:translate-x-1 ml-2"
+                class="text-white inline-flex items-center gap-1 hover:translate-x-1 ml-2"
               >
                 {{ $t('footer.address') }}<br />{{ $t('footer.national_coverage') }}
               </a>
@@ -193,7 +193,7 @@ const currentYear = new Date().getFullYear()
                 href="https://wa.link/92t4xt"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-[#27E2F8] hover:underline inline-flex items-center gap-1 hover:translate-x-1 ml-2"
+                class="text-white inline-flex items-center gap-1 hover:translate-x-1 ml-2"
               >
                 {{ $t('footer.phone') }}
               </a>
@@ -202,7 +202,7 @@ const currentYear = new Date().getFullYear()
               <i class="fas fa-envelope text-[#D8D8D8]"></i>
               <a
                 href="mailto:contacto@soluciones-hericraft.com"
-                class="text-[#27E2F8] hover:underline inline-flex items-center gap-1 hover:translate-x-1 ml-2"
+                class="text-white inline-flex items-center gap-1 hover:translate-x-1 ml-2"
               >
                 contacto@soluciones-hericraft.com
               </a>
