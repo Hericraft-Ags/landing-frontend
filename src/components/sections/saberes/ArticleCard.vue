@@ -132,7 +132,7 @@ const handleAuthorImageError = event => {
 }
 
 const viewDetail = () => {
-  router.push(`/saberes/articulo/${props.article.slug}`)
+  router.push(`/saberes/articulos/${props.article.slug}`)
 }
 </script>
 

@@ -11,7 +11,7 @@
         </span>
         <div class="flex justify-center mb-6">
           <img
-            src="/assets/images/us/NOSOTROS-02.svg"
+            src="/assets/images/us/modelo.jpg"
             alt="Modelo PRAXIS TRAMA - Educación 5.0"
             class="max-w-full h-auto w-auto"
             loading="lazy"

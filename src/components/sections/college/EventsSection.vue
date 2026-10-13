@@ -41,9 +41,9 @@ import SecondaryCard from '@/components/ui/SecondaryCard.vue'
 
 // Rutas para imágenes en public
 const gatheringImage = '/assets/images/college/college-14.png'
-const gatheringLink = '/#'
+const gatheringLink = '/encuentro-gigantes'
 const franchiseIcon = '/assets/images/college/college-12.png'
-const franchiseLink = '/#'
+const franchiseLink = '/franquicias-college'
 const agoraIcon = '/assets/images/college/college-13.png'
 const agoraLink = '/agora'
 </script>

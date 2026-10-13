@@ -7,7 +7,18 @@
   "school_name_placeholder": "Ej. Colegio Innovation",
   "whatsapp": "Enviar por WhatsApp",
   "email": "Enviar por Correo",
-  "fill_fields": "Por favor completa tu nombre y escuela.",
+  "fill_fields": "Por favor completa todos los datos del formulario",
   "whatsapp_pending": "Funcionalidad de WhatsApp pendiente de implementar.",
-  "email_pending": "Funcionalidad de Correo pendiente de implementar."
+  "email_pending": "Funcionalidad de Correo pendiente de implementar.",
+  "email_success_title": "¡Cotización enviada!",
+  "email_success_message": "Hemos enviado una copia a tu correo. Un asesor se pondrá en contacto contigo pronto.",
+  "email_success_button": "Perfecto",
+  "email_error_title": "Error al enviar",
+  "email_error": "No pudimos enviar tu cotización en este momento. Por favor, verifica tu conexión o inténtalo más tarde.",
+  "email_error_button": "Intentar de nuevo",
+  "your_email": "Correo electrónico",
+  "your_email_placeholder": "Ej. example@mail.com",
+  "sending": "Enviando...",
+  "whatsapp_success": "Mensaje enviado a WhatsApp",
+  "whatsapp_error": "No se pudo abrir WhatsApp. Verifica que tengas la aplicación instalada."
 }

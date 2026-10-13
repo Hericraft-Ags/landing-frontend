@@ -135,3 +135,7 @@
 .text-green {
   color: #39cc7f;
 }
+
+.swal-on-top {
+  z-index: 99999 !important;
+}

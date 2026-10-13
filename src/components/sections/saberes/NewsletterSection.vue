@@ -58,6 +58,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import apiClient from '@/config/axios'
 
 const email = ref('')
 const isSubmitting = ref(false)
@@ -75,16 +76,22 @@ const handleSubscribe = async () => {
   errorMessage.value = ''
 
   try {
-    // Aquí va la llamada a la API para suscribir
-    // await apiClient.post('/subscribe', { email: email.value })
+    const response = await apiClient.post('/public/newsletter/subscribe', {
+      email: email.value,
+    })
 
-    // Simulación
-    await new Promise(resolve => setTimeout(resolve, 1000))
-
-    successMessage.value = '¡Gracias por suscribirte! Pronto recibirás nuestro contenido.'
-    email.value = ''
+    if (response.data.success) {
+      successMessage.value = response.data.message || '¡Gracias por suscribirte!'
+      email.value = ''
+    } else {
+      errorMessage.value = response.data.message || 'Error al suscribir'
+    }
   } catch (error) {
-    errorMessage.value = 'Ocurrió un error. Por favor intenta nuevamente.'
+    if (error.response?.status === 422) {
+      errorMessage.value = 'Correo electrónico inválido'
+    } else {
+      errorMessage.value = 'Ocurrió un error. Por favor intenta nuevamente.'
+    }
   } finally {
     isSubmitting.value = false
   }

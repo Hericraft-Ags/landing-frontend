@@ -17,7 +17,7 @@
     <div class="flex-1">
       <div class="flex items-center gap-3 mb-2">
         <span
-          v-if="podcast.is_new"
+          v-if="isNewEpisode"
           class="bg-pink-100 text-accentPink text-[10px] font-bold px-2 py-1 rounded uppercase"
           >Nuevo Episodio</span
         >
@@ -59,6 +59,25 @@ const formattedDuration = computed(() => {
   const minutes = Math.floor(props.podcast.duration / 60)
   const seconds = props.podcast.duration % 60
   return `${minutes}:${seconds.toString().padStart(2, '0')} min`
+})
+
+// Determinar si el episodio es nuevo
+const isNewEpisode = computed(() => {
+  // Si ya tiene el campo is_new definido, usarlo
+  if (props.podcast.is_new !== undefined) {
+    return props.podcast.is_new
+  }
+
+  // Si no, calcular basado en la fecha de publicación
+  const dateToCheck = props.podcast.published_at || props.podcast.created_at
+  if (!dateToCheck) return false
+
+  const publishedDate = new Date(dateToCheck)
+  const now = new Date()
+  const diffInDays = (now - publishedDate) / (1000 * 60 * 60 * 24)
+
+  // Considerar nuevo si tiene menos de 7 días
+  return diffInDays <= 7
 })
 
 const playPodcast = () => {
