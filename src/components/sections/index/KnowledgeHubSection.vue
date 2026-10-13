@@ -31,8 +31,8 @@
           </p>
         </div>
 
-        <a
-          href="#"
+        <RouterLink
+          to="/saberes"
           class="group relative px-6 py-3 rounded-full overflow-hidden border border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-orange-200"
         >
           <span
@@ -45,7 +45,7 @@
             {{ $t('index.banco_btn') }}
             <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
           </span>
-        </a>
+        </RouterLink>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
@@ -62,71 +62,119 @@
 </template>
 
 <script setup>
-import { ref, inject } from 'vue'
+import { ref, inject, computed } from 'vue'
 import KnowledgeCard from '@/components/ui/KnowledgeCard.vue'
 
 const reduceMotion = inject('reduceMotion', ref(false))
 
-const knowledgeItems = [
-  {
-    id: 'podcast-ia',
-    type: 'podcast',
-    typeLabel: 'Podcast',
-    typeColor: 'blue',
-    typeIcon: 'fas fa-microphone',
-    title: 'El Futuro de la IA en el Aula',
-    description:
-      'Descubre cómo la inteligencia artificial está redefiniendo el rol del docente en este episodio especial con expertos de Google.',
-    image: 'podcast.svg',
-    imageAlt: 'Podcast sobre IA en educación',
-    metadata: '25 min',
-    metadataIcon: 'far fa-clock',
-    actionLabel: 'Reproducir',
-    actionIcon: 'fas fa-play-circle',
+const props = defineProps({
+  latestArticles: {
+    type: Array,
+    default: () => [],
   },
-  {
-    id: 'manual-hibridas',
-    type: 'manual',
-    typeLabel: 'Manual',
-    typeColor: 'blue',
-    typeIcon: 'fas fa-book',
-    title: 'Guía Práctica: Aulas Híbridas',
-    description:
-      'Manual paso a paso para configurar espacios de aprendizaje mixtos utilizando herramientas de Google Workspace for Education.',
-    image: 'manuales.svg',
-    imageAlt: 'Manual de aulas híbridas',
-    metadata: 'PDF Descargable',
-    metadataIcon: 'far fa-file-pdf',
-    actionLabel: 'Descargar',
-    actionIcon: 'fas fa-download',
+  latestPodcasts: {
+    type: Array,
+    default: () => [],
   },
-  {
-    id: 'revista-abril',
-    type: 'revista',
-    typeLabel: 'Revista',
-    typeColor: 'blue',
-    typeIcon: 'fas fa-newspaper',
-    title: 'Hericraft Monthly: Edición Abril',
-    description:
-      'Entrevistas exclusivas, casos de éxito en Colegios y las últimas tendencias en infraestructura educativa.',
-    image: 'revistas.svg',
-    imageAlt: 'Revista educativa mensual',
-    metadata: 'Leer Online',
-    metadataIcon: 'far fa-eye',
-    actionLabel: 'Leer Ahora',
-    actionIcon: 'fas fa-arrow-right',
+  latestDownloads: {
+    type: Array,
+    default: () => [],
   },
-]
+})
+
+// Mapear los datos reales a la estructura que espera KnowledgeCard
+const knowledgeItems = computed(() => {
+  const items = []
+
+  // Último Artículo
+  const article = props.latestArticles[0]
+  if (article) {
+    items.push({
+      id: `article-${article.id}`,
+      type: 'article',
+      typeLabel: 'Artículo',
+      typeColor: 'blue',
+      typeIcon: 'fas fa-newspaper',
+      title: article.title,
+      description: article.excerpt || article.description || '',
+      image: article.featured_image || 'revistas.svg',
+      imageAlt: article.title,
+      metadata: new Date(article.published_at || article.created_at).toLocaleDateString('es-ES', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+      }),
+      metadataIcon: 'far fa-calendar-alt',
+      actionLabel: 'Leer',
+      actionIcon: 'fas fa-arrow-right',
+      link: `/saberes/articulos/${article.slug}`,
+    })
+  }
+
+  // Último Podcast
+  const podcast = props.latestPodcasts[0]
+  if (podcast) {
+    // Calcular duración formateada manualmente si no viene del backend
+    let durationDisplay = 'Nuevo episodio'
+    let durationIcon = 'fas fa-star' // icono para "nuevo"
+
+    if (podcast.formatted_duration) {
+      durationDisplay = podcast.formatted_duration
+      durationIcon = 'fa-clock'
+    } else if (podcast.duration) {
+      const mins = Math.floor(podcast.duration / 60)
+      const secs = podcast.duration % 60
+      durationDisplay = `${mins}:${secs.toString().padStart(2, '0')} min`
+      durationIcon = 'fas fa-clock'
+    }
+
+    items.push({
+      id: `podcast-${podcast.id}`,
+      type: 'podcast',
+      typeLabel: 'Podcast',
+      typeColor: 'purple',
+      typeIcon: 'fas fa-microphone',
+      title: podcast.title,
+      description: podcast.description || '',
+      image: podcast.cover_image || 'podcast.svg',
+      imageAlt: podcast.title,
+      metadata: durationDisplay,
+      metadataIcon: durationIcon,
+      actionLabel: 'Reproducir',
+      actionIcon: 'fas fa-play-circle',
+      link: podcast.audio_url || null,
+    })
+  }
+
+  // Último Descargable
+  const download = props.latestDownloads[0]
+  if (download) {
+    items.push({
+      id: `download-${download.id}`,
+      type: 'download',
+      typeLabel: 'Descargable',
+      typeColor: 'orange',
+      typeIcon: 'fas fa-download',
+      title: download.title,
+      description: download.description || '',
+      image: 'manuales.svg', // imagen por defecto para descargables
+      imageAlt: download.title,
+      metadata: download.file_size || 'Descargar',
+      metadataIcon: 'fas fa-file-pdf',
+      actionLabel: 'Descargar',
+      actionIcon: 'fas fa-download',
+      link: download.file_url || '#',
+    })
+  }
+
+  return items
+})
 
 const handleItemAction = item => {
-  console.log('Acción en item:', item.title)
-  switch (item.type) {
-    case 'podcast':
-      break
-    case 'manual':
-      break
-    case 'revista':
-      break
+  if (item.link) {
+    window.open(item.link, '_blank')
+  } else {
+    console.log('Acción para:', item.title)
   }
 }
 </script>

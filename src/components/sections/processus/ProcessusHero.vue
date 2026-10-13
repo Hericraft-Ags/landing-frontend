@@ -30,7 +30,7 @@
           {{ $t('processus.hero_description') }}
         </p>
 
-        <div class="flex flex-wrap gap-4 pt-6">
+        <!--<div class="flex flex-wrap gap-4 pt-6">
           <a
             href="mailto:contacto@soluciones-hericraft.com"
             class="bg-cyan text-navy px-8 py-4 rounded-xl font-bold hover:bg-white transition shadow-lg shadow-cyan/30 transform hover:-translate-y-1"
@@ -42,7 +42,7 @@
           >
             {{ $t('processus.hero_button_secondary') }}
           </button>
-        </div>
+        </div>-->
       </div>
 
       <div class="relative group">
