@@ -26,12 +26,12 @@
         </div>
       </div>
 
-      <!-- Contenedor con Sidebar y Canvas (para fullscreen) -->
+      <!-- Contenedor con Sidebar y Canvas -->
       <div
         ref="configuratorContainer"
         class="rounded-2xl overflow-hidden shadow-2xl border border-gray-700 bg-gray-900 h-[850px] flex relative"
       >
-        <!-- Botón de pantalla completa dentro del contenedor -->
+        <!-- Botón de pantalla completa -->
         <button
           @click="toggleFullscreen"
           class="absolute top-4 right-4 z-50 bg-black/50 hover:bg-black/70 backdrop-blur-sm p-2 rounded-lg text-white transition-all duration-300 border border-blueprint-cyan/30 hover:border-blueprint-cyan shadow-lg"
@@ -89,9 +89,13 @@
       </div>
     </div>
 
-    <!-- Modal de ayuda - Fuera del contenedor, centrado en la pantalla -->
+    <!-- Modales -->
     <HelpModal v-if="showHelpModal" @close="showHelpModal = false" />
-    <ContactModal v-if="showContactModal" @close="showContactModal = false" />
+    <ContactModal
+      v-if="showContactModal"
+      @close="showContactModal = false"
+      :project-data="projectData"
+    />
   </section>
 </template>
 
@@ -101,8 +105,9 @@ import StudioSidebar from '@/components/ui/canvas/StudioSidebar.vue'
 import CanvasStudio from '@/components/ui/canvas/CanvasStudio.vue'
 import HelpModal from '@/components/ui/canvas/HelpModal.vue'
 import ContactModal from '@/components/ui/canvas/ContactModal.vue'
-import { ROOM_SHAPES } from '@/data/studioData'
+import { ROOM_SHAPES, ROOM_TYPES, PRICING } from '@/data/studioData'
 
+// Estado
 const showLoader = ref(true)
 const showHelpModal = ref(false)
 const showContactModal = ref(false)
@@ -115,13 +120,70 @@ const finishTier = ref('standard')
 const kitTier = ref('sencillo')
 const activeZones = ref([])
 
+// Fullscreen
 const configuratorContainer = ref(null)
 const isFullscreen = ref(false)
 
+// Computed
 const currentShape = computed(() => ROOM_SHAPES[shape.value])
 const studentTablesCount = computed(() => Math.ceil(students.value / 8))
 
-// Función para alternar pantalla completa
+const getRoomName = type => ROOM_TYPES[type]?.name || type
+
+const calculateBudget = () => {
+  const roomConfig = ROOM_TYPES[roomType.value]
+  if (!roomConfig) return 0
+
+  // ✅ Área efectiva con factor de forma
+  const areaFactor = ROOM_SHAPES[shape.value]?.areaFactor || 1
+  const effectiveArea = dimensions.value.width * dimensions.value.length * areaFactor
+
+  // 1. Acabados (usando área efectiva)
+  const civilCost = effectiveArea * PRICING.finishes[finishTier.value]
+
+  // 2. Mobiliario (sin cambios)
+  const tablesCount = Math.ceil(students.value / 8)
+  const furnitureCost =
+    tablesCount * PRICING.furniture.studentTable + students.value * PRICING.furniture.chair
+
+  // 3. Zonas (sin cambios)
+  const zonesCost = activeZones.value.reduce((total, zoneId) => {
+    const zone = roomConfig.zones.find(z => z.id === zoneId)
+    return total + (zone ? zone.cost : 0)
+  }, 0)
+
+  // 4. Kit (sin cambios)
+  const kitCost = PRICING.equipmentKits[roomType.value]?.[kitTier.value]?.cost || 0
+
+  return civilCost + furnitureCost + zonesCost + kitCost
+}
+
+const projectData = computed(() => {
+  const roomConfig = ROOM_TYPES[roomType.value]
+  const zones = activeZones.value.map(id => {
+    const zone = roomConfig?.zones.find(z => z.id === id)
+    return zone ? zone.label : id
+  })
+
+  return {
+    roomName: getRoomName(roomType.value),
+    level: level.value,
+    area: dimensions.value.width * dimensions.value.length,
+    dims: {
+      width: dimensions.value.width,
+      length: dimensions.value.length,
+    },
+    shape: shape.value,
+    students: students.value,
+    tables: Math.ceil(students.value / 8),
+    finish: finishTier.value,
+    kit: kitTier.value,
+    zones,
+    budget: calculateBudget(),
+  }
+})
+
+// Fullscreen handlers
 const toggleFullscreen = async () => {
   try {
     if (!document.fullscreenElement) {
@@ -134,20 +196,17 @@ const toggleFullscreen = async () => {
       await document.exitFullscreen()
       isFullscreen.value = false
     }
-  } catch (error) {
-    console.error('Error al cambiar pantalla completa:', error)
+  } catch (_) {
+    // Silently fail if fullscreen is not supported
   }
 }
 
-// Escuchar cambios en el estado de pantalla completa
 const handleFullscreenChange = () => {
   isFullscreen.value = !!document.fullscreenElement
 }
 
-// Registrar evento
 document.addEventListener('fullscreenchange', handleFullscreenChange)
 
-// Limpiar evento
 onUnmounted(() => {
   document.removeEventListener('fullscreenchange', handleFullscreenChange)
 })
@@ -158,7 +217,6 @@ setTimeout(() => {
 </script>
 
 <style scoped>
-/* Estilos para pantalla completa */
 :fullscreen {
   background-color: #0f172a;
   border-radius: 0;
@@ -169,7 +227,6 @@ setTimeout(() => {
   height: 100vh !important;
 }
 
-/* Personalización de la barra de scroll en el sidebar cuando está en fullscreen */
 :fullscreen .overflow-auto::-webkit-scrollbar {
   width: 10px;
   height: 10px;

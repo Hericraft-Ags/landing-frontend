@@ -167,12 +167,12 @@ const mobileButton = computed(() => {
           {{ $t('navbar.consultoria') }}
         </a>
 
-        <a
-          href="#saberes"
+        <RouterLink
+          to="/saberes"
           class="px-3 py-2 text-xs font-bold hover:text-cyan-bright transition uppercase tracking-wide hover:bg-white/10 rounded-full"
         >
           {{ $t('navbar.saberes') }}
-        </a>
+        </RouterLink>
 
         <!-- Botón dinámico: Inversionistas o Iniciar Sesión -->
         <a

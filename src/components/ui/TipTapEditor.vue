@@ -208,6 +208,19 @@
         >
           <i class="fas fa-eraser text-sm"></i>
         </button>
+
+        <!-- Botón para HTML -->
+        <div class="w-px h-6 bg-gray-300 mx-1"></div>
+        <button
+          type="button"
+          @click="toggleSourceMode"
+          class="p-1.5 rounded hover:bg-gray-100 transition text-gray-600 bg-white border border-gray-200"
+          :class="{ 'bg-blue-100 text-blue-700': sourceMode }"
+          title="Cambiar a modo HTML"
+        >
+          <i class="fas fa-code text-sm"></i>
+          <span class="text-xs ml-1">{{ sourceMode ? 'Visual' : 'HTML' }}</span>
+        </button>
       </div>
 
       <!-- Barra de estado -->
@@ -242,21 +255,44 @@
       <i class="fas fa-spinner fa-spin mr-2"></i>
       Cargando editor...
     </div>
-    <editor-content v-else :editor="editor" class="prose max-w-none p-4 min-h-[400px]" />
+
+    <!-- Modo visual -->
+    <editor-content
+      v-else-if="!sourceMode"
+      :editor="editor"
+      class="prose max-w-none p-4 min-h-[400px]"
+    />
+
+    <!-- Modo HTML -->
+    <div v-else class="relative">
+      <textarea
+        ref="sourceTextarea"
+        v-model="sourceHtml"
+        class="w-full min-h-[400px] p-4 font-mono text-sm bg-gray-50 text-gray-800 resize-y outline-none"
+        placeholder="Escribe el HTML aquí..."
+        spellcheck="false"
+      ></textarea>
+      <div class="absolute bottom-2 right-2 text-xs text-gray-400 bg-white/80 px-2 py-1 rounded">
+        HTML
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { useEditor, EditorContent } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
-import Heading from '@tiptap/extension-heading' // Importar explícitamente
 import Image from '@tiptap/extension-image'
-import Link from '@tiptap/extension-link'
 import Placeholder from '@tiptap/extension-placeholder'
 import TextAlign from '@tiptap/extension-text-align'
-import TaskList from '@tiptap/extension-task-list'
-import TaskItem from '@tiptap/extension-task-item'
-import { watch, computed, ref } from 'vue'
+import { watch, computed, ref, onMounted } from 'vue'
+import PreserveAttributes from '@/extensions/PreserveAttributes'
+import PreserveStyles from '@/extensions/PreserveStyles'
+import { DivExtension } from '@/extensions/DivExtension'
+
+// ✅ Solo importar TableKit — ya incluye Table, TableRow, TableCell y TableHeader
+import * as TableModule from '@tiptap/extension-table'
+const TableKit = TableModule.TableKit
 
 const props = defineProps({
   modelValue: {
@@ -266,9 +302,12 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['update:modelValue'])
+
+const sourceMode = ref(false)
+const sourceHtml = ref('')
+const sourceTextarea = ref(null)
 const isFullscreen = ref(false)
 
-// Contadores
 const wordCount = computed(() => {
   if (!editor.value) return 0
   const text = editor.value.getText()
@@ -283,36 +322,22 @@ const characterCount = computed(() => {
   return editor.value.getText().length
 })
 
-// Funciones para headings
 const setHeading = level => {
-  console.log('=== HEADING DEBUG ===')
-  console.log('Editor existe?', !!editor.value)
-  console.log('Nivel solicitado:', level)
-  console.log('Estado actual del contenido:', editor.value?.getHTML())
   if (!editor.value) return
   editor.value.chain().focus().toggleHeading({ level }).run()
-
-  console.log('Nuevo estado:', editor.value.getHTML())
 }
 
 const editor = useEditor({
-  content: props.modelValue,
+  content: props.modelValue || '',
   extensions: [
-    StarterKit, // Mantenemos StarterKit
-    Heading.configure({
-      // Configuración explícita de headings
-      levels: [1, 2, 3],
+    StarterKit.configure({
+      heading: {
+        levels: [1, 2, 3],
+      },
     }),
     Image.configure({
       inline: true,
       allowBase64: true,
-    }),
-    Link.configure({
-      openOnClick: false,
-      HTMLAttributes: {
-        target: '_blank',
-        rel: 'noopener noreferrer',
-      },
     }),
     Placeholder.configure({
       placeholder: 'Escribe el contenido del artículo aquí...',
@@ -320,10 +345,16 @@ const editor = useEditor({
     TextAlign.configure({
       types: ['heading', 'paragraph'],
     }),
-    TaskList,
-    TaskItem.configure({
-      nested: true,
+    PreserveStyles,
+    DivExtension,
+    // ✅ Solo TableKit, sin duplicar TableNode/TableRow/TableCell/TableHeader
+    TableKit.configure({
+      resizable: true,
+      HTMLAttributes: {
+        class: 'table-custom',
+      },
     }),
+    PreserveAttributes,
   ],
   editorProps: {
     attributes: {
@@ -331,20 +362,47 @@ const editor = useEditor({
     },
   },
   onUpdate: ({ editor }) => {
-    emit('update:modelValue', editor.getHTML())
+    if (!sourceMode.value) {
+      emit('update:modelValue', editor.getHTML())
+    }
   },
 })
 
-// Observar cambios en modelValue
 watch(
   () => props.modelValue,
   newValue => {
-    const isSame = editor.value?.getHTML() === newValue
-    if (editor.value && !isSame && newValue !== undefined) {
-      editor.value.commands.setContent(newValue)
+    if (editor.value && !sourceMode.value) {
+      const current = editor.value.getHTML()
+      if (current !== newValue) {
+        editor.value.commands.setContent(newValue || '')
+      }
     }
-  }
+    if (sourceMode.value && sourceHtml.value !== newValue) {
+      sourceHtml.value = newValue || ''
+    }
+  },
+  { immediate: true }
 )
+
+const toggleSourceMode = () => {
+  if (sourceMode.value) {
+    if (editor.value) {
+      editor.value.commands.setContent(sourceHtml.value || '')
+    }
+    sourceMode.value = false
+  } else {
+    if (editor.value) {
+      sourceHtml.value = editor.value.getHTML()
+    }
+    sourceMode.value = true
+  }
+}
+
+watch(sourceHtml, newVal => {
+  if (sourceMode.value) {
+    emit('update:modelValue', newVal)
+  }
+})
 
 const addImage = () => {
   if (!editor.value) return
@@ -365,7 +423,6 @@ const addLink = () => {
 const toggleFullscreen = () => {
   const editorElement = document.querySelector('.ProseMirror')
   if (!editorElement) return
-
   if (!isFullscreen.value) {
     editorElement.requestFullscreen()
     isFullscreen.value = true
@@ -374,6 +431,15 @@ const toggleFullscreen = () => {
     isFullscreen.value = false
   }
 }
+
+onMounted(() => {
+  if (editor.value && props.modelValue) {
+    const current = editor.value.getHTML()
+    if (current !== props.modelValue) {
+      editor.value.commands.setContent(props.modelValue)
+    }
+  }
+})
 </script>
 
 <style scoped>
@@ -407,7 +473,6 @@ const toggleFullscreen = () => {
   padding-left: 1.5rem;
 }
 
-/* Headings - con !important para sobreescribir Tailwind */
 .ProseMirror h1 {
   font-size: 2rem !important;
   font-weight: 700 !important;
@@ -432,7 +497,6 @@ const toggleFullscreen = () => {
   margin-bottom: 0.5rem !important;
 }
 
-/* Resto de estilos */
 .ProseMirror blockquote {
   border-left: 4px solid #e5e7eb;
   padding-left: 1rem;
@@ -463,7 +527,6 @@ const toggleFullscreen = () => {
   padding: 0;
 }
 
-/* Task list styles */
 .ProseMirror ul[data-type='taskList'] {
   list-style: none;
   padding-left: 0;
@@ -479,7 +542,6 @@ const toggleFullscreen = () => {
   margin-right: 0.5rem;
 }
 
-/* Fullscreen mode */
 .ProseMirror:fullscreen {
   background-color: white;
   padding: 2rem;

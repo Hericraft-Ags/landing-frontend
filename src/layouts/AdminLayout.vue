@@ -103,6 +103,14 @@
           <i class="fas fa-download w-5 group-hover:scale-110 transition-transform"></i>
           <span>Descargables</span>
         </router-link>
+        <router-link
+          to="/admin/newsletter"
+          class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition"
+          active-class="bg-white/10"
+        >
+          <i class="fas fa-envelope w-5 text-center text-cyanBright"></i>
+          <span>Newsletter</span>
+        </router-link>
       </nav>
 
       <!-- Sidebar Footer (fijo) -->

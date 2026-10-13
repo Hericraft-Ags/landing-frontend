@@ -15,47 +15,53 @@ export const useSaberesStore = () => {
       return path
     }
 
-    // Para imágenes de artículos
+    const baseURL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'
+    const cleanBaseURL = baseURL.replace(/\/api\/?$/, '')
+
+    // Para artículos
     const articleMatch = path.match(/(articles\/[^\/]+\.(jpg|jpeg|png|gif|webp))$/i)
     if (articleMatch) {
-      const baseURL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'
-      const cleanBaseURL = baseURL.replace(/\/api\/?$/, '')
       return `${cleanBaseURL}/storage/${articleMatch[1]}`
     }
 
-    // Para imágenes de autores (avatares)
+    // Para autores (avatares)
     const authorMatch = path.match(/(authors\/[^\/]+\.(jpg|jpeg|png|gif|webp))$/i)
     if (authorMatch) {
-      const baseURL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'
-      const cleanBaseURL = baseURL.replace(/\/api\/?$/, '')
       return `${cleanBaseURL}/storage/${authorMatch[1]}`
     }
 
-    // Fallback: limpiar manualmente
+    // Para videos (thumbnails)
+    const videoMatch = path.match(/(videos\/[^\/]+\.(jpg|jpeg|png|gif|webp))$/i)
+    if (videoMatch) {
+      return `${cleanBaseURL}/storage/${videoMatch[1]}`
+    }
+
+    // Para podcasts (cover_image)
+    const podcastMatch = path.match(/(podcasts\/[^\/]+\.(jpg|jpeg|png|gif|webp))$/i)
+    if (podcastMatch) {
+      return `${cleanBaseURL}/storage/${podcastMatch[1]}`
+    }
+
+    // Fallback genérico
     const cleanPath = path.replace(/^\/?(storage\/?)+/g, '')
-    const baseURL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'
-    const cleanBaseURL = baseURL.replace(/\/api\/?$/, '')
     return `${cleanBaseURL}/storage/${cleanPath}`
   }
 
-  const getLatestArticles = async (limit = 2) => {
+  const getLatestArticles = async (limit = 3) => {
     try {
       const response = await apiClient.get('/public/articles', {
         params: { limit, sort: 'latest' },
       })
 
-      const articles = response.data.data || []
-      articles.forEach(article => {
-        // Procesar imagen destacada
-        article.featured_image = getImageUrl(article.featured_image)
-
-        // Procesar avatar del autor
-        if (article.author && article.author.avatar_url) {
-          article.author.avatar_url = getImageUrl(article.author.avatar_url)
+      const items = response.data?.data || []
+      items.forEach(item => {
+        item.featured_image = getImageUrl(item.featured_image)
+        if (item.author && item.author.avatar_url) {
+          item.author.avatar_url = getImageUrl(item.author.avatar_url)
         }
       })
 
-      return { data: articles }
+      return { data: items }
     } catch (error) {
       console.error('Error fetching latest articles:', error)
       return { data: [] }
@@ -68,7 +74,13 @@ export const useSaberesStore = () => {
       const response = await apiClient.get('/public/videos', {
         params: { limit, sort: 'latest' },
       })
-      return response.data
+
+      const items = response.data?.data || []
+      items.forEach(item => {
+        item.thumbnail_url = getImageUrl(item.thumbnail_url)
+      })
+
+      return { data: items }
     } catch (error) {
       console.error('Error fetching latest videos:', error)
       return { data: [] }
@@ -83,7 +95,13 @@ export const useSaberesStore = () => {
       const response = await apiClient.get('/public/podcasts', {
         params: { limit, sort: 'latest' },
       })
-      return response.data
+
+      const items = response.data?.data || []
+      items.forEach(item => {
+        item.cover_image = getImageUrl(item.cover_image)
+      })
+
+      return { data: items }
     } catch (error) {
       console.error('Error fetching latest podcasts:', error)
       return { data: [] }
@@ -98,10 +116,33 @@ export const useSaberesStore = () => {
       const response = await apiClient.get('/public/downloads', {
         params: { limit, sort: 'latest' },
       })
-      return response.data
+
+      const items = response.data?.data || []
+      // Los downloads no tienen imagen, solo icono
+      return { data: items }
     } catch (error) {
       console.error('Error fetching latest downloads:', error)
       return { data: [] }
+    } finally {
+      isLoading.value = false
+    }
+  }
+
+  const getArticleBySlug = async slug => {
+    isLoading.value = true
+    try {
+      const response = await apiClient.get(`/public/articles/${slug}`)
+      const article = response.data.data || null
+      if (article) {
+        article.featured_image = getImageUrl(article.featured_image)
+        if (article.author && article.author.avatar_url) {
+          article.author.avatar_url = getImageUrl(article.author.avatar_url)
+        }
+      }
+      return { data: article }
+    } catch (error) {
+      console.error('Error fetching article:', error)
+      return { data: null }
     } finally {
       isLoading.value = false
     }
@@ -117,5 +158,6 @@ export const useSaberesStore = () => {
     getLatestVideos,
     getLatestPodcasts,
     getLatestDownloads,
+    getArticleBySlug,
   }
 }

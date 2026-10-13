@@ -16,6 +16,7 @@ const ThermsView = () => import('@/views/ThermsView.vue')
 const QuestionsView = () => import('@/views/QuestionsView.vue')
 const AmbientesView = () => import('@/views/AmbientesView.vue')
 const SaberesView = () => import('@/views/SaberesView.vue')
+const ArticleDetail = () => import('@/views/ArticleDetailView.vue')
 
 // Admin views
 const AdminLoginView = () => import('@/views/admin/LoginView.vue')
@@ -32,6 +33,12 @@ const AdminPodcastsView = () => import('@/views/admin/podcasts/AdminPodcastsView
 const AdminPodcastFormView = () => import('@/views/admin/podcasts/AdminPodcastFormView.vue')
 const AdminDownloadsView = () => import('@/views/admin/downloads/AdminDownloadsView.vue')
 const AdminDownloadFormView = () => import('@/views/admin/downloads/AdminDownloadFormView.vue')
+const AdminNewsletterView = () => import('@/views/admin/AdminNewsletterView.vue')
+
+const NotFound = () => import('@/views/errors/NotFound.vue')
+const Forbidden = () => import('@/views/errors/ForbiddenPage.vue')
+const ServerError = () => import('@/views/errors/ServerError.vue')
+const UnderConstruction = () => import('@/views/errors/UnderConstruction.vue')
 
 // Guard de autenticación - CORREGIDO
 const requireAuth = async (to, from) => {
@@ -151,6 +158,16 @@ const routes = [
         },
       },
       {
+        path: '/saberes/articulos/:slug',
+        name: ArticleDetail,
+        component: ArticleDetail,
+        meta: {
+          themeColor: '#051B45',
+          accessibilityColor: '#0EF1EB',
+          colorTextAccessibility: '#fff',
+        },
+      },
+      {
         path: 'aviso-privacidad',
         component: PrivacityView,
         meta: {
@@ -170,10 +187,28 @@ const routes = [
       },
       {
         path: 'preguntas-frecuentes',
-        component: QuestionsView,
+        component: UnderConstruction,
         meta: {
           themeColor: '#111319',
           accessibilityColor: '#08BE66',
+          colorTextAccessibility: '#fff',
+        },
+      },
+      {
+        path: 'encuentro-gigantes',
+        component: UnderConstruction,
+        meta: {
+          themeColor: '#085899',
+          accessibilityColor: '#00c2ff',
+          colorTextAccessibility: '#fff',
+        },
+      },
+      {
+        path: 'franquicias-college',
+        component: UnderConstruction,
+        meta: {
+          themeColor: '#085899',
+          accessibilityColor: '#00c2ff',
           colorTextAccessibility: '#fff',
         },
       },
@@ -324,7 +359,37 @@ const routes = [
         component: AdminDownloadFormView,
         beforeEnter: requireAdmin,
       },
+      {
+        path: 'newsletter',
+        name: 'AdminNewsletter',
+        component: AdminNewsletterView,
+        beforeEnter: requireAdmin,
+      },
     ],
+  },
+  {
+    path: '/404',
+    name: 'NotFound',
+    component: NotFound,
+  },
+  {
+    path: '/403',
+    name: 'Forbidden',
+    component: Forbidden,
+  },
+  {
+    path: '/500',
+    name: 'ServerError',
+    component: ServerError,
+  },
+  {
+    path: '/en-construccion',
+    name: 'UnderConstruction',
+    component: UnderConstruction,
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/404',
   },
 ]
 

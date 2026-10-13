@@ -96,6 +96,17 @@ const typeClasses = computed(() => {
 })
 
 const imageSrc = computed(() => {
+  // Si la imagen es una URL absoluta (empieza con http:// o https:// o /storage)
+  if (
+    props.item.image &&
+    (props.item.image.startsWith('http://') ||
+      props.item.image.startsWith('https://') ||
+      props.item.image.startsWith('/storage'))
+  ) {
+    return props.item.image
+  }
+
+  // Si no, intentar cargarla desde assets
   try {
     return new URL(`../../assets/images/${props.item.image}`, import.meta.url).href
   } catch (error) {

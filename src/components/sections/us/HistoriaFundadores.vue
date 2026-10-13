@@ -6,7 +6,7 @@ import FounderCard from '@/components/ui/FounderCard.vue'
 
 import ricardoImg from '@/assets/images/us/NOSOTROS-12.png'
 import hectorImg from '@/assets/images/us/NOSOTROS-13.png'
-import marcoImg from '@/assets/images/us/NOSOTROS-11.png'
+import marcoImg from '@/assets/images/us/rafa.png'
 
 const { t } = useI18n({ useScope: 'global' })
 
@@ -76,7 +76,7 @@ const founders = computed(() => [
             class="absolute inset-0 bg-cyan/10 rounded-2xl transform translate-x-4 translate-y-4"
           ></div>
           <img
-            src="@/assets/images/us/NOSOTROS-10.png"
+            src="/assets/images/us/linea.png"
             alt="Fundadores Hericraft"
             class="rounded-2xl shadow-2xl relative w-full object-cover filter grayscale hover:grayscale-0 transition duration-500"
           />
